@@ -1,0 +1,25 @@
+{
+ "host": "bank.sbi",
+ "brand": "sbi",
+ "fetched_at": "2026-11-06T00:18:02Z",
+ "source": "live_tls",
+ "cert": {
+  "sha256": "3f8cf7cd74bea8273478ab3d0ea0f83d2b58c9b45c90391d3460a3b6d247b010",
+  "subject": {
+   "cn": "*.bank.sbi",
+   "o": "STATE BANK OF INDIA",
+   "c": "IN"
+  },
+  "issuer": {
+   "cn": "DigiCert Global G2 TLS RSA SHA256 2020 CA1",
+   "o": "DigiCert Inc"
+  },
+  "sans": [
+   "*.bank.sbi",
+   "bank.sbi"
+  ],
+  "not_before": "2026-05-19T00:00:00Z",
+  "not_after": "2026-12-03T23:59:59Z",
+  "validation": "OV"
+ }
+}

@@ -1,0 +1,1444 @@
+{
+ "source": "PhiUSIIL (UCI 967, CC BY 4.0), column TLD (last label only)",
+ "base_rate": 0.428,
+ "smoothing_rows": 20,
+ "abused_threshold": 0.85,
+ "abused_min_rows": 25,
+ "tlds": {
+  "103": {
+   "risk": 0.74,
+   "phishing": 24,
+   "legitimate": 0
+  },
+  "12": {
+   "risk": 0.682,
+   "phishing": 16,
+   "legitimate": 0
+  },
+  "128": {
+   "risk": 0.757,
+   "phishing": 27,
+   "legitimate": 0
+  },
+  "146": {
+   "risk": 0.653,
+   "phishing": 13,
+   "legitimate": 0
+  },
+  "181": {
+   "risk": 0.762,
+   "phishing": 28,
+   "legitimate": 0
+  },
+  "197": {
+   "risk": 0.673,
+   "phishing": 15,
+   "legitimate": 0
+  },
+  "220": {
+   "risk": 0.653,
+   "phishing": 13,
+   "legitimate": 0
+  },
+  "223": {
+   "risk": 0.631,
+   "phishing": 11,
+   "legitimate": 0
+  },
+  "238": {
+   "risk": 0.818,
+   "phishing": 43,
+   "legitimate": 0
+  },
+  "24": {
+   "risk": 0.812,
+   "phishing": 41,
+   "legitimate": 0
+  },
+  "26": {
+   "risk": 0.691,
+   "phishing": 17,
+   "legitimate": 0
+  },
+  "41": {
+   "risk": 0.714,
+   "phishing": 20,
+   "legitimate": 0
+  },
+  "67": {
+   "risk": 0.762,
+   "phishing": 28,
+   "legitimate": 0
+  },
+  "78": {
+   "risk": 0.776,
+   "phishing": 31,
+   "legitimate": 0
+  },
+  "86": {
+   "risk": 0.74,
+   "phishing": 24,
+   "legitimate": 0
+  },
+  "87": {
+   "risk": 0.664,
+   "phishing": 14,
+   "legitimate": 0
+  },
+  "94": {
+   "risk": 0.767,
+   "phishing": 29,
+   "legitimate": 0
+  },
+  "95": {
+   "risk": 0.691,
+   "phishing": 17,
+   "legitimate": 0
+  },
+  "ac": {
+   "risk": 0.462,
+   "phishing": 9,
+   "legitimate": 9
+  },
+  "academy": {
+   "risk": 0.641,
+   "phishing": 19,
+   "legitimate": 4
+  },
+  "ad": {
+   "risk": 0.285,
+   "phishing": 0,
+   "legitimate": 10
+  },
+  "ae": {
+   "risk": 0.368,
+   "phishing": 51,
+   "legitimate": 91
+  },
+  "aero": {
+   "risk": 0.178,
+   "phishing": 0,
+   "legitimate": 28
+  },
+  "af": {
+   "risk": 0.352,
+   "phishing": 2,
+   "legitimate": 8
+  },
+  "africa": {
+   "risk": 0.47,
+   "phishing": 6,
+   "legitimate": 5
+  },
+  "agency": {
+   "risk": 0.564,
+   "phishing": 14,
+   "legitimate": 6
+  },
+  "ai": {
+   "risk": 0.245,
+   "phishing": 12,
+   "legitimate": 52
+  },
+  "al": {
+   "risk": 0.382,
+   "phishing": 14,
+   "legitimate": 25
+  },
+  "am": {
+   "risk": 0.288,
+   "phishing": 26,
+   "legitimate": 74
+  },
+  "app": {
+   "risk": 0.977,
+   "phishing": 6368,
+   "legitimate": 140
+  },
+  "ar": {
+   "risk": 0.352,
+   "phishing": 124,
+   "legitimate": 233
+  },
+  "art": {
+   "risk": 0.665,
+   "phishing": 40,
+   "legitimate": 13
+  },
+  "asia": {
+   "risk": 0.483,
+   "phishing": 32,
+   "legitimate": 32
+  },
+  "at": {
+   "risk": 0.21,
+   "phishing": 104,
+   "legitimate": 413
+  },
+  "au": {
+   "risk": 0.127,
+   "phishing": 373,
+   "legitimate": 2606
+  },
+  "az": {
+   "risk": 0.279,
+   "phishing": 14,
+   "legitimate": 47
+  },
+  "ba": {
+   "risk": 0.274,
+   "phishing": 12,
+   "legitimate": 43
+  },
+  "bank": {
+   "risk": 0.276,
+   "phishing": 0,
+   "legitimate": 11
+  },
+  "bd": {
+   "risk": 0.323,
+   "phishing": 16,
+   "legitimate": 40
+  },
+  "be": {
+   "risk": 0.115,
+   "phishing": 74,
+   "legitimate": 622
+  },
+  "best": {
+   "risk": 0.634,
+   "phishing": 13,
+   "legitimate": 1
+  },
+  "bg": {
+   "risk": 0.093,
+   "phishing": 6,
+   "legitimate": 131
+  },
+  "bh": {
+   "risk": 0.299,
+   "phishing": 1,
+   "legitimate": 11
+  },
+  "bid": {
+   "risk": 0.746,
+   "phishing": 25,
+   "legitimate": 0
+  },
+  "bio": {
+   "risk": 0.828,
+   "phishing": 66,
+   "legitimate": 4
+  },
+  "biz": {
+   "risk": 0.758,
+   "phishing": 332,
+   "legitimate": 97
+  },
+  "blog": {
+   "risk": 0.311,
+   "phishing": 2,
+   "legitimate": 12
+  },
+  "bm": {
+   "risk": 0.285,
+   "phishing": 0,
+   "legitimate": 10
+  },
+  "bo": {
+   "risk": 0.331,
+   "phishing": 6,
+   "legitimate": 18
+  },
+  "br": {
+   "risk": 0.355,
+   "phishing": 653,
+   "legitimate": 1193
+  },
+  "bt": {
+   "risk": 0.238,
+   "phishing": 0,
+   "legitimate": 16
+  },
+  "buzz": {
+   "risk": 0.751,
+   "phishing": 26,
+   "legitimate": 0
+  },
+  "bw": {
+   "risk": 0.293,
+   "phishing": 2,
+   "legitimate": 14
+  },
+  "by": {
+   "risk": 0.385,
+   "phishing": 23,
+   "legitimate": 39
+  },
+  "bz": {
+   "risk": 0.655,
+   "phishing": 34,
+   "legitimate": 11
+  },
+  "ca": {
+   "risk": 0.074,
+   "phishing": 112,
+   "legitimate": 1502
+  },
+  "cam": {
+   "risk": 0.691,
+   "phishing": 17,
+   "legitimate": 0
+  },
+  "cash": {
+   "risk": 0.556,
+   "phishing": 12,
+   "legitimate": 5
+  },
+  "cat": {
+   "risk": 0.143,
+   "phishing": 9,
+   "legitimate": 94
+  },
+  "cc": {
+   "risk": 0.82,
+   "phishing": 308,
+   "legitimate": 58
+  },
+  "cf": {
+   "risk": 0.991,
+   "phishing": 1203,
+   "legitimate": 0
+  },
+  "cfd": {
+   "risk": 0.91,
+   "phishing": 107,
+   "legitimate": 0
+  },
+  "ch": {
+   "risk": 0.123,
+   "phishing": 63,
+   "legitimate": 497
+  },
+  "chat": {
+   "risk": 0.502,
+   "phishing": 9,
+   "legitimate": 6
+  },
+  "church": {
+   "risk": 0.385,
+   "phishing": 3,
+   "legitimate": 7
+  },
+  "cl": {
+   "risk": 0.483,
+   "phishing": 149,
+   "legitimate": 157
+  },
+  "click": {
+   "risk": 0.851,
+   "phishing": 68,
+   "legitimate": 2
+  },
+  "cloud": {
+   "risk": 0.951,
+   "phishing": 392,
+   "legitimate": 9
+  },
+  "club": {
+   "risk": 0.93,
+   "phishing": 491,
+   "legitimate": 26
+  },
+  "cm": {
+   "risk": 0.579,
+   "phishing": 14,
+   "legitimate": 5
+  },
+  "cn": {
+   "risk": 0.69,
+   "phishing": 690,
+   "legitimate": 303
+  },
+  "co": {
+   "risk": 0.914,
+   "phishing": 4964,
+   "legitimate": 458
+  },
+  "com": {
+   "risk": 0.389,
+   "phishing": 43769,
+   "legitimate": 68785
+  },
+  "company": {
+   "risk": 0.549,
+   "phishing": 9,
+   "legitimate": 3
+  },
+  "cool": {
+   "risk": 0.656,
+   "phishing": 19,
+   "legitimate": 3
+  },
+  "coop": {
+   "risk": 0.174,
+   "phishing": 1,
+   "legitimate": 34
+  },
+  "cr": {
+   "risk": 0.434,
+   "phishing": 14,
+   "legitimate": 18
+  },
+  "cu": {
+   "risk": 0.238,
+   "phishing": 0,
+   "legitimate": 16
+  },
+  "cx": {
+   "risk": 0.722,
+   "phishing": 29,
+   "legitimate": 3
+  },
+  "cy": {
+   "risk": 0.247,
+   "phishing": 5,
+   "legitimate": 30
+  },
+  "cyou": {
+   "risk": 0.851,
+   "phishing": 57,
+   "legitimate": 0
+  },
+  "cz": {
+   "risk": 0.108,
+   "phishing": 57,
+   "legitimate": 530
+  },
+  "date": {
+   "risk": 0.728,
+   "phishing": 22,
+   "legitimate": 0
+  },
+  "de": {
+   "risk": 0.173,
+   "phishing": 686,
+   "legitimate": 3310
+  },
+  "design": {
+   "risk": 0.321,
+   "phishing": 3,
+   "legitimate": 13
+  },
+  "dev": {
+   "risk": 0.981,
+   "phishing": 2312,
+   "legitimate": 33
+  },
+  "digital": {
+   "risk": 0.794,
+   "phishing": 51,
+   "legitimate": 4
+  },
+  "dk": {
+   "risk": 0.118,
+   "phishing": 34,
+   "legitimate": 308
+  },
+  "do": {
+   "risk": 0.576,
+   "phishing": 30,
+   "legitimate": 17
+  },
+  "ec": {
+   "risk": 0.273,
+   "phishing": 10,
+   "legitimate": 38
+  },
+  "edu": {
+   "risk": 0.007,
+   "phishing": 5,
+   "legitimate": 1856
+  },
+  "ee": {
+   "risk": 0.171,
+   "phishing": 16,
+   "legitimate": 108
+  },
+  "eg": {
+   "risk": 0.385,
+   "phishing": 8,
+   "legitimate": 15
+  },
+  "email": {
+   "risk": 0.743,
+   "phishing": 36,
+   "legitimate": 4
+  },
+  "es": {
+   "risk": 0.188,
+   "phishing": 128,
+   "legitimate": 577
+  },
+  "eu": {
+   "risk": 0.294,
+   "phishing": 285,
+   "legitimate": 695
+  },
+  "eus": {
+   "risk": 0.266,
+   "phishing": 1,
+   "legitimate": 15
+  },
+  "fi": {
+   "risk": 0.08,
+   "phishing": 19,
+   "legitimate": 304
+  },
+  "finance": {
+   "risk": 0.717,
+   "phishing": 23,
+   "legitimate": 1
+  },
+  "fm": {
+   "risk": 0.162,
+   "phishing": 7,
+   "legitimate": 69
+  },
+  "fo": {
+   "risk": 0.448,
+   "phishing": 8,
+   "legitimate": 9
+  },
+  "fr": {
+   "risk": 0.267,
+   "phishing": 492,
+   "legitimate": 1366
+  },
+  "fun": {
+   "risk": 0.961,
+   "phishing": 374,
+   "legitimate": 4
+  },
+  "fund": {
+   "risk": 0.623,
+   "phishing": 12,
+   "legitimate": 1
+  },
+  "ga": {
+   "risk": 0.986,
+   "phishing": 1107,
+   "legitimate": 4
+  },
+  "games": {
+   "risk": 0.339,
+   "phishing": 5,
+   "legitimate": 15
+  },
+  "gd": {
+   "risk": 0.958,
+   "phishing": 324,
+   "legitimate": 3
+  },
+  "ge": {
+   "risk": 0.322,
+   "phishing": 14,
+   "legitimate": 36
+  },
+  "gg": {
+   "risk": 0.517,
+   "phishing": 24,
+   "legitimate": 19
+  },
+  "gh": {
+   "risk": 0.308,
+   "phishing": 1,
+   "legitimate": 10
+  },
+  "gi": {
+   "risk": 0.319,
+   "phishing": 1,
+   "legitimate": 9
+  },
+  "gle": {
+   "risk": 0.771,
+   "phishing": 30,
+   "legitimate": 0
+  },
+  "global": {
+   "risk": 0.331,
+   "phishing": 4,
+   "legitimate": 14
+  },
+  "goog": {
+   "risk": 0.776,
+   "phishing": 31,
+   "legitimate": 0
+  },
+  "gov": {
+   "risk": 0.007,
+   "phishing": 0,
+   "legitimate": 1276
+  },
+  "gp": {
+   "risk": 0.876,
+   "phishing": 79,
+   "legitimate": 1
+  },
+  "gq": {
+   "risk": 0.978,
+   "phishing": 493,
+   "legitimate": 0
+  },
+  "gr": {
+   "risk": 0.138,
+   "phishing": 63,
+   "legitimate": 437
+  },
+  "gs": {
+   "risk": 0.534,
+   "phishing": 8,
+   "legitimate": 3
+  },
+  "gt": {
+   "risk": 0.34,
+   "phishing": 4,
+   "legitimate": 13
+  },
+  "guru": {
+   "risk": 0.53,
+   "phishing": 10,
+   "legitimate": 5
+  },
+  "gy": {
+   "risk": 0.831,
+   "phishing": 77,
+   "legitimate": 6
+  },
+  "health": {
+   "risk": 0.385,
+   "phishing": 3,
+   "legitimate": 7
+  },
+  "hk": {
+   "risk": 0.193,
+   "phishing": 24,
+   "legitimate": 125
+  },
+  "hn": {
+   "risk": 0.359,
+   "phishing": 4,
+   "legitimate": 11
+  },
+  "host": {
+   "risk": 0.827,
+   "phishing": 46,
+   "legitimate": 0
+  },
+  "hr": {
+   "risk": 0.086,
+   "phishing": 8,
+   "legitimate": 165
+  },
+  "ht": {
+   "risk": 0.834,
+   "phishing": 84,
+   "legitimate": 7
+  },
+  "hu": {
+   "risk": 0.213,
+   "phishing": 55,
+   "legitimate": 224
+  },
+  "icu": {
+   "risk": 0.933,
+   "phishing": 151,
+   "legitimate": 0
+  },
+  "id": {
+   "risk": 0.692,
+   "phishing": 560,
+   "legitimate": 242
+  },
+  "ie": {
+   "risk": 0.036,
+   "phishing": 9,
+   "legitimate": 459
+  },
+  "il": {
+   "risk": 0.117,
+   "phishing": 27,
+   "legitimate": 256
+  },
+  "im": {
+   "risk": 0.399,
+   "phishing": 11,
+   "legitimate": 18
+  },
+  "in": {
+   "risk": 0.39,
+   "phishing": 537,
+   "legitimate": 842
+  },
+  "info": {
+   "risk": 0.568,
+   "phishing": 893,
+   "legitimate": 673
+  },
+  "ink": {
+   "risk": 0.746,
+   "phishing": 31,
+   "legitimate": 2
+  },
+  "int": {
+   "risk": 0.14,
+   "phishing": 0,
+   "legitimate": 41
+  },
+  "io": {
+   "risk": 0.895,
+   "phishing": 3769,
+   "legitimate": 432
+  },
+  "ir": {
+   "risk": 0.705,
+   "phishing": 181,
+   "legitimate": 68
+  },
+  "is": {
+   "risk": 0.146,
+   "phishing": 10,
+   "legitimate": 97
+  },
+  "it": {
+   "risk": 0.119,
+   "phishing": 218,
+   "legitimate": 1669
+  },
+  "je": {
+   "risk": 0.486,
+   "phishing": 7,
+   "legitimate": 5
+  },
+  "jm": {
+   "risk": 0.308,
+   "phishing": 1,
+   "legitimate": 10
+  },
+  "jo": {
+   "risk": 0.34,
+   "phishing": 3,
+   "legitimate": 11
+  },
+  "jp": {
+   "risk": 0.065,
+   "phishing": 137,
+   "legitimate": 2082
+  },
+  "ke": {
+   "risk": 0.402,
+   "phishing": 32,
+   "legitimate": 49
+  },
+  "kg": {
+   "risk": 0.448,
+   "phishing": 8,
+   "legitimate": 9
+  },
+  "kh": {
+   "risk": 0.239,
+   "phishing": 1,
+   "legitimate": 19
+  },
+  "kr": {
+   "risk": 0.291,
+   "phishing": 83,
+   "legitimate": 212
+  },
+  "ky": {
+   "risk": 0.276,
+   "phishing": 0,
+   "legitimate": 11
+  },
+  "kz": {
+   "risk": 0.535,
+   "phishing": 46,
+   "legitimate": 36
+  },
+  "la": {
+   "risk": 0.679,
+   "phishing": 39,
+   "legitimate": 11
+  },
+  "land": {
+   "risk": 0.673,
+   "phishing": 17,
+   "legitimate": 1
+  },
+  "lb": {
+   "risk": 0.199,
+   "phishing": 0,
+   "legitimate": 23
+  },
+  "lc": {
+   "risk": 0.836,
+   "phishing": 60,
+   "legitimate": 2
+  },
+  "li": {
+   "risk": 0.661,
+   "phishing": 39,
+   "legitimate": 13
+  },
+  "life": {
+   "risk": 0.738,
+   "phishing": 63,
+   "legitimate": 14
+  },
+  "link": {
+   "risk": 0.987,
+   "phishing": 1455,
+   "legitimate": 8
+  },
+  "live": {
+   "risk": 0.911,
+   "phishing": 292,
+   "legitimate": 18
+  },
+  "lk": {
+   "risk": 0.177,
+   "phishing": 7,
+   "legitimate": 61
+  },
+  "lol": {
+   "risk": 0.767,
+   "phishing": 29,
+   "legitimate": 0
+  },
+  "london": {
+   "risk": 0.33,
+   "phishing": 2,
+   "legitimate": 10
+  },
+  "lr": {
+   "risk": 0.546,
+   "phishing": 10,
+   "legitimate": 4
+  },
+  "lt": {
+   "risk": 0.192,
+   "phishing": 27,
+   "legitimate": 138
+  },
+  "ltd": {
+   "risk": 0.655,
+   "phishing": 17,
+   "legitimate": 2
+  },
+  "lu": {
+   "risk": 0.261,
+   "phishing": 16,
+   "legitimate": 58
+  },
+  "lv": {
+   "risk": 0.276,
+   "phishing": 19,
+   "legitimate": 61
+  },
+  "ly": {
+   "risk": 0.94,
+   "phishing": 247,
+   "legitimate": 5
+  },
+  "ma": {
+   "risk": 0.355,
+   "phishing": 17,
+   "legitimate": 35
+  },
+  "md": {
+   "risk": 0.236,
+   "phishing": 3,
+   "legitimate": 26
+  },
+  "me": {
+   "risk": 0.84,
+   "phishing": 853,
+   "legitimate": 153
+  },
+  "media": {
+   "risk": 0.399,
+   "phishing": 5,
+   "legitimate": 9
+  },
+  "mil": {
+   "risk": 0.027,
+   "phishing": 0,
+   "legitimate": 301
+  },
+  "mk": {
+   "risk": 0.306,
+   "phishing": 4,
+   "legitimate": 17
+  },
+  "ml": {
+   "risk": 0.988,
+   "phishing": 994,
+   "legitimate": 1
+  },
+  "mm": {
+   "risk": 0.308,
+   "phishing": 1,
+   "legitimate": 10
+  },
+  "mn": {
+   "risk": 0.44,
+   "phishing": 13,
+   "legitimate": 16
+  },
+  "mobi": {
+   "risk": 0.411,
+   "phishing": 26,
+   "legitimate": 38
+  },
+  "mom": {
+   "risk": 0.74,
+   "phishing": 24,
+   "legitimate": 0
+  },
+  "ms": {
+   "risk": 0.74,
+   "phishing": 24,
+   "legitimate": 0
+  },
+  "mt": {
+   "risk": 0.53,
+   "phishing": 28,
+   "legitimate": 21
+  },
+  "mu": {
+   "risk": 0.357,
+   "phishing": 5,
+   "legitimate": 13
+  },
+  "mv": {
+   "risk": 0.268,
+   "phishing": 0,
+   "legitimate": 12
+  },
+  "mx": {
+   "risk": 0.435,
+   "phishing": 217,
+   "legitimate": 281
+  },
+  "my": {
+   "risk": 0.23,
+   "phishing": 46,
+   "legitimate": 171
+  },
+  "mz": {
+   "risk": 0.488,
+   "phishing": 9,
+   "legitimate": 7
+  },
+  "na": {
+   "risk": 0.22,
+   "phishing": 0,
+   "legitimate": 19
+  },
+  "name": {
+   "risk": 0.654,
+   "phishing": 32,
+   "legitimate": 10
+  },
+  "net": {
+   "risk": 0.437,
+   "phishing": 3099,
+   "legitimate": 3998
+  },
+  "network": {
+   "risk": 0.835,
+   "phishing": 115,
+   "legitimate": 13
+  },
+  "news": {
+   "risk": 0.29,
+   "phishing": 10,
+   "legitimate": 34
+  },
+  "ng": {
+   "risk": 0.492,
+   "phishing": 76,
+   "legitimate": 76
+  },
+  "nl": {
+   "risk": 0.114,
+   "phishing": 191,
+   "legitimate": 1536
+  },
+  "no": {
+   "risk": 0.051,
+   "phishing": 13,
+   "legitimate": 389
+  },
+  "np": {
+   "risk": 0.34,
+   "phishing": 19,
+   "legitimate": 42
+  },
+  "nu": {
+   "risk": 0.526,
+   "phishing": 43,
+   "legitimate": 35
+  },
+  "nyc": {
+   "risk": 0.245,
+   "phishing": 1,
+   "legitimate": 18
+  },
+  "nz": {
+   "risk": 0.11,
+   "phishing": 61,
+   "legitimate": 553
+  },
+  "om": {
+   "risk": 0.268,
+   "phishing": 0,
+   "legitimate": 12
+  },
+  "one": {
+   "risk": 0.81,
+   "phishing": 87,
+   "legitimate": 11
+  },
+  "online": {
+   "risk": 0.901,
+   "phishing": 277,
+   "legitimate": 20
+  },
+  "org": {
+   "risk": 0.121,
+   "phishing": 2269,
+   "legitimate": 16524
+  },
+  "pa": {
+   "risk": 0.299,
+   "phishing": 1,
+   "legitimate": 11
+  },
+  "page": {
+   "risk": 0.978,
+   "phishing": 490,
+   "legitimate": 0
+  },
+  "pe": {
+   "risk": 0.572,
+   "phishing": 67,
+   "legitimate": 45
+  },
+  "pet": {
+   "risk": 0.646,
+   "phishing": 16,
+   "legitimate": 2
+  },
+  "ph": {
+   "risk": 0.195,
+   "phishing": 26,
+   "legitimate": 131
+  },
+  "pics": {
+   "risk": 0.646,
+   "phishing": 16,
+   "legitimate": 2
+  },
+  "pk": {
+   "risk": 0.414,
+   "phishing": 75,
+   "legitimate": 107
+  },
+  "pl": {
+   "risk": 0.596,
+   "phishing": 801,
+   "legitimate": 538
+  },
+  "pm": {
+   "risk": 0.656,
+   "phishing": 19,
+   "legitimate": 3
+  },
+  "press": {
+   "risk": 0.502,
+   "phishing": 7,
+   "legitimate": 4
+  },
+  "pro": {
+   "risk": 0.754,
+   "phishing": 91,
+   "legitimate": 21
+  },
+  "ps": {
+   "risk": 0.331,
+   "phishing": 6,
+   "legitimate": 18
+  },
+  "pt": {
+   "risk": 0.238,
+   "phishing": 63,
+   "legitimate": 218
+  },
+  "pw": {
+   "risk": 0.878,
+   "phishing": 95,
+   "legitimate": 3
+  },
+  "py": {
+   "risk": 0.437,
+   "phishing": 12,
+   "legitimate": 15
+  },
+  "qa": {
+   "risk": 0.408,
+   "phishing": 9,
+   "legitimate": 14
+  },
+  "re": {
+   "risk": 0.677,
+   "phishing": 28,
+   "legitimate": 6
+  },
+  "ro": {
+   "risk": 0.294,
+   "phishing": 159,
+   "legitimate": 390
+  },
+  "rs": {
+   "risk": 0.157,
+   "phishing": 20,
+   "legitimate": 142
+  },
+  "ru": {
+   "risk": 0.768,
+   "phishing": 2983,
+   "legitimate": 892
+  },
+  "run": {
+   "risk": 0.575,
+   "phishing": 11,
+   "legitimate": 3
+  },
+  "sa": {
+   "risk": 0.332,
+   "phishing": 12,
+   "legitimate": 30
+  },
+  "sbs": {
+   "risk": 0.728,
+   "phishing": 22,
+   "legitimate": 0
+  },
+  "scot": {
+   "risk": 0.214,
+   "phishing": 0,
+   "legitimate": 20
+  },
+  "se": {
+   "risk": 0.182,
+   "phishing": 123,
+   "legitimate": 581
+  },
+  "services": {
+   "risk": 0.697,
+   "phishing": 20,
+   "legitimate": 1
+  },
+  "sg": {
+   "risk": 0.162,
+   "phishing": 39,
+   "legitimate": 235
+  },
+  "sh": {
+   "risk": 0.813,
+   "phishing": 98,
+   "legitimate": 13
+  },
+  "shop": {
+   "risk": 0.935,
+   "phishing": 385,
+   "legitimate": 16
+  },
+  "si": {
+   "risk": 0.139,
+   "phishing": 18,
+   "legitimate": 153
+  },
+  "site": {
+   "risk": 0.989,
+   "phishing": 1477,
+   "legitimate": 5
+  },
+  "sk": {
+   "risk": 0.131,
+   "phishing": 20,
+   "legitimate": 178
+  },
+  "sn": {
+   "risk": 0.529,
+   "phishing": 11,
+   "legitimate": 6
+  },
+  "so": {
+   "risk": 0.485,
+   "phishing": 6,
+   "legitimate": 4
+  },
+  "social": {
+   "risk": 0.611,
+   "phishing": 11,
+   "legitimate": 1
+  },
+  "space": {
+   "risk": 0.775,
+   "phishing": 62,
+   "legitimate": 9
+  },
+  "st": {
+   "risk": 0.616,
+   "phishing": 21,
+   "legitimate": 7
+  },
+  "store": {
+   "risk": 0.746,
+   "phishing": 66,
+   "legitimate": 14
+  },
+  "stream": {
+   "risk": 0.699,
+   "phishing": 18,
+   "legitimate": 0
+  },
+  "studio": {
+   "risk": 0.381,
+   "phishing": 4,
+   "legitimate": 9
+  },
+  "su": {
+   "risk": 0.761,
+   "phishing": 66,
+   "legitimate": 12
+  },
+  "sv": {
+   "risk": 0.278,
+   "phishing": 2,
+   "legitimate": 16
+  },
+  "systems": {
+   "risk": 0.534,
+   "phishing": 8,
+   "legitimate": 3
+  },
+  "tc": {
+   "risk": 0.693,
+   "phishing": 24,
+   "legitimate": 3
+  },
+  "tech": {
+   "risk": 0.657,
+   "phishing": 65,
+   "legitimate": 27
+  },
+  "th": {
+   "risk": 0.277,
+   "phishing": 28,
+   "legitimate": 84
+  },
+  "tk": {
+   "risk": 0.933,
+   "phishing": 207,
+   "legitimate": 4
+  },
+  "tl": {
+   "risk": 0.68,
+   "phishing": 20,
+   "legitimate": 2
+  },
+  "tn": {
+   "risk": 0.641,
+   "phishing": 28,
+   "legitimate": 9
+  },
+  "to": {
+   "risk": 0.751,
+   "phishing": 83,
+   "legitimate": 19
+  },
+  "today": {
+   "risk": 0.594,
+   "phishing": 17,
+   "legitimate": 6
+  },
+  "tokyo": {
+   "risk": 0.475,
+   "phishing": 9,
+   "legitimate": 8
+  },
+  "tools": {
+   "risk": 0.452,
+   "phishing": 5,
+   "legitimate": 5
+  },
+  "top": {
+   "risk": 0.994,
+   "phishing": 2327,
+   "legitimate": 2
+  },
+  "tr": {
+   "risk": 0.268,
+   "phishing": 94,
+   "legitimate": 269
+  },
+  "travel": {
+   "risk": 0.16,
+   "phishing": 2,
+   "legitimate": 44
+  },
+  "tv": {
+   "risk": 0.18,
+   "phishing": 45,
+   "legitimate": 232
+  },
+  "tw": {
+   "risk": 0.198,
+   "phishing": 40,
+   "legitimate": 185
+  },
+  "tz": {
+   "risk": 0.308,
+   "phishing": 13,
+   "legitimate": 37
+  },
+  "ua": {
+   "risk": 0.552,
+   "phishing": 195,
+   "legitimate": 154
+  },
+  "ug": {
+   "risk": 0.361,
+   "phishing": 21,
+   "legitimate": 41
+  },
+  "uk": {
+   "risk": 0.052,
+   "phishing": 322,
+   "legitimate": 6073
+  },
+  "us": {
+   "risk": 0.389,
+   "phishing": 430,
+   "legitimate": 678
+  },
+  "uy": {
+   "risk": 0.287,
+   "phishing": 13,
+   "legitimate": 42
+  },
+  "uz": {
+   "risk": 0.371,
+   "phishing": 7,
+   "legitimate": 15
+  },
+  "vc": {
+   "risk": 0.33,
+   "phishing": 3,
+   "legitimate": 12
+  },
+  "ve": {
+   "risk": 0.321,
+   "phishing": 3,
+   "legitimate": 13
+  },
+  "vg": {
+   "risk": 0.689,
+   "phishing": 19,
+   "legitimate": 1
+  },
+  "vip": {
+   "risk": 0.848,
+   "phishing": 72,
+   "legitimate": 3
+  },
+  "vn": {
+   "risk": 0.557,
+   "phishing": 149,
+   "legitimate": 114
+  },
+  "vu": {
+   "risk": 0.72,
+   "phishing": 26,
+   "legitimate": 2
+  },
+  "wales": {
+   "risk": 0.209,
+   "phishing": 0,
+   "legitimate": 21
+  },
+  "website": {
+   "risk": 0.8,
+   "phishing": 53,
+   "legitimate": 4
+  },
+  "wiki": {
+   "risk": 0.452,
+   "phishing": 5,
+   "legitimate": 5
+  },
+  "win": {
+   "risk": 0.883,
+   "phishing": 85,
+   "legitimate": 1
+  },
+  "work": {
+   "risk": 0.935,
+   "phishing": 243,
+   "legitimate": 6
+  },
+  "world": {
+   "risk": 0.561,
+   "phishing": 24,
+   "legitimate": 14
+  },
+  "ws": {
+   "risk": 0.883,
+   "phishing": 319,
+   "legitimate": 32
+  },
+  "xn--p1ai": {
+   "risk": 0.792,
+   "phishing": 35,
+   "legitimate": 0
+  },
+  "xyz": {
+   "risk": 0.976,
+   "phishing": 1448,
+   "legitimate": 25
+  },
+  "za": {
+   "risk": 0.264,
+   "phishing": 131,
+   "legitimate": 377
+  },
+  "zm": {
+   "risk": 0.381,
+   "phishing": 4,
+   "legitimate": 9
+  },
+  "zone": {
+   "risk": 0.634,
+   "phishing": 13,
+   "legitimate": 1
+  },
+  "zw": {
+   "risk": 0.45,
+   "phishing": 18,
+   "legitimate": 21
+  }
+ }
+}

@@ -1,0 +1,576 @@
+{
+  "schema_version": "1.0.0",
+  "domain": "kx72-secure.top",
+  "input": {
+    "raw": "https://kx72-secure.top/",
+    "display": "kx72-secure.top",
+    "source": "gallery"
+  },
+  "owner": "kx72-secure.top",
+  "target_brand": {
+    "id": "sbi",
+    "name": "State Bank of India"
+  },
+  "closeness": 0.08,
+  "risk_score": 0.99,
+  "confidence": "high",
+  "label": "phishing",
+  "reason": "A random-looking name hosting a near-exact copy of SBI's login page that sends the password to Telegram.",
+  "hard_rule": {
+    "id": "H2_brand_claim_foreign_credentials",
+    "forces": "phishing",
+    "description": "The page claims a brand, the owner isn't in that brand's family, and the credentials leave to a domain outside it.",
+    "evidence_ids": [
+      "E10",
+      "E12",
+      "E13"
+    ],
+    "also_fired": [
+      "H4_direct_exfil_channel"
+    ]
+  },
+  "counterfactual": {
+    "change": "judged by the name only (Stage 3 evidence removed)",
+    "undone_evidence_ids": [
+      "E8",
+      "E9",
+      "E10",
+      "E11",
+      "E12",
+      "E13"
+    ],
+    "label": "benign",
+    "risk_score": 0.15,
+    "summary": "Would be BENIGN judged by the name alone, which is all a name-only tool ever sees."
+  },
+  "timings_ms": {
+    "quick": 13,
+    "standard": 720,
+    "deep": 4700,
+    "total": 5438
+  },
+  "stages": [
+    {
+      "stage": "quick",
+      "status": "completed",
+      "tools": [
+        "address_reader",
+        "family_verifier",
+        "trick_detector"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "provisional": {
+        "label": "benign",
+        "risk_score": 0.15,
+        "reason": "Benign by name: it resembles no brand. (Every name-only tool stops here.)"
+      }
+    },
+    {
+      "stage": "standard",
+      "status": "completed",
+      "tools": [
+        "risk_model",
+        "page_probe"
+      ],
+      "evidence_ids": [
+        "E6",
+        "E7"
+      ],
+      "provisional": {
+        "label": "suspicious",
+        "risk_score": 0.52,
+        "reason": "Suspicious: no brand in the name, but a live login form."
+      }
+    },
+    {
+      "stage": "deep",
+      "status": "completed",
+      "tools": [
+        "page_inspector",
+        "vision_ai",
+        "credential_tracker"
+      ],
+      "evidence_ids": [
+        "E8",
+        "E9",
+        "E10",
+        "E11",
+        "E12",
+        "E13"
+      ],
+      "provisional": {
+        "label": "phishing",
+        "risk_score": 0.99,
+        "reason": "A random-looking name hosting a near-exact copy of SBI's login page that sends the password to Telegram."
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "tool": "address_reader",
+      "stage": "quick",
+      "criterion": "C1",
+      "finding": "owner_resolved",
+      "points_to": "neutral",
+      "strength": "strong",
+      "score": 0,
+      "target_brand": null,
+      "summary": "Real owner is kx72-secure.top (public suffix 'top').",
+      "details": {
+        "owner": "kx72-secure.top",
+        "public_suffix": "top",
+        "private_suffix": false
+      },
+      "duration_ms": 2
+    },
+    {
+      "evidence_id": "E2",
+      "tool": "address_reader",
+      "stage": "quick",
+      "criterion": "C3",
+      "finding": "single_script",
+      "points_to": "neutral",
+      "strength": "strong",
+      "score": 0,
+      "target_brand": null,
+      "summary": "Plain ASCII: no hidden letters.",
+      "details": {
+        "scripts": [
+          "Latin"
+        ]
+      },
+      "duration_ms": 2
+    },
+    {
+      "evidence_id": "E3",
+      "tool": "family_verifier",
+      "stage": "quick",
+      "criterion": "C2",
+      "finding": "no_brand_to_verify",
+      "points_to": "neutral",
+      "strength": "strong",
+      "score": 0,
+      "target_brand": null,
+      "summary": "The name points to no protected brand, so there is no family to check.",
+      "details": {
+        "proofs_checked": [],
+        "proofs_matched": []
+      },
+      "duration_ms": 1
+    },
+    {
+      "evidence_id": "E4",
+      "tool": "trick_detector",
+      "stage": "quick",
+      "criterion": "C4",
+      "finding": "far_from_all_brands",
+      "points_to": "genuine",
+      "strength": "medium",
+      "score": 0.9,
+      "target_brand": null,
+      "summary": "Far from every protected brand (best: SBI at 0.08).",
+      "details": {
+        "per_brand": {
+          "sbi": 0.08,
+          "paytm": 0.05
+        }
+      },
+      "duration_ms": 10
+    },
+    {
+      "evidence_id": "E5",
+      "tool": "trick_detector",
+      "stage": "quick",
+      "criterion": "C6",
+      "finding": "abused_tld",
+      "points_to": "phishing",
+      "strength": "weak",
+      "score": 0.4,
+      "target_brand": null,
+      "summary": "'.top' is a cheap ending that is common in phishing.",
+      "details": {
+        "tld": "top"
+      },
+      "duration_ms": 10
+    },
+    {
+      "evidence_id": "E6",
+      "tool": "risk_model",
+      "stage": "standard",
+      "criterion": "C8",
+      "finding": "ml_risk",
+      "points_to": "phishing",
+      "strength": "weak",
+      "score": 0.63,
+      "target_brand": null,
+      "summary": "ML risk 0.63 (supporting signal only).",
+      "details": {
+        "probability": 0.63
+      },
+      "duration_ms": 37
+    },
+    {
+      "evidence_id": "E7",
+      "tool": "page_probe",
+      "stage": "standard",
+      "criterion": "C9",
+      "finding": "live_login_form",
+      "points_to": "phishing",
+      "strength": "medium",
+      "score": 0.7,
+      "target_brand": null,
+      "summary": "A live page with a login form.",
+      "details": {
+        "status": "live",
+        "http_status": 200,
+        "has_login_form": true
+      },
+      "duration_ms": 720
+    },
+    {
+      "evidence_id": "E8",
+      "tool": "page_inspector",
+      "stage": "deep",
+      "criterion": "C10",
+      "finding": "visual_match",
+      "points_to": "phishing",
+      "strength": "medium",
+      "score": 0.96,
+      "target_brand": {
+        "id": "sbi",
+        "name": "State Bank of India"
+      },
+      "summary": "Screenshot matches the saved SBI login page at 96%.",
+      "details": {
+        "ssim": 0.96,
+        "phash_distance": 3,
+        "artifacts": [
+          {
+            "kind": "heatmap",
+            "path": "deep/kx72-secure.top_heatmap.png",
+            "caption": "Differences vs genuine SBI login"
+          }
+        ]
+      },
+      "duration_ms": 2300
+    },
+    {
+      "evidence_id": "E9",
+      "tool": "page_inspector",
+      "stage": "deep",
+      "criterion": "C11",
+      "finding": "form_target_changed",
+      "points_to": "phishing",
+      "strength": "medium",
+      "score": 0.85,
+      "target_brand": {
+        "id": "sbi",
+        "name": "State Bank of India"
+      },
+      "summary": "Same structure as SBI's page, but the form posts to /auth.php on kx72-secure.top.",
+      "details": {
+        "suspect_action": "https://kx72-secure.top/auth.php"
+      },
+      "duration_ms": 2300
+    },
+    {
+      "evidence_id": "E10",
+      "tool": "vision_ai",
+      "stage": "deep",
+      "criterion": "C12",
+      "finding": "claimed_brand_mismatch",
+      "points_to": "phishing",
+      "strength": "strong",
+      "score": 0.95,
+      "target_brand": {
+        "id": "sbi",
+        "name": "State Bank of India"
+      },
+      "summary": "The page claims to be State Bank of India, but its owner isn't in SBI's family.",
+      "details": {
+        "claimed_brand": "State Bank of India",
+        "model": "gemini-flash",
+        "temperature": 0
+      },
+      "duration_ms": 2800
+    },
+    {
+      "evidence_id": "E11",
+      "tool": "vision_ai",
+      "stage": "deep",
+      "criterion": "C13",
+      "finding": "asks_sensitive",
+      "points_to": "phishing",
+      "strength": "medium",
+      "score": 0.85,
+      "target_brand": {
+        "id": "sbi",
+        "name": "State Bank of India"
+      },
+      "summary": "Asks for username, password and OTP.",
+      "details": {
+        "asks_for": [
+          "username",
+          "password",
+          "otp"
+        ]
+      },
+      "duration_ms": 2800
+    },
+    {
+      "evidence_id": "E12",
+      "tool": "credential_tracker",
+      "stage": "deep",
+      "criterion": "C14",
+      "finding": "credentials_to_foreign_domain",
+      "points_to": "phishing",
+      "strength": "strong",
+      "score": 0.9,
+      "target_brand": {
+        "id": "sbi",
+        "name": "State Bank of India"
+      },
+      "summary": "Dummy credentials were POSTed to kx72-secure.top/auth.php, outside SBI's family.",
+      "details": {
+        "first_hop": "https://kx72-secure.top/auth.php",
+        "dummy_credentials": true,
+        "requests_captured": 6
+      },
+      "duration_ms": 4700
+    },
+    {
+      "evidence_id": "E13",
+      "tool": "credential_tracker",
+      "stage": "deep",
+      "criterion": "C14",
+      "finding": "direct_exfil_telegram",
+      "points_to": "phishing",
+      "strength": "strong",
+      "score": 0.98,
+      "target_brand": {
+        "id": "sbi",
+        "name": "State Bank of India"
+      },
+      "summary": "The page also sent the data straight to api.telegram.org (bot token redacted; Telegram was never called by us).",
+      "details": {
+        "channel": "telegram",
+        "token_redacted": "12345****:[REDACTED]",
+        "blocked_by_sandbox": true
+      },
+      "duration_ms": 4700
+    }
+  ],
+  "trace": [
+    {
+      "step": 1,
+      "t_ms": 0,
+      "kind": "case_opened",
+      "message": "New case: kx72-secure.top. Single investigation, so every stage runs and the verdict updates after each one."
+    },
+    {
+      "step": 2,
+      "t_ms": 1,
+      "kind": "tool",
+      "stage": "quick",
+      "tool": "address_reader",
+      "args": {
+        "domain": "kx72-secure.top"
+      },
+      "duration_ms": 2,
+      "evidence_ids": [
+        "E1",
+        "E2"
+      ],
+      "risk_before": 0.0,
+      "risk_after": 0.05,
+      "message": "Address Reader: ordinary name."
+    },
+    {
+      "step": 3,
+      "t_ms": 3,
+      "kind": "tool",
+      "stage": "quick",
+      "tool": "family_verifier",
+      "args": {
+        "owner": "kx72-secure.top"
+      },
+      "duration_ms": 1,
+      "evidence_ids": [
+        "E3"
+      ],
+      "risk_before": 0.05,
+      "risk_after": 0.05,
+      "message": "Family Verifier: nothing to verify."
+    },
+    {
+      "step": 4,
+      "t_ms": 4,
+      "kind": "tool",
+      "stage": "quick",
+      "tool": "trick_detector",
+      "args": {
+        "domain": "kx72-secure.top",
+        "owner": "kx72-secure.top"
+      },
+      "duration_ms": 10,
+      "evidence_ids": [
+        "E4",
+        "E5"
+      ],
+      "risk_before": 0.05,
+      "risk_after": 0.15,
+      "message": "Trick Detector: no naming trick."
+    },
+    {
+      "step": 5,
+      "t_ms": 14,
+      "kind": "provisional_verdict",
+      "stage": "quick",
+      "label": "benign",
+      "risk_after": 0.15,
+      "message": "Benign by name: it resembles no brand. (Every name-only tool stops here.)"
+    },
+    {
+      "step": 6,
+      "t_ms": 14,
+      "kind": "policy",
+      "message": "Single investigation: continue to Stage 2 anyway."
+    },
+    {
+      "step": 7,
+      "t_ms": 15,
+      "kind": "tool",
+      "stage": "standard",
+      "tool": "risk_model",
+      "args": {
+        "domain": "kx72-secure.top"
+      },
+      "duration_ms": 37,
+      "evidence_ids": [
+        "E6"
+      ],
+      "risk_before": 0.15,
+      "risk_after": 0.3,
+      "message": "Risk Model: moderate ML risk."
+    },
+    {
+      "step": 8,
+      "t_ms": 15,
+      "kind": "tool",
+      "stage": "standard",
+      "tool": "page_probe",
+      "args": {
+        "domain": "kx72-secure.top"
+      },
+      "duration_ms": 720,
+      "evidence_ids": [
+        "E7"
+      ],
+      "risk_before": 0.3,
+      "risk_after": 0.52,
+      "message": "Page Probe: live login form."
+    },
+    {
+      "step": 9,
+      "t_ms": 735,
+      "kind": "provisional_verdict",
+      "stage": "standard",
+      "label": "suspicious",
+      "risk_after": 0.52,
+      "message": "Suspicious: no brand in the name, but a live login form."
+    },
+    {
+      "step": 10,
+      "t_ms": 735,
+      "kind": "policy",
+      "message": "No brand signal, but a login page exists: go to Stage 3 (Deep). It could be a brand-less clone."
+    },
+    {
+      "step": 11,
+      "t_ms": 736,
+      "kind": "tool",
+      "stage": "deep",
+      "tool": "page_inspector",
+      "args": {
+        "url": "https://kx72-secure.top/",
+        "genuine_snapshot": "sbi_login"
+      },
+      "duration_ms": 2300,
+      "evidence_ids": [
+        "E8",
+        "E9"
+      ],
+      "risk_before": 0.52,
+      "risk_after": 0.8,
+      "message": "Page Inspector: a copy of SBI's login page."
+    },
+    {
+      "step": 12,
+      "t_ms": 736,
+      "kind": "tool",
+      "stage": "deep",
+      "tool": "vision_ai",
+      "args": {
+        "screenshot": "deep/kx72-secure.top.png"
+      },
+      "duration_ms": 2800,
+      "evidence_ids": [
+        "E10",
+        "E11"
+      ],
+      "risk_before": 0.8,
+      "risk_after": 0.92,
+      "message": "Vision AI: claims SBI."
+    },
+    {
+      "step": 13,
+      "t_ms": 736,
+      "kind": "tool",
+      "stage": "deep",
+      "tool": "credential_tracker",
+      "args": {
+        "url": "https://kx72-secure.top/"
+      },
+      "duration_ms": 4700,
+      "evidence_ids": [
+        "E12",
+        "E13"
+      ],
+      "risk_before": 0.92,
+      "risk_after": 0.99,
+      "message": "Credential Tracker: the password goes to the page's owner and to Telegram."
+    },
+    {
+      "step": 14,
+      "t_ms": 5437,
+      "kind": "hard_rule",
+      "evidence_ids": [
+        "E10",
+        "E12",
+        "E13"
+      ],
+      "message": "Hard rule fired: H2_brand_claim_foreign_credentials, H4_direct_exfil_channel. The page claims a brand, the owner isn't in that brand's family, and the credentials leave to a domain outside it."
+    },
+    {
+      "step": 15,
+      "t_ms": 5438,
+      "kind": "final_verdict",
+      "label": "phishing",
+      "risk_before": 0.99,
+      "risk_after": 0.99,
+      "message": "PHISHING: A random-looking name hosting a near-exact copy of SBI's login page that sends the password to Telegram."
+    }
+  ],
+  "meta": {
+    "generated_at": "2026-11-05T10:00:00+05:30",
+    "engine_version": "0.0.1-mock",
+    "mock": true
+  }
+}

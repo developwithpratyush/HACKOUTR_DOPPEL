@@ -1,0 +1,24 @@
+{
+ "host": "www.blog.google",
+ "brand": "google",
+ "fetched_at": "2026-11-06T00:18:45Z",
+ "source": "live_tls",
+ "cert": {
+  "sha256": "a94f4f3d4e0d9b667b923e86c53e18b850b54955bd42999badb7669e42b4007a",
+  "subject": {
+   "cn": "www.blog.google",
+   "o": null,
+   "c": null
+  },
+  "issuer": {
+   "cn": "WR3",
+   "o": "Google Trust Services"
+  },
+  "sans": [
+   "www.blog.google"
+  ],
+  "not_before": "2026-09-22T23:27:12Z",
+  "not_after": "2026-12-22T00:15:42Z",
+  "validation": "DV"
+ }
+}

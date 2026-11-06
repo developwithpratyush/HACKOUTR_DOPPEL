@@ -1,0 +1,27 @@
+{
+ "host": "hdfc.bank.in",
+ "brand": "hdfc",
+ "fetched_at": "2026-11-06T00:18:16Z",
+ "source": "live_tls",
+ "cert": {
+  "sha256": "26df22acf0fd768c68bc4d96ef49248002a292f0505cdfbe887221dd390fef5b",
+  "subject": {
+   "cn": "www.hdfc.bank.in",
+   "o": "Hdfc Bank Limited",
+   "c": "IN"
+  },
+  "issuer": {
+   "cn": "GeoTrust TLS RSA CA G1",
+   "o": "DigiCert Inc"
+  },
+  "sans": [
+   "www.hdfc.bank.in",
+   "hdfc.bank.in",
+   "hdfcbank.com",
+   "www.hdfcbank.com"
+  ],
+  "not_before": "2026-07-01T00:00:00Z",
+  "not_after": "2027-01-15T23:59:59Z",
+  "validation": "OV"
+ }
+}

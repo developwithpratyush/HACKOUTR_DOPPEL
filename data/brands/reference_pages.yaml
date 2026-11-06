@@ -1,0 +1,19 @@
+# Genuine reference pages for the Page Inspector (P8, C10/C11) and the Vision AI accuracy set.
+# One page per brand: the page a phishing kit for that brand copies (usually the login or payment page).
+#
+# Rules:
+# - Every URL's host must be PROVEN genuine by the Family Verifier (H1). scripts/data/snapshot_genuine.py
+#   refuses any other host, so this file can't be used to visit a look-alike.
+# - Snapshots (screenshots, DOM, HAR) are written to data/snapshots/ (gitignored; brand pages are the brands'
+#   content) and rebuilt with: .venv/Scripts/python.exe scripts/data/snapshot_genuine.py
+# - "page" says what kind of page it is, for the clone builder (demo/fixtures) and the VLM labels.
+schema_version: 1
+pages:
+  sbi:        {url: "https://yonoretail.sbi.bank.in/registration/welcome?srcChn=RINB", page: login}   # onlinesbi's LOGIN button
+  hdfc:       {url: "https://www.hdfc.bank.in/", page: home}
+  icici:      {url: "https://www.icici.bank.in/", page: home}
+  paytm:      {url: "https://paytm.com/", page: home}
+  india_post: {url: "https://www.indiapost.gov.in/", page: home}
+  parivahan:  {url: "https://echallan.parivahan.gov.in/index/accused-challan", page: payment}
+  income_tax: {url: "https://www.incometax.gov.in/iec/foportal/", page: home}
+  google:     {url: "https://accounts.google.com/", page: login}

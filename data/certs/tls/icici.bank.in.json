@@ -1,0 +1,25 @@
+{
+ "host": "icici.bank.in",
+ "brand": "icici",
+ "fetched_at": "2026-11-06T00:18:17Z",
+ "source": "live_tls",
+ "cert": {
+  "sha256": "42b8ab6bf717a638330ac93d0c6f88560cb45ea0d1b468ba3d35656b4d875a5e",
+  "subject": {
+   "cn": "www.icici.bank.in",
+   "o": "ICICI Bank Limited",
+   "c": "IN"
+  },
+  "issuer": {
+   "cn": "Sectigo Public Server Authentication CA OV R36",
+   "o": "Sectigo Limited"
+  },
+  "sans": [
+   "www.icici.bank.in",
+   "icici.bank.in"
+  ],
+  "not_before": "2026-09-11T00:00:00Z",
+  "not_after": "2027-03-28T23:59:59Z",
+  "validation": "OV"
+ }
+}

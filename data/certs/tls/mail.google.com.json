@@ -1,0 +1,25 @@
+{
+ "host": "mail.google.com",
+ "brand": "google",
+ "fetched_at": "2026-11-06T00:18:48Z",
+ "source": "live_tls",
+ "cert": {
+  "sha256": "54302fc1606007c34de493f9f74c7a9130d93aaa46050d0290d7d4229780e79f",
+  "subject": {
+   "cn": "mail.google.com",
+   "o": null,
+   "c": null
+  },
+  "issuer": {
+   "cn": "WE2",
+   "o": "Google Trust Services"
+  },
+  "sans": [
+   "mail.google.com",
+   "inbox.google.com"
+  ],
+  "not_before": "2026-10-07T19:09:54Z",
+  "not_after": "2026-12-30T19:09:53Z",
+  "validation": "DV"
+ }
+}

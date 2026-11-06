@@ -1,0 +1,664 @@
+{
+  "schema_version": "1.0.0",
+  "domain": "echallan.parivahan.gov.in.pay-fine.icu",
+  "input": {
+    "raw": "https://echallan.parivahan.gov.in.pay-fine.icu/challan",
+    "display": "echallan.parivahan.gov.in.pay-fine.icu",
+    "source": "gallery"
+  },
+  "owner": "pay-fine.icu",
+  "target_brand": {
+    "id": "parivahan",
+    "name": "Parivahan / e-Challan"
+  },
+  "closeness": 0.9,
+  "risk_score": 0.98,
+  "confidence": "high",
+  "label": "phishing",
+  "reason": "Starts with the real e-Challan address but is owned by pay-fine.icu, copies the payment page and accepts any card.",
+  "hard_rule": {
+    "id": "H2_brand_claim_foreign_credentials",
+    "forces": "phishing",
+    "description": "The page claims a brand, the owner isn't in that brand's family, and the credentials leave to a domain outside it.",
+    "evidence_ids": [
+      "E12",
+      "E14",
+      "E15"
+    ],
+    "also_fired": [
+      "H3_accepts_any_credentials"
+    ]
+  },
+  "counterfactual": {
+    "change": "page rejects fake details and posts to echallan.parivahan.gov.in",
+    "undone_evidence_ids": [
+      "E11",
+      "E14",
+      "E15"
+    ],
+    "label": "needs_review",
+    "risk_score": 0.66,
+    "summary": "Would only drop to NEEDS REVIEW if the page rejected fake details and sent data to the real portal: the name alone is already high risk."
+  },
+  "timings_ms": {
+    "quick": 16,
+    "standard": 760,
+    "deep": 5100,
+    "total": 5880
+  },
+  "stages": [
+    {
+      "stage": "quick",
+      "status": "completed",
+      "tools": [
+        "address_reader",
+        "family_verifier",
+        "trick_detector"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "provisional": {
+        "label": "suspicious",
+        "risk_score": 0.86,
+        "reason": "Suspicious: disguised as the e-Challan portal."
+      }
+    },
+    {
+      "stage": "standard",
+      "status": "completed",
+      "tools": [
+        "human_eye_renderer",
+        "risk_model",
+        "page_probe"
+      ],
+      "evidence_ids": [
+        "E7",
+        "E8",
+        "E9"
+      ],
+      "provisional": {
+        "label": "suspicious",
+        "risk_score": 0.91,
+        "reason": "Very suspicious: reads as the real portal, and a live payment page exists."
+      }
+    },
+    {
+      "stage": "deep",
+      "status": "completed",
+      "tools": [
+        "page_inspector",
+        "vision_ai",
+        "credential_tracker"
+      ],
+      "evidence_ids": [
+        "E10",
+        "E11",
+        "E12",
+        "E13",
+        "E14",
+        "E15"
+      ],
+      "provisional": {
+        "label": "phishing",
+        "risk_score": 0.98,
+        "reason": "Starts with the real e-Challan address but is owned by pay-fine.icu, copies the payment page and accepts any card."
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "tool": "address_reader",
+      "stage": "quick",
+      "criterion": "C1",
+      "finding": "owner_differs",
+      "points_to": "phishing",
+      "strength": "strong",
+      "score": 0.85,
+      "target_brand": null,
+      "summary": "Real owner is pay-fine.icu. 'echallan.parivahan.gov.in' is only a sub-part the attacker chose.",
+      "details": {
+        "owner": "pay-fine.icu",
+        "public_suffix": "icu",
+        "private_suffix": false,
+        "subdomain_labels": [
+          "echallan",
+          "parivahan",
+          "gov",
+          "in"
+        ],
+        "embedded_suffix": "gov.in"
+      },
+      "duration_ms": 3
+    },
+    {
+      "evidence_id": "E2",
+      "tool": "address_reader",
+      "stage": "quick",
+      "criterion": "C3",
+      "finding": "single_script",
+      "points_to": "neutral",
+      "strength": "strong",
+      "score": 0,
+      "target_brand": null,
+      "summary": "Plain ASCII: no hidden letters.",
+      "details": {
+        "scripts": [
+          "Latin"
+        ]
+      },
+      "duration_ms": 3
+    },
+    {
+      "evidence_id": "E3",
+      "tool": "family_verifier",
+      "stage": "quick",
+      "criterion": "C2",
+      "finding": "imitates_trust_signal",
+      "points_to": "phishing",
+      "strength": "strong",
+      "score": 0.85,
+      "target_brand": {
+        "id": "parivahan",
+        "name": "Parivahan / e-Challan"
+      },
+      "summary": "Borrows the gov.in trust signal without being under gov.in.",
+      "details": {
+        "proofs_checked": [
+          "brand_tld",
+          "restricted_registry",
+          "official_list"
+        ],
+        "proofs_matched": [],
+        "imitated": "gov.in"
+      },
+      "duration_ms": 1
+    },
+    {
+      "evidence_id": "E4",
+      "tool": "trick_detector",
+      "stage": "quick",
+      "criterion": "C5",
+      "finding": "level_squat",
+      "points_to": "phishing",
+      "strength": "medium",
+      "score": 0.95,
+      "target_brand": {
+        "id": "parivahan",
+        "name": "Parivahan / e-Challan"
+      },
+      "summary": "The genuine 'echallan.parivahan.gov.in' is used as a prefix of a different owner.",
+      "details": {
+        "genuine": "echallan.parivahan.gov.in"
+      },
+      "duration_ms": 12
+    },
+    {
+      "evidence_id": "E5",
+      "tool": "trick_detector",
+      "stage": "quick",
+      "criterion": "C6",
+      "finding": "abused_tld",
+      "points_to": "phishing",
+      "strength": "weak",
+      "score": 0.4,
+      "target_brand": null,
+      "summary": "'.icu' is a cheap ending that is common in phishing.",
+      "details": {
+        "tld": "icu"
+      },
+      "duration_ms": 12
+    },
+    {
+      "evidence_id": "E6",
+      "tool": "trick_detector",
+      "stage": "quick",
+      "criterion": "C4",
+      "finding": "brand_closeness",
+      "points_to": "phishing",
+      "strength": "medium",
+      "score": 0.9,
+      "target_brand": {
+        "id": "parivahan",
+        "name": "Parivahan / e-Challan"
+      },
+      "summary": "Closeness to echallan.parivahan.gov.in is 0.90 (the whole genuine name appears at the start).",
+      "details": {
+        "closeness": 0.9,
+        "genuine": "echallan.parivahan.gov.in"
+      },
+      "duration_ms": 12
+    },
+    {
+      "evidence_id": "E7",
+      "tool": "human_eye_renderer",
+      "stage": "standard",
+      "criterion": "C7",
+      "finding": "sms_view_prefix_match",
+      "points_to": "phishing",
+      "strength": "medium",
+      "score": 0.9,
+      "target_brand": {
+        "id": "parivahan",
+        "name": "Parivahan / e-Challan"
+      },
+      "summary": "In the SMS text, the first 25 characters are the real e-Challan address; a reader who checks the start is fooled.",
+      "details": {
+        "matching_prefix_chars": 25,
+        "artifacts": [
+          {
+            "kind": "render",
+            "path": "renders/pay-fine.icu_sms.png",
+            "caption": "How the link reads in the SMS"
+          }
+        ]
+      },
+      "duration_ms": 320
+    },
+    {
+      "evidence_id": "E8",
+      "tool": "risk_model",
+      "stage": "standard",
+      "criterion": "C8",
+      "finding": "ml_risk",
+      "points_to": "phishing",
+      "strength": "weak",
+      "score": 0.88,
+      "target_brand": null,
+      "summary": "ML risk 0.88 (supporting signal only).",
+      "details": {
+        "probability": 0.88
+      },
+      "duration_ms": 42
+    },
+    {
+      "evidence_id": "E9",
+      "tool": "page_probe",
+      "stage": "standard",
+      "criterion": "C9",
+      "finding": "live_payment_form",
+      "points_to": "phishing",
+      "strength": "medium",
+      "score": 0.75,
+      "target_brand": null,
+      "summary": "A live page with a payment form.",
+      "details": {
+        "status": "live",
+        "http_status": 200,
+        "has_login_form": true
+      },
+      "duration_ms": 760
+    },
+    {
+      "evidence_id": "E10",
+      "tool": "page_inspector",
+      "stage": "deep",
+      "criterion": "C10",
+      "finding": "visual_match",
+      "points_to": "phishing",
+      "strength": "medium",
+      "score": 0.88,
+      "target_brand": {
+        "id": "parivahan",
+        "name": "Parivahan / e-Challan"
+      },
+      "summary": "Screenshot matches the saved e-Challan payment page at 88%.",
+      "details": {
+        "ssim": 0.88,
+        "phash_distance": 7,
+        "artifacts": [
+          {
+            "kind": "heatmap",
+            "path": "deep/pay-fine.icu_heatmap.png",
+            "caption": "Differences vs genuine e-Challan page"
+          }
+        ]
+      },
+      "duration_ms": 2200
+    },
+    {
+      "evidence_id": "E11",
+      "tool": "page_inspector",
+      "stage": "deep",
+      "criterion": "C11",
+      "finding": "fields_added",
+      "points_to": "phishing",
+      "strength": "medium",
+      "score": 0.85,
+      "target_brand": {
+        "id": "parivahan",
+        "name": "Parivahan / e-Challan"
+      },
+      "summary": "Same layout, but card number, CVV and OTP fields were added and the form posts to /pay.php.",
+      "details": {
+        "added_inputs": [
+          "card_number",
+          "cvv",
+          "otp"
+        ],
+        "suspect_action": "https://echallan.parivahan.gov.in.pay-fine.icu/pay.php"
+      },
+      "duration_ms": 2200
+    },
+    {
+      "evidence_id": "E12",
+      "tool": "vision_ai",
+      "stage": "deep",
+      "criterion": "C12",
+      "finding": "claimed_brand_mismatch",
+      "points_to": "phishing",
+      "strength": "strong",
+      "score": 0.93,
+      "target_brand": {
+        "id": "parivahan",
+        "name": "Parivahan / e-Challan"
+      },
+      "summary": "The page claims to be the Parivahan e-Challan portal, but its owner isn't under gov.in.",
+      "details": {
+        "claimed_brand": "Parivahan e-Challan",
+        "model": "gemini-flash",
+        "temperature": 0
+      },
+      "duration_ms": 3000
+    },
+    {
+      "evidence_id": "E13",
+      "tool": "vision_ai",
+      "stage": "deep",
+      "criterion": "C13",
+      "finding": "asks_sensitive",
+      "points_to": "phishing",
+      "strength": "medium",
+      "score": 0.9,
+      "target_brand": {
+        "id": "parivahan",
+        "name": "Parivahan / e-Challan"
+      },
+      "summary": "Asks for vehicle number, card number, CVV and OTP.",
+      "details": {
+        "asks_for": [
+          "vehicle_number",
+          "card_number",
+          "cvv",
+          "otp"
+        ]
+      },
+      "duration_ms": 3000
+    },
+    {
+      "evidence_id": "E14",
+      "tool": "credential_tracker",
+      "stage": "deep",
+      "criterion": "C14",
+      "finding": "credentials_to_foreign_domain",
+      "points_to": "phishing",
+      "strength": "strong",
+      "score": 0.85,
+      "target_brand": {
+        "id": "parivahan",
+        "name": "Parivahan / e-Challan"
+      },
+      "summary": "Dummy card details were POSTed to pay-fine.icu/pay.php (same-origin relay).",
+      "details": {
+        "first_hop": "https://echallan.parivahan.gov.in.pay-fine.icu/pay.php",
+        "relay": "same_origin",
+        "dummy_credentials": true,
+        "requests_captured": 9
+      },
+      "duration_ms": 5100
+    },
+    {
+      "evidence_id": "E15",
+      "tool": "credential_tracker",
+      "stage": "deep",
+      "criterion": "C15",
+      "finding": "accepts_any_credentials",
+      "points_to": "phishing",
+      "strength": "strong",
+      "score": 0.95,
+      "target_brand": {
+        "id": "parivahan",
+        "name": "Parivahan / e-Challan"
+      },
+      "summary": "The page accepted a made-up card and OTP and showed 'Payment successful'.",
+      "details": {
+        "accepted": true,
+        "redirect_after": null
+      },
+      "duration_ms": 5100
+    }
+  ],
+  "trace": [
+    {
+      "step": 1,
+      "t_ms": 0,
+      "kind": "case_opened",
+      "message": "New case: echallan.parivahan.gov.in.pay-fine.icu. Single investigation, so every stage runs and the verdict updates after each one."
+    },
+    {
+      "step": 2,
+      "t_ms": 1,
+      "kind": "tool",
+      "stage": "quick",
+      "tool": "address_reader",
+      "args": {
+        "domain": "echallan.parivahan.gov.in.pay-fine.icu"
+      },
+      "duration_ms": 3,
+      "evidence_ids": [
+        "E1",
+        "E2"
+      ],
+      "risk_before": 0.0,
+      "risk_after": 0.55,
+      "message": "Address Reader: the real owner is pay-fine.icu."
+    },
+    {
+      "step": 3,
+      "t_ms": 4,
+      "kind": "tool",
+      "stage": "quick",
+      "tool": "family_verifier",
+      "args": {
+        "owner": "pay-fine.icu"
+      },
+      "duration_ms": 1,
+      "evidence_ids": [
+        "E3"
+      ],
+      "risk_before": 0.55,
+      "risk_after": 0.7,
+      "message": "Family Verifier: imitates a gov.in address it doesn't have."
+    },
+    {
+      "step": 4,
+      "t_ms": 5,
+      "kind": "tool",
+      "stage": "quick",
+      "tool": "trick_detector",
+      "args": {
+        "domain": "echallan.parivahan.gov.in.pay-fine.icu",
+        "owner": "pay-fine.icu"
+      },
+      "duration_ms": 12,
+      "evidence_ids": [
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "risk_before": 0.7,
+      "risk_after": 0.86,
+      "message": "Trick Detector: level-squat on the e-Challan address."
+    },
+    {
+      "step": 5,
+      "t_ms": 17,
+      "kind": "provisional_verdict",
+      "stage": "quick",
+      "label": "suspicious",
+      "risk_after": 0.86,
+      "message": "Suspicious: disguised as the e-Challan portal."
+    },
+    {
+      "step": 6,
+      "t_ms": 17,
+      "kind": "policy",
+      "message": "Brand signal found, so go to Stage 2 (Standard)."
+    },
+    {
+      "step": 7,
+      "t_ms": 18,
+      "kind": "tool",
+      "stage": "standard",
+      "tool": "human_eye_renderer",
+      "args": {
+        "candidate": "echallan.parivahan.gov.in.pay-fine.icu",
+        "genuine": "echallan.parivahan.gov.in",
+        "view": "sms"
+      },
+      "duration_ms": 320,
+      "evidence_ids": [
+        "E7"
+      ],
+      "risk_before": 0.86,
+      "risk_after": 0.88,
+      "message": "Human-Eye Renderer: reads as the genuine portal in the message."
+    },
+    {
+      "step": 8,
+      "t_ms": 18,
+      "kind": "tool",
+      "stage": "standard",
+      "tool": "risk_model",
+      "args": {
+        "domain": "echallan.parivahan.gov.in.pay-fine.icu"
+      },
+      "duration_ms": 42,
+      "evidence_ids": [
+        "E8"
+      ],
+      "risk_before": 0.88,
+      "risk_after": 0.89,
+      "message": "Risk Model: high ML risk."
+    },
+    {
+      "step": 9,
+      "t_ms": 18,
+      "kind": "tool",
+      "stage": "standard",
+      "tool": "page_probe",
+      "args": {
+        "domain": "echallan.parivahan.gov.in.pay-fine.icu"
+      },
+      "duration_ms": 760,
+      "evidence_ids": [
+        "E9"
+      ],
+      "risk_before": 0.89,
+      "risk_after": 0.91,
+      "message": "Page Probe: live payment page."
+    },
+    {
+      "step": 10,
+      "t_ms": 778,
+      "kind": "provisional_verdict",
+      "stage": "standard",
+      "label": "suspicious",
+      "risk_after": 0.91,
+      "message": "Very suspicious: reads as the real portal, and a live payment page exists."
+    },
+    {
+      "step": 11,
+      "t_ms": 778,
+      "kind": "policy",
+      "message": "Live page, so go to Stage 3 (Deep)."
+    },
+    {
+      "step": 12,
+      "t_ms": 779,
+      "kind": "tool",
+      "stage": "deep",
+      "tool": "page_inspector",
+      "args": {
+        "url": "https://echallan.parivahan.gov.in.pay-fine.icu/challan",
+        "genuine_snapshot": "echallan_pay"
+      },
+      "duration_ms": 2200,
+      "evidence_ids": [
+        "E10",
+        "E11"
+      ],
+      "risk_before": 0.91,
+      "risk_after": 0.93,
+      "message": "Page Inspector: a copy with added card fields."
+    },
+    {
+      "step": 13,
+      "t_ms": 779,
+      "kind": "tool",
+      "stage": "deep",
+      "tool": "vision_ai",
+      "args": {
+        "screenshot": "deep/pay-fine.icu.png"
+      },
+      "duration_ms": 3000,
+      "evidence_ids": [
+        "E12",
+        "E13"
+      ],
+      "risk_before": 0.93,
+      "risk_after": 0.95,
+      "message": "Vision AI: claims to be e-Challan, asks for card details."
+    },
+    {
+      "step": 14,
+      "t_ms": 779,
+      "kind": "tool",
+      "stage": "deep",
+      "tool": "credential_tracker",
+      "args": {
+        "url": "https://echallan.parivahan.gov.in.pay-fine.icu/challan"
+      },
+      "duration_ms": 5100,
+      "evidence_ids": [
+        "E14",
+        "E15"
+      ],
+      "risk_before": 0.95,
+      "risk_after": 0.98,
+      "message": "Credential Tracker: accepts fake card details."
+    },
+    {
+      "step": 15,
+      "t_ms": 5879,
+      "kind": "hard_rule",
+      "evidence_ids": [
+        "E12",
+        "E14",
+        "E15"
+      ],
+      "message": "Hard rule fired: H2_brand_claim_foreign_credentials, H3_accepts_any_credentials. The page claims a brand, the owner isn't in that brand's family, and the credentials leave to a domain outside it."
+    },
+    {
+      "step": 16,
+      "t_ms": 5880,
+      "kind": "final_verdict",
+      "label": "phishing",
+      "risk_before": 0.98,
+      "risk_after": 0.98,
+      "message": "PHISHING: Starts with the real e-Challan address but is owned by pay-fine.icu, copies the payment page and accepts any card."
+    }
+  ],
+  "meta": {
+    "generated_at": "2026-11-05T10:00:00+05:30",
+    "engine_version": "0.0.1-mock",
+    "mock": true,
+    "notes": "The Credential Tracker sees only the first hop; server-side exfiltration (PHP mail) is invisible to it."
+  }
+}

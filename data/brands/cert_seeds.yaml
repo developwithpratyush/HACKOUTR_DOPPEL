@@ -1,0 +1,29 @@
+# Seed hosts for family auto-discovery (P11, doppel/certs/discover.py).
+#
+# Discovery reads the live certificate of every registry family domain (bare and www.) plus the extra
+# hosts below. EVERY host must already be proven genuine by the Family Verifier (brand-owned ending,
+# restricted registry or official list); discover.py checks that before opening a connection, and refuses
+# otherwise. These extras only matter because one brand serves different certificates on different hosts.
+#
+# Found 2026-11-06 by reading the certificates of Google's proven hosts:
+google:
+  - upload.google.com      # serves the certificate that lists *.googleapis.com and *.docs.google.com
+  - accounts.google.com    # its own certificate (*.partner.android.com)
+  - mail.google.com
+hdfc:
+  - www.hdfc.com           # its certificate also lists homeloans.hdfc.bank.in
+sbi:
+  - onlinesbi.sbi.bank.in
+  - yonobusiness.sbi       # covered by .sbi (brand TLD); EV certificate, O = STATE BANK OF INDIA
+  - retail.onlinesbi.sbi
+icici:
+  - www.icici.bank.in
+india_post:
+  - www.indiapost.gov.in
+income_tax:
+  - www.incometax.gov.in
+  - eportal.incometax.gov.in
+parivahan:
+  - echallan.parivahan.gov.in
+npci:
+  - www.npci.org.in

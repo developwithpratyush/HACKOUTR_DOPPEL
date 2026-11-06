@@ -1,0 +1,25 @@
+{
+ "host": "paytm.com",
+ "brand": "paytm",
+ "fetched_at": "2026-11-06T00:18:18Z",
+ "source": "live_tls",
+ "cert": {
+  "sha256": "fb021864b96c1d213e99ee829832871db89bae4e9f50fe427169ff04f023a5ae",
+  "subject": {
+   "cn": "*.paytm.com",
+   "o": "One 97 Communications Ltd",
+   "c": "IN"
+  },
+  "issuer": {
+   "cn": "GeoTrust TLS ECC CA G1",
+   "o": "DigiCert Inc"
+  },
+  "sans": [
+   "*.paytm.com",
+   "paytm.com"
+  ],
+  "not_before": "2026-08-24T00:00:00Z",
+  "not_after": "2027-03-10T23:59:59Z",
+  "validation": "OV"
+ }
+}

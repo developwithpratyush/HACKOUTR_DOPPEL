@@ -1,0 +1,174 @@
+{
+  "phiusiil": {
+    "file": "phiusiil/PhiUSIIL_Phishing_URL_Dataset.csv",
+    "rows": 235795,
+    "columns": 56,
+    "label_meaning": {
+      "1": "legitimate",
+      "0": "phishing"
+    },
+    "by_label": {
+      "legitimate": 134850,
+      "phishing": 100945
+    },
+    "url_similarity_index_is_100_pct": {
+      "legitimate": 100.0,
+      "phishing": 0.78
+    },
+    "starts_https_www_pct": {
+      "legitimate": 100.0,
+      "phishing": 2.43
+    },
+    "idn_hosts": {
+      "legitimate": 0,
+      "phishing": 154
+    },
+    "on_psl_private_suffix_pct": {
+      "legitimate": 0.08,
+      "phishing": 26.53
+    },
+    "top_private_suffixes_in_phishing": {
+      "web.app": 5754,
+      "firebaseapp.com": 5594,
+      "repl.co": 2882,
+      "workers.dev": 1438,
+      "square.site": 1199,
+      "ipfs.dweb.link": 958,
+      "pantheonsite.io": 900,
+      "id.repl.co": 872,
+      "duckdns.org": 642,
+      "cf-ipfs.com": 494
+    },
+    "distinct_registrable_domains": {
+      "legitimate": 132186,
+      "phishing": 65206
+    }
+  },
+  "nrd7": {
+    "file": "nrd/nrd7.txt",
+    "header": {
+      "Title": "Newly Registered Domains (NRD)",
+      "Description": "Domains from 7 days ago to yesterday (the last day)",
+      "Homepage": "https://github.com/hagezi/nrd",
+      "License": "https://github.com/hagezi/nrd/blob/main/LICENSE",
+      "Expires": "8 hours",
+      "Last modified": "04 Nov 2026 07:13 UTC",
+      "Version": "2026.1104.0713.22",
+      "Syntax": "Domains (including possible subdomains)",
+      "Number of entries": "2342440"
+    },
+    "domains": 2342440,
+    "idn_domains": 16308,
+    "tld_in": 3353,
+    "under_suffix": {
+      "co.in": 533,
+      "bank.in": 3
+    },
+    "top_tlds": {
+      "com": 1154352,
+      "top": 124335,
+      "shop": 69754,
+      "my": 66022,
+      "org": 62097,
+      "online": 60904,
+      "ru": 58925,
+      "net": 56514,
+      "xyz": 55418,
+      "berlin": 42408
+    },
+    "alias_substring_hits": {
+      "sbi": 1010,
+      "hdfc": 8,
+      "income_tax": 27,
+      "google": 376,
+      "icici": 8,
+      "parivahan": 22,
+      "india_post": 3,
+      "paytm": 2
+    },
+    "note": "alias_substring_hits counts raw substrings (e.g. 'sbi' inside 'thanksbitcoin'): an upper bound, not brand matches."
+  },
+  "unicode_confusables": {
+    "file": "unicode/confusables.txt",
+    "version": "18.0.0",
+    "date": "2026-08-06, 01:05:35 GMT",
+    "mappings": 6712,
+    "mappings_to_pure_ascii": 2269
+  },
+  "homoglyphs": {
+    "confusable_vision": {
+      "release": "2026.09.26",
+      "lookalike_pairs": 12074,
+      "sequence_pairs": 719,
+      "in_place_tiers": {
+        "strict": 646,
+        "broad": 358,
+        "no": 1950,
+        "design": 101
+      }
+    },
+    "codebox_homoglyph_groups": 1915,
+    "life4_homoglyphs_entries": 9601
+  },
+  "registry": {
+    "brands": 8,
+    "genuine_family_entries": 25,
+    "shared_lure_words": 97,
+    "lure_words_by_lang": {
+      "en": 85,
+      "hinglish": 12
+    }
+  },
+  "sources": {
+    "phiusiil": {
+      "sha256": "0a639fd03aea6308c5b1c10c92aa23c2ce1505447a9137271865cd0badc9a59a",
+      "bytes": 15376007,
+      "fetched_at": "2026-11-05T01:59:11+00:00"
+    },
+    "nrd7": {
+      "sha256": "00d5382963f2df5cd6bc2bd013543ed8d293a375cd2b7a820d8460283c00d36d",
+      "bytes": 38872305,
+      "fetched_at": "2026-11-05T01:59:23+00:00"
+    },
+    "confusables": {
+      "sha256": "6ed3ee967c9dfdf6677d563c9985182fbc50a2efb7d6059cd57b2e2ce18f5b92",
+      "bytes": 763128,
+      "fetched_at": "2026-11-05T01:59:25+00:00"
+    },
+    "cv_lookalikes": {
+      "sha256": "ce22254585c6926eb896bc7089cd010818f42d19071320b72e4d3f90a668cd06",
+      "bytes": 805379,
+      "fetched_at": "2026-11-05T01:59:25+00:00"
+    },
+    "cv_sequences": {
+      "sha256": "78d586eb880bc1a05575b805a613802b47767977a97ae32f841415124e917f02",
+      "bytes": 61866,
+      "fetched_at": "2026-11-05T01:59:26+00:00"
+    },
+    "cv_dataset_md": {
+      "sha256": "30c8d38ee2feec96da48ff36df358f25e6c459c59bd9e3b4f5d42c8223f6a10e",
+      "bytes": 9113,
+      "fetched_at": "2026-11-05T01:59:26+00:00"
+    },
+    "cv_sha256sums": {
+      "sha256": "bce120a08a232f4a12c8248e90ff0e911392bb37aa650a3c95b4926433039c0d",
+      "bytes": 418,
+      "fetched_at": "2026-11-05T01:59:26+00:00"
+    },
+    "codebox_homoglyph": {
+      "sha256": "635f56f2eab035d002e51ec6430ec4baf0e28fdf6cf53ab06e3e5512711911b6",
+      "bytes": 22929,
+      "fetched_at": "2026-11-05T01:59:26+00:00"
+    },
+    "life4_homoglyphs": {
+      "sha256": "6ca4f3c2df4fb15192eddc6d72f0c63fcd455b63dbcd2ff7232e1036a864eb6f",
+      "bytes": 424249,
+      "fetched_at": "2026-11-05T01:59:27+00:00"
+    },
+    "cv_in_place": {
+      "sha256": "9c17050099077abd59d9597b5f5d982b906f93f6d49808c6bb47bc5cb87f8216",
+      "bytes": 400192,
+      "fetched_at": "2026-11-05T02:00:14+00:00"
+    }
+  }
+}

@@ -1,0 +1,514 @@
+{
+  "schema_version": "1.0.0",
+  "domain": "onlinesbi.sbi.bank.in",
+  "input": {
+    "raw": "https://onlinesbi.sbi.bank.in/",
+    "display": "onlinesbi.sbi.bank.in",
+    "source": "gallery"
+  },
+  "owner": "sbi.bank.in",
+  "target_brand": {
+    "id": "sbi",
+    "name": "State Bank of India"
+  },
+  "closeness": 1.0,
+  "risk_score": 0.02,
+  "confidence": "high",
+  "label": "genuine",
+  "reason": "Looks odd, but it's provably SBI's: under the restricted .bank.in registry and on SBI's official list, and the login stays on SBI.",
+  "hard_rule": {
+    "id": "H1_genuine_family",
+    "forces": "genuine",
+    "description": "Ownership is proven by the Family Verifier, so the domain is genuine whatever the other signals say.",
+    "evidence_ids": [
+      "E3",
+      "E10"
+    ]
+  },
+  "counterfactual": {
+    "change": "ownership proof removed (not on the list, not under .bank.in)",
+    "undone_evidence_ids": [
+      "E3"
+    ],
+    "label": "needs_review",
+    "risk_score": 0.5,
+    "summary": "Would be NEEDS REVIEW without the ownership proof: the proof, not the looks, is what makes it green."
+  },
+  "timings_ms": {
+    "quick": 11,
+    "standard": 610,
+    "deep": 3100,
+    "total": 3725
+  },
+  "stages": [
+    {
+      "stage": "quick",
+      "status": "completed",
+      "tools": [
+        "address_reader",
+        "family_verifier",
+        "trick_detector"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "provisional": {
+        "label": "genuine",
+        "risk_score": 0.03,
+        "reason": "Genuine: proven SBI family. Confirming the page in later stages."
+      }
+    },
+    {
+      "stage": "standard",
+      "status": "completed",
+      "tools": [
+        "risk_model",
+        "page_probe"
+      ],
+      "evidence_ids": [
+        "E6",
+        "E7"
+      ],
+      "provisional": {
+        "label": "genuine",
+        "risk_score": 0.03,
+        "reason": "Genuine: nothing contradicts the ownership proof."
+      }
+    },
+    {
+      "stage": "deep",
+      "status": "completed",
+      "tools": [
+        "page_inspector",
+        "vision_ai",
+        "credential_tracker"
+      ],
+      "evidence_ids": [
+        "E8",
+        "E9",
+        "E10"
+      ],
+      "provisional": {
+        "label": "genuine",
+        "risk_score": 0.02,
+        "reason": "Looks odd, but it's provably SBI's: under the restricted .bank.in registry and on SBI's official list, and the login stays on SBI."
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "tool": "address_reader",
+      "stage": "quick",
+      "criterion": "C1",
+      "finding": "owner_resolved",
+      "points_to": "neutral",
+      "strength": "strong",
+      "score": 0,
+      "target_brand": null,
+      "summary": "Real owner is sbi.bank.in (public suffix 'bank.in', a restricted registry).",
+      "details": {
+        "owner": "sbi.bank.in",
+        "public_suffix": "bank.in",
+        "private_suffix": false
+      },
+      "duration_ms": 2
+    },
+    {
+      "evidence_id": "E2",
+      "tool": "address_reader",
+      "stage": "quick",
+      "criterion": "C3",
+      "finding": "single_script",
+      "points_to": "neutral",
+      "strength": "strong",
+      "score": 0,
+      "target_brand": null,
+      "summary": "Plain ASCII: no hidden letters.",
+      "details": {
+        "scripts": [
+          "Latin"
+        ]
+      },
+      "duration_ms": 2
+    },
+    {
+      "evidence_id": "E3",
+      "tool": "family_verifier",
+      "stage": "quick",
+      "criterion": "C2",
+      "finding": "genuine_family",
+      "points_to": "genuine",
+      "strength": "strong",
+      "score": 0.98,
+      "target_brand": {
+        "id": "sbi",
+        "name": "State Bank of India"
+      },
+      "summary": "Proven SBI: under the restricted .bank.in registry, and sbi.bank.in is on SBI's official list.",
+      "details": {
+        "proofs_checked": [
+          "brand_tld",
+          "restricted_registry",
+          "official_list"
+        ],
+        "proofs_matched": [
+          "restricted_registry",
+          "official_list"
+        ],
+        "family_entry": "sbi.bank.in",
+        "source": "https://sbi.bank.in/en/web/personal-banking/digital/internet-banking",
+        "verified_on": "2026-11-04"
+      },
+      "duration_ms": 1
+    },
+    {
+      "evidence_id": "E4",
+      "tool": "trick_detector",
+      "stage": "quick",
+      "criterion": "C5",
+      "finding": "no_trick",
+      "points_to": "neutral",
+      "strength": "medium",
+      "score": 0,
+      "target_brand": {
+        "id": "sbi",
+        "name": "State Bank of India"
+      },
+      "summary": "No naming trick: it is a subdomain of SBI's own domain.",
+      "details": {
+        "tokens": [
+          "onlinesbi",
+          "sbi",
+          "bank",
+          "in"
+        ]
+      },
+      "duration_ms": 8
+    },
+    {
+      "evidence_id": "E5",
+      "tool": "trick_detector",
+      "stage": "quick",
+      "criterion": "C4",
+      "finding": "in_family",
+      "points_to": "neutral",
+      "strength": "medium",
+      "score": 0,
+      "target_brand": {
+        "id": "sbi",
+        "name": "State Bank of India"
+      },
+      "summary": "Closeness 1.00: it is inside SBI's family.",
+      "details": {
+        "closeness": 1.0
+      },
+      "duration_ms": 8
+    },
+    {
+      "evidence_id": "E6",
+      "tool": "risk_model",
+      "stage": "standard",
+      "criterion": "C8",
+      "finding": "ml_risk",
+      "points_to": "genuine",
+      "strength": "weak",
+      "score": 0.88,
+      "target_brand": null,
+      "summary": "ML risk 0.12 (supporting signal only).",
+      "details": {
+        "probability": 0.12
+      },
+      "duration_ms": 36
+    },
+    {
+      "evidence_id": "E7",
+      "tool": "page_probe",
+      "stage": "standard",
+      "criterion": "C9",
+      "finding": "live_login_form",
+      "points_to": "neutral",
+      "strength": "medium",
+      "score": 0,
+      "target_brand": {
+        "id": "sbi",
+        "name": "State Bank of India"
+      },
+      "summary": "Live SBI login page (expected for the bank's own site).",
+      "details": {
+        "status": "live",
+        "http_status": 200,
+        "has_login_form": true
+      },
+      "duration_ms": 610
+    },
+    {
+      "evidence_id": "E8",
+      "tool": "page_inspector",
+      "stage": "deep",
+      "criterion": "C10",
+      "finding": "matches_genuine_snapshot",
+      "points_to": "genuine",
+      "strength": "medium",
+      "score": 0.99,
+      "target_brand": {
+        "id": "sbi",
+        "name": "State Bank of India"
+      },
+      "summary": "Matches the saved genuine SBI login page at 99%.",
+      "details": {
+        "ssim": 0.99,
+        "phash_distance": 1
+      },
+      "duration_ms": 1800
+    },
+    {
+      "evidence_id": "E9",
+      "tool": "vision_ai",
+      "stage": "deep",
+      "criterion": "C12",
+      "finding": "claimed_brand_matches_owner",
+      "points_to": "genuine",
+      "strength": "strong",
+      "score": 0.95,
+      "target_brand": {
+        "id": "sbi",
+        "name": "State Bank of India"
+      },
+      "summary": "The page claims to be SBI, and the owner is in SBI's family.",
+      "details": {
+        "claimed_brand": "State Bank of India",
+        "model": "gemini-flash",
+        "temperature": 0
+      },
+      "duration_ms": 2700
+    },
+    {
+      "evidence_id": "E10",
+      "tool": "credential_tracker",
+      "stage": "deep",
+      "criterion": "C14",
+      "finding": "credentials_stay_in_family",
+      "points_to": "genuine",
+      "strength": "strong",
+      "score": 0.95,
+      "target_brand": {
+        "id": "sbi",
+        "name": "State Bank of India"
+      },
+      "summary": "The login form posts to onlinesbi.sbi.bank.in, inside SBI's family. Replayed from the saved snapshot: nothing was sent to SBI.",
+      "details": {
+        "first_hop": "https://onlinesbi.sbi.bank.in/retail/login",
+        "mode": "snapshot_replay"
+      },
+      "duration_ms": 3100
+    }
+  ],
+  "trace": [
+    {
+      "step": 1,
+      "t_ms": 0,
+      "kind": "case_opened",
+      "message": "New case: onlinesbi.sbi.bank.in. Single investigation, so every stage runs and the verdict updates after each one."
+    },
+    {
+      "step": 2,
+      "t_ms": 1,
+      "kind": "tool",
+      "stage": "quick",
+      "tool": "address_reader",
+      "args": {
+        "domain": "onlinesbi.sbi.bank.in"
+      },
+      "duration_ms": 2,
+      "evidence_ids": [
+        "E1",
+        "E2"
+      ],
+      "risk_before": 0.0,
+      "risk_after": 0.2,
+      "message": "Address Reader: owner is sbi.bank.in."
+    },
+    {
+      "step": 3,
+      "t_ms": 3,
+      "kind": "tool",
+      "stage": "quick",
+      "tool": "family_verifier",
+      "args": {
+        "owner": "sbi.bank.in"
+      },
+      "duration_ms": 1,
+      "evidence_ids": [
+        "E3"
+      ],
+      "risk_before": 0.2,
+      "risk_after": 0.03,
+      "message": "Family Verifier: proven SBI family."
+    },
+    {
+      "step": 4,
+      "t_ms": 4,
+      "kind": "tool",
+      "stage": "quick",
+      "tool": "trick_detector",
+      "args": {
+        "domain": "onlinesbi.sbi.bank.in",
+        "owner": "sbi.bank.in"
+      },
+      "duration_ms": 8,
+      "evidence_ids": [
+        "E4",
+        "E5"
+      ],
+      "risk_before": 0.03,
+      "risk_after": 0.03,
+      "message": "Trick Detector: nothing to flag."
+    },
+    {
+      "step": 5,
+      "t_ms": 12,
+      "kind": "provisional_verdict",
+      "stage": "quick",
+      "label": "genuine",
+      "risk_after": 0.03,
+      "message": "Genuine: proven SBI family. Confirming the page in later stages."
+    },
+    {
+      "step": 6,
+      "t_ms": 12,
+      "kind": "policy",
+      "message": "Genuine family: still confirm the page and the login destination in Deep."
+    },
+    {
+      "step": 7,
+      "t_ms": 13,
+      "kind": "tool",
+      "stage": "standard",
+      "tool": "risk_model",
+      "args": {
+        "domain": "onlinesbi.sbi.bank.in"
+      },
+      "duration_ms": 36,
+      "evidence_ids": [
+        "E6"
+      ],
+      "risk_before": 0.03,
+      "risk_after": 0.03,
+      "message": "Risk Model: low ML risk."
+    },
+    {
+      "step": 8,
+      "t_ms": 13,
+      "kind": "tool",
+      "stage": "standard",
+      "tool": "page_probe",
+      "args": {
+        "domain": "onlinesbi.sbi.bank.in"
+      },
+      "duration_ms": 610,
+      "evidence_ids": [
+        "E7"
+      ],
+      "risk_before": 0.03,
+      "risk_after": 0.03,
+      "message": "Page Probe: live login page."
+    },
+    {
+      "step": 9,
+      "t_ms": 623,
+      "kind": "provisional_verdict",
+      "stage": "standard",
+      "label": "genuine",
+      "risk_after": 0.03,
+      "message": "Genuine: nothing contradicts the ownership proof."
+    },
+    {
+      "step": 10,
+      "t_ms": 623,
+      "kind": "policy",
+      "message": "Live page, so go to Stage 3 (Deep) to confirm."
+    },
+    {
+      "step": 11,
+      "t_ms": 624,
+      "kind": "tool",
+      "stage": "deep",
+      "tool": "page_inspector",
+      "args": {
+        "url": "https://onlinesbi.sbi.bank.in/",
+        "genuine_snapshot": "sbi_login"
+      },
+      "duration_ms": 1800,
+      "evidence_ids": [
+        "E8"
+      ],
+      "risk_before": 0.03,
+      "risk_after": 0.02,
+      "message": "Page Inspector: the genuine page."
+    },
+    {
+      "step": 12,
+      "t_ms": 624,
+      "kind": "tool",
+      "stage": "deep",
+      "tool": "vision_ai",
+      "args": {
+        "screenshot": "deep/onlinesbi.sbi.bank.in.png"
+      },
+      "duration_ms": 2700,
+      "evidence_ids": [
+        "E9"
+      ],
+      "risk_before": 0.02,
+      "risk_after": 0.02,
+      "message": "Vision AI: claims SBI, and it is SBI."
+    },
+    {
+      "step": 13,
+      "t_ms": 624,
+      "kind": "tool",
+      "stage": "deep",
+      "tool": "credential_tracker",
+      "args": {
+        "url": "https://onlinesbi.sbi.bank.in/",
+        "mode": "snapshot_replay"
+      },
+      "duration_ms": 3100,
+      "evidence_ids": [
+        "E10"
+      ],
+      "risk_before": 0.02,
+      "risk_after": 0.02,
+      "message": "Credential Tracker: the password stays with SBI."
+    },
+    {
+      "step": 14,
+      "t_ms": 3724,
+      "kind": "hard_rule",
+      "evidence_ids": [
+        "E3",
+        "E10"
+      ],
+      "message": "Hard rule fired: H1_genuine_family. Ownership is proven by the Family Verifier, so the domain is genuine whatever the other signals say."
+    },
+    {
+      "step": 15,
+      "t_ms": 3725,
+      "kind": "final_verdict",
+      "label": "genuine",
+      "risk_before": 0.02,
+      "risk_after": 0.02,
+      "message": "GENUINE: Looks odd, but it's provably SBI's: under the restricted .bank.in registry and on SBI's official list, and the login stays on SBI."
+    }
+  ],
+  "meta": {
+    "generated_at": "2026-11-05T10:00:00+05:30",
+    "engine_version": "0.0.1-mock",
+    "mock": true
+  }
+}

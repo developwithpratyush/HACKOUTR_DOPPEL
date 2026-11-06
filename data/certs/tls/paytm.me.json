@@ -1,0 +1,25 @@
+{
+ "host": "paytm.me",
+ "brand": "paytm",
+ "fetched_at": "2026-11-06T00:18:19Z",
+ "source": "live_tls",
+ "cert": {
+  "sha256": "8747e7a889f12d0fdd71a5c26d59d378f2d55d0e623162753c075e06de6d3bcf",
+  "subject": {
+   "cn": "paytm.me",
+   "o": null,
+   "c": null
+  },
+  "issuer": {
+   "cn": "YR1",
+   "o": "Let's Encrypt"
+  },
+  "sans": [
+   "p-y.tm",
+   "paytm.me"
+  ],
+  "not_before": "2026-09-29T04:22:32Z",
+  "not_after": "2026-12-28T04:22:31Z",
+  "validation": "DV"
+ }
+}

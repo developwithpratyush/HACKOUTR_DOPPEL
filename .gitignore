@@ -1,0 +1,40 @@
+# Private
+CLAUDE.local.md
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+build/
+dist/
+
+# Node (ui/)
+node_modules/
+ui/dist/
+
+# Data: large raw downloads are reproducible from scripts/data/
+data/raw/
+data/cache/
+*.parquet
+
+# Run outputs (screenshots, heatmaps, HAR, reports)
+runs/
+out/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Genuine page snapshots (P8): brand content, rebuilt by scripts/data/snapshot_genuine.py; only the manifest is committed
+data/snapshots/*
+!data/snapshots/MANIFEST.json
+# Clones generated from the snapshots (P8): never committed
+demo/fixtures/generated/

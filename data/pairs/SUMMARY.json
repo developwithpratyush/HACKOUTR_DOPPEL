@@ -1,0 +1,219 @@
+{
+  "seed": 20261105,
+  "held_out_brands": [
+    "icici",
+    "india_post"
+  ],
+  "cap_per_brand_technique": 400,
+  "rows": 27832,
+  "by_kind": {
+    "benign": 10000,
+    "genuine": 65,
+    "hard_negative": 398,
+    "lookalike": 17168,
+    "real_phish": 201
+  },
+  "by_split": {
+    "dev": 3575,
+    "test_real": 201,
+    "test_seen": 3510,
+    "test_unseen": 5023,
+    "train": 15523
+  },
+  "by_label_split": {
+    "dev": {
+      "0": 1612,
+      "1": 1963
+    },
+    "test_real": {
+      "1": 201
+    },
+    "test_seen": {
+      "0": 1586,
+      "1": 1924
+    },
+    "test_unseen": {
+      "0": 1050,
+      "1": 3973
+    },
+    "train": {
+      "0": 6215,
+      "1": 9308
+    }
+  },
+  "positives_by_technique": {
+    "T1": {
+      "name": "typosquat (missing, extra, swapped or neighbouring-key letter)",
+      "dev": 252,
+      "test_seen": 281,
+      "test_unseen": 395,
+      "train": 1200,
+      "total": 2128
+    },
+    "T2": {
+      "name": "twin letters (ASCII look-alikes: rn/m, vv/w, 0/o)",
+      "dev": 117,
+      "test_seen": 103,
+      "test_unseen": 163,
+      "train": 469,
+      "total": 852
+    },
+    "T3": {
+      "name": "homoglyph (foreign-script letters)",
+      "dev": 340,
+      "test_seen": 353,
+      "test_unseen": 800,
+      "train": 1707,
+      "total": 3200
+    },
+    "T4": {
+      "name": "combosquat (brand + lure words)",
+      "dev": 352,
+      "test_real": 85,
+      "test_seen": 345,
+      "test_unseen": 800,
+      "train": 1703,
+      "total": 3285
+    },
+    "T5": {
+      "name": "ending swap (TLD swap)",
+      "dev": 55,
+      "test_real": 3,
+      "test_seen": 68,
+      "test_unseen": 98,
+      "train": 331,
+      "total": 555
+    },
+    "T6": {
+      "name": "level-squat (genuine address as a prefix of another owner)",
+      "dev": 384,
+      "test_real": 1,
+      "test_seen": 346,
+      "test_unseen": 800,
+      "train": 1670,
+      "total": 3201
+    },
+    "T7": {
+      "name": "trust-signal mimicry (bank-in, gov-in, blog-google)",
+      "dev": 28,
+      "test_real": 15,
+      "test_seen": 26,
+      "test_unseen": 29,
+      "train": 150,
+      "total": 248
+    },
+    "T11": {
+      "name": "free-hosting subdomain",
+      "dev": 361,
+      "test_real": 97,
+      "test_seen": 329,
+      "test_unseen": 800,
+      "train": 1710,
+      "total": 3297
+    },
+    "T12": {
+      "name": "soundsquat (sounds the same)",
+      "dev": 4,
+      "test_seen": 5,
+      "test_unseen": 6,
+      "train": 12,
+      "total": 27
+    },
+    "T13": {
+      "name": "bitsquat (one flipped bit)",
+      "dev": 70,
+      "test_seen": 68,
+      "test_unseen": 82,
+      "train": 356,
+      "total": 576
+    }
+  },
+  "positives_by_brand": {
+    "google": 2447,
+    "hdfc": 2134,
+    "income_tax": 1997,
+    "parivahan": 1969,
+    "paytm": 2598,
+    "sbi": 2250,
+    "icici": 2003,
+    "india_post": 1971
+  },
+  "hard_negatives_by_brand": {
+    "google": 357,
+    "income_tax": 3,
+    "sbi": 15,
+    "hdfc": 6,
+    "paytm": 4,
+    "icici": 9,
+    "india_post": 4
+  },
+  "dropped_candidates": {
+    "genuine": 12
+  },
+  "p2_family_verifier_signal": {
+    "T1": {
+      "total": 2128,
+      "no_signal": 1360,
+      "right_brand": 768,
+      "right_brand_pct": 36.1
+    },
+    "T11": {
+      "total": 3200,
+      "right_brand": 3186,
+      "no_signal": 13,
+      "wrong_brand": 1,
+      "right_brand_pct": 99.6
+    },
+    "T12": {
+      "total": 27,
+      "no_signal": 22,
+      "right_brand": 5,
+      "right_brand_pct": 18.5
+    },
+    "T13": {
+      "total": 576,
+      "right_brand": 153,
+      "no_signal": 423,
+      "right_brand_pct": 26.6
+    },
+    "T2": {
+      "total": 852,
+      "right_brand": 268,
+      "no_signal": 584,
+      "right_brand_pct": 31.5
+    },
+    "T3": {
+      "total": 3200,
+      "no_signal": 2516,
+      "right_brand": 684,
+      "right_brand_pct": 21.4
+    },
+    "T4": {
+      "total": 3200,
+      "right_brand": 3171,
+      "no_signal": 29,
+      "right_brand_pct": 99.1
+    },
+    "T5": {
+      "total": 552,
+      "right_brand": 552,
+      "right_brand_pct": 100.0
+    },
+    "T6": {
+      "total": 3200,
+      "right_brand": 3200,
+      "right_brand_pct": 100.0
+    },
+    "T7": {
+      "total": 233,
+      "right_brand": 231,
+      "no_signal": 2,
+      "right_brand_pct": 99.1
+    }
+  },
+  "techniques_not_generated": [
+    "T8",
+    "T9"
+  ],
+  "build_seconds": 262.7
+}

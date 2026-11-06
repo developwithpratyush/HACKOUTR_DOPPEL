@@ -1,0 +1,24 @@
+{
+ "host": "eportal.incometax.gov.in",
+ "brand": "income_tax",
+ "fetched_at": "2026-11-06T00:18:44Z",
+ "source": "live_tls",
+ "cert": {
+  "sha256": "4af0d9491b924ad33d72934fdb0bac4d111500289e78cc63831a45ee79bcbf46",
+  "subject": {
+   "cn": "eportal.incometax.gov.in",
+   "o": "Directorate Of Income Tax (Systems)",
+   "c": "IN"
+  },
+  "issuer": {
+   "cn": "Entrust OV TLS Issuing RSA CA 2",
+   "o": "Entrust Limited"
+  },
+  "sans": [
+   "eportal.incometax.gov.in"
+  ],
+  "not_before": "2026-04-29T00:00:00Z",
+  "not_after": "2026-11-13T23:59:59Z",
+  "validation": "OV"
+ }
+}

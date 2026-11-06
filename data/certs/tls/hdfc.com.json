@@ -1,0 +1,25 @@
+{
+ "host": "hdfc.com",
+ "brand": "hdfc",
+ "fetched_at": "2026-11-06T00:18:17Z",
+ "source": "live_tls",
+ "cert": {
+  "sha256": "77d27cd17fd8a88d7b772e822bc73e27d44c004778f2b4fe0e201e59dce1d976",
+  "subject": {
+   "cn": "hdfc.com",
+   "o": null,
+   "c": null
+  },
+  "issuer": {
+   "cn": "WE1",
+   "o": "Google Trust Services"
+  },
+  "sans": [
+   "hdfc.com",
+   "*.hdfc.com"
+  ],
+  "not_before": "2026-10-31T11:24:50Z",
+  "not_after": "2027-01-29T12:24:32Z",
+  "validation": "DV"
+ }
+}

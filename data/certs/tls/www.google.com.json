@@ -1,0 +1,24 @@
+{
+ "host": "www.google.com",
+ "brand": "google",
+ "fetched_at": "2026-11-06T00:18:45Z",
+ "source": "live_tls",
+ "cert": {
+  "sha256": "83b9c3ffb53ed1eef2849324f536430b191dd5bd5f98d3f643e397884ac9c6cb",
+  "subject": {
+   "cn": "www.google.com",
+   "o": null,
+   "c": null
+  },
+  "issuer": {
+   "cn": "WE2",
+   "o": "Google Trust Services"
+  },
+  "sans": [
+   "www.google.com"
+  ],
+  "not_before": "2026-10-07T19:09:54Z",
+  "not_after": "2026-12-30T19:09:53Z",
+  "validation": "DV"
+ }
+}

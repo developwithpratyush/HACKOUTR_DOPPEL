@@ -1,0 +1,39 @@
+# Genuine names outside the registry's family list, used by the no-degradation gate (bench/regress.py).
+# Every registry family domain (and www. + one subdomain of it) is added by the gate itself.
+#
+# Source: the names checked by hand on 2026-11-06 (docs/BUILD_PHASES.md "Evidence already measured" and
+# docs/finale-examples.md §2-§3). The original list of 25 wasn't saved, so this is rebuilt from those two
+# documents: each name below is named there as genuine, with the certificate or official page that shows it.
+# The GENUINE count on this set may only go up.
+
+# Google (on Google's own certificates, 2026-11-06)
+google.co.in
+googleapis.com
+google-analytics.com
+googlecommerce.com
+us-central1-aiplatform.rep.googleapis.com
+urchin.com
+gvt1.com
+youtube.com
+youtube-nocookie.com
+# Gmail: the live-feed false alarms of 2026-11-06 (gmail.com's certificate names only itself)
+gmail.com
+pop.gmail.com
+imap.gmail.com
+smtp-relay.gmail.com
+# Banks and government (the brands' own addresses, OV/EV certificates seen 2026-11-06)
+hdfcbank.com
+www.hdfc.bank.in
+onlinesbi.sbi
+yonobusiness.sbi
+sbi.co.in
+icici.bank.in
+paytm.com
+www.indiapost.gov.in
+www.incometax.gov.in
+echallan.parivahan.gov.in
+# NPCI / UPI (one NPCI certificate covers all four)
+npci.org.in
+bhimupi.org.in
+rupay.co.in
+upichalega.com

@@ -1,0 +1,50 @@
+{
+ "domain": "ubi.dev",
+ "include_subdomains": true,
+ "fetched_at": "2026-11-06T01:51:16Z",
+ "source": "sslmate",
+ "issuances": [
+  {
+   "id": "17047746200",
+   "sha256": "4d86ae8b938349446b17e682ff17234bd4c57adc9232faf2da6917e9d142622a",
+   "sans": [
+    "*.ubi.dev",
+    "ubi.dev"
+   ],
+   "issuer": {
+    "o": "Google Trust Services",
+    "cn": "WE1"
+   },
+   "not_before": "2026-09-07T22:21:02Z",
+   "not_after": "2026-12-06T23:18:44Z",
+   "validation": "DV",
+   "subject": {
+    "cn": "ubi.dev",
+    "o": null,
+    "c": null
+   }
+  },
+  {
+   "id": "17276332695",
+   "sha256": "099872a3a7c81d77bc368ef315986bee8c3b558d27c9151952af37e7167174ff",
+   "sans": [
+    "*.ubi.dev",
+    "ubi.dev"
+   ],
+   "issuer": {
+    "o": "Sectigo Limited",
+    "cn": "Sectigo Public Server Authentication CA DV E36"
+   },
+   "not_before": "2026-09-19T00:00:00Z",
+   "not_after": "2026-12-13T23:47:19Z",
+   "validation": "DV",
+   "subject": {
+    "cn": "ubi.dev",
+    "o": null,
+    "c": null
+   }
+  }
+ ],
+ "truncated": false,
+ "rate_limit_remaining": "8"
+}

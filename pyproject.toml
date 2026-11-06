@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "doppel"
+version = "0.0.1"
+description = "Explainable detection of look-alike phishing domains (PS-08)."
+readme = "README.md"
+requires-python = ">=3.11"
+# Core: only what the contract and the Quick stage need. Each later phase
+# installs its own extra, so `pip install -e .` stays fast and light.
+dependencies = [
+  "typer>=0.12",
+  "jsonschema>=4.21",
+  "pyyaml>=6.0",
+  "publicsuffixlist>=1.0",
+  "idna>=3.7",
+  # P4: the Family Verifier segments glued names (sbibankin) and the Trick Detector runs in Quick
+  "wordninja>=2",
+  "rapidfuzz>=3",
+  "jellyfish>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "httpx>=0.27"]
+# P3: look-alike generator
+generator = ["dnstwist", "ail-typo-squatting"]
+# P4: Human-Eye Renderer + rebuilding the glyph matrix (the Quick stage needs only the core deps)
+tricks = ["pillow>=10", "scikit-image>=0.22", "fonttools>=4.40", "numpy>=1.26"]
+# bench scripts (arena heatmap)
+bench = ["matplotlib>=3.8"]
+# P7: risk model
+risk = ["pandas>=2", "scikit-learn>=1.4", "scipy>=1.11", "numpy>=1.26"]  # training only; inference is pure Python
+# P6: API
+api = ["fastapi>=0.110", "uvicorn>=0.29", "python-multipart>=0.0.9"]
+# P8-P9: deep stage
+deep = ["playwright>=1.44", "imagehash>=4.3", "pillow>=10", "scikit-image>=0.22", "scipy>=1.11", "numpy>=1.26"]  # then: python -m playwright install chromium
+# P11: Certificate Forensics (parse X.509 certificates; TLS and CT use the standard library)
+certs = ["cryptography>=42"]
+# P8/P10: LLM tools (keys come from .env, never committed)
+llm = ["google-genai>=1.0", "groq>=0.9", "python-dotenv>=1.0"]
+# P12: Live Hunt (the certstream websocket; SQLite, gzip and urllib are the standard library)
+live = ["websockets>=13"]
+# P13: Campaign Radar (weighted connected components)
+campaign = ["networkx>=3"]
+
+[project.scripts]
+doppel = "doppel.cli:app"
+
+[tool.setuptools.packages.find]
+include = ["doppel*"]
+
+[tool.setuptools.package-data]
+doppel = ["address/unicode/*.txt", "address/*.txt", "perception/glyph_costs.json", "perception/fonts/*",
+          "tricks/tld_risk.json", "risk/model/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

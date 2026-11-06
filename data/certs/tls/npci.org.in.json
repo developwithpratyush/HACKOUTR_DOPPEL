@@ -1,0 +1,40 @@
+{
+ "host": "npci.org.in",
+ "brand": "npci",
+ "fetched_at": "2026-11-06T00:18:48Z",
+ "source": "live_tls",
+ "cert": {
+  "sha256": "a634bf3b73bba10ebfaef1c1083e6bb5bb335a9a7d547bd3a1363e77fbbc34f7",
+  "subject": {
+   "cn": "npci.org.in",
+   "o": "National Payments Corporation Of India",
+   "c": "IN"
+  },
+  "issuer": {
+   "cn": "DigiCert Global G3 TLS ECC SHA384 2020 CA1",
+   "o": "DigiCert Inc"
+  },
+  "sans": [
+   "npci.org.in",
+   "assets.bhmle.npci.org.in",
+   "assets.upi.npci.org.in",
+   "bhimmartech-edge.npci.org.in",
+   "bhimmartech.npci.org.in",
+   "bhimuat.npci.org.in",
+   "bhimupi.org.in",
+   "mweb.bhmle.npci.org.in",
+   "netc.org.in",
+   "rupay.co.in",
+   "upi-edge.npci.org.in",
+   "upichalega.com",
+   "www.bhimupi.org.in",
+   "www.netc.org.in",
+   "www.npci.org.in",
+   "www.rupay.co.in",
+   "www.upichalega.com"
+  ],
+  "not_before": "2026-09-10T00:00:00Z",
+  "not_after": "2026-12-18T23:59:59Z",
+  "validation": "OV"
+ }
+}

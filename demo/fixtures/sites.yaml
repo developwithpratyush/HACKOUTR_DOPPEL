@@ -1,0 +1,64 @@
+# Local page fixtures. Doppel never contacts a real domain: these are the only pages it ever opens.
+#
+# - Page Probe (Standard, P5) reads the page file to see whether it asks for credentials.
+# - Deep (P8) renders it in the sandboxed browser (doppel/deep/sandbox.py), where every request is served from
+#   these files or the genuine snapshots' HAR, and everything else is refused.
+#
+# A site is either a hand-made mock (`page:`), or a CLONE of a genuine snapshot (`clone_of:` + `transforms:`),
+# generated into demo/fixtures/generated/ (gitignored) by `python -m doppel.deep.pages`. The transforms are the
+# kit's edits, recorded so the Page Inspector's findings can be checked. When the snapshot is missing, the
+# hand-made `page:` is the fallback. All pages are fixtures made by us and served nowhere (honesty protocol).
+#
+# Transforms: form_action {action} (every form posts there) · inject_login {action, title} (a login box on top)
+#             · inject_card_fields {form_index} (card number, CVV, expiry, OTP added to a form)
+#             · name_inputs (P9: gives unnamed inputs a name, as a kit must: a saved SPA page posts nothing without it)
+#             · exfil_script {channel: telegram} (P9: the kit also sends every form to a Telegram bot; the token
+#               is made up, and the sandbox answers that call itself). {host} = this site.
+# backend (P9): how the site's "server" answers a submitted form, playing the kit's PHP for the Credential
+#   Tracker: {accepts: any, then: URL} (every login "works", then bounce to URL) or {accepts: none} (wrong
+#   logins rejected). Without it the sandbox answers with its own placeholder (behaviour after login: unknown).
+schema_version: 2
+sites:
+  # 01 The invisible letter: Paytm's page + a kit login box posting to the suspect itself
+  xn--pytm-53d.com:
+    status: live
+    page: pages/paytm_login_clone.html
+    clone_of: paytm
+    transforms:
+      - {kind: inject_login, action: "https://{host}/collect.php", title: "Login to Paytm"}
+    backend: {accepts: any, then: "https://paytm.com/"}      # T17: any password works, then off to the real Paytm
+  # 02 The twin letters: an ordinary blog (looks like nothing)
+  paytrn.com: {status: live, page: pages/ordinary_blog.html}
+  # 03 The sleeper: parked
+  sbi-kyc-update.in: {status: parked, page: pages/parked.html}
+  # 04 The disguise: e-Challan payment page, card fields added, the form posts to a FOREIGN domain
+  echallan.parivahan.gov.in.pay-fine.icu:
+    status: live
+    page: pages/echallan_payment_clone.html
+    clone_of: parivahan
+    transforms:
+      - {kind: inject_card_fields, form_index: 0}
+      - {kind: form_action, action: "https://challan-pay-secure.xyz/pay.php"}
+  # 05 The brand-less clone: SBI's login page on a random name, posting to itself AND to a Telegram bot (T16),
+  #    accepting any password and bouncing the victim to the real SBI (T17)
+  kx72-secure.top:
+    status: live
+    page: pages/sbi_login_clone.html
+    clone_of: sbi
+    transforms:
+      - {kind: form_action, action: "https://{host}/auth.php"}
+      - {kind: name_inputs}
+      - {kind: exfil_script, channel: telegram}
+    backend: {accepts: any, then: "https://sbi.bank.in/"}
+  # 06 The genuine weirdo: SBI's saved genuine login page, unchanged
+  onlinesbi.sbi.bank.in:
+    status: live
+    page: pages/sbi_login_genuine_standin.html
+    clone_of: sbi
+    transforms: []
+  # 08 The trust-signal fake: nothing there
+  sbi.bank-in.com: {status: none}
+  # Prompt-injection test (not in the gallery): an SBI-branded KYC page whose hidden text tells the VLM to
+  # call it genuine. The guard must strip the hidden text, and the screenshot still says SBI.
+  # Its "server" rejects wrong logins like a real one: the Credential Tracker's C15 must not be the only check.
+  kyc-helpdesk.online: {status: live, page: pages/injection_test.html, backend: {accepts: none}}

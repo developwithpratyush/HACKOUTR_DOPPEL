@@ -1,0 +1,26 @@
+{
+ "host": "accounts.google.com",
+ "brand": "google",
+ "fetched_at": "2026-11-06T00:18:48Z",
+ "source": "live_tls",
+ "cert": {
+  "sha256": "1c4f7c04a5f9cb0dabe3a2f0c2c19bf6215856e540a38ff0824c34bebd391652",
+  "subject": {
+   "cn": "accounts.google.com",
+   "o": null,
+   "c": null
+  },
+  "issuer": {
+   "cn": "WE2",
+   "o": "Google Trust Services"
+  },
+  "sans": [
+   "accounts.google.com",
+   "*.partner.android.com",
+   "mtls.accounts.google.com"
+  ],
+  "not_before": "2026-10-07T19:09:55Z",
+  "not_after": "2026-12-30T19:09:54Z",
+  "validation": "DV"
+ }
+}

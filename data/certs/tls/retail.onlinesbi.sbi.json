@@ -1,0 +1,25 @@
+{
+ "host": "retail.onlinesbi.sbi",
+ "brand": "sbi",
+ "fetched_at": "2026-11-06T00:18:16Z",
+ "source": "live_tls",
+ "cert": {
+  "sha256": "1a847a88fc2d7a8db617a41dd24f51fcbf30e756e904b8fa33d579567908dbc7",
+  "subject": {
+   "cn": "retail.onlinesbi.sbi",
+   "o": "STATE BANK OF INDIA",
+   "c": "IN"
+  },
+  "issuer": {
+   "cn": "DigiCert EV RSA CA G2",
+   "o": "DigiCert Inc"
+  },
+  "sans": [
+   "retail.onlinesbi.sbi",
+   "www.retail.onlinesbi.sbi"
+  ],
+  "not_before": "2026-06-25T00:00:00Z",
+  "not_after": "2027-01-09T23:59:59Z",
+  "validation": "EV"
+ }
+}

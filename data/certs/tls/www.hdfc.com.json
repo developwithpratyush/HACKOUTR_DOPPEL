@@ -1,0 +1,28 @@
+{
+ "host": "www.hdfc.com",
+ "brand": "hdfc",
+ "fetched_at": "2026-11-06T00:18:17Z",
+ "source": "live_tls",
+ "cert": {
+  "sha256": "45e1e12e649e30e1d3418a63cf8f639fbb3b303b077602b601026df6c7241b68",
+  "subject": {
+   "cn": "homeloans.hdfc.bank.in",
+   "o": "Hdfc Bank Limited",
+   "c": "IN"
+  },
+  "issuer": {
+   "cn": "GeoTrust TLS RSA CA G1",
+   "o": "DigiCert Inc"
+  },
+  "sans": [
+   "homeloans.hdfc.bank.in",
+   "www.homeloans.hdfc.bank.in",
+   "www.hdfc.com",
+   "www.hdfc.bank.in",
+   "www.hdfcbank.com"
+  ],
+  "not_before": "2026-02-16T00:00:00Z",
+  "not_after": "2027-02-16T23:59:59Z",
+  "validation": "OV"
+ }
+}

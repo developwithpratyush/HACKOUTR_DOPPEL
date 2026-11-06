@@ -1,0 +1,92 @@
+{
+ "domain": "ln-echallan.bid",
+ "include_subdomains": true,
+ "fetched_at": "2026-11-06T00:25:38Z",
+ "source": "sslmate_unauthenticated",
+ "issuances": [
+  {
+   "id": "18057146267",
+   "sha256": "538df1775ece865ddb70c88a97c6d8ea30de0ca90e4e9b80567f881958638865",
+   "sans": [
+    "*.ln-echallan.bid",
+    "ln-echallan.bid"
+   ],
+   "issuer": {
+    "o": "Let's Encrypt",
+    "cn": "YE1"
+   },
+   "not_before": "2026-10-29T17:45:42Z",
+   "not_after": "2027-01-27T17:45:41Z",
+   "validation": "DV",
+   "subject": {
+    "cn": "ln-echallan.bid",
+    "o": null,
+    "c": null
+   }
+  },
+  {
+   "id": "18057176288",
+   "sha256": "fb2a41f5b2a024a465e2a660a1552f6b0b74a1edb8a4c86033c21244e633f2da",
+   "sans": [
+    "*.top.ln-echallan.bid",
+    "ln-echallan.bid",
+    "top.ln-echallan.bid"
+   ],
+   "issuer": {
+    "o": "Google Trust Services",
+    "cn": "WE1"
+   },
+   "not_before": "2026-10-29T17:47:20Z",
+   "not_after": "2027-01-27T18:47:16Z",
+   "validation": "DV",
+   "subject": {
+    "cn": "ln-echallan.bid",
+    "o": null,
+    "c": null
+   }
+  },
+  {
+   "id": "18057192763",
+   "sha256": "ffb9c8c5126f5d0c7cc3d14920c2ad6b096bbd67ba5d78d877d050f13176b3ba",
+   "sans": [
+    "*.top.ln-echallan.bid",
+    "ln-echallan.bid",
+    "top.ln-echallan.bid"
+   ],
+   "issuer": {
+    "o": "Google Trust Services",
+    "cn": "WR1"
+   },
+   "not_before": "2026-10-29T17:47:10Z",
+   "not_after": "2027-01-27T18:44:58Z",
+   "validation": "DV",
+   "subject": {
+    "cn": "ln-echallan.bid",
+    "o": null,
+    "c": null
+   }
+  },
+  {
+   "id": "18058738916",
+   "sha256": "3a53492894512d9ed5772041ff73d50720ed6775b05b4889bdd022b94484982f",
+   "sans": [
+    "*.ln-echallan.bid",
+    "ln-echallan.bid"
+   ],
+   "issuer": {
+    "o": "Google Trust Services",
+    "cn": "WE1"
+   },
+   "not_before": "2026-10-29T19:55:46Z",
+   "not_after": "2027-01-27T20:44:22Z",
+   "validation": "DV",
+   "subject": {
+    "cn": "ln-echallan.bid",
+    "o": null,
+    "c": null
+   }
+  }
+ ],
+ "truncated": false,
+ "rate_limit_remaining": "0"
+}

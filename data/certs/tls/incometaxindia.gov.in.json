@@ -1,0 +1,25 @@
+{
+ "host": "incometaxindia.gov.in",
+ "brand": "income_tax",
+ "fetched_at": "2026-11-06T00:18:22Z",
+ "source": "live_tls",
+ "cert": {
+  "sha256": "632ce50fb23f79aefa9e6e39638ddc71a046fa577838e40f707364b63e41d83a",
+  "subject": {
+   "cn": "*.incometaxindia.gov.in",
+   "o": null,
+   "c": null
+  },
+  "issuer": {
+   "cn": "GlobalSign GCC R6 AlphaSSL CA 2025",
+   "o": "GlobalSign nv-sa"
+  },
+  "sans": [
+   "*.incometaxindia.gov.in",
+   "incometaxindia.gov.in"
+  ],
+  "not_before": "2026-01-30T10:12:38Z",
+  "not_after": "2027-03-03T10:12:37Z",
+  "validation": "DV"
+ }
+}

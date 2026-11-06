@@ -1,0 +1,80 @@
+# Phishing.Database ACTIVE (github.com/Phishing-Database/Phishing.Database, MIT), downloaded 2026-11-06:
+# 392,178 domains. Every name that contains one of our brands' strings and really targets that brand,
+# found by grep (indiapost|speedpost|icici|incometax|paytm|hdfc|echallan|parivahan|statebank|onlinesbi|yono|sbi)
+# and then read by hand. Frozen here so the no-degradation gate (bench/regress.py) doesn't move when the list does.
+#
+# Format: <brand id> <domain>    (# lines are comments)
+# Left out on purpose:
+#   - gamechallange.com, ggamechallanger.world: "echallan" only inside "gamechallange" (games)
+#   - sbi.mx, sbi-us.com, sbii-pawan103in.replit.app and the other 160 "sbi" hits: SBI Securities (Japan,
+#     sbisec*), Coinbase/Binance look-alikes, "bills"/"biz"/"lesbian" fragments, or no clear State Bank lure
+#   - mobilit...organizyononayi.run.place: "yono" inside Turkish "organizasyonu"
+# Included although not Indian: the 4 hm-revenue-customsincometax-* names (UK HMRC). They name "incometax",
+# and the 2026-11-06 count "Income Tax 6/6" included them; kept so the gate reproduces that number.
+
+# India Post (25)
+india_post gov-indiapost.sbs
+india_post indiapostad.top
+india_post indiapostes.icu
+india_post indiapost.gonvi.top
+india_post indiapost.gov.atxxycp.top
+india_post indiapost.gov.bdzhpc.top
+india_post indiapost.gov.bilibil.top
+india_post indiapost.gov.ceibigj.top
+india_post indiapost.gov.eyssebd.top
+india_post indiapost.gov.gjaipio.top
+india_post indiapost.gov.guangm.top
+india_post indiapost.gov.gyiaeu.top
+india_post indiapost.govin.life
+india_post indiapost.gov.itvsqtr.top
+india_post indiapost.gov.wzdygy.top
+india_post indiapost.gov.ykoil.top
+india_post indiapost.gov.ypaypro.top
+india_post indiapost.inflab.top
+india_post indiapostin.top
+india_post indiapost.isirina.top
+india_post indiapostnews.cc
+india_post indiapost.souil.xyz
+india_post indiapost.sunbofan.top
+india_post indiapost.xhfish.top
+india_post indiapost.zyttja.top
+
+# ICICI (7)
+icici applyonline-icici229392-ea696f.ingress-earth.ewp.live
+icici icicibankb.top
+icici icicibank.leadportals.com
+icici icicibanksecondchannel.com.cheissinc.com
+icici icicilbank.sbs
+icici iciciphone.com
+icici loginmlcrosoftonline365icicibank.com.verifyex.com
+
+# Income Tax (6; 4 of them UK HMRC, see above)
+income_tax hm-revenue-customsincometax-enquiries-668d2cde9960c.smartaromas.com
+income_tax hm-revenue-customsincometax-enquiries-668d3b1e91ce1.smartaromas.com
+income_tax hm-revenue-customsincometax-enquiries-668fff5597cb7.smartaromas.com
+income_tax hm-revenue-customsincometax-enquiries-66900be4afd64.smartaromas.com
+income_tax incometaxchandigarh.org
+income_tax pxi.incometaxnotice.in
+
+# Paytm (3)
+paytm internetbanking-paytmbank.com
+paytm paytmearning11.000webhostapp.com
+paytm paytm.heka-karya.com
+
+# HDFC (11; the first 2 are HDFC hidden inside gibberish on free hosting, missed before P11 fix (a))
+hdfc ezhzxywnitjrudyxhdfcuvotob-dot-gloff849483.uk.r.appspot.com
+hdfc fjdhhjgudjgsiwokjfdkvhjshdfchvjhvhjdhv.weebly.com
+hdfc hdfc-32-pan-update.web.app
+hdfc hdfcbank.com.dragonflydowser.com
+hdfc hdfcbank.speedynet.in
+hdfc hdfcgjbjbjfd.pages.dev
+hdfc hdfconline.co
+hdfc hdfc-pan-up-date2.web.app
+hdfc hdfc-sec-kohl-newoip.vercel.app
+hdfc loginmicrosoftonlinesettings.hdfcbank.cnsa.ao
+hdfc portalhdfc.rf.gd
+
+# State Bank of India (3 that really target SBI: internet banking, and the "SBI rewards" points scam)
+sbi onlinesbi.online
+sbi rewardsbi7i.replit.app
+sbi rewarsdsbi.pages.dev

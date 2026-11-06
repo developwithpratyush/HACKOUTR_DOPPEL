@@ -1,0 +1,249 @@
+{
+  "schema_version": "1.0.0",
+  "domain": "thanksbitcoin.com",
+  "input": {
+    "raw": "thanksbitcoin.com",
+    "display": "thanksbitcoin.com",
+    "source": "nrd_snapshot"
+  },
+  "owner": "thanksbitcoin.com",
+  "target_brand": null,
+  "closeness": null,
+  "risk_score": 0.04,
+  "confidence": "high",
+  "label": "benign",
+  "reason": "Contains the letters 'sbi' only by accident inside 'thanks bitcoin'; it resembles no protected brand.",
+  "hard_rule": null,
+  "counterfactual": null,
+  "timings_ms": {
+    "quick": 12,
+    "standard": null,
+    "deep": null,
+    "total": 14
+  },
+  "stages": [
+    {
+      "stage": "quick",
+      "status": "completed",
+      "tools": [
+        "address_reader",
+        "family_verifier",
+        "trick_detector"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "provisional": {
+        "label": "benign",
+        "risk_score": 0.04,
+        "reason": "Benign: no brand signal."
+      }
+    },
+    {
+      "stage": "standard",
+      "status": "skipped",
+      "tools": [],
+      "evidence_ids": [],
+      "provisional": null,
+      "skip_reason": "Batch input with no brand signal: not escalated."
+    },
+    {
+      "stage": "deep",
+      "status": "skipped",
+      "tools": [],
+      "evidence_ids": [],
+      "provisional": null,
+      "skip_reason": "Batch input with no brand signal: not escalated."
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "tool": "address_reader",
+      "stage": "quick",
+      "criterion": "C1",
+      "finding": "owner_resolved",
+      "points_to": "neutral",
+      "strength": "strong",
+      "score": 0,
+      "target_brand": null,
+      "summary": "Real owner is thanksbitcoin.com (public suffix 'com').",
+      "details": {
+        "owner": "thanksbitcoin.com",
+        "public_suffix": "com",
+        "private_suffix": false
+      },
+      "duration_ms": 2
+    },
+    {
+      "evidence_id": "E2",
+      "tool": "address_reader",
+      "stage": "quick",
+      "criterion": "C3",
+      "finding": "single_script",
+      "points_to": "neutral",
+      "strength": "strong",
+      "score": 0,
+      "target_brand": null,
+      "summary": "Plain ASCII: no hidden letters.",
+      "details": {
+        "scripts": [
+          "Latin"
+        ]
+      },
+      "duration_ms": 2
+    },
+    {
+      "evidence_id": "E3",
+      "tool": "family_verifier",
+      "stage": "quick",
+      "criterion": "C2",
+      "finding": "no_brand_to_verify",
+      "points_to": "neutral",
+      "strength": "strong",
+      "score": 0,
+      "target_brand": null,
+      "summary": "No protected brand in the name, so there is no family to check.",
+      "details": {
+        "proofs_checked": [],
+        "proofs_matched": []
+      },
+      "duration_ms": 1
+    },
+    {
+      "evidence_id": "E4",
+      "tool": "trick_detector",
+      "stage": "quick",
+      "criterion": "C5",
+      "finding": "substring_not_token",
+      "points_to": "genuine",
+      "strength": "weak",
+      "score": 0.7,
+      "target_brand": null,
+      "summary": "'sbi' appears only across a word boundary (thank|s|bi|tcoin); segmented as 'thanks bitcoin', so it isn't the brand.",
+      "details": {
+        "substring_hit": "sbi",
+        "tokens": [
+          "thanks",
+          "bitcoin"
+        ]
+      },
+      "duration_ms": 9
+    },
+    {
+      "evidence_id": "E5",
+      "tool": "trick_detector",
+      "stage": "quick",
+      "criterion": "C4",
+      "finding": "far_from_all_brands",
+      "points_to": "genuine",
+      "strength": "medium",
+      "score": 0.9,
+      "target_brand": null,
+      "summary": "Far from every protected brand (best: SBI at 0.11).",
+      "details": {
+        "per_brand": {
+          "sbi": 0.11,
+          "paytm": 0.03
+        }
+      },
+      "duration_ms": 9
+    }
+  ],
+  "trace": [
+    {
+      "step": 1,
+      "t_ms": 0,
+      "kind": "case_opened",
+      "message": "New case: thanksbitcoin.com from the newly-registered-domains snapshot. Batch input, so the brain escalates only on evidence."
+    },
+    {
+      "step": 2,
+      "t_ms": 1,
+      "kind": "tool",
+      "stage": "quick",
+      "tool": "address_reader",
+      "args": {
+        "domain": "thanksbitcoin.com"
+      },
+      "duration_ms": 2,
+      "evidence_ids": [
+        "E1",
+        "E2"
+      ],
+      "risk_before": 0.0,
+      "risk_after": 0.05,
+      "message": "Address Reader: ordinary name."
+    },
+    {
+      "step": 3,
+      "t_ms": 3,
+      "kind": "tool",
+      "stage": "quick",
+      "tool": "family_verifier",
+      "args": {
+        "owner": "thanksbitcoin.com"
+      },
+      "duration_ms": 1,
+      "evidence_ids": [
+        "E3"
+      ],
+      "risk_before": 0.05,
+      "risk_after": 0.05,
+      "message": "Family Verifier: nothing to verify."
+    },
+    {
+      "step": 4,
+      "t_ms": 4,
+      "kind": "tool",
+      "stage": "quick",
+      "tool": "trick_detector",
+      "args": {
+        "domain": "thanksbitcoin.com",
+        "owner": "thanksbitcoin.com"
+      },
+      "duration_ms": 9,
+      "evidence_ids": [
+        "E4",
+        "E5"
+      ],
+      "risk_before": 0.05,
+      "risk_after": 0.04,
+      "message": "Trick Detector: a substring hit, not a brand token."
+    },
+    {
+      "step": 5,
+      "t_ms": 13,
+      "kind": "provisional_verdict",
+      "stage": "quick",
+      "label": "benign",
+      "risk_after": 0.04,
+      "message": "Benign: no brand signal."
+    },
+    {
+      "step": 6,
+      "t_ms": 13,
+      "kind": "policy",
+      "message": "Batch input and no brand signal, so stop after Stage 1."
+    },
+    {
+      "step": 7,
+      "t_ms": 14,
+      "kind": "final_verdict",
+      "label": "benign",
+      "risk_before": 0.04,
+      "risk_after": 0.04,
+      "message": "BENIGN: Contains the letters 'sbi' only by accident inside 'thanks bitcoin'; it resembles no protected brand."
+    }
+  ],
+  "meta": {
+    "generated_at": "2026-11-05T10:00:00+05:30",
+    "engine_version": "0.0.1-mock",
+    "mock": true,
+    "notes": "Substring tools (openSquat-style keyword match) flag this; token-aware parsing doesn't."
+  }
+}

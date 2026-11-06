@@ -1,0 +1,5043 @@
+{
+ "generated_at": "2026-11-06T02:33:07+00:00",
+ "campaigns": [
+  {
+   "id": "C2ecb3504",
+   "size": 12,
+   "members_ids": [
+    "atxxycp.top",
+    "bdzhpc.top",
+    "bilibil.top",
+    "ceibigj.top",
+    "eyssebd.top",
+    "gjaipio.top",
+    "guangm.top",
+    "gyiaeu.top",
+    "itvsqtr.top",
+    "wzdygy.top",
+    "ykoil.top",
+    "ypaypro.top"
+   ],
+   "members": [
+    {
+     "domain": "atxxycp.top",
+     "names": [
+      "indiapost.gov.atxxycp.top"
+     ],
+     "risk": 0.995,
+     "brand": "india_post",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "bdzhpc.top",
+     "names": [
+      "indiapost.gov.bdzhpc.top"
+     ],
+     "risk": 0.995,
+     "brand": "india_post",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "bilibil.top",
+     "names": [
+      "indiapost.gov.bilibil.top"
+     ],
+     "risk": 0.995,
+     "brand": "india_post",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "ceibigj.top",
+     "names": [
+      "indiapost.gov.ceibigj.top"
+     ],
+     "risk": 0.995,
+     "brand": "india_post",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "eyssebd.top",
+     "names": [
+      "indiapost.gov.eyssebd.top"
+     ],
+     "risk": 0.995,
+     "brand": "india_post",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "gjaipio.top",
+     "names": [
+      "indiapost.gov.gjaipio.top"
+     ],
+     "risk": 0.995,
+     "brand": "india_post",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "guangm.top",
+     "names": [
+      "indiapost.gov.guangm.top"
+     ],
+     "risk": 0.995,
+     "brand": "india_post",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "gyiaeu.top",
+     "names": [
+      "indiapost.gov.gyiaeu.top"
+     ],
+     "risk": 0.995,
+     "brand": "india_post",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "itvsqtr.top",
+     "names": [
+      "indiapost.gov.itvsqtr.top"
+     ],
+     "risk": 0.995,
+     "brand": "india_post",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "wzdygy.top",
+     "names": [
+      "indiapost.gov.wzdygy.top"
+     ],
+     "risk": 0.995,
+     "brand": "india_post",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "ykoil.top",
+     "names": [
+      "indiapost.gov.ykoil.top"
+     ],
+     "risk": 0.995,
+     "brand": "india_post",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "ypaypro.top",
+     "names": [
+      "indiapost.gov.ypaypro.top"
+     ],
+     "risk": 0.995,
+     "brand": "india_post",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "india_post": 12
+   },
+   "templates": [
+    "<B>.gov.<r>.<tld>"
+   ],
+   "links": {
+    "naming_template": 11
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": null,
+   "last_seen": null,
+   "armed": [],
+   "sources": [
+    "pdb"
+   ],
+   "rank": 12.0
+  },
+  {
+   "id": "Cd40e4c46",
+   "size": 5,
+   "members_ids": [
+    "in-echallan.date",
+    "in-echallan.online",
+    "in-echallan.party",
+    "in-echallan.trade",
+    "ln-echallan.bid"
+   ],
+   "members": [
+    {
+     "domain": "in-echallan.date",
+     "names": [
+      "in-echallan.date"
+     ],
+     "risk": 0.985,
+     "brand": "parivahan",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": "2026-10-28T21:18:08Z",
+     "subdomains": [
+      "pov"
+     ],
+     "armed": true
+    },
+    {
+     "domain": "in-echallan.online",
+     "names": [
+      "in-echallan.online"
+     ],
+     "risk": 0.989,
+     "brand": "parivahan",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": "2026-10-26T11:28:29Z",
+     "subdomains": [
+      "poy"
+     ],
+     "armed": true
+    },
+    {
+     "domain": "in-echallan.party",
+     "names": [
+      "in-echallan.party"
+     ],
+     "risk": 0.976,
+     "brand": "parivahan",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": "2026-10-28T21:39:43Z",
+     "subdomains": [
+      "fov"
+     ],
+     "armed": true
+    },
+    {
+     "domain": "in-echallan.trade",
+     "names": [
+      "in-echallan.trade"
+     ],
+     "risk": 0.979,
+     "brand": "parivahan",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": "2026-10-28T21:44:31Z",
+     "subdomains": [
+      "ogv"
+     ],
+     "armed": true
+    },
+    {
+     "domain": "ln-echallan.bid",
+     "names": [
+      "ln-echallan.bid"
+     ],
+     "risk": 0.983,
+     "brand": "parivahan",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": "2026-10-29T17:45:42Z",
+     "subdomains": [
+      "top"
+     ],
+     "armed": true
+    }
+   ],
+   "brands": {
+    "parivahan": 10
+   },
+   "templates": [
+    "in-<B>.<tld>"
+   ],
+   "links": {
+    "naming_template": 10,
+    "cert_recipe": 10,
+    "nrd_week": 10
+   },
+   "strength": "strong (same certificate recipe)",
+   "recipe": {
+    "shapes": [
+     "A+S3+WS3",
+     "A+W"
+    ],
+    "issuers": {
+     "Google Trust Services": 5,
+     "Let's Encrypt": 5,
+     "SSL Corporation": 2
+    },
+    "first_cert": "2026-10-26T11:28:29Z",
+    "last_cert": "2026-10-29T17:45:42Z",
+    "span_h": 78.3
+   },
+   "first_seen": "2026-11-06T01:44:25Z",
+   "last_seen": "2026-11-06T01:44:25Z",
+   "armed": [
+    "in-echallan.date",
+    "in-echallan.online",
+    "in-echallan.party",
+    "in-echallan.trade",
+    "ln-echallan.bid"
+   ],
+   "sources": [
+    "nrd"
+   ],
+   "rank": 12.0
+  },
+  {
+   "id": "C42b83c2f",
+   "size": 7,
+   "members_ids": [
+    "pay8-2v-4wkfituj8-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-6bis3visv-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-9jkc4ukd3-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-bomuuniez-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-dp8sptwgl-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-gbz1keyte-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-kbawr6w4i-ekontetevi-gmailcom.vercel.app"
+   ],
+   "members": [
+    {
+     "domain": "pay8-2v-4wkfituj8-ekontetevi-gmailcom.vercel.app",
+     "names": [
+      "pay8-2v-4wkfituj8-ekontetevi-gmailcom.vercel.app"
+     ],
+     "risk": 0.777,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "pay8-2v-6bis3visv-ekontetevi-gmailcom.vercel.app",
+     "names": [
+      "pay8-2v-6bis3visv-ekontetevi-gmailcom.vercel.app"
+     ],
+     "risk": 0.777,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "pay8-2v-9jkc4ukd3-ekontetevi-gmailcom.vercel.app",
+     "names": [
+      "pay8-2v-9jkc4ukd3-ekontetevi-gmailcom.vercel.app"
+     ],
+     "risk": 0.777,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "pay8-2v-bomuuniez-ekontetevi-gmailcom.vercel.app",
+     "names": [
+      "pay8-2v-bomuuniez-ekontetevi-gmailcom.vercel.app"
+     ],
+     "risk": 0.777,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "pay8-2v-dp8sptwgl-ekontetevi-gmailcom.vercel.app",
+     "names": [
+      "pay8-2v-dp8sptwgl-ekontetevi-gmailcom.vercel.app"
+     ],
+     "risk": 0.777,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "pay8-2v-gbz1keyte-ekontetevi-gmailcom.vercel.app",
+     "names": [
+      "pay8-2v-gbz1keyte-ekontetevi-gmailcom.vercel.app"
+     ],
+     "risk": 0.777,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "pay8-2v-kbawr6w4i-ekontetevi-gmailcom.vercel.app",
+     "names": [
+      "pay8-2v-kbawr6w4i-ekontetevi-gmailcom.vercel.app"
+     ],
+     "risk": 0.777,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "google": 7
+   },
+   "templates": [
+    "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>"
+   ],
+   "links": {
+    "naming_template": 21
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": null,
+   "last_seen": null,
+   "armed": [],
+   "sources": [
+    "pdb"
+   ],
+   "rank": 7.0
+  },
+  {
+   "id": "C80e3f08b",
+   "size": 7,
+   "members_ids": [
+    "cygn.eu.org",
+    "nyanwaretest.com",
+    "pmeflex.ch",
+    "signoninmyaccountb.com",
+    "skir.cc",
+    "tsinbei.cn",
+    "wjfcloud.us.kg"
+   ],
+   "members": [
+    {
+     "domain": "cygn.eu.org",
+     "names": [
+      "accounts.google.cygn.eu.org"
+     ],
+     "risk": 0.972,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "nyanwaretest.com",
+     "names": [
+      "accounts.google.nyanwaretest.com",
+      "www.google.nyanwaretest.com"
+     ],
+     "risk": 0.958,
+     "brand": "google",
+     "sources": [
+      "live"
+     ],
+     "first_seen": "2026-11-06T02:30:18Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "pmeflex.ch",
+     "names": [
+      "accounts.google.pmeflex.ch"
+     ],
+     "risk": 0.97,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "signoninmyaccountb.com",
+     "names": [
+      "accounts.google.signoninmyaccountb.com"
+     ],
+     "risk": 0.965,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "skir.cc",
+     "names": [
+      "accounts.google.skir.cc"
+     ],
+     "risk": 0.972,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "tsinbei.cn",
+     "names": [
+      "accounts.google.tsinbei.cn",
+      "arvr.google.tsinbei.cn"
+     ],
+     "risk": 0.973,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "wjfcloud.us.kg",
+     "names": [
+      "accounts.google.wjfcloud.us.kg"
+     ],
+     "risk": 0.969,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "google": 9
+   },
+   "templates": [
+    "accounts.<B>.<r>.<tld>"
+   ],
+   "links": {
+    "naming_template": 21
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": "2026-11-06T02:30:18Z",
+   "last_seen": "2026-11-06T02:30:18Z",
+   "armed": [],
+   "sources": [
+    "live",
+    "pdb"
+   ],
+   "rank": 7.0
+  },
+  {
+   "id": "C04fdbd7a",
+   "size": 4,
+   "members_ids": [
+    "google-site-verificationcqeizys86jq4o8tta5ktfcbwzptikmtnlix.com",
+    "google-site-verificationfqwlvnbunu2dg04kmftcoq36z0oatfm5kdo.xyz",
+    "google-site-verificationjhdpcya7tw3uthgd2fnz63zg5jsnu2rt02o.xyz",
+    "google-site-verificationr7luxn3drarw27l0myiiuovr3o22snlfyu8pzf.store"
+   ],
+   "members": [
+    {
+     "domain": "google-site-verificationcqeizys86jq4o8tta5ktfcbwzptikmtnlix.com",
+     "names": [
+      "google-site-verificationcqeizys86jq4o8tta5ktfcbwzptikmtnlix.com"
+     ],
+     "risk": 0.92,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "google-site-verificationfqwlvnbunu2dg04kmftcoq36z0oatfm5kdo.xyz",
+     "names": [
+      "google-site-verificationfqwlvnbunu2dg04kmftcoq36z0oatfm5kdo.xyz"
+     ],
+     "risk": 0.936,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "google-site-verificationjhdpcya7tw3uthgd2fnz63zg5jsnu2rt02o.xyz",
+     "names": [
+      "google-site-verificationjhdpcya7tw3uthgd2fnz63zg5jsnu2rt02o.xyz"
+     ],
+     "risk": 0.916,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:49:49Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "google-site-verificationr7luxn3drarw27l0myiiuovr3o22snlfyu8pzf.store",
+     "names": [
+      "google-site-verificationr7luxn3drarw27l0myiiuovr3o22snlfyu8pzf.store"
+     ],
+     "risk": 0.894,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:49:49Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "google": 6
+   },
+   "templates": [
+    "<B>-site-<r>.<tld>"
+   ],
+   "links": {
+    "naming_template": 6,
+    "nrd_week": 6
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": "2026-11-06T01:44:25Z",
+   "last_seen": "2026-11-06T01:49:49Z",
+   "armed": [],
+   "sources": [
+    "nrd"
+   ],
+   "rank": 6.0
+  },
+  {
+   "id": "C1ca365e6",
+   "size": 4,
+   "members_ids": [
+    "jp-google.cloud",
+    "jp-google.club",
+    "jp-google.cyou",
+    "jp-google.fit"
+   ],
+   "members": [
+    {
+     "domain": "jp-google.cloud",
+     "names": [
+      "jp-google.cloud"
+     ],
+     "risk": 0.913,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "jp-google.club",
+     "names": [
+      "jp-google.club"
+     ],
+     "risk": 0.913,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "jp-google.cyou",
+     "names": [
+      "jp-google.cyou"
+     ],
+     "risk": 0.911,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "jp-google.fit",
+     "names": [
+      "jp-google.fit"
+     ],
+     "risk": 0.884,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "google": 8
+   },
+   "templates": [
+    "jp-<B>.<tld>"
+   ],
+   "links": {
+    "naming_template": 6,
+    "nrd_week": 6
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": "2026-11-06T01:44:25Z",
+   "last_seen": "2026-11-06T01:44:25Z",
+   "armed": [],
+   "sources": [
+    "nrd"
+   ],
+   "rank": 6.0
+  },
+  {
+   "id": "C5bf644cc",
+   "size": 4,
+   "members_ids": [
+    "googlenewsblog.com",
+    "googlenewsblog.info",
+    "googlenewsblog.org",
+    "googlenewsblog.store"
+   ],
+   "members": [
+    {
+     "domain": "googlenewsblog.com",
+     "names": [
+      "googlenewsblog.com"
+     ],
+     "risk": 0.868,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "googlenewsblog.info",
+     "names": [
+      "googlenewsblog.info"
+     ],
+     "risk": 0.901,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "googlenewsblog.org",
+     "names": [
+      "googlenewsblog.org"
+     ],
+     "risk": 0.859,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "googlenewsblog.store",
+     "names": [
+      "googlenewsblog.store"
+     ],
+     "risk": 0.925,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "google": 8
+   },
+   "templates": [
+    "<B>newsblog.<tld>"
+   ],
+   "links": {
+    "naming_template": 6,
+    "nrd_week": 6
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": "2026-11-06T01:44:25Z",
+   "last_seen": "2026-11-06T01:44:25Z",
+   "armed": [],
+   "sources": [
+    "nrd"
+   ],
+   "rank": 6.0
+  },
+  {
+   "id": "Cd633b363",
+   "size": 4,
+   "members_ids": [
+    "hellogoogle.cloud",
+    "hellogoogle.net",
+    "hellogoogle.store",
+    "hellogoogle.xyz"
+   ],
+   "members": [
+    {
+     "domain": "hellogoogle.cloud",
+     "names": [
+      "hellogoogle.cloud"
+     ],
+     "risk": 0.858,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "hellogoogle.net",
+     "names": [
+      "hellogoogle.net"
+     ],
+     "risk": 0.757,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "hellogoogle.store",
+     "names": [
+      "hellogoogle.store"
+     ],
+     "risk": 0.814,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "hellogoogle.xyz",
+     "names": [
+      "hellogoogle.xyz"
+     ],
+     "risk": 0.867,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "google": 8
+   },
+   "templates": [
+    "hello<B>.<tld>"
+   ],
+   "links": {
+    "naming_template": 6,
+    "nrd_week": 6
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": "2026-11-06T01:44:25Z",
+   "last_seen": "2026-11-06T01:44:25Z",
+   "armed": [],
+   "sources": [
+    "nrd"
+   ],
+   "rank": 6.0
+  },
+  {
+   "id": "C64aa61bf",
+   "size": 3,
+   "members_ids": [
+    "kr-google.cyou",
+    "kr-google.ltd",
+    "kr-google.work"
+   ],
+   "members": [
+    {
+     "domain": "kr-google.cyou",
+     "names": [
+      "kr-google.cyou"
+     ],
+     "risk": 0.91,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "kr-google.ltd",
+     "names": [
+      "kr-google.ltd"
+     ],
+     "risk": 0.874,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "kr-google.work",
+     "names": [
+      "kr-google.work"
+     ],
+     "risk": 0.9,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "google": 6
+   },
+   "templates": [
+    "kr-<B>.<tld>"
+   ],
+   "links": {
+    "naming_template": 3,
+    "nrd_week": 3
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": "2026-11-06T01:44:25Z",
+   "last_seen": "2026-11-06T01:44:25Z",
+   "armed": [],
+   "sources": [
+    "nrd"
+   ],
+   "rank": 4.5
+  },
+  {
+   "id": "C24d2fc30",
+   "size": 4,
+   "members_ids": [
+    "ranking-googleads-gacordong1.pages.dev",
+    "ranking-googleads-gacordong2.pages.dev",
+    "ranking-googleads-gacordong3.pages.dev",
+    "ranking-googleads-gacordong6.pages.dev"
+   ],
+   "members": [
+    {
+     "domain": "ranking-googleads-gacordong1.pages.dev",
+     "names": [
+      "ranking-googleads-gacordong1.pages.dev"
+     ],
+     "risk": 0.746,
+     "brand": "google",
+     "sources": [
+      "live"
+     ],
+     "first_seen": "2026-11-06T02:30:28Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "ranking-googleads-gacordong2.pages.dev",
+     "names": [
+      "ranking-googleads-gacordong2.pages.dev"
+     ],
+     "risk": 0.746,
+     "brand": "google",
+     "sources": [
+      "live"
+     ],
+     "first_seen": "2026-11-06T01:59:41Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "ranking-googleads-gacordong3.pages.dev",
+     "names": [
+      "ranking-googleads-gacordong3.pages.dev"
+     ],
+     "risk": 0.746,
+     "brand": "google",
+     "sources": [
+      "live"
+     ],
+     "first_seen": "2026-11-06T02:13:05Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "ranking-googleads-gacordong6.pages.dev",
+     "names": [
+      "ranking-googleads-gacordong6.pages.dev"
+     ],
+     "risk": 0.746,
+     "brand": "google",
+     "sources": [
+      "live"
+     ],
+     "first_seen": "2026-11-06T02:18:11Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "google": 4
+   },
+   "templates": [
+    "ranking-<B>ads-<r><n>.<tld>"
+   ],
+   "links": {
+    "naming_template": 6
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": "2026-11-06T01:59:41Z",
+   "last_seen": "2026-11-06T02:30:28Z",
+   "armed": [],
+   "sources": [
+    "live"
+   ],
+   "rank": 4.0
+  },
+  {
+   "id": "Cfdd54959",
+   "size": 4,
+   "members_ids": [
+    "accounts-google.eu",
+    "accounts-google.help",
+    "accounts-google.shop",
+    "accounts-google.top"
+   ],
+   "members": [
+    {
+     "domain": "accounts-google.eu",
+     "names": [
+      "accounts.accounts-google.eu",
+      "accounts-google.eu"
+     ],
+     "risk": 0.832,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "accounts-google.help",
+     "names": [
+      "accounts-google.help"
+     ],
+     "risk": 0.83,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "accounts-google.shop",
+     "names": [
+      "accounts-google.shop"
+     ],
+     "risk": 0.862,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "accounts-google.top",
+     "names": [
+      "accounts-google.top"
+     ],
+     "risk": 0.865,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "google": 6
+   },
+   "templates": [
+    "accounts-<B>.<tld>"
+   ],
+   "links": {
+    "naming_template": 6
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": "2026-11-06T01:44:25Z",
+   "last_seen": "2026-11-06T01:44:25Z",
+   "armed": [],
+   "sources": [
+    "nrd",
+    "pdb"
+   ],
+   "rank": 4.0
+  },
+  {
+   "id": "C40b3b9b3",
+   "size": 3,
+   "members_ids": [
+    "caddy.workers.dev",
+    "euskodata.com",
+    "letsatsilesufi.co.za"
+   ],
+   "members": [
+    {
+     "domain": "caddy.workers.dev",
+     "names": [
+      "accounts-google.caddy.workers.dev"
+     ],
+     "risk": 0.82,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "euskodata.com",
+     "names": [
+      "accounts-google.euskodata.com"
+     ],
+     "risk": 0.764,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "letsatsilesufi.co.za",
+     "names": [
+      "accounts-google.letsatsilesufi.co.za"
+     ],
+     "risk": 0.75,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "google": 3
+   },
+   "templates": [
+    "accounts-<B>.<r>.<tld>"
+   ],
+   "links": {
+    "naming_template": 3
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": null,
+   "last_seen": null,
+   "armed": [],
+   "sources": [
+    "pdb"
+   ],
+   "rank": 3.0
+  },
+  {
+   "id": "Cb6a49071",
+   "size": 3,
+   "members_ids": [
+    "adack.ir",
+    "arablatrade.com",
+    "jdvz.net"
+   ],
+   "members": [
+    {
+     "domain": "adack.ir",
+     "names": [
+      "drive.google.com.adack.ir"
+     ],
+     "risk": 0.997,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "arablatrade.com",
+     "names": [
+      "drive.google.com.arablatrade.com"
+     ],
+     "risk": 0.996,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "jdvz.net",
+     "names": [
+      "drive.google.com.jdvz.net"
+     ],
+     "risk": 0.997,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "google": 3
+   },
+   "templates": [
+    "drive.<B>.com.<r>.<tld>"
+   ],
+   "links": {
+    "naming_template": 3
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": null,
+   "last_seen": null,
+   "armed": [],
+   "sources": [
+    "pdb"
+   ],
+   "rank": 3.0
+  },
+  {
+   "id": "Ce594b6b0",
+   "size": 3,
+   "members_ids": [
+    "us-east1-runtime-connectors-google.com",
+    "us-east4-runtime-connectors-google.com",
+    "us-east5-runtime-connectors-google.com"
+   ],
+   "members": [
+    {
+     "domain": "us-east1-runtime-connectors-google.com",
+     "names": [
+      "us-east1-runtime-connectors-google.com"
+     ],
+     "risk": 0.71,
+     "brand": "google",
+     "sources": [
+      "live"
+     ],
+     "first_seen": "2026-11-06T01:57:46Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "us-east4-runtime-connectors-google.com",
+     "names": [
+      "us-east4-runtime-connectors-google.com"
+     ],
+     "risk": 0.71,
+     "brand": "google",
+     "sources": [
+      "live"
+     ],
+     "first_seen": "2026-11-06T01:54:07Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "us-east5-runtime-connectors-google.com",
+     "names": [
+      "us-east5-runtime-connectors-google.com"
+     ],
+     "risk": 0.697,
+     "brand": "google",
+     "sources": [
+      "live"
+     ],
+     "first_seen": "2026-11-06T02:18:24Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "google": 3
+   },
+   "templates": [
+    "us-east<n>-runtime-connectors-<B>.<tld>"
+   ],
+   "links": {
+    "naming_template": 3
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": "2026-11-06T01:54:07Z",
+   "last_seen": "2026-11-06T02:18:24Z",
+   "armed": [],
+   "sources": [
+    "live"
+   ],
+   "rank": 3.0
+  },
+  {
+   "id": "Cf3b62572",
+   "size": 3,
+   "members_ids": [
+    "cins.it",
+    "fkdgl.com",
+    "khanimambatraining.co.za"
+   ],
+   "members": [
+    {
+     "domain": "cins.it",
+     "names": [
+      "google.com.cins.it"
+     ],
+     "risk": 0.999,
+     "brand": "google",
+     "sources": [
+      "live"
+     ],
+     "first_seen": "2026-11-06T02:17:51Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "fkdgl.com",
+     "names": [
+      "gmail.com.fkdgl.com",
+      "mail.gmail.com.fkdgl.com"
+     ],
+     "risk": 0.999,
+     "brand": "google",
+     "sources": [
+      "live"
+     ],
+     "first_seen": "2026-11-06T02:10:36Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "khanimambatraining.co.za",
+     "names": [
+      "google.com.khanimambatraining.co.za"
+     ],
+     "risk": 0.999,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "google": 4
+   },
+   "templates": [
+    "<B>.com.<r>.<tld>"
+   ],
+   "links": {
+    "naming_template": 3
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": "2026-11-06T02:10:36Z",
+   "last_seen": "2026-11-06T02:17:51Z",
+   "armed": [],
+   "sources": [
+    "live",
+    "pdb"
+   ],
+   "rank": 3.0
+  },
+  {
+   "id": "C23be680c",
+   "size": 2,
+   "members_ids": [
+    "echallanrto.com",
+    "echallanrto.org"
+   ],
+   "members": [
+    {
+     "domain": "echallanrto.com",
+     "names": [
+      "echallanrto.com"
+     ],
+     "risk": 0.891,
+     "brand": "parivahan",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "echallanrto.org",
+     "names": [
+      "echallanrto.org"
+     ],
+     "risk": 0.886,
+     "brand": "parivahan",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "parivahan": 4
+   },
+   "templates": [
+    "<B>rto.<tld>"
+   ],
+   "links": {
+    "naming_template": 1,
+    "nrd_week": 1
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": "2026-11-06T01:44:25Z",
+   "last_seen": "2026-11-06T01:44:25Z",
+   "armed": [],
+   "sources": [
+    "nrd"
+   ],
+   "rank": 3.0
+  },
+  {
+   "id": "C3e6ac754",
+   "size": 2,
+   "members_ids": [
+    "nxtgenparivahan.com",
+    "nxtgenparivahan.org"
+   ],
+   "members": [
+    {
+     "domain": "nxtgenparivahan.com",
+     "names": [
+      "nxtgenparivahan.com"
+     ],
+     "risk": 0.731,
+     "brand": "parivahan",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "nxtgenparivahan.org",
+     "names": [
+      "nxtgenparivahan.org"
+     ],
+     "risk": 0.707,
+     "brand": "parivahan",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "parivahan": 4
+   },
+   "templates": [
+    "nxtgen<B>.<tld>"
+   ],
+   "links": {
+    "naming_template": 1,
+    "nrd_week": 1
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": "2026-11-06T01:44:25Z",
+   "last_seen": "2026-11-06T01:44:25Z",
+   "armed": [],
+   "sources": [
+    "nrd"
+   ],
+   "rank": 3.0
+  },
+  {
+   "id": "C508caad3",
+   "size": 2,
+   "members_ids": [
+    "googleads3.com",
+    "googleads4.com"
+   ],
+   "members": [
+    {
+     "domain": "googleads3.com",
+     "names": [
+      "googleads3.com"
+     ],
+     "risk": 0.9,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "googleads4.com",
+     "names": [
+      "googleads4.com"
+     ],
+     "risk": 0.912,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "google": 4
+   },
+   "templates": [
+    "<B>ads<n>.<tld>"
+   ],
+   "links": {
+    "naming_template": 1,
+    "nrd_week": 1
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": "2026-11-06T01:44:25Z",
+   "last_seen": "2026-11-06T01:44:25Z",
+   "armed": [],
+   "sources": [
+    "nrd"
+   ],
+   "rank": 3.0
+  },
+  {
+   "id": "C6f896407",
+   "size": 2,
+   "members_ids": [
+    "buyspinslotgoogle1.lol",
+    "buyspinslotgoogle1.net"
+   ],
+   "members": [
+    {
+     "domain": "buyspinslotgoogle1.lol",
+     "names": [
+      "buyspinslotgoogle1.lol"
+     ],
+     "risk": 0.551,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "buyspinslotgoogle1.net",
+     "names": [
+      "buyspinslotgoogle1.net"
+     ],
+     "risk": 0.533,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "google": 4
+   },
+   "templates": [
+    "buyspinslot<B><n>.<tld>"
+   ],
+   "links": {
+    "naming_template": 1,
+    "nrd_week": 1
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": "2026-11-06T01:44:25Z",
+   "last_seen": "2026-11-06T01:44:25Z",
+   "armed": [],
+   "sources": [
+    "nrd"
+   ],
+   "rank": 3.0
+  },
+  {
+   "id": "Ca2fbce91",
+   "size": 2,
+   "members_ids": [
+    "sbi-rating.ch",
+    "sbi-rating.com"
+   ],
+   "members": [
+    {
+     "domain": "sbi-rating.ch",
+     "names": [
+      "sbi-rating.ch"
+     ],
+     "risk": 0.858,
+     "brand": "sbi",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "sbi-rating.com",
+     "names": [
+      "sbi-rating.com"
+     ],
+     "risk": 0.879,
+     "brand": "sbi",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "sbi": 4
+   },
+   "templates": [
+    "<B>-rating.<tld>"
+   ],
+   "links": {
+    "naming_template": 1,
+    "nrd_week": 1
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": "2026-11-06T01:44:25Z",
+   "last_seen": "2026-11-06T01:44:25Z",
+   "armed": [],
+   "sources": [
+    "nrd"
+   ],
+   "rank": 3.0
+  },
+  {
+   "id": "Cd3a7d869",
+   "size": 2,
+   "members_ids": [
+    "googlechrome722196.com",
+    "googlechrome733350.com"
+   ],
+   "members": [
+    {
+     "domain": "googlechrome722196.com",
+     "names": [
+      "googlechrome722196.com"
+     ],
+     "risk": 0.93,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "googlechrome733350.com",
+     "names": [
+      "googlechrome733350.com"
+     ],
+     "risk": 0.927,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "google": 4
+   },
+   "templates": [
+    "<B>chrome<n>.<tld>"
+   ],
+   "links": {
+    "naming_template": 1,
+    "nrd_week": 1
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": "2026-11-06T01:44:25Z",
+   "last_seen": "2026-11-06T01:44:25Z",
+   "armed": [],
+   "sources": [
+    "nrd"
+   ],
+   "rank": 3.0
+  },
+  {
+   "id": "Cdaa9bff6",
+   "size": 2,
+   "members_ids": [
+    "meet-google-call.fyi",
+    "meet-google-call.live"
+   ],
+   "members": [
+    {
+     "domain": "meet-google-call.fyi",
+     "names": [
+      "meet-google-call.fyi"
+     ],
+     "risk": 0.772,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "meet-google-call.live",
+     "names": [
+      "meet-google-call.live"
+     ],
+     "risk": 0.837,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "google": 4
+   },
+   "templates": [
+    "meet-<B>-call.<tld>"
+   ],
+   "links": {
+    "naming_template": 1,
+    "nrd_week": 1
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": "2026-11-06T01:44:25Z",
+   "last_seen": "2026-11-06T01:44:25Z",
+   "armed": [],
+   "sources": [
+    "nrd"
+   ],
+   "rank": 3.0
+  },
+  {
+   "id": "Ce80a8d18",
+   "size": 2,
+   "members_ids": [
+    "meet-google.pro",
+    "meet-google.top"
+   ],
+   "members": [
+    {
+     "domain": "meet-google.pro",
+     "names": [
+      "meet-google.pro"
+     ],
+     "risk": 0.862,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "meet-google.top",
+     "names": [
+      "meet-google.top"
+     ],
+     "risk": 0.893,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "google": 4
+   },
+   "templates": [
+    "meet-<B>.<tld>"
+   ],
+   "links": {
+    "naming_template": 1,
+    "nrd_week": 1
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": "2026-11-06T01:44:25Z",
+   "last_seen": "2026-11-06T01:44:25Z",
+   "armed": [],
+   "sources": [
+    "nrd"
+   ],
+   "rank": 3.0
+  },
+  {
+   "id": "C00eed30f",
+   "size": 2,
+   "members_ids": [
+    "acountsgoogleads.com",
+    "dichvugoogleads.online"
+   ],
+   "members": [
+    {
+     "domain": "acountsgoogleads.com",
+     "names": [
+      "acountsgoogleads.com"
+     ],
+     "risk": 0.478,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "dichvugoogleads.online",
+     "names": [
+      "dichvugoogleads.online"
+     ],
+     "risk": 0.69,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "google": 3
+   },
+   "templates": [
+    "<r><B>ads.<tld>"
+   ],
+   "links": {
+    "naming_template": 1
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": "2026-11-06T01:44:25Z",
+   "last_seen": "2026-11-06T01:44:25Z",
+   "armed": [],
+   "sources": [
+    "nrd",
+    "pdb"
+   ],
+   "rank": 2.0
+  },
+  {
+   "id": "C0929baf1",
+   "size": 2,
+   "members_ids": [
+    "cloudindex-google-gd01wp.pages.dev",
+    "cloudindex-google-gdao.pages.dev"
+   ],
+   "members": [
+    {
+     "domain": "cloudindex-google-gd01wp.pages.dev",
+     "names": [
+      "cloudindex-google-gd01wp.pages.dev"
+     ],
+     "risk": 0.758,
+     "brand": "google",
+     "sources": [
+      "live"
+     ],
+     "first_seen": "2026-11-06T01:54:47Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "cloudindex-google-gdao.pages.dev",
+     "names": [
+      "cloudindex-google-gdao.pages.dev"
+     ],
+     "risk": 0.766,
+     "brand": "google",
+     "sources": [
+      "live"
+     ],
+     "first_seen": "2026-11-06T01:57:13Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "google": 2
+   },
+   "templates": [
+    "cloudindex-<B>-<r>.<tld>"
+   ],
+   "links": {
+    "naming_template": 1
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": "2026-11-06T01:54:47Z",
+   "last_seen": "2026-11-06T01:57:13Z",
+   "armed": [],
+   "sources": [
+    "live"
+   ],
+   "rank": 2.0
+  },
+  {
+   "id": "C25eff55d",
+   "size": 2,
+   "members_ids": [
+    "googlemap.org",
+    "googlemap.support"
+   ],
+   "members": [
+    {
+     "domain": "googlemap.org",
+     "names": [
+      "googlemap.org"
+     ],
+     "risk": 0.883,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "googlemap.support",
+     "names": [
+      "googlemap.support"
+     ],
+     "risk": 0.945,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "google": 3
+   },
+   "templates": [
+    "<B>map.<tld>"
+   ],
+   "links": {
+    "naming_template": 1
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": "2026-11-06T01:44:25Z",
+   "last_seen": "2026-11-06T01:44:25Z",
+   "armed": [],
+   "sources": [
+    "nrd",
+    "pdb"
+   ],
+   "rank": 2.0
+  },
+  {
+   "id": "C28f3a82e",
+   "size": 2,
+   "members_ids": [
+    "us-west2-runtime-connectors-google.com",
+    "us-west4-runtime-connectors-google.com"
+   ],
+   "members": [
+    {
+     "domain": "us-west2-runtime-connectors-google.com",
+     "names": [
+      "us-west2-runtime-connectors-google.com"
+     ],
+     "risk": 0.714,
+     "brand": "google",
+     "sources": [
+      "live"
+     ],
+     "first_seen": "2026-11-06T01:54:32Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "us-west4-runtime-connectors-google.com",
+     "names": [
+      "us-west4-runtime-connectors-google.com"
+     ],
+     "risk": 0.714,
+     "brand": "google",
+     "sources": [
+      "live"
+     ],
+     "first_seen": "2026-11-06T02:25:24Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "google": 2
+   },
+   "templates": [
+    "us-west<n>-runtime-connectors-<B>.<tld>"
+   ],
+   "links": {
+    "naming_template": 1
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": "2026-11-06T01:54:32Z",
+   "last_seen": "2026-11-06T02:25:24Z",
+   "armed": [],
+   "sources": [
+    "live"
+   ],
+   "rank": 2.0
+  },
+  {
+   "id": "C3ba41982",
+   "size": 2,
+   "members_ids": [
+    "google-drive.se",
+    "google-drive.zip"
+   ],
+   "members": [
+    {
+     "domain": "google-drive.se",
+     "names": [
+      "google-drive.se"
+     ],
+     "risk": 0.917,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "google-drive.zip",
+     "names": [
+      "google-drive.zip"
+     ],
+     "risk": 0.936,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "google": 3
+   },
+   "templates": [
+    "<B>-drive.<tld>"
+   ],
+   "links": {
+    "naming_template": 1
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": "2026-11-06T01:44:25Z",
+   "last_seen": "2026-11-06T01:44:25Z",
+   "armed": [],
+   "sources": [
+    "nrd",
+    "pdb"
+   ],
+   "rank": 2.0
+  },
+  {
+   "id": "C60415bb8",
+   "size": 2,
+   "members_ids": [
+    "facebookupload-google55.ph",
+    "facebookupload-google82.ph"
+   ],
+   "members": [
+    {
+     "domain": "facebookupload-google55.ph",
+     "names": [
+      "facebookupload-google55.ph"
+     ],
+     "risk": 0.705,
+     "brand": "google",
+     "sources": [
+      "live"
+     ],
+     "first_seen": "2026-11-06T02:20:03Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "facebookupload-google82.ph",
+     "names": [
+      "www.facebookupload-google82.ph",
+      "facebookupload-google82.ph"
+     ],
+     "risk": 0.705,
+     "brand": "google",
+     "sources": [
+      "live"
+     ],
+     "first_seen": "2026-11-06T02:18:34Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "google": 3
+   },
+   "templates": [
+    "facebookupload-<B><n>.<tld>"
+   ],
+   "links": {
+    "naming_template": 1
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": "2026-11-06T02:18:34Z",
+   "last_seen": "2026-11-06T02:20:03Z",
+   "armed": [],
+   "sources": [
+    "live"
+   ],
+   "rank": 2.0
+  },
+  {
+   "id": "Ca7b4ca00",
+   "size": 2,
+   "members_ids": [
+    "gmail-auth.com",
+    "gmail-auth.live"
+   ],
+   "members": [
+    {
+     "domain": "gmail-auth.com",
+     "names": [
+      "gmail-auth.com"
+     ],
+     "risk": 0.931,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "gmail-auth.live",
+     "names": [
+      "gmail-auth.live"
+     ],
+     "risk": 0.954,
+     "brand": "google",
+     "sources": [
+      "nrd"
+     ],
+     "first_seen": "2026-11-06T01:44:25Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "google": 3
+   },
+   "templates": [
+    "<B>-auth.<tld>"
+   ],
+   "links": {
+    "naming_template": 1
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": "2026-11-06T01:44:25Z",
+   "last_seen": "2026-11-06T01:44:25Z",
+   "armed": [],
+   "sources": [
+    "nrd",
+    "pdb"
+   ],
+   "rank": 2.0
+  },
+  {
+   "id": "Cad26ff08",
+   "size": 2,
+   "members_ids": [
+    "google-home-zipy-zipzy-zxzzzz.net.ph",
+    "google-home-zipy-zipzy-zzzi.net.ph"
+   ],
+   "members": [
+    {
+     "domain": "google-home-zipy-zipzy-zxzzzz.net.ph",
+     "names": [
+      "www.google-home-zipy-zipzy-zxzzzz.net.ph"
+     ],
+     "risk": 0.692,
+     "brand": "google",
+     "sources": [
+      "live"
+     ],
+     "first_seen": "2026-11-06T02:03:58Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "google-home-zipy-zipzy-zzzi.net.ph",
+     "names": [
+      "www.google-home-zipy-zipzy-zzzi.net.ph"
+     ],
+     "risk": 0.649,
+     "brand": "google",
+     "sources": [
+      "live"
+     ],
+     "first_seen": "2026-11-06T02:31:49Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "google": 2
+   },
+   "templates": [
+    "<B>-home-<r>-<r>-<r>.<tld>"
+   ],
+   "links": {
+    "naming_template": 1
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": "2026-11-06T02:03:58Z",
+   "last_seen": "2026-11-06T02:31:49Z",
+   "armed": [],
+   "sources": [
+    "live"
+   ],
+   "rank": 2.0
+  },
+  {
+   "id": "Cde56721c",
+   "size": 2,
+   "members_ids": [
+    "sepamate.fr",
+    "webtechuanta.com"
+   ],
+   "members": [
+    {
+     "domain": "sepamate.fr",
+     "names": [
+      "drive.google.sepamate.fr"
+     ],
+     "risk": 0.971,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "webtechuanta.com",
+     "names": [
+      "drive.google.webtechuanta.com"
+     ],
+     "risk": 0.969,
+     "brand": "google",
+     "sources": [
+      "pdb"
+     ],
+     "first_seen": null,
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "google": 2
+   },
+   "templates": [
+    "drive.<B>.<r>.<tld>"
+   ],
+   "links": {
+    "naming_template": 1
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": null,
+   "last_seen": null,
+   "armed": [],
+   "sources": [
+    "pdb"
+   ],
+   "rank": 2.0
+  },
+  {
+   "id": "Ce69002cc",
+   "size": 2,
+   "members_ids": [
+    "duta168acom-drama-google.pages.dev",
+    "logam77anet-drama-google.pages.dev"
+   ],
+   "members": [
+    {
+     "domain": "duta168acom-drama-google.pages.dev",
+     "names": [
+      "duta168acom-drama-google.pages.dev"
+     ],
+     "risk": 0.758,
+     "brand": "google",
+     "sources": [
+      "live"
+     ],
+     "first_seen": "2026-11-06T01:56:22Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    },
+    {
+     "domain": "logam77anet-drama-google.pages.dev",
+     "names": [
+      "logam77anet-drama-google.pages.dev"
+     ],
+     "risk": 0.758,
+     "brand": "google",
+     "sources": [
+      "live"
+     ],
+     "first_seen": "2026-11-06T02:29:24Z",
+     "first_cert": null,
+     "subdomains": [],
+     "armed": false
+    }
+   ],
+   "brands": {
+    "google": 2
+   },
+   "templates": [
+    "<r>-drama-<B>.<tld>"
+   ],
+   "links": {
+    "naming_template": 1
+   },
+   "strength": "naming habit only",
+   "recipe": null,
+   "first_seen": "2026-11-06T01:56:22Z",
+   "last_seen": "2026-11-06T02:29:24Z",
+   "armed": [],
+   "sources": [
+    "live"
+   ],
+   "rank": 2.0
+  }
+ ],
+ "graph": {
+  "nodes": [
+   {
+    "id": "accounts-google.eu",
+    "brand": "google",
+    "risk": 0.832,
+    "names": [
+     "accounts.accounts-google.eu",
+     "accounts-google.eu"
+    ],
+    "campaign": "Cfdd54959",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "accounts-google.help",
+    "brand": "google",
+    "risk": 0.83,
+    "names": [
+     "accounts-google.help"
+    ],
+    "campaign": "Cfdd54959",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "accounts-google.shop",
+    "brand": "google",
+    "risk": 0.862,
+    "names": [
+     "accounts-google.shop"
+    ],
+    "campaign": "Cfdd54959",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "accounts-google.top",
+    "brand": "google",
+    "risk": 0.865,
+    "names": [
+     "accounts-google.top"
+    ],
+    "campaign": "Cfdd54959",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "acountsgoogleads.com",
+    "brand": "google",
+    "risk": 0.478,
+    "names": [
+     "acountsgoogleads.com"
+    ],
+    "campaign": "C00eed30f",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "adack.ir",
+    "brand": "google",
+    "risk": 0.997,
+    "names": [
+     "drive.google.com.adack.ir"
+    ],
+    "campaign": "Cb6a49071",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "arablatrade.com",
+    "brand": "google",
+    "risk": 0.996,
+    "names": [
+     "drive.google.com.arablatrade.com"
+    ],
+    "campaign": "Cb6a49071",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "atxxycp.top",
+    "brand": "india_post",
+    "risk": 0.995,
+    "names": [
+     "indiapost.gov.atxxycp.top"
+    ],
+    "campaign": "C2ecb3504",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "bdzhpc.top",
+    "brand": "india_post",
+    "risk": 0.995,
+    "names": [
+     "indiapost.gov.bdzhpc.top"
+    ],
+    "campaign": "C2ecb3504",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "bilibil.top",
+    "brand": "india_post",
+    "risk": 0.995,
+    "names": [
+     "indiapost.gov.bilibil.top"
+    ],
+    "campaign": "C2ecb3504",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "buyspinslotgoogle1.lol",
+    "brand": "google",
+    "risk": 0.551,
+    "names": [
+     "buyspinslotgoogle1.lol"
+    ],
+    "campaign": "C6f896407",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "buyspinslotgoogle1.net",
+    "brand": "google",
+    "risk": 0.533,
+    "names": [
+     "buyspinslotgoogle1.net"
+    ],
+    "campaign": "C6f896407",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "caddy.workers.dev",
+    "brand": "google",
+    "risk": 0.82,
+    "names": [
+     "accounts-google.caddy.workers.dev"
+    ],
+    "campaign": "C40b3b9b3",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "ceibigj.top",
+    "brand": "india_post",
+    "risk": 0.995,
+    "names": [
+     "indiapost.gov.ceibigj.top"
+    ],
+    "campaign": "C2ecb3504",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "cins.it",
+    "brand": "google",
+    "risk": 0.999,
+    "names": [
+     "google.com.cins.it"
+    ],
+    "campaign": "Cf3b62572",
+    "sources": [
+     "live"
+    ]
+   },
+   {
+    "id": "cloudindex-google-gd01wp.pages.dev",
+    "brand": "google",
+    "risk": 0.758,
+    "names": [
+     "cloudindex-google-gd01wp.pages.dev"
+    ],
+    "campaign": "C0929baf1",
+    "sources": [
+     "live"
+    ]
+   },
+   {
+    "id": "cloudindex-google-gdao.pages.dev",
+    "brand": "google",
+    "risk": 0.766,
+    "names": [
+     "cloudindex-google-gdao.pages.dev"
+    ],
+    "campaign": "C0929baf1",
+    "sources": [
+     "live"
+    ]
+   },
+   {
+    "id": "cygn.eu.org",
+    "brand": "google",
+    "risk": 0.972,
+    "names": [
+     "accounts.google.cygn.eu.org"
+    ],
+    "campaign": "C80e3f08b",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "dichvugoogleads.online",
+    "brand": "google",
+    "risk": 0.69,
+    "names": [
+     "dichvugoogleads.online"
+    ],
+    "campaign": "C00eed30f",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "duta168acom-drama-google.pages.dev",
+    "brand": "google",
+    "risk": 0.758,
+    "names": [
+     "duta168acom-drama-google.pages.dev"
+    ],
+    "campaign": "Ce69002cc",
+    "sources": [
+     "live"
+    ]
+   },
+   {
+    "id": "echallanrto.com",
+    "brand": "parivahan",
+    "risk": 0.891,
+    "names": [
+     "echallanrto.com"
+    ],
+    "campaign": "C23be680c",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "echallanrto.org",
+    "brand": "parivahan",
+    "risk": 0.886,
+    "names": [
+     "echallanrto.org"
+    ],
+    "campaign": "C23be680c",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "euskodata.com",
+    "brand": "google",
+    "risk": 0.764,
+    "names": [
+     "accounts-google.euskodata.com"
+    ],
+    "campaign": "C40b3b9b3",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "eyssebd.top",
+    "brand": "india_post",
+    "risk": 0.995,
+    "names": [
+     "indiapost.gov.eyssebd.top"
+    ],
+    "campaign": "C2ecb3504",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "facebookupload-google55.ph",
+    "brand": "google",
+    "risk": 0.705,
+    "names": [
+     "facebookupload-google55.ph"
+    ],
+    "campaign": "C60415bb8",
+    "sources": [
+     "live"
+    ]
+   },
+   {
+    "id": "facebookupload-google82.ph",
+    "brand": "google",
+    "risk": 0.705,
+    "names": [
+     "www.facebookupload-google82.ph",
+     "facebookupload-google82.ph"
+    ],
+    "campaign": "C60415bb8",
+    "sources": [
+     "live"
+    ]
+   },
+   {
+    "id": "fkdgl.com",
+    "brand": "google",
+    "risk": 0.999,
+    "names": [
+     "gmail.com.fkdgl.com",
+     "mail.gmail.com.fkdgl.com"
+    ],
+    "campaign": "Cf3b62572",
+    "sources": [
+     "live"
+    ]
+   },
+   {
+    "id": "gjaipio.top",
+    "brand": "india_post",
+    "risk": 0.995,
+    "names": [
+     "indiapost.gov.gjaipio.top"
+    ],
+    "campaign": "C2ecb3504",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "gmail-auth.com",
+    "brand": "google",
+    "risk": 0.931,
+    "names": [
+     "gmail-auth.com"
+    ],
+    "campaign": "Ca7b4ca00",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "gmail-auth.live",
+    "brand": "google",
+    "risk": 0.954,
+    "names": [
+     "gmail-auth.live"
+    ],
+    "campaign": "Ca7b4ca00",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "google-drive.se",
+    "brand": "google",
+    "risk": 0.917,
+    "names": [
+     "google-drive.se"
+    ],
+    "campaign": "C3ba41982",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "google-drive.zip",
+    "brand": "google",
+    "risk": 0.936,
+    "names": [
+     "google-drive.zip"
+    ],
+    "campaign": "C3ba41982",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "google-home-zipy-zipzy-zxzzzz.net.ph",
+    "brand": "google",
+    "risk": 0.692,
+    "names": [
+     "www.google-home-zipy-zipzy-zxzzzz.net.ph"
+    ],
+    "campaign": "Cad26ff08",
+    "sources": [
+     "live"
+    ]
+   },
+   {
+    "id": "google-home-zipy-zipzy-zzzi.net.ph",
+    "brand": "google",
+    "risk": 0.649,
+    "names": [
+     "www.google-home-zipy-zipzy-zzzi.net.ph"
+    ],
+    "campaign": "Cad26ff08",
+    "sources": [
+     "live"
+    ]
+   },
+   {
+    "id": "google-site-verificationcqeizys86jq4o8tta5ktfcbwzptikmtnlix.com",
+    "brand": "google",
+    "risk": 0.92,
+    "names": [
+     "google-site-verificationcqeizys86jq4o8tta5ktfcbwzptikmtnlix.com"
+    ],
+    "campaign": "C04fdbd7a",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "google-site-verificationfqwlvnbunu2dg04kmftcoq36z0oatfm5kdo.xyz",
+    "brand": "google",
+    "risk": 0.936,
+    "names": [
+     "google-site-verificationfqwlvnbunu2dg04kmftcoq36z0oatfm5kdo.xyz"
+    ],
+    "campaign": "C04fdbd7a",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "google-site-verificationjhdpcya7tw3uthgd2fnz63zg5jsnu2rt02o.xyz",
+    "brand": "google",
+    "risk": 0.916,
+    "names": [
+     "google-site-verificationjhdpcya7tw3uthgd2fnz63zg5jsnu2rt02o.xyz"
+    ],
+    "campaign": "C04fdbd7a",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "google-site-verificationr7luxn3drarw27l0myiiuovr3o22snlfyu8pzf.store",
+    "brand": "google",
+    "risk": 0.894,
+    "names": [
+     "google-site-verificationr7luxn3drarw27l0myiiuovr3o22snlfyu8pzf.store"
+    ],
+    "campaign": "C04fdbd7a",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "googleads3.com",
+    "brand": "google",
+    "risk": 0.9,
+    "names": [
+     "googleads3.com"
+    ],
+    "campaign": "C508caad3",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "googleads4.com",
+    "brand": "google",
+    "risk": 0.912,
+    "names": [
+     "googleads4.com"
+    ],
+    "campaign": "C508caad3",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "googlechrome722196.com",
+    "brand": "google",
+    "risk": 0.93,
+    "names": [
+     "googlechrome722196.com"
+    ],
+    "campaign": "Cd3a7d869",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "googlechrome733350.com",
+    "brand": "google",
+    "risk": 0.927,
+    "names": [
+     "googlechrome733350.com"
+    ],
+    "campaign": "Cd3a7d869",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "googlemap.org",
+    "brand": "google",
+    "risk": 0.883,
+    "names": [
+     "googlemap.org"
+    ],
+    "campaign": "C25eff55d",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "googlemap.support",
+    "brand": "google",
+    "risk": 0.945,
+    "names": [
+     "googlemap.support"
+    ],
+    "campaign": "C25eff55d",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "googlenewsblog.com",
+    "brand": "google",
+    "risk": 0.868,
+    "names": [
+     "googlenewsblog.com"
+    ],
+    "campaign": "C5bf644cc",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "googlenewsblog.info",
+    "brand": "google",
+    "risk": 0.901,
+    "names": [
+     "googlenewsblog.info"
+    ],
+    "campaign": "C5bf644cc",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "googlenewsblog.org",
+    "brand": "google",
+    "risk": 0.859,
+    "names": [
+     "googlenewsblog.org"
+    ],
+    "campaign": "C5bf644cc",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "googlenewsblog.store",
+    "brand": "google",
+    "risk": 0.925,
+    "names": [
+     "googlenewsblog.store"
+    ],
+    "campaign": "C5bf644cc",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "guangm.top",
+    "brand": "india_post",
+    "risk": 0.995,
+    "names": [
+     "indiapost.gov.guangm.top"
+    ],
+    "campaign": "C2ecb3504",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "gyiaeu.top",
+    "brand": "india_post",
+    "risk": 0.995,
+    "names": [
+     "indiapost.gov.gyiaeu.top"
+    ],
+    "campaign": "C2ecb3504",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "hellogoogle.cloud",
+    "brand": "google",
+    "risk": 0.858,
+    "names": [
+     "hellogoogle.cloud"
+    ],
+    "campaign": "Cd633b363",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "hellogoogle.net",
+    "brand": "google",
+    "risk": 0.757,
+    "names": [
+     "hellogoogle.net"
+    ],
+    "campaign": "Cd633b363",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "hellogoogle.store",
+    "brand": "google",
+    "risk": 0.814,
+    "names": [
+     "hellogoogle.store"
+    ],
+    "campaign": "Cd633b363",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "hellogoogle.xyz",
+    "brand": "google",
+    "risk": 0.867,
+    "names": [
+     "hellogoogle.xyz"
+    ],
+    "campaign": "Cd633b363",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "in-echallan.date",
+    "brand": "parivahan",
+    "risk": 0.985,
+    "names": [
+     "in-echallan.date"
+    ],
+    "campaign": "Cd40e4c46",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "in-echallan.online",
+    "brand": "parivahan",
+    "risk": 0.989,
+    "names": [
+     "in-echallan.online"
+    ],
+    "campaign": "Cd40e4c46",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "in-echallan.party",
+    "brand": "parivahan",
+    "risk": 0.976,
+    "names": [
+     "in-echallan.party"
+    ],
+    "campaign": "Cd40e4c46",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "in-echallan.trade",
+    "brand": "parivahan",
+    "risk": 0.979,
+    "names": [
+     "in-echallan.trade"
+    ],
+    "campaign": "Cd40e4c46",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "itvsqtr.top",
+    "brand": "india_post",
+    "risk": 0.995,
+    "names": [
+     "indiapost.gov.itvsqtr.top"
+    ],
+    "campaign": "C2ecb3504",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "jdvz.net",
+    "brand": "google",
+    "risk": 0.997,
+    "names": [
+     "drive.google.com.jdvz.net"
+    ],
+    "campaign": "Cb6a49071",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "jp-google.cloud",
+    "brand": "google",
+    "risk": 0.913,
+    "names": [
+     "jp-google.cloud"
+    ],
+    "campaign": "C1ca365e6",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "jp-google.club",
+    "brand": "google",
+    "risk": 0.913,
+    "names": [
+     "jp-google.club"
+    ],
+    "campaign": "C1ca365e6",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "jp-google.cyou",
+    "brand": "google",
+    "risk": 0.911,
+    "names": [
+     "jp-google.cyou"
+    ],
+    "campaign": "C1ca365e6",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "jp-google.fit",
+    "brand": "google",
+    "risk": 0.884,
+    "names": [
+     "jp-google.fit"
+    ],
+    "campaign": "C1ca365e6",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "khanimambatraining.co.za",
+    "brand": "google",
+    "risk": 0.999,
+    "names": [
+     "google.com.khanimambatraining.co.za"
+    ],
+    "campaign": "Cf3b62572",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "kr-google.cyou",
+    "brand": "google",
+    "risk": 0.91,
+    "names": [
+     "kr-google.cyou"
+    ],
+    "campaign": "C64aa61bf",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "kr-google.ltd",
+    "brand": "google",
+    "risk": 0.874,
+    "names": [
+     "kr-google.ltd"
+    ],
+    "campaign": "C64aa61bf",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "kr-google.work",
+    "brand": "google",
+    "risk": 0.9,
+    "names": [
+     "kr-google.work"
+    ],
+    "campaign": "C64aa61bf",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "letsatsilesufi.co.za",
+    "brand": "google",
+    "risk": 0.75,
+    "names": [
+     "accounts-google.letsatsilesufi.co.za"
+    ],
+    "campaign": "C40b3b9b3",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "ln-echallan.bid",
+    "brand": "parivahan",
+    "risk": 0.983,
+    "names": [
+     "ln-echallan.bid"
+    ],
+    "campaign": "Cd40e4c46",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "logam77anet-drama-google.pages.dev",
+    "brand": "google",
+    "risk": 0.758,
+    "names": [
+     "logam77anet-drama-google.pages.dev"
+    ],
+    "campaign": "Ce69002cc",
+    "sources": [
+     "live"
+    ]
+   },
+   {
+    "id": "meet-google-call.fyi",
+    "brand": "google",
+    "risk": 0.772,
+    "names": [
+     "meet-google-call.fyi"
+    ],
+    "campaign": "Cdaa9bff6",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "meet-google-call.live",
+    "brand": "google",
+    "risk": 0.837,
+    "names": [
+     "meet-google-call.live"
+    ],
+    "campaign": "Cdaa9bff6",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "meet-google.pro",
+    "brand": "google",
+    "risk": 0.862,
+    "names": [
+     "meet-google.pro"
+    ],
+    "campaign": "Ce80a8d18",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "meet-google.top",
+    "brand": "google",
+    "risk": 0.893,
+    "names": [
+     "meet-google.top"
+    ],
+    "campaign": "Ce80a8d18",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "nxtgenparivahan.com",
+    "brand": "parivahan",
+    "risk": 0.731,
+    "names": [
+     "nxtgenparivahan.com"
+    ],
+    "campaign": "C3e6ac754",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "nxtgenparivahan.org",
+    "brand": "parivahan",
+    "risk": 0.707,
+    "names": [
+     "nxtgenparivahan.org"
+    ],
+    "campaign": "C3e6ac754",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "nyanwaretest.com",
+    "brand": "google",
+    "risk": 0.958,
+    "names": [
+     "accounts.google.nyanwaretest.com",
+     "www.google.nyanwaretest.com"
+    ],
+    "campaign": "C80e3f08b",
+    "sources": [
+     "live"
+    ]
+   },
+   {
+    "id": "pay8-2v-4wkfituj8-ekontetevi-gmailcom.vercel.app",
+    "brand": "google",
+    "risk": 0.777,
+    "names": [
+     "pay8-2v-4wkfituj8-ekontetevi-gmailcom.vercel.app"
+    ],
+    "campaign": "C42b83c2f",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "pay8-2v-6bis3visv-ekontetevi-gmailcom.vercel.app",
+    "brand": "google",
+    "risk": 0.777,
+    "names": [
+     "pay8-2v-6bis3visv-ekontetevi-gmailcom.vercel.app"
+    ],
+    "campaign": "C42b83c2f",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "pay8-2v-9jkc4ukd3-ekontetevi-gmailcom.vercel.app",
+    "brand": "google",
+    "risk": 0.777,
+    "names": [
+     "pay8-2v-9jkc4ukd3-ekontetevi-gmailcom.vercel.app"
+    ],
+    "campaign": "C42b83c2f",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "pay8-2v-bomuuniez-ekontetevi-gmailcom.vercel.app",
+    "brand": "google",
+    "risk": 0.777,
+    "names": [
+     "pay8-2v-bomuuniez-ekontetevi-gmailcom.vercel.app"
+    ],
+    "campaign": "C42b83c2f",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "pay8-2v-dp8sptwgl-ekontetevi-gmailcom.vercel.app",
+    "brand": "google",
+    "risk": 0.777,
+    "names": [
+     "pay8-2v-dp8sptwgl-ekontetevi-gmailcom.vercel.app"
+    ],
+    "campaign": "C42b83c2f",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "pay8-2v-gbz1keyte-ekontetevi-gmailcom.vercel.app",
+    "brand": "google",
+    "risk": 0.777,
+    "names": [
+     "pay8-2v-gbz1keyte-ekontetevi-gmailcom.vercel.app"
+    ],
+    "campaign": "C42b83c2f",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "pay8-2v-kbawr6w4i-ekontetevi-gmailcom.vercel.app",
+    "brand": "google",
+    "risk": 0.777,
+    "names": [
+     "pay8-2v-kbawr6w4i-ekontetevi-gmailcom.vercel.app"
+    ],
+    "campaign": "C42b83c2f",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "pmeflex.ch",
+    "brand": "google",
+    "risk": 0.97,
+    "names": [
+     "accounts.google.pmeflex.ch"
+    ],
+    "campaign": "C80e3f08b",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "ranking-googleads-gacordong1.pages.dev",
+    "brand": "google",
+    "risk": 0.746,
+    "names": [
+     "ranking-googleads-gacordong1.pages.dev"
+    ],
+    "campaign": "C24d2fc30",
+    "sources": [
+     "live"
+    ]
+   },
+   {
+    "id": "ranking-googleads-gacordong2.pages.dev",
+    "brand": "google",
+    "risk": 0.746,
+    "names": [
+     "ranking-googleads-gacordong2.pages.dev"
+    ],
+    "campaign": "C24d2fc30",
+    "sources": [
+     "live"
+    ]
+   },
+   {
+    "id": "ranking-googleads-gacordong3.pages.dev",
+    "brand": "google",
+    "risk": 0.746,
+    "names": [
+     "ranking-googleads-gacordong3.pages.dev"
+    ],
+    "campaign": "C24d2fc30",
+    "sources": [
+     "live"
+    ]
+   },
+   {
+    "id": "ranking-googleads-gacordong6.pages.dev",
+    "brand": "google",
+    "risk": 0.746,
+    "names": [
+     "ranking-googleads-gacordong6.pages.dev"
+    ],
+    "campaign": "C24d2fc30",
+    "sources": [
+     "live"
+    ]
+   },
+   {
+    "id": "sbi-rating.ch",
+    "brand": "sbi",
+    "risk": 0.858,
+    "names": [
+     "sbi-rating.ch"
+    ],
+    "campaign": "Ca2fbce91",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "sbi-rating.com",
+    "brand": "sbi",
+    "risk": 0.879,
+    "names": [
+     "sbi-rating.com"
+    ],
+    "campaign": "Ca2fbce91",
+    "sources": [
+     "nrd"
+    ]
+   },
+   {
+    "id": "sepamate.fr",
+    "brand": "google",
+    "risk": 0.971,
+    "names": [
+     "drive.google.sepamate.fr"
+    ],
+    "campaign": "Cde56721c",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "signoninmyaccountb.com",
+    "brand": "google",
+    "risk": 0.965,
+    "names": [
+     "accounts.google.signoninmyaccountb.com"
+    ],
+    "campaign": "C80e3f08b",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "skir.cc",
+    "brand": "google",
+    "risk": 0.972,
+    "names": [
+     "accounts.google.skir.cc"
+    ],
+    "campaign": "C80e3f08b",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "tsinbei.cn",
+    "brand": "google",
+    "risk": 0.973,
+    "names": [
+     "accounts.google.tsinbei.cn",
+     "arvr.google.tsinbei.cn"
+    ],
+    "campaign": "C80e3f08b",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "us-east1-runtime-connectors-google.com",
+    "brand": "google",
+    "risk": 0.71,
+    "names": [
+     "us-east1-runtime-connectors-google.com"
+    ],
+    "campaign": "Ce594b6b0",
+    "sources": [
+     "live"
+    ]
+   },
+   {
+    "id": "us-east4-runtime-connectors-google.com",
+    "brand": "google",
+    "risk": 0.71,
+    "names": [
+     "us-east4-runtime-connectors-google.com"
+    ],
+    "campaign": "Ce594b6b0",
+    "sources": [
+     "live"
+    ]
+   },
+   {
+    "id": "us-east5-runtime-connectors-google.com",
+    "brand": "google",
+    "risk": 0.697,
+    "names": [
+     "us-east5-runtime-connectors-google.com"
+    ],
+    "campaign": "Ce594b6b0",
+    "sources": [
+     "live"
+    ]
+   },
+   {
+    "id": "us-west2-runtime-connectors-google.com",
+    "brand": "google",
+    "risk": 0.714,
+    "names": [
+     "us-west2-runtime-connectors-google.com"
+    ],
+    "campaign": "C28f3a82e",
+    "sources": [
+     "live"
+    ]
+   },
+   {
+    "id": "us-west4-runtime-connectors-google.com",
+    "brand": "google",
+    "risk": 0.714,
+    "names": [
+     "us-west4-runtime-connectors-google.com"
+    ],
+    "campaign": "C28f3a82e",
+    "sources": [
+     "live"
+    ]
+   },
+   {
+    "id": "webtechuanta.com",
+    "brand": "google",
+    "risk": 0.969,
+    "names": [
+     "drive.google.webtechuanta.com"
+    ],
+    "campaign": "Cde56721c",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "wjfcloud.us.kg",
+    "brand": "google",
+    "risk": 0.969,
+    "names": [
+     "accounts.google.wjfcloud.us.kg"
+    ],
+    "campaign": "C80e3f08b",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "wzdygy.top",
+    "brand": "india_post",
+    "risk": 0.995,
+    "names": [
+     "indiapost.gov.wzdygy.top"
+    ],
+    "campaign": "C2ecb3504",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "ykoil.top",
+    "brand": "india_post",
+    "risk": 0.995,
+    "names": [
+     "indiapost.gov.ykoil.top"
+    ],
+    "campaign": "C2ecb3504",
+    "sources": [
+     "pdb"
+    ]
+   },
+   {
+    "id": "ypaypro.top",
+    "brand": "india_post",
+    "risk": 0.995,
+    "names": [
+     "indiapost.gov.ypaypro.top"
+    ],
+    "campaign": "C2ecb3504",
+    "sources": [
+     "pdb"
+    ]
+   }
+  ],
+  "edges": [
+   {
+    "source": "accounts-google.eu",
+    "target": "accounts-google.help",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts-<B>.<tld>"
+    }
+   },
+   {
+    "source": "accounts-google.help",
+    "target": "accounts-google.shop",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts-<B>.<tld>"
+    }
+   },
+   {
+    "source": "accounts-google.help",
+    "target": "accounts-google.top",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts-<B>.<tld>"
+    }
+   },
+   {
+    "source": "accounts-google.eu",
+    "target": "accounts-google.shop",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts-<B>.<tld>"
+    }
+   },
+   {
+    "source": "accounts-google.eu",
+    "target": "accounts-google.top",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts-<B>.<tld>"
+    }
+   },
+   {
+    "source": "accounts-google.shop",
+    "target": "accounts-google.top",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts-<B>.<tld>"
+    }
+   },
+   {
+    "source": "buyspinslotgoogle1.lol",
+    "target": "buyspinslotgoogle1.net",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "buyspinslot<B><n>.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "acountsgoogleads.com",
+    "target": "dichvugoogleads.online",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "<r><B>ads.<tld>"
+    }
+   },
+   {
+    "source": "echallanrto.com",
+    "target": "echallanrto.org",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "<B>rto.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "gmail-auth.com",
+    "target": "gmail-auth.live",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "<B>-auth.<tld>"
+    }
+   },
+   {
+    "source": "google-drive.se",
+    "target": "google-drive.zip",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "<B>-drive.<tld>"
+    }
+   },
+   {
+    "source": "google-site-verificationcqeizys86jq4o8tta5ktfcbwzptikmtnlix.com",
+    "target": "google-site-verificationfqwlvnbunu2dg04kmftcoq36z0oatfm5kdo.xyz",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "<B>-site-<r>.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "google-site-verificationcqeizys86jq4o8tta5ktfcbwzptikmtnlix.com",
+    "target": "google-site-verificationjhdpcya7tw3uthgd2fnz63zg5jsnu2rt02o.xyz",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "<B>-site-<r>.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "google-site-verificationcqeizys86jq4o8tta5ktfcbwzptikmtnlix.com",
+    "target": "google-site-verificationr7luxn3drarw27l0myiiuovr3o22snlfyu8pzf.store",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "<B>-site-<r>.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "google-site-verificationfqwlvnbunu2dg04kmftcoq36z0oatfm5kdo.xyz",
+    "target": "google-site-verificationjhdpcya7tw3uthgd2fnz63zg5jsnu2rt02o.xyz",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "<B>-site-<r>.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "google-site-verificationfqwlvnbunu2dg04kmftcoq36z0oatfm5kdo.xyz",
+    "target": "google-site-verificationr7luxn3drarw27l0myiiuovr3o22snlfyu8pzf.store",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "<B>-site-<r>.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "google-site-verificationjhdpcya7tw3uthgd2fnz63zg5jsnu2rt02o.xyz",
+    "target": "google-site-verificationr7luxn3drarw27l0myiiuovr3o22snlfyu8pzf.store",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "<B>-site-<r>.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "googleads3.com",
+    "target": "googleads4.com",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "<B>ads<n>.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "googlechrome722196.com",
+    "target": "googlechrome733350.com",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "<B>chrome<n>.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "googlemap.org",
+    "target": "googlemap.support",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "<B>map.<tld>"
+    }
+   },
+   {
+    "source": "googlenewsblog.com",
+    "target": "googlenewsblog.info",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "<B>newsblog.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "googlenewsblog.com",
+    "target": "googlenewsblog.org",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "<B>newsblog.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "googlenewsblog.com",
+    "target": "googlenewsblog.store",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "<B>newsblog.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "googlenewsblog.info",
+    "target": "googlenewsblog.org",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "<B>newsblog.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "googlenewsblog.info",
+    "target": "googlenewsblog.store",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "<B>newsblog.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "googlenewsblog.org",
+    "target": "googlenewsblog.store",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "<B>newsblog.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "hellogoogle.cloud",
+    "target": "hellogoogle.net",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "hello<B>.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "hellogoogle.cloud",
+    "target": "hellogoogle.store",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "hello<B>.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "hellogoogle.cloud",
+    "target": "hellogoogle.xyz",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "hello<B>.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "hellogoogle.net",
+    "target": "hellogoogle.store",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "hello<B>.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "hellogoogle.net",
+    "target": "hellogoogle.xyz",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "hello<B>.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "hellogoogle.store",
+    "target": "hellogoogle.xyz",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "hello<B>.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "in-echallan.date",
+    "target": "in-echallan.online",
+    "weight": 1.35,
+    "types": {
+     "naming_template": "in-<B>.<tld>",
+     "cert_recipe": "A+S3+WS3 / A+W; first certificates 3470 min apart",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "in-echallan.date",
+    "target": "in-echallan.party",
+    "weight": 1.65,
+    "types": {
+     "naming_template": "in-<B>.<tld>",
+     "cert_recipe": "A+S3+WS3 / A+W; first certificates 22 min apart",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "in-echallan.date",
+    "target": "in-echallan.trade",
+    "weight": 1.65,
+    "types": {
+     "naming_template": "in-<B>.<tld>",
+     "cert_recipe": "A+S3+WS3 / A+W; first certificates 26 min apart",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "in-echallan.date",
+    "target": "ln-echallan.bid",
+    "weight": 1.35,
+    "types": {
+     "naming_template": "in-<B>.<tld>",
+     "cert_recipe": "A+S3+WS3 / A+W; first certificates 1228 min apart",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "in-echallan.online",
+    "target": "in-echallan.party",
+    "weight": 1.35,
+    "types": {
+     "naming_template": "in-<B>.<tld>",
+     "cert_recipe": "A+S3+WS3 / A+W; first certificates 3491 min apart",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "in-echallan.online",
+    "target": "in-echallan.trade",
+    "weight": 1.35,
+    "types": {
+     "naming_template": "in-<B>.<tld>",
+     "cert_recipe": "A+S3+WS3 / A+W; first certificates 3496 min apart",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "in-echallan.online",
+    "target": "ln-echallan.bid",
+    "weight": 1.35,
+    "types": {
+     "naming_template": "in-<B>.<tld>",
+     "cert_recipe": "A+S3+WS3 / A+W; first certificates 4697 min apart",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "in-echallan.party",
+    "target": "in-echallan.trade",
+    "weight": 1.65,
+    "types": {
+     "naming_template": "in-<B>.<tld>",
+     "cert_recipe": "A+S3+WS3 / A+W; first certificates 5 min apart",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "in-echallan.party",
+    "target": "ln-echallan.bid",
+    "weight": 1.35,
+    "types": {
+     "naming_template": "in-<B>.<tld>",
+     "cert_recipe": "A+S3+WS3 / A+W; first certificates 1206 min apart",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "in-echallan.trade",
+    "target": "ln-echallan.bid",
+    "weight": 1.35,
+    "types": {
+     "naming_template": "in-<B>.<tld>",
+     "cert_recipe": "A+S3+WS3 / A+W; first certificates 1201 min apart",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "jp-google.cloud",
+    "target": "jp-google.club",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "jp-<B>.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "jp-google.cloud",
+    "target": "jp-google.cyou",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "jp-<B>.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "jp-google.cloud",
+    "target": "jp-google.fit",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "jp-<B>.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "jp-google.club",
+    "target": "jp-google.cyou",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "jp-<B>.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "jp-google.club",
+    "target": "jp-google.fit",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "jp-<B>.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "jp-google.cyou",
+    "target": "jp-google.fit",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "jp-<B>.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "kr-google.cyou",
+    "target": "kr-google.ltd",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "kr-<B>.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "kr-google.cyou",
+    "target": "kr-google.work",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "kr-<B>.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "kr-google.ltd",
+    "target": "kr-google.work",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "kr-<B>.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "meet-google-call.fyi",
+    "target": "meet-google-call.live",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "meet-<B>-call.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "meet-google.pro",
+    "target": "meet-google.top",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "meet-<B>.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "nxtgenparivahan.com",
+    "target": "nxtgenparivahan.org",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "nxtgen<B>.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "sbi-rating.ch",
+    "target": "sbi-rating.com",
+    "weight": 0.75,
+    "types": {
+     "naming_template": "<B>-rating.<tld>",
+     "nrd_week": "both in the same 7-day NRD snapshot"
+    }
+   },
+   {
+    "source": "caddy.workers.dev",
+    "target": "euskodata.com",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts-<B>.<r>.<tld>"
+    }
+   },
+   {
+    "source": "caddy.workers.dev",
+    "target": "letsatsilesufi.co.za",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts-<B>.<r>.<tld>"
+    }
+   },
+   {
+    "source": "euskodata.com",
+    "target": "letsatsilesufi.co.za",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts-<B>.<r>.<tld>"
+    }
+   },
+   {
+    "source": "cygn.eu.org",
+    "target": "pmeflex.ch",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts.<B>.<r>.<tld>"
+    }
+   },
+   {
+    "source": "cygn.eu.org",
+    "target": "signoninmyaccountb.com",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts.<B>.<r>.<tld>"
+    }
+   },
+   {
+    "source": "cygn.eu.org",
+    "target": "skir.cc",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts.<B>.<r>.<tld>"
+    }
+   },
+   {
+    "source": "cygn.eu.org",
+    "target": "tsinbei.cn",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts.<B>.<r>.<tld>"
+    }
+   },
+   {
+    "source": "cygn.eu.org",
+    "target": "wjfcloud.us.kg",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts.<B>.<r>.<tld>"
+    }
+   },
+   {
+    "source": "cygn.eu.org",
+    "target": "nyanwaretest.com",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts.<B>.<r>.<tld>"
+    }
+   },
+   {
+    "source": "pmeflex.ch",
+    "target": "signoninmyaccountb.com",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts.<B>.<r>.<tld>"
+    }
+   },
+   {
+    "source": "pmeflex.ch",
+    "target": "skir.cc",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts.<B>.<r>.<tld>"
+    }
+   },
+   {
+    "source": "pmeflex.ch",
+    "target": "tsinbei.cn",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts.<B>.<r>.<tld>"
+    }
+   },
+   {
+    "source": "pmeflex.ch",
+    "target": "wjfcloud.us.kg",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts.<B>.<r>.<tld>"
+    }
+   },
+   {
+    "source": "nyanwaretest.com",
+    "target": "pmeflex.ch",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts.<B>.<r>.<tld>"
+    }
+   },
+   {
+    "source": "signoninmyaccountb.com",
+    "target": "skir.cc",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts.<B>.<r>.<tld>"
+    }
+   },
+   {
+    "source": "signoninmyaccountb.com",
+    "target": "tsinbei.cn",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts.<B>.<r>.<tld>"
+    }
+   },
+   {
+    "source": "signoninmyaccountb.com",
+    "target": "wjfcloud.us.kg",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts.<B>.<r>.<tld>"
+    }
+   },
+   {
+    "source": "nyanwaretest.com",
+    "target": "signoninmyaccountb.com",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts.<B>.<r>.<tld>"
+    }
+   },
+   {
+    "source": "skir.cc",
+    "target": "tsinbei.cn",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts.<B>.<r>.<tld>"
+    }
+   },
+   {
+    "source": "skir.cc",
+    "target": "wjfcloud.us.kg",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts.<B>.<r>.<tld>"
+    }
+   },
+   {
+    "source": "nyanwaretest.com",
+    "target": "skir.cc",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts.<B>.<r>.<tld>"
+    }
+   },
+   {
+    "source": "tsinbei.cn",
+    "target": "wjfcloud.us.kg",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts.<B>.<r>.<tld>"
+    }
+   },
+   {
+    "source": "nyanwaretest.com",
+    "target": "tsinbei.cn",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts.<B>.<r>.<tld>"
+    }
+   },
+   {
+    "source": "nyanwaretest.com",
+    "target": "wjfcloud.us.kg",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "accounts.<B>.<r>.<tld>"
+    }
+   },
+   {
+    "source": "adack.ir",
+    "target": "arablatrade.com",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "drive.<B>.com.<r>.<tld>"
+    }
+   },
+   {
+    "source": "adack.ir",
+    "target": "jdvz.net",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "drive.<B>.com.<r>.<tld>"
+    }
+   },
+   {
+    "source": "arablatrade.com",
+    "target": "jdvz.net",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "drive.<B>.com.<r>.<tld>"
+    }
+   },
+   {
+    "source": "sepamate.fr",
+    "target": "webtechuanta.com",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "drive.<B>.<r>.<tld>"
+    }
+   },
+   {
+    "source": "fkdgl.com",
+    "target": "khanimambatraining.co.za",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "<B>.com.<r>.<tld>"
+    }
+   },
+   {
+    "source": "cins.it",
+    "target": "khanimambatraining.co.za",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "<B>.com.<r>.<tld>"
+    }
+   },
+   {
+    "source": "cins.it",
+    "target": "fkdgl.com",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "<B>.com.<r>.<tld>"
+    }
+   },
+   {
+    "source": "atxxycp.top",
+    "target": "bdzhpc.top",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "<B>.gov.<r>.<tld>"
+    }
+   },
+   {
+    "source": "atxxycp.top",
+    "target": "bilibil.top",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "<B>.gov.<r>.<tld>"
+    }
+   },
+   {
+    "source": "atxxycp.top",
+    "target": "ceibigj.top",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "<B>.gov.<r>.<tld>"
+    }
+   },
+   {
+    "source": "atxxycp.top",
+    "target": "eyssebd.top",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "<B>.gov.<r>.<tld>"
+    }
+   },
+   {
+    "source": "atxxycp.top",
+    "target": "gjaipio.top",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "<B>.gov.<r>.<tld>"
+    }
+   },
+   {
+    "source": "atxxycp.top",
+    "target": "guangm.top",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "<B>.gov.<r>.<tld>"
+    }
+   },
+   {
+    "source": "atxxycp.top",
+    "target": "gyiaeu.top",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "<B>.gov.<r>.<tld>"
+    }
+   },
+   {
+    "source": "atxxycp.top",
+    "target": "itvsqtr.top",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "<B>.gov.<r>.<tld>"
+    }
+   },
+   {
+    "source": "atxxycp.top",
+    "target": "wzdygy.top",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "<B>.gov.<r>.<tld>"
+    }
+   },
+   {
+    "source": "atxxycp.top",
+    "target": "ykoil.top",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "<B>.gov.<r>.<tld>"
+    }
+   },
+   {
+    "source": "atxxycp.top",
+    "target": "ypaypro.top",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "<B>.gov.<r>.<tld>"
+    }
+   },
+   {
+    "source": "pay8-2v-4wkfituj8-ekontetevi-gmailcom.vercel.app",
+    "target": "pay8-2v-6bis3visv-ekontetevi-gmailcom.vercel.app",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>"
+    }
+   },
+   {
+    "source": "pay8-2v-4wkfituj8-ekontetevi-gmailcom.vercel.app",
+    "target": "pay8-2v-9jkc4ukd3-ekontetevi-gmailcom.vercel.app",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>"
+    }
+   },
+   {
+    "source": "pay8-2v-4wkfituj8-ekontetevi-gmailcom.vercel.app",
+    "target": "pay8-2v-bomuuniez-ekontetevi-gmailcom.vercel.app",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>"
+    }
+   },
+   {
+    "source": "pay8-2v-4wkfituj8-ekontetevi-gmailcom.vercel.app",
+    "target": "pay8-2v-dp8sptwgl-ekontetevi-gmailcom.vercel.app",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>"
+    }
+   },
+   {
+    "source": "pay8-2v-4wkfituj8-ekontetevi-gmailcom.vercel.app",
+    "target": "pay8-2v-gbz1keyte-ekontetevi-gmailcom.vercel.app",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>"
+    }
+   },
+   {
+    "source": "pay8-2v-4wkfituj8-ekontetevi-gmailcom.vercel.app",
+    "target": "pay8-2v-kbawr6w4i-ekontetevi-gmailcom.vercel.app",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>"
+    }
+   },
+   {
+    "source": "pay8-2v-6bis3visv-ekontetevi-gmailcom.vercel.app",
+    "target": "pay8-2v-9jkc4ukd3-ekontetevi-gmailcom.vercel.app",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>"
+    }
+   },
+   {
+    "source": "pay8-2v-6bis3visv-ekontetevi-gmailcom.vercel.app",
+    "target": "pay8-2v-bomuuniez-ekontetevi-gmailcom.vercel.app",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>"
+    }
+   },
+   {
+    "source": "pay8-2v-6bis3visv-ekontetevi-gmailcom.vercel.app",
+    "target": "pay8-2v-dp8sptwgl-ekontetevi-gmailcom.vercel.app",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>"
+    }
+   },
+   {
+    "source": "pay8-2v-6bis3visv-ekontetevi-gmailcom.vercel.app",
+    "target": "pay8-2v-gbz1keyte-ekontetevi-gmailcom.vercel.app",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>"
+    }
+   },
+   {
+    "source": "pay8-2v-6bis3visv-ekontetevi-gmailcom.vercel.app",
+    "target": "pay8-2v-kbawr6w4i-ekontetevi-gmailcom.vercel.app",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>"
+    }
+   },
+   {
+    "source": "pay8-2v-9jkc4ukd3-ekontetevi-gmailcom.vercel.app",
+    "target": "pay8-2v-bomuuniez-ekontetevi-gmailcom.vercel.app",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>"
+    }
+   },
+   {
+    "source": "pay8-2v-9jkc4ukd3-ekontetevi-gmailcom.vercel.app",
+    "target": "pay8-2v-dp8sptwgl-ekontetevi-gmailcom.vercel.app",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>"
+    }
+   },
+   {
+    "source": "pay8-2v-9jkc4ukd3-ekontetevi-gmailcom.vercel.app",
+    "target": "pay8-2v-gbz1keyte-ekontetevi-gmailcom.vercel.app",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>"
+    }
+   },
+   {
+    "source": "pay8-2v-9jkc4ukd3-ekontetevi-gmailcom.vercel.app",
+    "target": "pay8-2v-kbawr6w4i-ekontetevi-gmailcom.vercel.app",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>"
+    }
+   },
+   {
+    "source": "pay8-2v-bomuuniez-ekontetevi-gmailcom.vercel.app",
+    "target": "pay8-2v-dp8sptwgl-ekontetevi-gmailcom.vercel.app",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>"
+    }
+   },
+   {
+    "source": "pay8-2v-bomuuniez-ekontetevi-gmailcom.vercel.app",
+    "target": "pay8-2v-gbz1keyte-ekontetevi-gmailcom.vercel.app",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>"
+    }
+   },
+   {
+    "source": "pay8-2v-bomuuniez-ekontetevi-gmailcom.vercel.app",
+    "target": "pay8-2v-kbawr6w4i-ekontetevi-gmailcom.vercel.app",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>"
+    }
+   },
+   {
+    "source": "pay8-2v-dp8sptwgl-ekontetevi-gmailcom.vercel.app",
+    "target": "pay8-2v-gbz1keyte-ekontetevi-gmailcom.vercel.app",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>"
+    }
+   },
+   {
+    "source": "pay8-2v-dp8sptwgl-ekontetevi-gmailcom.vercel.app",
+    "target": "pay8-2v-kbawr6w4i-ekontetevi-gmailcom.vercel.app",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>"
+    }
+   },
+   {
+    "source": "pay8-2v-gbz1keyte-ekontetevi-gmailcom.vercel.app",
+    "target": "pay8-2v-kbawr6w4i-ekontetevi-gmailcom.vercel.app",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>"
+    }
+   },
+   {
+    "source": "us-east1-runtime-connectors-google.com",
+    "target": "us-east4-runtime-connectors-google.com",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "us-east<n>-runtime-connectors-<B>.<tld>"
+    }
+   },
+   {
+    "source": "us-east4-runtime-connectors-google.com",
+    "target": "us-east5-runtime-connectors-google.com",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "us-east<n>-runtime-connectors-<B>.<tld>"
+    }
+   },
+   {
+    "source": "us-east1-runtime-connectors-google.com",
+    "target": "us-east5-runtime-connectors-google.com",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "us-east<n>-runtime-connectors-<B>.<tld>"
+    }
+   },
+   {
+    "source": "us-west2-runtime-connectors-google.com",
+    "target": "us-west4-runtime-connectors-google.com",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "us-west<n>-runtime-connectors-<B>.<tld>"
+    }
+   },
+   {
+    "source": "cloudindex-google-gd01wp.pages.dev",
+    "target": "cloudindex-google-gdao.pages.dev",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "cloudindex-<B>-<r>.<tld>"
+    }
+   },
+   {
+    "source": "duta168acom-drama-google.pages.dev",
+    "target": "logam77anet-drama-google.pages.dev",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "<r>-drama-<B>.<tld>"
+    }
+   },
+   {
+    "source": "ranking-googleads-gacordong2.pages.dev",
+    "target": "ranking-googleads-gacordong3.pages.dev",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "ranking-<B>ads-<r><n>.<tld>"
+    }
+   },
+   {
+    "source": "ranking-googleads-gacordong2.pages.dev",
+    "target": "ranking-googleads-gacordong6.pages.dev",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "ranking-<B>ads-<r><n>.<tld>"
+    }
+   },
+   {
+    "source": "ranking-googleads-gacordong1.pages.dev",
+    "target": "ranking-googleads-gacordong2.pages.dev",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "ranking-<B>ads-<r><n>.<tld>"
+    }
+   },
+   {
+    "source": "ranking-googleads-gacordong3.pages.dev",
+    "target": "ranking-googleads-gacordong6.pages.dev",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "ranking-<B>ads-<r><n>.<tld>"
+    }
+   },
+   {
+    "source": "ranking-googleads-gacordong1.pages.dev",
+    "target": "ranking-googleads-gacordong3.pages.dev",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "ranking-<B>ads-<r><n>.<tld>"
+    }
+   },
+   {
+    "source": "ranking-googleads-gacordong1.pages.dev",
+    "target": "ranking-googleads-gacordong6.pages.dev",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "ranking-<B>ads-<r><n>.<tld>"
+    }
+   },
+   {
+    "source": "google-home-zipy-zipzy-zxzzzz.net.ph",
+    "target": "google-home-zipy-zipzy-zzzi.net.ph",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "<B>-home-<r>-<r>-<r>.<tld>"
+    }
+   },
+   {
+    "source": "facebookupload-google55.ph",
+    "target": "facebookupload-google82.ph",
+    "weight": 0.6,
+    "types": {
+     "naming_template": "facebookupload-<B><n>.<tld>"
+    }
+   }
+  ]
+ },
+ "stats": {
+  "items": 2187,
+  "domains": 1393,
+  "with_recipe": 6,
+  "campaigns": 33,
+  "in_campaigns": 106,
+  "edges_by_type": {
+   "naming_template": 132,
+   "nrd_week": 45,
+   "cert_recipe": 10
+  },
+  "elapsed_s": 0.82
+ },
+ "inputs": [
+  {
+   "source": "nrd",
+   "file": "data\\raw\\nrd\\nrd7.txt",
+   "names": 2342440,
+   "flagged": 513,
+   "elapsed_s": 167.4
+  },
+  {
+   "source": "pdb",
+   "file": "data\\raw\\phishing_database\\phishing-domains-ACTIVE.txt",
+   "names": 392178,
+   "flagged": 629,
+   "elapsed_s": 37.1
+  },
+  {
+   "source": "live",
+   "flagged": 452,
+   "watchlist": 593
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "host": "upload.google.com",
+ "brand": "google",
+ "fetched_at": "2026-11-06T00:18:47Z",
+ "source": "live_tls",
+ "cert": {
+  "sha256": "083ba27452d7124dbb7dd9e5fe75c22a767da6ec75ddac25927fa70f3c892bb0",
+  "subject": {
+   "cn": "upload.video.google.com",
+   "o": null,
+   "c": null
+  },
+  "issuer": {
+   "cn": "WE2",
+   "o": "Google Trust Services"
+  },
+  "sans": [
+   "upload.video.google.com",
+   "*.clients.google.com",
+   "*.docs.google.com",
+   "*.drive.google.com",
+   "*.gdata.youtube.com",
+   "*.googleapis.com",
+   "*.photos.google.com",
+   "*.youtube-3rd-party.com",
+   "upload.google.com",
+   "*.upload.google.com",
+   "upload.youtube.com",
+   "*.upload.youtube.com",
+   "uploads.stage.gdata.youtube.com",
+   "bg-call-donation.goog",
+   "bg-call-donation-alpha.goog",
+   "bg-call-donation-canary.goog",
+   "bg-call-donation-dev.goog"
+  ],
+  "not_before": "2026-10-07T19:09:11Z",
+  "not_after": "2026-12-30T19:09:10Z",
+  "validation": "DV"
+ }
+}

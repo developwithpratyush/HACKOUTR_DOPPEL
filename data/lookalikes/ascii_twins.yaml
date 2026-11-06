@@ -1,0 +1,32 @@
+# ASCII look-alikes (no foreign script needed): seed list for the glyph
+# confusability matrix (P4) and the look-alike generator (P3).
+#
+# Unicode homoglyphs (Cyrillic а, etc.) come from data/raw/unicode/confusables.txt
+# and the confusable-vision release; this file covers the ASCII-only tricks
+# those lists mostly don't (rn → m is the one confusable-vision does measure).
+#
+# status:
+#   measured: confusable-vision 2026.09.26 in-place tier (see data/raw/confusable-vision/DATASET.md)
+#   seed:     from our attack catalog; P4 renders and scores it with SSIM before we trust a cost
+# domain_possible: false = only fools in message text (DNS lowercases, so capital I never reaches the browser)
+
+schema_version: 1
+source_release: confusable-vision 2026.09.26 (CC BY 4.0, Paul Wood FRSA)
+
+pairs:
+  # multi-character twins
+  - { fake: rn, real: m, status: measured, tier: strict, domain_possible: true }
+  - { fake: vv, real: w, status: seed, tier: null, domain_possible: true }
+  - { fake: cl, real: d, status: seed, tier: null, domain_possible: true }
+  - { fake: nn, real: m, status: seed, tier: null, domain_possible: true }
+  - { fake: ri, real: n, status: seed, tier: null, domain_possible: true }
+  - { fake: lj, real: y, status: seed, tier: null, domain_possible: true }
+  # single-character twins
+  - { fake: "0", real: o, status: measured, tier: strict, domain_possible: true }
+  - { fake: "1", real: l, status: measured, tier: strict, domain_possible: true }
+  - { fake: l, real: i, status: seed, tier: null, domain_possible: true }
+  - { fake: I, real: l, status: measured, tier: strict, domain_possible: false }
+  - { fake: "5", real: s, status: seed, tier: null, domain_possible: true }
+  - { fake: "8", real: b, status: seed, tier: null, domain_possible: true }
+  - { fake: q, real: g, status: seed, tier: null, domain_possible: true }
+  - { fake: u, real: v, status: seed, tier: null, domain_possible: true }

@@ -1,0 +1,218 @@
+{
+ "google": {
+  "url": "https://accounts.google.com/",
+  "final_url": "https://accounts.google.com/v3/signin/identifier?continue=https://accounts.google.com/&followup=https://accounts.google.com/&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1110339641:1793890466193704",
+  "title": "Sign in - Google Accounts",
+  "has_password_field": true,
+  "captured_at": "2026-11-05T14:54:36+00:00",
+  "seconds": 10.3,
+  "files": {
+   "desktop.png": {
+    "sha256": "3ccb547c99a70da34f1e20f1ee6278ecf33b5a8f135dc54b8964dcdeaccf0bf8",
+    "bytes": 13259
+   },
+   "dom.html": {
+    "sha256": "3b09cd876696e4a491cf7eb0beb8ef533512a4bcb1c59fb751d1e782262ce739",
+    "bytes": 1252884
+   },
+   "mobile.png": {
+    "sha256": "36207ec3507004e1a78399ea1b4aa8a4c4be1bf23f94c1d0f125d5cfc289d58c",
+    "bytes": 10185
+   },
+   "page.har.zip": {
+    "sha256": "24795834d1fd0ecf327047ea655548625c9f95668fa7686f40ed06aa3d8f943e",
+    "bytes": 913737
+   }
+  },
+  "page": "login"
+ },
+ "hdfc": {
+  "url": "https://www.hdfc.bank.in/",
+  "final_url": "https://www.hdfc.bank.in/",
+  "title": "Personal Banking & Netbanking Services | HDFC Bank",
+  "has_password_field": false,
+  "captured_at": "2026-11-05T14:55:41+00:00",
+  "seconds": 52.6,
+  "files": {
+   "desktop.png": {
+    "sha256": "a3323c8123e4a22c0d4fdd079cb139e7fc8ef5412114831741133eca52fd26d0",
+    "bytes": 398319
+   },
+   "dom.html": {
+    "sha256": "f3e9a8110ace4d43ea06ce94dc350513f9178d8f9d890e7279ace592bc0aa2a7",
+    "bytes": 1460691
+   },
+   "mobile.png": {
+    "sha256": "0b5249aeb89391a6131e20da51525a65d18ebff22cbc0dc903e2e75547642b43",
+    "bytes": 167784
+   },
+   "page.har.zip": {
+    "sha256": "250d927e544f7bd8ab8753b5b8e6454a4494423c4432fce56a01530145ab2157",
+    "bytes": 2559846
+   }
+  },
+  "page": "home"
+ },
+ "icici": {
+  "url": "https://www.icici.bank.in/",
+  "final_url": "https://www.icici.bank.in/",
+  "title": "ICICI Bank - Personal, Business, Corporate and NRI Banking Online",
+  "has_password_field": false,
+  "captured_at": "2026-11-05T14:52:58+00:00",
+  "seconds": 10.2,
+  "files": {
+   "desktop.png": {
+    "sha256": "b4421ccebcfb4315e81ee14d68f6f59c5f1c7d23acf4ed05fa46ffa773b74d8b",
+    "bytes": 548086
+   },
+   "dom.html": {
+    "sha256": "d4e4fb8fd621a3f42fa2b73ad4a7597f02cd1d57468282a2960a87e83f8f7d34",
+    "bytes": 1624364
+   },
+   "mobile.png": {
+    "sha256": "6f3faff30bf401d159317fa4e0b5367881567199129c4174ccbdeabe934cc00c",
+    "bytes": 185014
+   },
+   "page.har.zip": {
+    "sha256": "efd7d4f8c1856263650e185d214c787fd9871dd42d02e4065376a7e008fa7b9c",
+    "bytes": 1296716
+   }
+  },
+  "page": "home"
+ },
+ "income_tax": {
+  "url": "https://www.incometax.gov.in/iec/foportal/",
+  "final_url": "https://www.incometax.gov.in/iec/foportal/",
+  "title": "Home | Income Tax Department",
+  "has_password_field": false,
+  "captured_at": "2026-11-05T14:56:13+00:00",
+  "seconds": 9.8,
+  "files": {
+   "desktop.png": {
+    "sha256": "5753edf3ba8f55a7063f3f8773a119a915bf23ce7181f94d0c57ec7923a9f4c8",
+    "bytes": 813626
+   },
+   "dom.html": {
+    "sha256": "4023a3ef5865243fd058e9ab2623190e0c0aa6ed22a307943be6ba715b7996ff",
+    "bytes": 318515
+   },
+   "mobile.png": {
+    "sha256": "ae253309ef07af8ced5eb821df2a77e062943585317afc2395dd9461153abba6",
+    "bytes": 127275
+   },
+   "page.har.zip": {
+    "sha256": "0a01eb55efea1517f036e9f8549f381e1a401401a1e5cbf3f88735c0c6ffaa87",
+    "bytes": 2919911
+   }
+  },
+  "page": "home"
+ },
+ "india_post": {
+  "url": "https://www.indiapost.gov.in/",
+  "final_url": "https://www.indiapost.gov.in/",
+  "title": "India Post",
+  "has_password_field": false,
+  "captured_at": "2026-11-05T14:54:04+00:00",
+  "seconds": 55.0,
+  "files": {
+   "desktop.png": {
+    "sha256": "675d9144156eb8fa8b2f66392be959d4cf15cc67a9d3a9d02a6ed671f203e798",
+    "bytes": 209839
+   },
+   "dom.html": {
+    "sha256": "f332719f26e14f7ff85e4ebef363b559ddf2bc94fd13874b87316bb32a12a965",
+    "bytes": 414502
+   },
+   "mobile.png": {
+    "sha256": "708b90618cd54524418bbb5297cb4661ed8c9aed2d4133b46bc22cd5f2c716a2",
+    "bytes": 63890
+   },
+   "page.har.zip": {
+    "sha256": "bc25497add819986851d05f5ee93f2892d488b37eed518a1c0afbb8349a729f8",
+    "bytes": 2022901
+   }
+  },
+  "page": "home"
+ },
+ "parivahan": {
+  "url": "https://echallan.parivahan.gov.in/index/accused-challan",
+  "final_url": "https://echallan.parivahan.gov.in/index/accused-challan",
+  "title": "Ministry of Road Transport and Highways",
+  "has_password_field": true,
+  "captured_at": "2026-11-05T14:54:18+00:00",
+  "seconds": 13.2,
+  "files": {
+   "desktop.png": {
+    "sha256": "bfad290e7adfc75accda67f596c229052bcae48f10808711ec7655ac02973824",
+    "bytes": 44577
+   },
+   "dom.html": {
+    "sha256": "6a58dfe90e202c70d93bcadcd282f8f726e5f81582ee487d97fc473c3f724b1e",
+    "bytes": 223249
+   },
+   "mobile.png": {
+    "sha256": "ba320641df0ce211b75918326e4e8a83b5bbf0ba7989c24927536c1b6ecc2e18",
+    "bytes": 29346
+   },
+   "page.har.zip": {
+    "sha256": "f5a1a602a4c3ec66a91fb7de399b833534a12e08e1ea48754e67b3888d667049",
+    "bytes": 1226036
+   }
+  },
+  "page": "payment"
+ },
+ "paytm": {
+  "url": "https://paytm.com/",
+  "final_url": "https://paytm.com/",
+  "title": "Paytm: Secure & Fast UPI Payments, Recharge Mobile & Pay Bills",
+  "has_password_field": false,
+  "captured_at": "2026-11-05T14:53:09+00:00",
+  "seconds": 10.2,
+  "files": {
+   "desktop.png": {
+    "sha256": "329f5bf28a89d7aed677f68f4ba38f6d20bcf490921a22eb81eef96263ed1ee5",
+    "bytes": 188751
+   },
+   "dom.html": {
+    "sha256": "9388a9fcb4428f8552062f60c6079e90a23ade746a946aa33a2cc13c265a9c75",
+    "bytes": 352251
+   },
+   "mobile.png": {
+    "sha256": "d41dcfa7f96b960a774ac258010e252d3ef78af3a7eb195320834e7914fb5736",
+    "bytes": 75725
+   },
+   "page.har.zip": {
+    "sha256": "a36682595b17957b18fe262b53adc8fbf7599eb775539ca77c3c07588682ee59",
+    "bytes": 2154168
+   }
+  },
+  "page": "home"
+ },
+ "sbi": {
+  "url": "https://yonoretail.sbi.bank.in/registration/welcome?srcChn=RINB",
+  "final_url": "https://yonoretail.sbi.bank.in/registration/welcome?srcChn=RINB",
+  "title": "YONO SBI",
+  "has_password_field": true,
+  "captured_at": "2026-11-05T14:57:58+00:00",
+  "seconds": 16.6,
+  "files": {
+   "desktop.png": {
+    "sha256": "5adb0815d1711073363c2c92f19a2566d2d59a62a6de8a80e6f1060818b3fe64",
+    "bytes": 60821
+   },
+   "dom.html": {
+    "sha256": "23880a51aeacb246a2d2163bfa3d2e7360132610992376654122a9ca561b0d9f",
+    "bytes": 331552
+   },
+   "mobile.png": {
+    "sha256": "6ff960534867609f78fe85df6ac9038dfde6af34843821dbb4bdd322b8e3d7e9",
+    "bytes": 29688
+   },
+   "page.har.zip": {
+    "sha256": "f757a7ae9b16da52e041b360aebeb39f74b1c5fa04b89d67cfdcf389afa93a25",
+    "bytes": 1922868
+   }
+  },
+  "page": "login"
+ }
+}

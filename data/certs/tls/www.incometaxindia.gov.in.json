@@ -1,0 +1,25 @@
+{
+ "host": "www.incometaxindia.gov.in",
+ "brand": "income_tax",
+ "fetched_at": "2026-11-06T00:18:22Z",
+ "source": "live_tls",
+ "cert": {
+  "sha256": "61e778f221fa93584c619f9feb5e5659163d3b07786ec4df6857c92b40d6701d",
+  "subject": {
+   "cn": "*.incometaxindia.gov.in",
+   "o": "Directorate of Income Tax",
+   "c": "IN"
+  },
+  "issuer": {
+   "cn": "DigiCert Global G3 TLS ECC SHA384 2020 CA1",
+   "o": "DigiCert Inc"
+  },
+  "sans": [
+   "*.incometaxindia.gov.in",
+   "incometaxindia.gov.in"
+  ],
+  "not_before": "2025-11-04T00:00:00Z",
+  "not_after": "2026-12-05T23:59:59Z",
+  "validation": "OV"
+ }
+}

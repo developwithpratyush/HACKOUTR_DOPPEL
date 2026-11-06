@@ -1,0 +1,25 @@
+{
+ "host": "paytmpayments.com",
+ "brand": "paytm",
+ "fetched_at": "2026-11-06T00:18:20Z",
+ "source": "live_tls",
+ "cert": {
+  "sha256": "c7673d3da33bb090e0873a8a1aefaf3772bf5549028e8239d96d45c3b771a8bc",
+  "subject": {
+   "cn": "*.paytmpayments.com",
+   "o": null,
+   "c": null
+  },
+  "issuer": {
+   "cn": "Amazon RSA 2048 M04",
+   "o": "Amazon"
+  },
+  "sans": [
+   "*.paytmpayments.com",
+   "paytmpayments.com"
+  ],
+  "not_before": "2026-09-15T00:00:00Z",
+  "not_after": "2027-03-31T23:59:59Z",
+  "validation": "DV"
+ }
+}

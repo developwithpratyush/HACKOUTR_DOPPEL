@@ -1,0 +1,25 @@
+{
+ "host": "www.paytminsurance.co.in",
+ "brand": "paytm",
+ "fetched_at": "2026-11-06T00:18:20Z",
+ "source": "live_tls",
+ "cert": {
+  "sha256": "f167e7a446a0ba23078e2e02a1e0d638fd8421469de7f8ec79850e6b438e7557",
+  "subject": {
+   "cn": "*.paytminsurance.co.in",
+   "o": "PAYTM INSURANCE BROKING PRIVATE LIMITED",
+   "c": "IN"
+  },
+  "issuer": {
+   "cn": "GeoTrust TLS ECC CA G1",
+   "o": "DigiCert Inc"
+  },
+  "sans": [
+   "*.paytminsurance.co.in",
+   "paytminsurance.co.in"
+  ],
+  "not_before": "2026-02-10T00:00:00Z",
+  "not_after": "2027-02-05T23:59:59Z",
+  "validation": "OV"
+ }
+}

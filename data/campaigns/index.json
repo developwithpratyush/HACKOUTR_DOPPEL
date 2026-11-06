@@ -1,0 +1,1504 @@
+{
+ "generated_at": "2026-11-06T02:33:07+00:00",
+ "members": {
+  "atxxycp.top": {
+   "campaign": "C2ecb3504",
+   "size": 12,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>.gov.<r>.<tld>",
+   "peers": [
+    "bdzhpc.top",
+    "bilibil.top",
+    "ceibigj.top",
+    "eyssebd.top",
+    "gjaipio.top"
+   ]
+  },
+  "bdzhpc.top": {
+   "campaign": "C2ecb3504",
+   "size": 12,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>.gov.<r>.<tld>",
+   "peers": [
+    "atxxycp.top",
+    "bilibil.top",
+    "ceibigj.top",
+    "eyssebd.top",
+    "gjaipio.top"
+   ]
+  },
+  "bilibil.top": {
+   "campaign": "C2ecb3504",
+   "size": 12,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>.gov.<r>.<tld>",
+   "peers": [
+    "atxxycp.top",
+    "bdzhpc.top",
+    "ceibigj.top",
+    "eyssebd.top",
+    "gjaipio.top"
+   ]
+  },
+  "ceibigj.top": {
+   "campaign": "C2ecb3504",
+   "size": 12,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>.gov.<r>.<tld>",
+   "peers": [
+    "atxxycp.top",
+    "bdzhpc.top",
+    "bilibil.top",
+    "eyssebd.top",
+    "gjaipio.top"
+   ]
+  },
+  "eyssebd.top": {
+   "campaign": "C2ecb3504",
+   "size": 12,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>.gov.<r>.<tld>",
+   "peers": [
+    "atxxycp.top",
+    "bdzhpc.top",
+    "bilibil.top",
+    "ceibigj.top",
+    "gjaipio.top"
+   ]
+  },
+  "gjaipio.top": {
+   "campaign": "C2ecb3504",
+   "size": 12,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>.gov.<r>.<tld>",
+   "peers": [
+    "atxxycp.top",
+    "bdzhpc.top",
+    "bilibil.top",
+    "ceibigj.top",
+    "eyssebd.top"
+   ]
+  },
+  "guangm.top": {
+   "campaign": "C2ecb3504",
+   "size": 12,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>.gov.<r>.<tld>",
+   "peers": [
+    "atxxycp.top",
+    "bdzhpc.top",
+    "bilibil.top",
+    "ceibigj.top",
+    "eyssebd.top"
+   ]
+  },
+  "gyiaeu.top": {
+   "campaign": "C2ecb3504",
+   "size": 12,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>.gov.<r>.<tld>",
+   "peers": [
+    "atxxycp.top",
+    "bdzhpc.top",
+    "bilibil.top",
+    "ceibigj.top",
+    "eyssebd.top"
+   ]
+  },
+  "itvsqtr.top": {
+   "campaign": "C2ecb3504",
+   "size": 12,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>.gov.<r>.<tld>",
+   "peers": [
+    "atxxycp.top",
+    "bdzhpc.top",
+    "bilibil.top",
+    "ceibigj.top",
+    "eyssebd.top"
+   ]
+  },
+  "wzdygy.top": {
+   "campaign": "C2ecb3504",
+   "size": 12,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>.gov.<r>.<tld>",
+   "peers": [
+    "atxxycp.top",
+    "bdzhpc.top",
+    "bilibil.top",
+    "ceibigj.top",
+    "eyssebd.top"
+   ]
+  },
+  "ykoil.top": {
+   "campaign": "C2ecb3504",
+   "size": 12,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>.gov.<r>.<tld>",
+   "peers": [
+    "atxxycp.top",
+    "bdzhpc.top",
+    "bilibil.top",
+    "ceibigj.top",
+    "eyssebd.top"
+   ]
+  },
+  "ypaypro.top": {
+   "campaign": "C2ecb3504",
+   "size": 12,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>.gov.<r>.<tld>",
+   "peers": [
+    "atxxycp.top",
+    "bdzhpc.top",
+    "bilibil.top",
+    "ceibigj.top",
+    "eyssebd.top"
+   ]
+  },
+  "in-echallan.date": {
+   "campaign": "Cd40e4c46",
+   "size": 5,
+   "links": [
+    "cert_recipe",
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "strong (same certificate recipe)",
+   "template": "in-<B>.<tld>",
+   "peers": [
+    "in-echallan.online",
+    "in-echallan.party",
+    "in-echallan.trade",
+    "ln-echallan.bid"
+   ]
+  },
+  "in-echallan.online": {
+   "campaign": "Cd40e4c46",
+   "size": 5,
+   "links": [
+    "cert_recipe",
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "strong (same certificate recipe)",
+   "template": "in-<B>.<tld>",
+   "peers": [
+    "in-echallan.date",
+    "in-echallan.party",
+    "in-echallan.trade",
+    "ln-echallan.bid"
+   ]
+  },
+  "in-echallan.party": {
+   "campaign": "Cd40e4c46",
+   "size": 5,
+   "links": [
+    "cert_recipe",
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "strong (same certificate recipe)",
+   "template": "in-<B>.<tld>",
+   "peers": [
+    "in-echallan.date",
+    "in-echallan.online",
+    "in-echallan.trade",
+    "ln-echallan.bid"
+   ]
+  },
+  "in-echallan.trade": {
+   "campaign": "Cd40e4c46",
+   "size": 5,
+   "links": [
+    "cert_recipe",
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "strong (same certificate recipe)",
+   "template": "in-<B>.<tld>",
+   "peers": [
+    "in-echallan.date",
+    "in-echallan.online",
+    "in-echallan.party",
+    "ln-echallan.bid"
+   ]
+  },
+  "ln-echallan.bid": {
+   "campaign": "Cd40e4c46",
+   "size": 5,
+   "links": [
+    "cert_recipe",
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "strong (same certificate recipe)",
+   "template": "in-<B>.<tld>",
+   "peers": [
+    "in-echallan.date",
+    "in-echallan.online",
+    "in-echallan.party",
+    "in-echallan.trade"
+   ]
+  },
+  "pay8-2v-4wkfituj8-ekontetevi-gmailcom.vercel.app": {
+   "campaign": "C42b83c2f",
+   "size": 7,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>",
+   "peers": [
+    "pay8-2v-6bis3visv-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-9jkc4ukd3-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-bomuuniez-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-dp8sptwgl-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-gbz1keyte-ekontetevi-gmailcom.vercel.app"
+   ]
+  },
+  "pay8-2v-6bis3visv-ekontetevi-gmailcom.vercel.app": {
+   "campaign": "C42b83c2f",
+   "size": 7,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>",
+   "peers": [
+    "pay8-2v-4wkfituj8-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-9jkc4ukd3-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-bomuuniez-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-dp8sptwgl-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-gbz1keyte-ekontetevi-gmailcom.vercel.app"
+   ]
+  },
+  "pay8-2v-9jkc4ukd3-ekontetevi-gmailcom.vercel.app": {
+   "campaign": "C42b83c2f",
+   "size": 7,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>",
+   "peers": [
+    "pay8-2v-4wkfituj8-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-6bis3visv-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-bomuuniez-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-dp8sptwgl-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-gbz1keyte-ekontetevi-gmailcom.vercel.app"
+   ]
+  },
+  "pay8-2v-bomuuniez-ekontetevi-gmailcom.vercel.app": {
+   "campaign": "C42b83c2f",
+   "size": 7,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>",
+   "peers": [
+    "pay8-2v-4wkfituj8-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-6bis3visv-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-9jkc4ukd3-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-dp8sptwgl-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-gbz1keyte-ekontetevi-gmailcom.vercel.app"
+   ]
+  },
+  "pay8-2v-dp8sptwgl-ekontetevi-gmailcom.vercel.app": {
+   "campaign": "C42b83c2f",
+   "size": 7,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>",
+   "peers": [
+    "pay8-2v-4wkfituj8-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-6bis3visv-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-9jkc4ukd3-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-bomuuniez-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-gbz1keyte-ekontetevi-gmailcom.vercel.app"
+   ]
+  },
+  "pay8-2v-gbz1keyte-ekontetevi-gmailcom.vercel.app": {
+   "campaign": "C42b83c2f",
+   "size": 7,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>",
+   "peers": [
+    "pay8-2v-4wkfituj8-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-6bis3visv-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-9jkc4ukd3-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-bomuuniez-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-dp8sptwgl-ekontetevi-gmailcom.vercel.app"
+   ]
+  },
+  "pay8-2v-kbawr6w4i-ekontetevi-gmailcom.vercel.app": {
+   "campaign": "C42b83c2f",
+   "size": 7,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "pay<n>-<n><r>-<r>-<r>-<B>com.<tld>",
+   "peers": [
+    "pay8-2v-4wkfituj8-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-6bis3visv-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-9jkc4ukd3-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-bomuuniez-ekontetevi-gmailcom.vercel.app",
+    "pay8-2v-dp8sptwgl-ekontetevi-gmailcom.vercel.app"
+   ]
+  },
+  "cygn.eu.org": {
+   "campaign": "C80e3f08b",
+   "size": 7,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "accounts.<B>.<r>.<tld>",
+   "peers": [
+    "nyanwaretest.com",
+    "pmeflex.ch",
+    "signoninmyaccountb.com",
+    "skir.cc",
+    "tsinbei.cn"
+   ]
+  },
+  "nyanwaretest.com": {
+   "campaign": "C80e3f08b",
+   "size": 7,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "accounts.<B>.<r>.<tld>",
+   "peers": [
+    "cygn.eu.org",
+    "pmeflex.ch",
+    "signoninmyaccountb.com",
+    "skir.cc",
+    "tsinbei.cn"
+   ]
+  },
+  "pmeflex.ch": {
+   "campaign": "C80e3f08b",
+   "size": 7,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "accounts.<B>.<r>.<tld>",
+   "peers": [
+    "cygn.eu.org",
+    "nyanwaretest.com",
+    "signoninmyaccountb.com",
+    "skir.cc",
+    "tsinbei.cn"
+   ]
+  },
+  "signoninmyaccountb.com": {
+   "campaign": "C80e3f08b",
+   "size": 7,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "accounts.<B>.<r>.<tld>",
+   "peers": [
+    "cygn.eu.org",
+    "nyanwaretest.com",
+    "pmeflex.ch",
+    "skir.cc",
+    "tsinbei.cn"
+   ]
+  },
+  "skir.cc": {
+   "campaign": "C80e3f08b",
+   "size": 7,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "accounts.<B>.<r>.<tld>",
+   "peers": [
+    "cygn.eu.org",
+    "nyanwaretest.com",
+    "pmeflex.ch",
+    "signoninmyaccountb.com",
+    "tsinbei.cn"
+   ]
+  },
+  "tsinbei.cn": {
+   "campaign": "C80e3f08b",
+   "size": 7,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "accounts.<B>.<r>.<tld>",
+   "peers": [
+    "cygn.eu.org",
+    "nyanwaretest.com",
+    "pmeflex.ch",
+    "signoninmyaccountb.com",
+    "skir.cc"
+   ]
+  },
+  "wjfcloud.us.kg": {
+   "campaign": "C80e3f08b",
+   "size": 7,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "accounts.<B>.<r>.<tld>",
+   "peers": [
+    "cygn.eu.org",
+    "nyanwaretest.com",
+    "pmeflex.ch",
+    "signoninmyaccountb.com",
+    "skir.cc"
+   ]
+  },
+  "google-site-verificationcqeizys86jq4o8tta5ktfcbwzptikmtnlix.com": {
+   "campaign": "C04fdbd7a",
+   "size": 4,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>-site-<r>.<tld>",
+   "peers": [
+    "google-site-verificationfqwlvnbunu2dg04kmftcoq36z0oatfm5kdo.xyz",
+    "google-site-verificationjhdpcya7tw3uthgd2fnz63zg5jsnu2rt02o.xyz",
+    "google-site-verificationr7luxn3drarw27l0myiiuovr3o22snlfyu8pzf.store"
+   ]
+  },
+  "google-site-verificationfqwlvnbunu2dg04kmftcoq36z0oatfm5kdo.xyz": {
+   "campaign": "C04fdbd7a",
+   "size": 4,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>-site-<r>.<tld>",
+   "peers": [
+    "google-site-verificationcqeizys86jq4o8tta5ktfcbwzptikmtnlix.com",
+    "google-site-verificationjhdpcya7tw3uthgd2fnz63zg5jsnu2rt02o.xyz",
+    "google-site-verificationr7luxn3drarw27l0myiiuovr3o22snlfyu8pzf.store"
+   ]
+  },
+  "google-site-verificationjhdpcya7tw3uthgd2fnz63zg5jsnu2rt02o.xyz": {
+   "campaign": "C04fdbd7a",
+   "size": 4,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>-site-<r>.<tld>",
+   "peers": [
+    "google-site-verificationcqeizys86jq4o8tta5ktfcbwzptikmtnlix.com",
+    "google-site-verificationfqwlvnbunu2dg04kmftcoq36z0oatfm5kdo.xyz",
+    "google-site-verificationr7luxn3drarw27l0myiiuovr3o22snlfyu8pzf.store"
+   ]
+  },
+  "google-site-verificationr7luxn3drarw27l0myiiuovr3o22snlfyu8pzf.store": {
+   "campaign": "C04fdbd7a",
+   "size": 4,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>-site-<r>.<tld>",
+   "peers": [
+    "google-site-verificationcqeizys86jq4o8tta5ktfcbwzptikmtnlix.com",
+    "google-site-verificationfqwlvnbunu2dg04kmftcoq36z0oatfm5kdo.xyz",
+    "google-site-verificationjhdpcya7tw3uthgd2fnz63zg5jsnu2rt02o.xyz"
+   ]
+  },
+  "jp-google.cloud": {
+   "campaign": "C1ca365e6",
+   "size": 4,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "jp-<B>.<tld>",
+   "peers": [
+    "jp-google.club",
+    "jp-google.cyou",
+    "jp-google.fit"
+   ]
+  },
+  "jp-google.club": {
+   "campaign": "C1ca365e6",
+   "size": 4,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "jp-<B>.<tld>",
+   "peers": [
+    "jp-google.cloud",
+    "jp-google.cyou",
+    "jp-google.fit"
+   ]
+  },
+  "jp-google.cyou": {
+   "campaign": "C1ca365e6",
+   "size": 4,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "jp-<B>.<tld>",
+   "peers": [
+    "jp-google.cloud",
+    "jp-google.club",
+    "jp-google.fit"
+   ]
+  },
+  "jp-google.fit": {
+   "campaign": "C1ca365e6",
+   "size": 4,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "jp-<B>.<tld>",
+   "peers": [
+    "jp-google.cloud",
+    "jp-google.club",
+    "jp-google.cyou"
+   ]
+  },
+  "googlenewsblog.com": {
+   "campaign": "C5bf644cc",
+   "size": 4,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>newsblog.<tld>",
+   "peers": [
+    "googlenewsblog.info",
+    "googlenewsblog.org",
+    "googlenewsblog.store"
+   ]
+  },
+  "googlenewsblog.info": {
+   "campaign": "C5bf644cc",
+   "size": 4,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>newsblog.<tld>",
+   "peers": [
+    "googlenewsblog.com",
+    "googlenewsblog.org",
+    "googlenewsblog.store"
+   ]
+  },
+  "googlenewsblog.org": {
+   "campaign": "C5bf644cc",
+   "size": 4,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>newsblog.<tld>",
+   "peers": [
+    "googlenewsblog.com",
+    "googlenewsblog.info",
+    "googlenewsblog.store"
+   ]
+  },
+  "googlenewsblog.store": {
+   "campaign": "C5bf644cc",
+   "size": 4,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>newsblog.<tld>",
+   "peers": [
+    "googlenewsblog.com",
+    "googlenewsblog.info",
+    "googlenewsblog.org"
+   ]
+  },
+  "hellogoogle.cloud": {
+   "campaign": "Cd633b363",
+   "size": 4,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "hello<B>.<tld>",
+   "peers": [
+    "hellogoogle.net",
+    "hellogoogle.store",
+    "hellogoogle.xyz"
+   ]
+  },
+  "hellogoogle.net": {
+   "campaign": "Cd633b363",
+   "size": 4,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "hello<B>.<tld>",
+   "peers": [
+    "hellogoogle.cloud",
+    "hellogoogle.store",
+    "hellogoogle.xyz"
+   ]
+  },
+  "hellogoogle.store": {
+   "campaign": "Cd633b363",
+   "size": 4,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "hello<B>.<tld>",
+   "peers": [
+    "hellogoogle.cloud",
+    "hellogoogle.net",
+    "hellogoogle.xyz"
+   ]
+  },
+  "hellogoogle.xyz": {
+   "campaign": "Cd633b363",
+   "size": 4,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "hello<B>.<tld>",
+   "peers": [
+    "hellogoogle.cloud",
+    "hellogoogle.net",
+    "hellogoogle.store"
+   ]
+  },
+  "kr-google.cyou": {
+   "campaign": "C64aa61bf",
+   "size": 3,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "kr-<B>.<tld>",
+   "peers": [
+    "kr-google.ltd",
+    "kr-google.work"
+   ]
+  },
+  "kr-google.ltd": {
+   "campaign": "C64aa61bf",
+   "size": 3,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "kr-<B>.<tld>",
+   "peers": [
+    "kr-google.cyou",
+    "kr-google.work"
+   ]
+  },
+  "kr-google.work": {
+   "campaign": "C64aa61bf",
+   "size": 3,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "kr-<B>.<tld>",
+   "peers": [
+    "kr-google.cyou",
+    "kr-google.ltd"
+   ]
+  },
+  "ranking-googleads-gacordong1.pages.dev": {
+   "campaign": "C24d2fc30",
+   "size": 4,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "ranking-<B>ads-<r><n>.<tld>",
+   "peers": [
+    "ranking-googleads-gacordong2.pages.dev",
+    "ranking-googleads-gacordong3.pages.dev",
+    "ranking-googleads-gacordong6.pages.dev"
+   ]
+  },
+  "ranking-googleads-gacordong2.pages.dev": {
+   "campaign": "C24d2fc30",
+   "size": 4,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "ranking-<B>ads-<r><n>.<tld>",
+   "peers": [
+    "ranking-googleads-gacordong1.pages.dev",
+    "ranking-googleads-gacordong3.pages.dev",
+    "ranking-googleads-gacordong6.pages.dev"
+   ]
+  },
+  "ranking-googleads-gacordong3.pages.dev": {
+   "campaign": "C24d2fc30",
+   "size": 4,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "ranking-<B>ads-<r><n>.<tld>",
+   "peers": [
+    "ranking-googleads-gacordong1.pages.dev",
+    "ranking-googleads-gacordong2.pages.dev",
+    "ranking-googleads-gacordong6.pages.dev"
+   ]
+  },
+  "ranking-googleads-gacordong6.pages.dev": {
+   "campaign": "C24d2fc30",
+   "size": 4,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "ranking-<B>ads-<r><n>.<tld>",
+   "peers": [
+    "ranking-googleads-gacordong1.pages.dev",
+    "ranking-googleads-gacordong2.pages.dev",
+    "ranking-googleads-gacordong3.pages.dev"
+   ]
+  },
+  "accounts-google.eu": {
+   "campaign": "Cfdd54959",
+   "size": 4,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "accounts-<B>.<tld>",
+   "peers": [
+    "accounts-google.help",
+    "accounts-google.shop",
+    "accounts-google.top"
+   ]
+  },
+  "accounts-google.help": {
+   "campaign": "Cfdd54959",
+   "size": 4,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "accounts-<B>.<tld>",
+   "peers": [
+    "accounts-google.eu",
+    "accounts-google.shop",
+    "accounts-google.top"
+   ]
+  },
+  "accounts-google.shop": {
+   "campaign": "Cfdd54959",
+   "size": 4,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "accounts-<B>.<tld>",
+   "peers": [
+    "accounts-google.eu",
+    "accounts-google.help",
+    "accounts-google.top"
+   ]
+  },
+  "accounts-google.top": {
+   "campaign": "Cfdd54959",
+   "size": 4,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "accounts-<B>.<tld>",
+   "peers": [
+    "accounts-google.eu",
+    "accounts-google.help",
+    "accounts-google.shop"
+   ]
+  },
+  "caddy.workers.dev": {
+   "campaign": "C40b3b9b3",
+   "size": 3,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "accounts-<B>.<r>.<tld>",
+   "peers": [
+    "euskodata.com",
+    "letsatsilesufi.co.za"
+   ]
+  },
+  "euskodata.com": {
+   "campaign": "C40b3b9b3",
+   "size": 3,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "accounts-<B>.<r>.<tld>",
+   "peers": [
+    "caddy.workers.dev",
+    "letsatsilesufi.co.za"
+   ]
+  },
+  "letsatsilesufi.co.za": {
+   "campaign": "C40b3b9b3",
+   "size": 3,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "accounts-<B>.<r>.<tld>",
+   "peers": [
+    "caddy.workers.dev",
+    "euskodata.com"
+   ]
+  },
+  "adack.ir": {
+   "campaign": "Cb6a49071",
+   "size": 3,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "drive.<B>.com.<r>.<tld>",
+   "peers": [
+    "arablatrade.com",
+    "jdvz.net"
+   ]
+  },
+  "arablatrade.com": {
+   "campaign": "Cb6a49071",
+   "size": 3,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "drive.<B>.com.<r>.<tld>",
+   "peers": [
+    "adack.ir",
+    "jdvz.net"
+   ]
+  },
+  "jdvz.net": {
+   "campaign": "Cb6a49071",
+   "size": 3,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "drive.<B>.com.<r>.<tld>",
+   "peers": [
+    "adack.ir",
+    "arablatrade.com"
+   ]
+  },
+  "us-east1-runtime-connectors-google.com": {
+   "campaign": "Ce594b6b0",
+   "size": 3,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "us-east<n>-runtime-connectors-<B>.<tld>",
+   "peers": [
+    "us-east4-runtime-connectors-google.com",
+    "us-east5-runtime-connectors-google.com"
+   ]
+  },
+  "us-east4-runtime-connectors-google.com": {
+   "campaign": "Ce594b6b0",
+   "size": 3,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "us-east<n>-runtime-connectors-<B>.<tld>",
+   "peers": [
+    "us-east1-runtime-connectors-google.com",
+    "us-east5-runtime-connectors-google.com"
+   ]
+  },
+  "us-east5-runtime-connectors-google.com": {
+   "campaign": "Ce594b6b0",
+   "size": 3,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "us-east<n>-runtime-connectors-<B>.<tld>",
+   "peers": [
+    "us-east1-runtime-connectors-google.com",
+    "us-east4-runtime-connectors-google.com"
+   ]
+  },
+  "cins.it": {
+   "campaign": "Cf3b62572",
+   "size": 3,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>.com.<r>.<tld>",
+   "peers": [
+    "fkdgl.com",
+    "khanimambatraining.co.za"
+   ]
+  },
+  "fkdgl.com": {
+   "campaign": "Cf3b62572",
+   "size": 3,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>.com.<r>.<tld>",
+   "peers": [
+    "cins.it",
+    "khanimambatraining.co.za"
+   ]
+  },
+  "khanimambatraining.co.za": {
+   "campaign": "Cf3b62572",
+   "size": 3,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>.com.<r>.<tld>",
+   "peers": [
+    "cins.it",
+    "fkdgl.com"
+   ]
+  },
+  "echallanrto.com": {
+   "campaign": "C23be680c",
+   "size": 2,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>rto.<tld>",
+   "peers": [
+    "echallanrto.org"
+   ]
+  },
+  "echallanrto.org": {
+   "campaign": "C23be680c",
+   "size": 2,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>rto.<tld>",
+   "peers": [
+    "echallanrto.com"
+   ]
+  },
+  "nxtgenparivahan.com": {
+   "campaign": "C3e6ac754",
+   "size": 2,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "nxtgen<B>.<tld>",
+   "peers": [
+    "nxtgenparivahan.org"
+   ]
+  },
+  "nxtgenparivahan.org": {
+   "campaign": "C3e6ac754",
+   "size": 2,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "nxtgen<B>.<tld>",
+   "peers": [
+    "nxtgenparivahan.com"
+   ]
+  },
+  "googleads3.com": {
+   "campaign": "C508caad3",
+   "size": 2,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>ads<n>.<tld>",
+   "peers": [
+    "googleads4.com"
+   ]
+  },
+  "googleads4.com": {
+   "campaign": "C508caad3",
+   "size": 2,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>ads<n>.<tld>",
+   "peers": [
+    "googleads3.com"
+   ]
+  },
+  "buyspinslotgoogle1.lol": {
+   "campaign": "C6f896407",
+   "size": 2,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "buyspinslot<B><n>.<tld>",
+   "peers": [
+    "buyspinslotgoogle1.net"
+   ]
+  },
+  "buyspinslotgoogle1.net": {
+   "campaign": "C6f896407",
+   "size": 2,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "buyspinslot<B><n>.<tld>",
+   "peers": [
+    "buyspinslotgoogle1.lol"
+   ]
+  },
+  "sbi-rating.ch": {
+   "campaign": "Ca2fbce91",
+   "size": 2,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>-rating.<tld>",
+   "peers": [
+    "sbi-rating.com"
+   ]
+  },
+  "sbi-rating.com": {
+   "campaign": "Ca2fbce91",
+   "size": 2,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>-rating.<tld>",
+   "peers": [
+    "sbi-rating.ch"
+   ]
+  },
+  "googlechrome722196.com": {
+   "campaign": "Cd3a7d869",
+   "size": 2,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>chrome<n>.<tld>",
+   "peers": [
+    "googlechrome733350.com"
+   ]
+  },
+  "googlechrome733350.com": {
+   "campaign": "Cd3a7d869",
+   "size": 2,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>chrome<n>.<tld>",
+   "peers": [
+    "googlechrome722196.com"
+   ]
+  },
+  "meet-google-call.fyi": {
+   "campaign": "Cdaa9bff6",
+   "size": 2,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "meet-<B>-call.<tld>",
+   "peers": [
+    "meet-google-call.live"
+   ]
+  },
+  "meet-google-call.live": {
+   "campaign": "Cdaa9bff6",
+   "size": 2,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "meet-<B>-call.<tld>",
+   "peers": [
+    "meet-google-call.fyi"
+   ]
+  },
+  "meet-google.pro": {
+   "campaign": "Ce80a8d18",
+   "size": 2,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "meet-<B>.<tld>",
+   "peers": [
+    "meet-google.top"
+   ]
+  },
+  "meet-google.top": {
+   "campaign": "Ce80a8d18",
+   "size": 2,
+   "links": [
+    "naming_template",
+    "nrd_week"
+   ],
+   "strength": "naming habit only",
+   "template": "meet-<B>.<tld>",
+   "peers": [
+    "meet-google.pro"
+   ]
+  },
+  "acountsgoogleads.com": {
+   "campaign": "C00eed30f",
+   "size": 2,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "<r><B>ads.<tld>",
+   "peers": [
+    "dichvugoogleads.online"
+   ]
+  },
+  "dichvugoogleads.online": {
+   "campaign": "C00eed30f",
+   "size": 2,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "<r><B>ads.<tld>",
+   "peers": [
+    "acountsgoogleads.com"
+   ]
+  },
+  "cloudindex-google-gd01wp.pages.dev": {
+   "campaign": "C0929baf1",
+   "size": 2,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "cloudindex-<B>-<r>.<tld>",
+   "peers": [
+    "cloudindex-google-gdao.pages.dev"
+   ]
+  },
+  "cloudindex-google-gdao.pages.dev": {
+   "campaign": "C0929baf1",
+   "size": 2,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "cloudindex-<B>-<r>.<tld>",
+   "peers": [
+    "cloudindex-google-gd01wp.pages.dev"
+   ]
+  },
+  "googlemap.org": {
+   "campaign": "C25eff55d",
+   "size": 2,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>map.<tld>",
+   "peers": [
+    "googlemap.support"
+   ]
+  },
+  "googlemap.support": {
+   "campaign": "C25eff55d",
+   "size": 2,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>map.<tld>",
+   "peers": [
+    "googlemap.org"
+   ]
+  },
+  "us-west2-runtime-connectors-google.com": {
+   "campaign": "C28f3a82e",
+   "size": 2,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "us-west<n>-runtime-connectors-<B>.<tld>",
+   "peers": [
+    "us-west4-runtime-connectors-google.com"
+   ]
+  },
+  "us-west4-runtime-connectors-google.com": {
+   "campaign": "C28f3a82e",
+   "size": 2,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "us-west<n>-runtime-connectors-<B>.<tld>",
+   "peers": [
+    "us-west2-runtime-connectors-google.com"
+   ]
+  },
+  "google-drive.se": {
+   "campaign": "C3ba41982",
+   "size": 2,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>-drive.<tld>",
+   "peers": [
+    "google-drive.zip"
+   ]
+  },
+  "google-drive.zip": {
+   "campaign": "C3ba41982",
+   "size": 2,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>-drive.<tld>",
+   "peers": [
+    "google-drive.se"
+   ]
+  },
+  "facebookupload-google55.ph": {
+   "campaign": "C60415bb8",
+   "size": 2,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "facebookupload-<B><n>.<tld>",
+   "peers": [
+    "facebookupload-google82.ph"
+   ]
+  },
+  "facebookupload-google82.ph": {
+   "campaign": "C60415bb8",
+   "size": 2,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "facebookupload-<B><n>.<tld>",
+   "peers": [
+    "facebookupload-google55.ph"
+   ]
+  },
+  "gmail-auth.com": {
+   "campaign": "Ca7b4ca00",
+   "size": 2,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>-auth.<tld>",
+   "peers": [
+    "gmail-auth.live"
+   ]
+  },
+  "gmail-auth.live": {
+   "campaign": "Ca7b4ca00",
+   "size": 2,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>-auth.<tld>",
+   "peers": [
+    "gmail-auth.com"
+   ]
+  },
+  "google-home-zipy-zipzy-zxzzzz.net.ph": {
+   "campaign": "Cad26ff08",
+   "size": 2,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>-home-<r>-<r>-<r>.<tld>",
+   "peers": [
+    "google-home-zipy-zipzy-zzzi.net.ph"
+   ]
+  },
+  "google-home-zipy-zipzy-zzzi.net.ph": {
+   "campaign": "Cad26ff08",
+   "size": 2,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "<B>-home-<r>-<r>-<r>.<tld>",
+   "peers": [
+    "google-home-zipy-zipzy-zxzzzz.net.ph"
+   ]
+  },
+  "sepamate.fr": {
+   "campaign": "Cde56721c",
+   "size": 2,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "drive.<B>.<r>.<tld>",
+   "peers": [
+    "webtechuanta.com"
+   ]
+  },
+  "webtechuanta.com": {
+   "campaign": "Cde56721c",
+   "size": 2,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "drive.<B>.<r>.<tld>",
+   "peers": [
+    "sepamate.fr"
+   ]
+  },
+  "duta168acom-drama-google.pages.dev": {
+   "campaign": "Ce69002cc",
+   "size": 2,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "<r>-drama-<B>.<tld>",
+   "peers": [
+    "logam77anet-drama-google.pages.dev"
+   ]
+  },
+  "logam77anet-drama-google.pages.dev": {
+   "campaign": "Ce69002cc",
+   "size": 2,
+   "links": [
+    "naming_template"
+   ],
+   "strength": "naming habit only",
+   "template": "<r>-drama-<B>.<tld>",
+   "peers": [
+    "duta168acom-drama-google.pages.dev"
+   ]
+  }
+ }
+}

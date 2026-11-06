@@ -1,0 +1,25 @@
+{
+ "host": "www.parivahan.gov.in",
+ "brand": "parivahan",
+ "fetched_at": "2026-11-06T00:18:21Z",
+ "source": "live_tls",
+ "cert": {
+  "sha256": "89410aac282deac26aa95ed93c695d002482952e4e7c2c173c2d16a1f77fb98f",
+  "subject": {
+   "cn": "*.parivahan.gov.in",
+   "o": null,
+   "c": null
+  },
+  "issuer": {
+   "cn": "YE1",
+   "o": "Let's Encrypt"
+  },
+  "sans": [
+   "*.parivahan.gov.in",
+   "parivahan.gov.in"
+  ],
+  "not_before": "2026-09-23T04:43:20Z",
+  "not_after": "2026-12-22T04:43:19Z",
+  "validation": "DV"
+ }
+}

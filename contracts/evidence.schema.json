@@ -1,0 +1,428 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://doppel.local/contracts/evidence.schema.json",
+  "title": "Doppel verdict and evidence contract",
+  "description": "v1.1.0 (v1.0.0 documents stay valid). The root validates one verdict. Use #/$defs/evidence_item for a single tool result and #/$defs/scan_result for a batch. Field meanings and the invariants that JSON Schema cannot express are in contracts/README.md; doppel.contract checks both.",
+  "$ref": "#/$defs/verdict",
+
+  "$defs": {
+    "schema_version": {
+      "type": "string",
+      "enum": ["1.0.0", "1.1.0"],
+      "description": "1.1.0 (P11, decision 004): criteria C16-C18 and the tools cert_forensics, ct_history, campaign_radar. Additive: every 1.0.0 document is a valid 1.1.0 document."
+    },
+
+    "evidence_id": {
+      "type": "string",
+      "pattern": "^E[1-9][0-9]*$",
+      "description": "Unique within one verdict. Cited by the trace, the hard rule, the counterfactual and the case-file report."
+    },
+
+    "tool": {
+      "type": "string",
+      "enum": [
+        "address_reader",
+        "family_verifier",
+        "trick_detector",
+        "human_eye_renderer",
+        "risk_model",
+        "page_probe",
+        "page_inspector",
+        "vision_ai",
+        "credential_tracker",
+        "cert_forensics",
+        "ct_history",
+        "campaign_radar"
+      ]
+    },
+
+    "stage": {
+      "type": "string",
+      "enum": ["quick", "standard", "deep"]
+    },
+
+    "final_label": {
+      "type": "string",
+      "enum": ["genuine", "phishing", "sleeper", "needs_review", "benign"]
+    },
+
+    "provisional_label": {
+      "type": "string",
+      "enum": ["genuine", "phishing", "sleeper", "needs_review", "benign", "suspicious"],
+      "description": "'suspicious' is allowed only as an in-progress status after a stage, never as a final label."
+    },
+
+    "unit_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+
+    "brand_ref": {
+      "type": "object",
+      "description": "A protected brand. 'id' is the key in data/brands/registry.yaml.",
+      "required": ["id", "name"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+        "name": { "type": "string", "minLength": 1 }
+      }
+    },
+
+    "edit": {
+      "type": "object",
+      "description": "One aligned edit between the candidate and the genuine string. The UI highlights these spans.",
+      "required": ["op", "candidate", "genuine", "candidate_span", "cost", "kind"],
+      "additionalProperties": false,
+      "properties": {
+        "op": { "type": "string", "enum": ["substitute", "insert", "delete", "transpose"] },
+        "candidate": { "type": "string", "description": "Text in the candidate (empty for delete)." },
+        "genuine": { "type": "string", "description": "Text in the genuine name (empty for insert)." },
+        "candidate_span": {
+          "type": "array",
+          "description": "[start, end) code-point offsets into the Unicode candidate string.",
+          "items": { "type": "integer", "minimum": 0 },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "genuine_span": {
+          "type": "array",
+          "items": { "type": "integer", "minimum": 0 },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "cost": { "$ref": "#/$defs/unit_score", "description": "0 = indistinguishable to the eye, 1 = obvious." },
+        "kind": {
+          "type": "string",
+          "enum": ["homoglyph", "twin_letters", "typo", "keyboard", "phonetic", "bitflip", "hyphen", "other"]
+        },
+        "codepoints": {
+          "type": "array",
+          "description": "Code points of the candidate text, e.g. ['U+0430'], so a judge can check a hidden letter by eye.",
+          "items": { "type": "string", "pattern": "^U\\+[0-9A-F]{4,6}$" }
+        }
+      }
+    },
+
+    "evidence_item": {
+      "type": "object",
+      "description": "What every tool returns. One tool call may return several items.",
+      "required": [
+        "evidence_id", "tool", "stage", "criterion", "finding",
+        "points_to", "strength", "score", "target_brand", "summary", "details"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "evidence_id": { "$ref": "#/$defs/evidence_id" },
+        "tool": { "$ref": "#/$defs/tool" },
+        "stage": { "$ref": "#/$defs/stage" },
+        "criterion": {
+          "type": "string",
+          "pattern": "^C([1-9]|1[0-8])$",
+          "description": "Fake-vs-real criterion C1-C15 from docs/architecture.html section 5, plus C16 certificate identity, C17 certificate history (P11) and C18 campaign link (P13)."
+        },
+        "finding": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "description": "Machine-readable finding name, e.g. owner_differs, mixed_script, lure_words. Known names are listed in contracts/README.md."
+        },
+        "points_to": {
+          "type": "string",
+          "enum": ["phishing", "genuine", "neutral"],
+          "description": "Which way this finding pushes the verdict. A clean check (no hidden letters) is 'neutral'."
+        },
+        "strength": {
+          "type": "string",
+          "enum": ["strong", "medium", "weak"],
+          "description": "The criterion weight class from the architecture: strong can almost decide alone."
+        },
+        "score": {
+          "$ref": "#/$defs/unit_score",
+          "description": "How strongly the finding holds, in the points_to direction. 0 for a neutral finding."
+        },
+        "target_brand": {
+          "description": "The brand this finding is about, or null.",
+          "oneOf": [{ "$ref": "#/$defs/brand_ref" }, { "type": "null" }]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1,
+          "description": "One plain-language line a human can check, e.g. \"real owner is in-kyc-verify.com, not SBI\"."
+        },
+        "details": {
+          "type": "object",
+          "description": "Tool-specific structured payload. 'edits' and 'artifacts' have fixed shapes; everything else is free-form.",
+          "properties": {
+            "edits": { "type": "array", "items": { "$ref": "#/$defs/edit" } },
+            "artifacts": {
+              "type": "array",
+              "description": "Files produced as evidence (screenshots, heatmaps, HAR), relative to the run's output directory.",
+              "items": {
+                "type": "object",
+                "required": ["kind", "path"],
+                "additionalProperties": false,
+                "properties": {
+                  "kind": { "type": "string", "enum": ["screenshot", "heatmap", "render", "har", "dom_diff", "other"] },
+                  "path": { "type": "string", "minLength": 1 },
+                  "caption": { "type": "string" }
+                }
+              }
+            }
+          },
+          "additionalProperties": true
+        },
+        "duration_ms": { "type": "number", "minimum": 0 }
+      }
+    },
+
+    "provisional_verdict": {
+      "type": "object",
+      "required": ["label", "risk_score", "reason"],
+      "additionalProperties": false,
+      "properties": {
+        "label": { "$ref": "#/$defs/provisional_label" },
+        "risk_score": { "$ref": "#/$defs/unit_score" },
+        "reason": { "type": "string", "minLength": 1 }
+      }
+    },
+
+    "stage_record": {
+      "type": "object",
+      "description": "One automatic stage. Stages always appear in order quick, standard, deep.",
+      "required": ["stage", "status", "tools", "evidence_ids", "provisional"],
+      "additionalProperties": false,
+      "properties": {
+        "stage": { "$ref": "#/$defs/stage" },
+        "status": { "type": "string", "enum": ["completed", "skipped"] },
+        "skip_reason": {
+          "type": "string",
+          "description": "Required when status is skipped, e.g. \"no live page: sleeper\"."
+        },
+        "tools": { "type": "array", "items": { "$ref": "#/$defs/tool" }, "uniqueItems": true },
+        "evidence_ids": { "type": "array", "items": { "$ref": "#/$defs/evidence_id" }, "uniqueItems": true },
+        "provisional": {
+          "description": "The provisional verdict published after this stage; null when skipped.",
+          "oneOf": [{ "$ref": "#/$defs/provisional_verdict" }, { "type": "null" }]
+        }
+      },
+      "if": { "properties": { "status": { "const": "skipped" } } },
+      "then": {
+        "required": ["skip_reason"],
+        "properties": {
+          "tools": { "maxItems": 0 },
+          "evidence_ids": { "maxItems": 0 },
+          "provisional": { "type": "null" }
+        }
+      },
+      "else": {
+        "properties": { "provisional": { "$ref": "#/$defs/provisional_verdict" } }
+      }
+    },
+
+    "trace_step": {
+      "type": "object",
+      "description": "One replayable step for the Decision Trace Explorer: stage -> tool -> evidence -> score change.",
+      "required": ["step", "t_ms", "kind", "message"],
+      "additionalProperties": false,
+      "properties": {
+        "step": { "type": "integer", "minimum": 1 },
+        "t_ms": { "type": "number", "minimum": 0, "description": "Start time, ms since the case opened." },
+        "kind": {
+          "type": "string",
+          "enum": ["case_opened", "policy", "tool", "provisional_verdict", "hard_rule", "final_verdict"]
+        },
+        "stage": { "$ref": "#/$defs/stage" },
+        "tool": { "$ref": "#/$defs/tool" },
+        "args": { "type": "object", "description": "The {tool, args} call the brain made." },
+        "duration_ms": { "type": "number", "minimum": 0 },
+        "evidence_ids": { "type": "array", "items": { "$ref": "#/$defs/evidence_id" } },
+        "risk_before": { "$ref": "#/$defs/unit_score" },
+        "risk_after": { "$ref": "#/$defs/unit_score" },
+        "label": { "$ref": "#/$defs/provisional_label" },
+        "message": { "type": "string", "minLength": 1 }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "kind": { "const": "tool" } } },
+          "then": { "required": ["stage", "tool", "args", "duration_ms", "evidence_ids", "risk_before", "risk_after"] }
+        },
+        {
+          "if": { "properties": { "kind": { "enum": ["provisional_verdict", "final_verdict"] } } },
+          "then": { "required": ["label", "risk_after"] }
+        }
+      ]
+    },
+
+    "hard_rule": {
+      "type": "object",
+      "required": ["id", "forces", "description", "evidence_ids"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "enum": [
+            "H1_genuine_family",
+            "H2_brand_claim_foreign_credentials",
+            "H3_accepts_any_credentials",
+            "H4_direct_exfil_channel"
+          ]
+        },
+        "forces": { "type": "string", "enum": ["genuine", "phishing"] },
+        "description": { "type": "string", "minLength": 1 },
+        "evidence_ids": { "type": "array", "items": { "$ref": "#/$defs/evidence_id" }, "minItems": 1 },
+        "also_fired": {
+          "type": "array",
+          "description": "Other phishing rules that fired too. 'id' is the first rule in priority order H1 > H2 > H3 > H4.",
+          "items": {
+            "type": "string",
+            "enum": ["H2_brand_claim_foreign_credentials", "H3_accepts_any_credentials", "H4_direct_exfil_channel"]
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+
+    "counterfactual": {
+      "type": "object",
+      "description": "The what-if: undo the decisive evidence, re-score, report what the verdict would be.",
+      "required": ["change", "undone_evidence_ids", "label", "risk_score", "summary"],
+      "additionalProperties": false,
+      "properties": {
+        "change": { "type": "string", "minLength": 1, "description": "What was undone, e.g. \"rn -> m\"." },
+        "undone_evidence_ids": { "type": "array", "items": { "$ref": "#/$defs/evidence_id" }, "minItems": 1 },
+        "counterfactual_domain": { "type": "string", "description": "The re-scored input, when the change edits the name." },
+        "label": { "$ref": "#/$defs/final_label" },
+        "risk_score": { "$ref": "#/$defs/unit_score" },
+        "summary": { "type": "string", "minLength": 1, "description": "e.g. \"would be BENIGN if 'rn' were 'm'\"" }
+      }
+    },
+
+    "timings_ms": {
+      "type": "object",
+      "description": "Wall-clock time per stage. null for a skipped stage.",
+      "required": ["quick", "standard", "deep", "total"],
+      "additionalProperties": false,
+      "properties": {
+        "quick": { "type": "number", "minimum": 0 },
+        "standard": { "type": ["number", "null"], "minimum": 0 },
+        "deep": { "type": ["number", "null"], "minimum": 0 },
+        "total": { "type": "number", "minimum": 0 }
+      }
+    },
+
+    "verdict": {
+      "type": "object",
+      "required": [
+        "schema_version", "domain", "input", "owner", "target_brand", "closeness",
+        "risk_score", "confidence", "label", "reason", "evidence", "stages",
+        "trace", "hard_rule", "counterfactual", "timings_ms", "meta"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": { "$ref": "#/$defs/schema_version" },
+        "domain": {
+          "type": "string",
+          "pattern": "^[a-z0-9.-]+$",
+          "description": "The host in lowercase ASCII (punycode for IDNs). This is what goes in a blocklist."
+        },
+        "input": {
+          "type": "object",
+          "required": ["raw", "display", "source"],
+          "additionalProperties": false,
+          "properties": {
+            "raw": { "type": "string", "minLength": 1, "description": "Exactly what was submitted (URL, domain, SMS link)." },
+            "display": { "type": "string", "minLength": 1, "description": "Unicode form, as a victim would see it in a message." },
+            "source": {
+              "type": "string",
+              "enum": ["paste", "file", "stdin", "nrd_snapshot", "ct_feed", "gallery", "api", "fool_it"],
+              "description": "Single investigations (paste, api, fool_it, gallery) run every stage; batch sources (file, stdin, nrd_snapshot, ct_feed) escalate on evidence."
+            }
+          }
+        },
+        "owner": {
+          "type": ["string", "null"],
+          "description": "The real owner from the Address Reader: the registrable domain, or the full private-suffix host for free hosting (e.g. sbi-kyc.web.app)."
+        },
+        "target_brand": {
+          "description": "Who it imitates (or, for genuine, whose it is). null when no brand signal was found.",
+          "oneOf": [{ "$ref": "#/$defs/brand_ref" }, { "type": "null" }]
+        },
+        "closeness": {
+          "description": "Name-level closeness to target_brand's genuine family, 0-1. null when target_brand is null.",
+          "oneOf": [{ "$ref": "#/$defs/unit_score" }, { "type": "null" }]
+        },
+        "risk_score": {
+          "$ref": "#/$defs/unit_score",
+          "description": "How likely it is a scam. A risk score with a stated base rate, not a calibrated probability."
+        },
+        "confidence": { "type": "string", "enum": ["high", "medium", "low"] },
+        "label": { "$ref": "#/$defs/final_label" },
+        "reason": { "type": "string", "minLength": 1, "description": "One plain-language line." },
+        "evidence": { "type": "array", "items": { "$ref": "#/$defs/evidence_item" }, "minItems": 1 },
+        "stages": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/stage_record" },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "trace": { "type": "array", "items": { "$ref": "#/$defs/trace_step" }, "minItems": 2 },
+        "hard_rule": {
+          "description": "The hard rule that decided the label, or null if the combiner decided.",
+          "oneOf": [{ "$ref": "#/$defs/hard_rule" }, { "type": "null" }]
+        },
+        "counterfactual": {
+          "oneOf": [{ "$ref": "#/$defs/counterfactual" }, { "type": "null" }]
+        },
+        "timings_ms": { "$ref": "#/$defs/timings_ms" },
+        "meta": {
+          "type": "object",
+          "required": ["generated_at", "engine_version", "mock"],
+          "additionalProperties": false,
+          "properties": {
+            "generated_at": { "type": "string", "format": "date-time" },
+            "engine_version": { "type": "string" },
+            "mock": { "type": "boolean", "description": "true for hand-written examples and seeded demo data (honesty protocol)." },
+            "notes": { "type": "string" },
+            "checks_off": {
+              "type": "array",
+              "description": "v1.1.0: criteria switched off for this run (the ablation switch, e.g. --no-cert turns off C16 and C17).",
+              "items": { "type": "string", "pattern": "^C([1-9]|1[0-8])$" },
+              "uniqueItems": true
+            }
+          }
+        }
+      }
+    },
+
+    "scan_result": {
+      "type": "object",
+      "description": "A batch run: what `doppel scan --format json` writes.",
+      "required": ["schema_version", "generated_at", "verdicts", "summary"],
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": { "$ref": "#/$defs/schema_version" },
+        "generated_at": { "type": "string", "format": "date-time" },
+        "verdicts": { "type": "array", "items": { "$ref": "#/$defs/verdict" } },
+        "summary": {
+          "type": "object",
+          "required": ["total", "by_label", "reached_stage", "elapsed_ms"],
+          "additionalProperties": false,
+          "properties": {
+            "total": { "type": "integer", "minimum": 0 },
+            "by_label": {
+              "type": "object",
+              "propertyNames": { "$ref": "#/$defs/final_label" },
+              "additionalProperties": { "type": "integer", "minimum": 0 }
+            },
+            "reached_stage": {
+              "type": "object",
+              "propertyNames": { "$ref": "#/$defs/stage" },
+              "additionalProperties": { "type": "integer", "minimum": 0 }
+            },
+            "elapsed_ms": { "type": "number", "minimum": 0 }
+          }
+        }
+      }
+    }
+  }
+}

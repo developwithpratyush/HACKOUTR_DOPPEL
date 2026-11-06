@@ -1,0 +1,25 @@
+{
+ "host": "www.paytmpayments.com",
+ "brand": "paytm",
+ "fetched_at": "2026-11-06T00:18:20Z",
+ "source": "live_tls",
+ "cert": {
+  "sha256": "dfb57744549ab778f58ebfb35535ff5bc0dcda68879c2ca0b6d67d44160bff63",
+  "subject": {
+   "cn": "*.paytmpayments.com",
+   "o": "Paytm Payments Services Limited",
+   "c": "IN"
+  },
+  "issuer": {
+   "cn": "DigiCert G5 TLS RSA4096 SHA384 2021 CA1",
+   "o": "DigiCert, Inc."
+  },
+  "sans": [
+   "*.paytmpayments.com",
+   "paytmpayments.com"
+  ],
+  "not_before": "2026-09-18T00:00:00Z",
+  "not_after": "2027-04-04T23:59:59Z",
+  "validation": "OV"
+ }
+}

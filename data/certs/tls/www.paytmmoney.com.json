@@ -1,0 +1,25 @@
+{
+ "host": "www.paytmmoney.com",
+ "brand": "paytm",
+ "fetched_at": "2026-11-06T00:18:19Z",
+ "source": "live_tls",
+ "cert": {
+  "sha256": "b7c3b4512c42a83966c84f6682e0959dd3e9e2a4e60ec0ec2555c44ea5bf460b",
+  "subject": {
+   "cn": "*.paytmmoney.com",
+   "o": "PAYTM MONEY LIMITED",
+   "c": "IN"
+  },
+  "issuer": {
+   "cn": "GeoTrust TLS RSA CA G1",
+   "o": "DigiCert Inc"
+  },
+  "sans": [
+   "*.paytmmoney.com",
+   "paytmmoney.com"
+  ],
+  "not_before": "2026-06-05T00:00:00Z",
+  "not_after": "2026-12-20T23:59:59Z",
+  "validation": "OV"
+ }
+}

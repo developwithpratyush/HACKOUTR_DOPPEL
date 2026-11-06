@@ -1,0 +1,24 @@
+{
+ "host": "goo.gle",
+ "brand": "google",
+ "fetched_at": "2026-11-06T00:18:46Z",
+ "source": "live_tls",
+ "cert": {
+  "sha256": "cee224f53e26950907240ab99d2bfca6e94dee485a5c16f818e0218c4f9ebf7f",
+  "subject": {
+   "cn": "goo.gle",
+   "o": null,
+   "c": null
+  },
+  "issuer": {
+   "cn": "YR1",
+   "o": "Let's Encrypt"
+  },
+  "sans": [
+   "goo.gle"
+  ],
+  "not_before": "2026-10-16T12:05:46Z",
+  "not_after": "2027-01-14T12:05:45Z",
+  "validation": "DV"
+ }
+}

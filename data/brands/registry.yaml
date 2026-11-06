@@ -1,0 +1,512 @@
+# Doppel brand registry. Format: contracts/registry.schema.json (v1.1).
+#
+# Filled in P1 (2026-11-05). Every genuine_family entry records WHERE it was
+# confirmed (source: the brand's own page, an exchange filing, or IANA) and WHEN.
+# verified_on: null means "still to verify": the entry is used, but the Family
+# Verifier reports it as unverified.
+#
+# How entries were verified (reproduce with scripts/data/verify_registry.py):
+# 1. The domain is named or linked on the brand's own official page, an
+#    exchange filing, or the IANA root zone database.
+# 2. It resolves in DNS (2026-11-05), and legacy addresses redirect to the new one.
+#
+# Domains are lowercase ASCII (punycode for IDNs).
+
+schema_version: 1
+updated: 2026-11-06
+
+restricted_registries:
+  - suffix: bank.in
+    who_can_register: Banks verified by IDRBT, the exclusive registrar under RBI's April 2025 circular (migration deadline 31 Oct 2025)
+    source: https://www.businesstoday.in/amp/personal-finance/banking/story/rbi-mandates-banks-to-adopt-bankin-domains-for-safer-digital-access-check-faqs-473150-2025-04-22
+    verified_on: 2026-11-04
+  - suffix: fin.in
+    who_can_register: Non-bank financial entities (announced by RBI in Feb 2025; no launch date found, and no fin.in names in our NRD snapshot)
+    source: https://en.wikipedia.org/wiki/.in
+    verified_on: 2026-11-05
+  - suffix: gov.in
+    who_can_register: Government ministries, departments, states and union territories; NIC is the only registrar (secondary source; registry.gov.in renders by script)
+    source: https://en.wikipedia.org/wiki/.in
+    verified_on: 2026-11-05
+  - suffix: nic.in
+    who_can_register: Reserved for the National Informatics Centre, which hosts many government sites (secondary source)
+    source: https://en.wikipedia.org/wiki/.in
+    verified_on: 2026-11-05
+
+# Closed brand TLDs (proof a), as listed in the IANA root zone database.
+brand_tld_registry:
+  - { tld: sbi, brand: sbi, manager: State Bank of India, source: "https://www.iana.org/domains/root/db/sbi.html", verified_on: 2026-11-05 }
+  - { tld: hdfcbank, brand: hdfc, manager: HDFC Bank Limited, source: "https://www.iana.org/domains/root/db/hdfcbank.html", verified_on: 2026-11-05 }
+  - tld: hdfc
+    brand: hdfc
+    manager: Housing Development Finance Corporation Limited
+    source: https://www.iana.org/domains/root/db/hdfc.html
+    verified_on: null
+    note: IANA still lists HDFC Ltd, which merged into HDFC Bank in 2023. Confirm HDFC Bank now controls .hdfc before relying on it.
+  - { tld: google, brand: google, manager: Charleston Road Registry Inc. (Google), source: "https://www.iana.org/domains/root/db/google.html", verified_on: 2026-11-05 }
+  - { tld: goog, brand: google, manager: Charleston Road Registry Inc. (Google), source: "https://www.iana.org/domains/root/db/goog.html", verified_on: 2026-11-05 }
+  - { tld: gmail, brand: google, manager: Charleston Road Registry Inc. (Google), source: "https://www.iana.org/domains/root/db/gmail.html", verified_on: 2026-11-05 }
+
+# Shared lure lexicon: tokens that, next to a brand token, signal a lure
+# (sbi-kyc-update.in). English + Hinglish (Hindi words in Latin script).
+# Token-matched after segmentation, never as substrings.
+lure_words:
+  # account / KYC
+  - { word: kyc, lang: en, category: account }
+  - { word: ekyc, lang: en, category: account }
+  - { word: rekyc, lang: en, category: account }
+  - { word: update, lang: en, category: account }
+  - { word: updation, lang: en, category: account }
+  - { word: account, lang: en, category: account }
+  - { word: aadhaar, lang: en, category: account }
+  - { word: aadhar, lang: en, category: account }
+  - { word: pan, lang: en, category: account }
+  - { word: link, lang: en, category: account }
+  - { word: activate, lang: en, category: account }
+  - { word: reactivate, lang: en, category: account }
+  - { word: khata, lang: hinglish, category: account }
+  # security / login
+  - { word: verify, lang: en, category: security }
+  - { word: verification, lang: en, category: security }
+  - { word: validate, lang: en, category: security }
+  - { word: confirm, lang: en, category: security }
+  - { word: secure, lang: en, category: security }
+  - { word: security, lang: en, category: security }
+  - { word: login, lang: en, category: security }
+  - { word: signin, lang: en, category: security }
+  - { word: netbanking, lang: en, category: security }
+  - { word: otp, lang: en, category: security }
+  - { word: password, lang: en, category: security }
+  - { word: reset, lang: en, category: security }
+  - { word: auth, lang: en, category: security }
+  # urgency
+  - { word: blocked, lang: en, category: urgency }
+  - { word: block, lang: en, category: urgency }
+  - { word: suspended, lang: en, category: urgency }
+  - { word: suspend, lang: en, category: urgency }
+  - { word: locked, lang: en, category: urgency }
+  - { word: unlock, lang: en, category: urgency }
+  - { word: expired, lang: en, category: urgency }
+  - { word: expire, lang: en, category: urgency }
+  - { word: deactivated, lang: en, category: urgency }
+  - { word: alert, lang: en, category: urgency }
+  - { word: urgent, lang: en, category: urgency }
+  - { word: turant, lang: hinglish, category: urgency }
+  - { word: band, lang: hinglish, category: urgency }
+  # payment
+  - { word: refund, lang: en, category: payment }
+  - { word: pay, lang: en, category: payment }
+  - { word: payment, lang: en, category: payment }
+  - { word: bill, lang: en, category: payment }
+  - { word: due, lang: en, category: payment }
+  - { word: pending, lang: en, category: payment }
+  - { word: penalty, lang: en, category: payment }
+  - { word: fine, lang: en, category: payment }
+  - { word: upi, lang: en, category: payment }
+  - { word: emi, lang: en, category: payment }
+  - { word: card, lang: en, category: payment }
+  - { word: creditcard, lang: en, category: payment }
+  - { word: limit, lang: en, category: payment }
+  - { word: loan, lang: en, category: payment }
+  - { word: bijli, lang: hinglish, category: payment }
+  - { word: paisa, lang: hinglish, category: payment }
+  - { word: kist, lang: hinglish, category: payment }
+  - { word: jurmana, lang: hinglish, category: payment }
+  # reward
+  - { word: reward, lang: en, category: reward }
+  - { word: rewards, lang: en, category: reward }
+  - { word: points, lang: en, category: reward }
+  - { word: redeem, lang: en, category: reward }
+  - { word: cashback, lang: en, category: reward }
+  - { word: prize, lang: en, category: reward }
+  - { word: gift, lang: en, category: reward }
+  - { word: offer, lang: en, category: reward }
+  - { word: bonus, lang: en, category: reward }
+  - { word: winner, lang: en, category: reward }
+  - { word: lucky, lang: en, category: reward }
+  - { word: inaam, lang: hinglish, category: reward }
+  # delivery
+  - { word: redelivery, lang: en, category: delivery }
+  - { word: delivery, lang: en, category: delivery }
+  - { word: parcel, lang: en, category: delivery }
+  - { word: package, lang: en, category: delivery }
+  - { word: shipment, lang: en, category: delivery }
+  - { word: track, lang: en, category: delivery }
+  - { word: tracking, lang: en, category: delivery }
+  - { word: courier, lang: en, category: delivery }
+  - { word: customs, lang: en, category: delivery }
+  - { word: address, lang: en, category: delivery }
+  # government
+  - { word: challan, lang: hinglish, category: government }
+  - { word: traffic, lang: en, category: government }
+  - { word: rto, lang: en, category: government }
+  - { word: fastag, lang: en, category: government }
+  - { word: itr, lang: en, category: government }
+  - { word: tds, lang: en, category: government }
+  - { word: subsidy, lang: en, category: government }
+  - { word: scheme, lang: en, category: government }
+  - { word: yojana, lang: hinglish, category: government }
+  - { word: sarkari, lang: hinglish, category: government }
+  - { word: vahan, lang: hinglish, category: government }
+  # support
+  - { word: support, lang: en, category: support }
+  - { word: helpdesk, lang: en, category: support }
+  - { word: help, lang: en, category: support }
+  - { word: care, lang: en, category: support }
+  - { word: customercare, lang: en, category: support }
+  - { word: service, lang: en, category: support }
+  - { word: complaint, lang: en, category: support }
+
+brands:
+  # ------------------------------------------------------------------ SBI ---
+  - id: sbi
+    name: State Bank of India
+    aliases: [sbi, onlinesbi, statebank, yonosbi]
+    brand_tlds: [sbi]
+    restricted_suffixes: [bank.in]
+    genuine_family:
+      - domain: sbi.bank.in
+        include_subdomains: true
+        proof: restricted_registry
+        source: https://sbi.bank.in/en/web/personal-banking/digital/internet-banking
+        verified_on: 2026-11-05
+        note: The internet-banking page links onlinesbi.sbi.bank.in, homeloans., raas., onlineapply., crh., nridigital., mobilityretail., yonoretail.sbi.bank.in.
+      - domain: bank.sbi
+        include_subdomains: true
+        proof: brand_tld
+        source: https://sbi.bank.in/en/web/personal-banking/digital/internet-banking
+        verified_on: 2026-11-05
+        note: Linked for Doorstep Banking and RTI; bank.sbi/redirect/ refreshes to sbi.bank.in.
+      - domain: onlinesbi.sbi
+        include_subdomains: true
+        proof: brand_tld
+        source: https://sbi.bank.in/en/web/personal-banking/digital/internet-banking
+        verified_on: 2026-11-05
+        note: Named on the page ("visit www.onlinesbi.sbi"); redirects to onlinesbi.sbi.bank.in. retail.onlinesbi.sbi is linked too.
+      - domain: sbi.co.in
+        include_subdomains: true
+        proof: official_list
+        source: https://www.iana.org/domains/root/db/sbi.html
+        verified_on: 2026-11-05
+        note: Legacy address. IANA lists it as the .sbi registry website; SBI's page uses report.phishing@sbi.co.in; sbi.co.in/redirect/ refreshes to sbi.bank.in.
+      - domain: onlinesbi.com
+        include_subdomains: true
+        proof: official_list
+        source: https://sbi.bank.in/en/web/personal-banking/digital/internet-banking
+        verified_on: 2026-11-05
+        note: Legacy internet-banking address, still the link target behind "www.onlinesbi.sbi" on SBI's page. No DNS answer on 2026-11-05, but RDAP shows it registered since 2000, transfer/delete-locked, expiring 2031, so it hasn't lapsed. Re-check before each demo.
+    lure_words:
+      - { word: yono, lang: en, category: account }
+      - { word: rewardz, lang: en, category: reward }
+    logo: null
+    legal_names:
+      - name: "STATE BANK OF INDIA"
+        country: IN
+        source: https://sbi.bank.in/
+        verified_on: 2026-11-06
+        note: O= field of the OV/EV certificate served at sbi.bank.in (live TLS read, cached in data/certs/tls/sbi.bank.in.json).
+
+  # ----------------------------------------------------------------- HDFC ---
+  - id: hdfc
+    name: HDFC Bank
+    aliases: [hdfc, hdfcbank]
+    brand_tlds: [hdfcbank, hdfc]
+    restricted_suffixes: [bank.in]
+    genuine_family:
+      - domain: hdfc.bank.in
+        include_subdomains: true
+        proof: restricted_registry
+        source: https://www.hdfc.bank.in/important-messages/all-new-website
+        verified_on: 2026-11-05
+        note: '"All New Website hdfc.bank.in". Links netbanking., applyonline., now., v., connect., emandate.hdfc.bank.in.'
+      - domain: hdfcbank.com
+        include_subdomains: true
+        proof: official_list
+        source: https://www.hdfc.bank.in/important-messages/all-new-website
+        verified_on: 2026-11-05
+        note: Legacy address; www.hdfcbank.com redirects to www.hdfc.bank.in. The new site still links mycards.hdfcbank.com.
+      - domain: hdfc.com
+        include_subdomains: true
+        proof: official_list
+        source: https://www.hdfc.bank.in/important-messages/all-new-website
+        verified_on: 2026-11-05
+        note: Linked from HDFC Bank's site ("Pre-verified Properties"); the former HDFC Ltd site.
+    lure_words:
+      - { word: payzapp, lang: en, category: payment }
+      - { word: smartbuy, lang: en, category: reward }
+    logo: null
+    legal_names:
+      - name: "Hdfc Bank Limited"
+        country: IN
+        source: https://www.hdfc.bank.in/
+        verified_on: 2026-11-06
+        note: O= field of the OV/EV certificate served at www.hdfc.bank.in (live TLS read, cached in data/certs/tls/www.hdfc.bank.in.json).
+
+  # ---------------------------------------------------------------- ICICI ---
+  - id: icici
+    name: ICICI Bank
+    aliases: [icici, icicibank]
+    brand_tlds: []
+    restricted_suffixes: [bank.in]
+    genuine_family:
+      - domain: icici.bank.in
+        include_subdomains: true
+        proof: restricted_registry
+        source: https://nsearchives.nseindia.com/corporate/ICICI2022_28102025191027_NSEBSE.pdf
+        verified_on: 2026-11-05
+        note: Exchange filing of 28 Oct 2025 ("changed its website domain from www.icicibank.com to www.icici.bank.in"). retailnetbanking.icici.bank.in resolves.
+      - domain: icicibank.com
+        include_subdomains: true
+        proof: official_list
+        source: https://nsearchives.nseindia.com/corporate/ICICI2022_28102025191027_NSEBSE.pdf
+        verified_on: 2026-11-05
+        note: Legacy address; the filing says visitors are redirected to www.icici.bank.in (seen 2026-11-05).
+    lure_words:
+      - { word: imobile, lang: en, category: account }
+      - { word: ipay, lang: en, category: payment }
+    logo: null
+    legal_names:
+      - name: "ICICI Bank Limited"
+        country: IN
+        source: https://www.icici.bank.in/
+        verified_on: 2026-11-06
+        note: O= field of the OV/EV certificate served at www.icici.bank.in (live TLS read, cached in data/certs/tls/www.icici.bank.in.json).
+
+  # ---------------------------------------------------------------- Paytm ---
+  - id: paytm
+    name: Paytm
+    aliases: [paytm]
+    brand_tlds: []
+    restricted_suffixes: []
+    genuine_family:
+      - domain: paytm.com
+        include_subdomains: true
+        proof: official_list
+        source: https://paytm.com/about-us
+        verified_on: 2026-11-05
+        note: Self-published (One97 Communications, investor site ir.paytm.com). A stronger third-party anchor (NSE company page) is still to add.
+      - domain: paytmmoney.com
+        include_subdomains: true
+        proof: official_list
+        source: https://paytm.com/about-us
+        verified_on: 2026-11-05
+        note: Paytm Money, linked from paytm.com.
+      - domain: paytm.me
+        include_subdomains: true
+        proof: official_list
+        source: https://paytm.com/about-us
+        verified_on: 2026-11-05
+        note: Short links (p.paytm.me linked from paytm.com); paytm.me redirects to paytm.com.
+      - domain: paytminsurance.co.in
+        include_subdomains: true
+        proof: official_list
+        source: https://paytm.com/about-us
+        verified_on: 2026-11-05
+      - domain: paytmpayments.com
+        include_subdomains: true
+        proof: official_list
+        source: https://paytm.com/about-us
+        verified_on: 2026-11-05
+    lure_words:
+      - { word: wallet, lang: en, category: payment }
+      - { word: postpaid, lang: en, category: payment }
+      - { word: soundbox, lang: en, category: payment }
+    logo: null
+    legal_names:
+      - name: "One 97 Communications Ltd"
+        country: IN
+        source: https://paytm.com/
+        verified_on: 2026-11-06
+        note: O= field of the OV/EV certificate served at paytm.com (live TLS read, cached in data/certs/tls/paytm.com.json).
+      - name: "PAYTM MONEY LIMITED"
+        country: IN
+        source: https://paytmmoney.com/
+        verified_on: 2026-11-06
+        note: "human-approved 2026-11-06: seen on the certificate of an official-list domain (paytmmoney.com; OV, DigiCert; also www.paytmmoney.com)."
+      - name: "PAYTM INSURANCE BROKING PRIVATE LIMITED"
+        country: IN
+        source: https://paytminsurance.co.in/
+        verified_on: 2026-11-06
+        note: "human-approved 2026-11-06: seen on the certificate of an official-list domain (paytminsurance.co.in; OV, DigiCert; also www.paytminsurance.co.in)."
+      - name: "Paytm Payments Services Limited"
+        country: IN
+        source: https://www.paytmpayments.com/
+        verified_on: 2026-11-06
+        note: "human-approved 2026-11-06: seen on the certificate of an official-list domain (www.paytmpayments.com; OV)."
+
+  # ----------------------------------------------------------- India Post ---
+  - id: india_post
+    name: India Post
+    aliases: [indiapost, speedpost]
+    brand_tlds: []
+    restricted_suffixes: [gov.in]
+    genuine_family:
+      - domain: indiapost.gov.in
+        include_subdomains: true
+        proof: restricted_registry
+        source: https://www.indiapost.gov.in/
+        verified_on: 2026-11-05
+        note: Links app., crm., pli.indiapost.gov.in. India Post Payments Bank is a separate brand (not covered).
+    lure_words:
+      - { word: post, lang: en, category: delivery }
+      - { word: dak, lang: hinglish, category: delivery }
+    logo: null
+    legal_names:
+      - name: "DEPARTMENT OF POSTS"
+        country: IN
+        source: https://www.indiapost.gov.in/
+        verified_on: 2026-11-06
+        note: O= field of the OV/EV certificate served at www.indiapost.gov.in (live TLS read, cached in data/certs/tls/www.indiapost.gov.in.json).
+
+  # ------------------------------------------------ Parivahan / e-Challan ---
+  - id: parivahan
+    name: Parivahan / e-Challan
+    aliases: [parivahan, echallan, mparivahan]
+    brand_tlds: []
+    restricted_suffixes: [gov.in]
+    genuine_family:
+      - domain: parivahan.gov.in
+        include_subdomains: true
+        proof: restricted_registry
+        source: https://parivahan.gov.in/parivahan/
+        verified_on: 2026-11-05
+        note: Links echallan., vahan., sarathi., services., puc., mparivahan.parivahan.gov.in (Ministry of Road Transport and Highways).
+    lure_words:
+      - { word: sarathi, lang: hinglish, category: government }
+      - { word: licence, lang: en, category: government }
+      - { word: license, lang: en, category: government }
+      - { word: puc, lang: en, category: government }
+    logo: null
+
+  # --------------------------------------------------- Income Tax e-filing ---
+  - id: income_tax
+    name: Income Tax Department (e-filing)
+    aliases: [incometax, incometaxindia]
+    brand_tlds: []
+    restricted_suffixes: [gov.in]
+    genuine_family:
+      - domain: incometax.gov.in
+        include_subdomains: true
+        proof: restricted_registry
+        source: https://www.incometax.gov.in/iec/foportal/
+        verified_on: 2026-11-05
+        note: The e-filing portal (www., eportal.incometax.gov.in). The bare apex doesn't resolve; only subdomains do.
+      - domain: incometaxindia.gov.in
+        include_subdomains: true
+        proof: restricted_registry
+        source: https://www.incometax.gov.in/iec/foportal/
+        verified_on: 2026-11-05
+        note: The department's information site, linked from the e-filing portal.
+      - domain: incometaxindiaefiling.gov.in
+        include_subdomains: true
+        proof: restricted_registry
+        source: https://www.incometax.gov.in/iec/foportal/
+        verified_on: 2026-11-05
+        note: The old e-filing address, still linked from the portal. No DNS answer on 2026-11-05; it's under gov.in, so nobody outside government can re-register it.
+    lure_words:
+      - { word: return, lang: en, category: government }
+      - { word: taxrefund, lang: en, category: payment }
+    logo: null
+    legal_names:
+      - name: "Income Tax Department"
+        country: IN
+        source: https://www.incometax.gov.in/
+        verified_on: 2026-11-06
+        note: O= field of the OV/EV certificate served at www.incometax.gov.in (live TLS read, cached in data/certs/tls/www.incometax.gov.in.json).
+      - name: "Directorate of Income Tax"
+        country: IN
+        source: https://www.incometaxindia.gov.in/
+        verified_on: 2026-11-06
+        note: "human-approved 2026-11-06: seen on the certificate of an official-list domain (www.incometaxindia.gov.in; OV)."
+      - name: "Directorate Of Income Tax (Systems)"
+        country: IN
+        source: https://eportal.incometax.gov.in/
+        verified_on: 2026-11-06
+        note: "human-approved 2026-11-06: seen on the certificate of an official-list domain (eportal.incometax.gov.in; OV)."
+
+  # --------------------------------------------------------------- Google ---
+  - id: google
+    name: Google
+    aliases: [google, gmail]
+    brand_tlds: [google, goog, gmail]
+    restricted_suffixes: []
+    genuine_family:
+      - domain: google.com
+        include_subdomains: true
+        proof: official_list
+        source: https://about.google/
+        verified_on: 2026-11-05
+      - domain: blog.google
+        include_subdomains: true
+        proof: brand_tld
+        source: https://www.iana.org/domains/root/db/google.html
+        verified_on: 2026-11-05
+      - domain: withgoogle.com
+        include_subdomains: true
+        proof: official_list
+        source: https://about.google/
+        verified_on: 2026-11-05
+        note: about.google links partnermarketinghub.withgoogle.com; blog.google links frightgeist.withgoogle.com.
+      - domain: g.co
+        include_subdomains: true
+        proof: official_list
+        source: https://searchengineland.com/googles-new-official-google-only-short-url-g-co-86098
+        verified_on: 2026-11-05
+        note: Google's Google-only short links; the g.co page itself says so.
+      - domain: goo.gle
+        include_subdomains: true
+        proof: official_list
+        source: https://workspace.google.com/
+        verified_on: 2026-11-05
+        note: Linked from workspace.google.com; the bare goo.gle redirects to www.google.com.
+      - domain: gmail.com
+        include_subdomains: true
+        proof: official_list
+        source: https://developers.google.com/workspace/gmail/imap/imap-smtp
+        verified_on: 2026-11-06
+        note: Added in P11 (fix d). Google's developer page names imap.gmail.com, pop.gmail.com, smtp.gmail.com and smtp-relay.gmail.com. Its certificate names only gmail.com (no Organisation, no link to google.com), so the certificate can't prove it; the official list does. Found as live-feed false alarms on 2026-11-06.
+    # Google-owned, but anyone can publish here. Phishers use them (Google Forms
+    # collecting bank logins), so ownership must NOT make these green.
+    user_content_hosts:
+      - { host: forms.gle, what: Google Forms short links to any user's form, source: null }
+      - { host: docs.google.com, what: "Google Docs, Sheets and Forms by any user", source: null }
+      - { host: sites.google.com, what: Google Sites pages by any user, source: null }
+      - { host: script.google.com, what: Apps Script web apps by any user, source: null }
+      - { host: drive.google.com, what: Files shared by any user, source: null }
+      - { host: groups.google.com, what: Posts by any user, source: null }
+      # Added in P3 after 99 PhiUSIIL phishing rows were found on these Google-owned hosts:
+      - { host: translate.goog, what: "Google Translate's proxy, which serves ANY website under <site>.translate.goog", source: null }
+      - { host: storage.cloud.google.com, what: Cloud Storage files by any user, source: null }
+      - { host: storage.googleapis.com, what: Cloud Storage files by any user, source: null }
+      - { host: firebasestorage.googleapis.com, what: Firebase Storage files by any user, source: null }
+      - { host: googleusercontent.com, what: Content uploaded by any user, source: null }
+    lure_words: []
+    logo: null
+
+  # ------------------------------------------------------------ NPCI / UPI ---
+  # Added in P11 (optional 9th brand, docs/finale-examples.md 2.3). Only npci.org.in is listed by hand:
+  # family auto-discovery proves bhimupi.org.in, rupay.co.in, netc.org.in and upichalega.com from NPCI's
+  # own certificate (data/brands/discovered.yaml).
+  - id: npci
+    name: NPCI / UPI
+    aliases: [npci, bhimupi, rupay]
+    # Short or common strings: whole tokens only, never look-alike targets. Measured on the NRD snapshot
+    # (docs/eval/p11-cert.md): as typo targets they flagged 41 unrelated names (repay.world, cpci.com, npc.fit).
+    exact_aliases: [npci, rupay]
+    brand_tlds: []
+    restricted_suffixes: []
+    genuine_family:
+      - domain: npci.org.in
+        include_subdomains: true
+        proof: official_list
+        source: https://en.wikipedia.org/wiki/National_Payments_Corporation_of_India
+        verified_on: 2026-11-06
+        note: Secondary source (npci.org.in answers 403 to scripts). Backed by NPCI's own OV certificate, O = National Payments Corporation Of India (DigiCert), read 2026-11-06.
+    lure_words: []
+    logo: null
+    legal_names:
+      - name: National Payments Corporation Of India
+        country: IN
+        source: https://www.npci.org.in/
+        verified_on: 2026-11-06
+        note: O= field of the OV certificate served at www.npci.org.in (live TLS read, cached in data/certs/tls/www.npci.org.in.json).

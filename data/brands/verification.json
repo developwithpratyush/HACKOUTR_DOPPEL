@@ -1,0 +1,359 @@
+{
+  "checked_at": "2026-11-05T02:11:23+00:00",
+  "domains": [
+    {
+      "brand": "sbi",
+      "verified_on": "2026-11-05",
+      "domain": "sbi.bank.in",
+      "resolves": true,
+      "via": "sbi.bank.in",
+      "ips": [
+        "103.209.96.176"
+      ]
+    },
+    {
+      "brand": "sbi",
+      "verified_on": "2026-11-05",
+      "domain": "bank.sbi",
+      "resolves": true,
+      "via": "bank.sbi",
+      "ips": [
+        "103.209.96.177"
+      ]
+    },
+    {
+      "brand": "sbi",
+      "verified_on": "2026-11-05",
+      "domain": "onlinesbi.sbi",
+      "resolves": true,
+      "via": "onlinesbi.sbi",
+      "ips": [
+        "103.209.97.9"
+      ]
+    },
+    {
+      "brand": "sbi",
+      "verified_on": "2026-11-05",
+      "domain": "sbi.co.in",
+      "resolves": true,
+      "via": "sbi.co.in",
+      "ips": [
+        "103.209.96.176"
+      ]
+    },
+    {
+      "brand": "sbi",
+      "verified_on": "2026-11-05",
+      "domain": "onlinesbi.com",
+      "resolves": false,
+      "via": null,
+      "ips": []
+    },
+    {
+      "brand": "hdfc",
+      "verified_on": "2026-11-05",
+      "domain": "hdfc.bank.in",
+      "resolves": true,
+      "via": "hdfc.bank.in",
+      "ips": [
+        "159.60.141.118",
+        "172.66.0.118"
+      ]
+    },
+    {
+      "brand": "hdfc",
+      "verified_on": "2026-11-05",
+      "domain": "hdfcbank.com",
+      "resolves": true,
+      "via": "hdfcbank.com",
+      "ips": [
+        "104.18.146.40",
+        "104.18.147.40"
+      ]
+    },
+    {
+      "brand": "hdfc",
+      "verified_on": "2026-11-05",
+      "domain": "hdfc.com",
+      "resolves": true,
+      "via": "hdfc.com",
+      "ips": [
+        "104.19.174.126",
+        "104.19.175.126"
+      ]
+    },
+    {
+      "brand": "icici",
+      "verified_on": "2026-11-05",
+      "domain": "icici.bank.in",
+      "resolves": true,
+      "via": "icici.bank.in",
+      "ips": [
+        "20.204.105.107"
+      ]
+    },
+    {
+      "brand": "icici",
+      "verified_on": "2026-11-05",
+      "domain": "icicibank.com",
+      "resolves": true,
+      "via": "icicibank.com",
+      "ips": [
+        "20.204.105.107"
+      ]
+    },
+    {
+      "brand": "paytm",
+      "verified_on": "2026-11-05",
+      "domain": "paytm.com",
+      "resolves": true,
+      "via": "paytm.com",
+      "ips": [
+        "172.65.64.50",
+        "172.65.64.51"
+      ]
+    },
+    {
+      "brand": "paytm",
+      "verified_on": "2026-11-05",
+      "domain": "paytmmoney.com",
+      "resolves": true,
+      "via": "paytmmoney.com",
+      "ips": [
+        "104.119.105.244"
+      ]
+    },
+    {
+      "brand": "paytm",
+      "verified_on": "2026-11-05",
+      "domain": "paytm.me",
+      "resolves": true,
+      "via": "paytm.me",
+      "ips": [
+        "23.57.76.38",
+        "23.57.76.55"
+      ]
+    },
+    {
+      "brand": "paytm",
+      "verified_on": "2026-11-05",
+      "domain": "paytminsurance.co.in",
+      "resolves": true,
+      "via": "paytminsurance.co.in",
+      "ips": [
+        "23.57.76.45",
+        "23.57.76.46"
+      ]
+    },
+    {
+      "brand": "paytm",
+      "verified_on": "2026-11-05",
+      "domain": "paytmpayments.com",
+      "resolves": true,
+      "via": "paytmpayments.com",
+      "ips": [
+        "13.232.213.188",
+        "13.234.185.146"
+      ]
+    },
+    {
+      "brand": "india_post",
+      "verified_on": "2026-11-05",
+      "domain": "indiapost.gov.in",
+      "resolves": true,
+      "via": "indiapost.gov.in",
+      "ips": [
+        "64.185.167.238"
+      ]
+    },
+    {
+      "brand": "parivahan",
+      "verified_on": "2026-11-05",
+      "domain": "parivahan.gov.in",
+      "resolves": true,
+      "via": "parivahan.gov.in",
+      "ips": [
+        "103.195.218.37"
+      ]
+    },
+    {
+      "brand": "income_tax",
+      "verified_on": "2026-11-05",
+      "domain": "incometax.gov.in",
+      "resolves": true,
+      "via": "www.incometax.gov.in",
+      "ips": [
+        "23.57.76.22",
+        "23.57.76.61"
+      ]
+    },
+    {
+      "brand": "income_tax",
+      "verified_on": "2026-11-05",
+      "domain": "incometaxindia.gov.in",
+      "resolves": true,
+      "via": "incometaxindia.gov.in",
+      "ips": [
+        "121.0.56.47"
+      ]
+    },
+    {
+      "brand": "income_tax",
+      "verified_on": "2026-11-05",
+      "domain": "incometaxindiaefiling.gov.in",
+      "resolves": false,
+      "via": null,
+      "ips": []
+    },
+    {
+      "brand": "google",
+      "verified_on": "2026-11-05",
+      "domain": "google.com",
+      "resolves": true,
+      "via": "google.com",
+      "ips": [
+        "142.250.207.206"
+      ]
+    },
+    {
+      "brand": "google",
+      "verified_on": "2026-11-05",
+      "domain": "blog.google",
+      "resolves": true,
+      "via": "blog.google",
+      "ips": [
+        "216.239.32.21",
+        "216.239.34.21",
+        "216.239.36.21"
+      ]
+    },
+    {
+      "brand": "google",
+      "verified_on": "2026-11-05",
+      "domain": "withgoogle.com",
+      "resolves": true,
+      "via": "withgoogle.com",
+      "ips": [
+        "192.178.193.100",
+        "192.178.193.101",
+        "192.178.193.102"
+      ]
+    },
+    {
+      "brand": "google",
+      "verified_on": "2026-11-05",
+      "domain": "g.co",
+      "resolves": true,
+      "via": "g.co",
+      "ips": [
+        "192.178.173.100",
+        "192.178.173.101",
+        "192.178.173.102"
+      ]
+    },
+    {
+      "brand": "google",
+      "verified_on": "2026-11-05",
+      "domain": "goo.gle",
+      "resolves": true,
+      "via": "goo.gle",
+      "ips": [
+        "67.199.248.12",
+        "67.199.248.13"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://about.google/",
+      "status": 200,
+      "final_url": "https://about.google/"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/.in",
+      "status": 200,
+      "final_url": "https://en.wikipedia.org/wiki/.in"
+    },
+    {
+      "url": "https://nsearchives.nseindia.com/corporate/ICICI2022_28102025191027_NSEBSE.pdf",
+      "status": 200,
+      "final_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_28102025191027_NSEBSE.pdf"
+    },
+    {
+      "url": "https://parivahan.gov.in/parivahan/",
+      "status": 200,
+      "final_url": "https://parivahan.gov.in/"
+    },
+    {
+      "url": "https://paytm.com/about-us",
+      "status": 200,
+      "final_url": "https://paytm.com/about-us"
+    },
+    {
+      "url": "https://sbi.bank.in/en/web/personal-banking/digital/internet-banking",
+      "status": 200,
+      "final_url": "https://sbi.bank.in/en/web/personal-banking/digital/internet-banking"
+    },
+    {
+      "url": "https://searchengineland.com/googles-new-official-google-only-short-url-g-co-86098",
+      "status": 403,
+      "final_url": "https://searchengineland.com/googles-new-official-google-only-short-url-g-co-86098"
+    },
+    {
+      "url": "https://workspace.google.com/",
+      "status": 200,
+      "final_url": "https://workspace.google.com/"
+    },
+    {
+      "url": "https://www.businesstoday.in/amp/personal-finance/banking/story/rbi-mandates-banks-to-adopt-bankin-domains-for-safer-digital-access-check-faqs-473150-2025-04-22",
+      "status": 200,
+      "final_url": "https://www.businesstoday.in/amp/personal-finance/banking/story/rbi-mandates-banks-to-adopt-bankin-domains-for-safer-digital-access-check-faqs-473150-2025-04-22"
+    },
+    {
+      "url": "https://www.hdfc.bank.in/important-messages/all-new-website",
+      "status": 200,
+      "final_url": "https://www.hdfc.bank.in/important-messages/all-new-website"
+    },
+    {
+      "url": "https://www.iana.org/domains/root/db/gmail.html",
+      "status": 200,
+      "final_url": "https://www.iana.org/domains/root/db/gmail.html"
+    },
+    {
+      "url": "https://www.iana.org/domains/root/db/goog.html",
+      "status": 200,
+      "final_url": "https://www.iana.org/domains/root/db/goog.html"
+    },
+    {
+      "url": "https://www.iana.org/domains/root/db/google.html",
+      "status": 200,
+      "final_url": "https://www.iana.org/domains/root/db/google.html"
+    },
+    {
+      "url": "https://www.iana.org/domains/root/db/hdfc.html",
+      "status": 200,
+      "final_url": "https://www.iana.org/domains/root/db/hdfc.html"
+    },
+    {
+      "url": "https://www.iana.org/domains/root/db/hdfcbank.html",
+      "status": 200,
+      "final_url": "https://www.iana.org/domains/root/db/hdfcbank.html"
+    },
+    {
+      "url": "https://www.iana.org/domains/root/db/sbi.html",
+      "status": 200,
+      "final_url": "https://www.iana.org/domains/root/db/sbi.html"
+    },
+    {
+      "url": "https://www.incometax.gov.in/iec/foportal/",
+      "status": 200,
+      "final_url": "https://www.incometax.gov.in/iec/foportal/"
+    },
+    {
+      "url": "https://www.indiapost.gov.in/",
+      "status": 200,
+      "final_url": "https://www.indiapost.gov.in/"
+    }
+  ],
+  "unverified_entries": []
+}

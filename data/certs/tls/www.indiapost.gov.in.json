@@ -1,0 +1,25 @@
+{
+ "host": "www.indiapost.gov.in",
+ "brand": "india_post",
+ "fetched_at": "2026-11-06T00:18:20Z",
+ "source": "live_tls",
+ "cert": {
+  "sha256": "d4df4453ea0ccd49f16754303bf1ffa213f1862b24f6d35defebcbe601f2b137",
+  "subject": {
+   "cn": "*.indiapost.gov.in",
+   "o": "DEPARTMENT OF POSTS",
+   "c": "IN"
+  },
+  "issuer": {
+   "cn": "Sectigo Public Server Authentication CA OV R36",
+   "o": "Sectigo Limited"
+  },
+  "sans": [
+   "*.indiapost.gov.in",
+   "indiapost.gov.in"
+  ],
+  "not_before": "2026-11-02T00:00:00Z",
+  "not_after": "2027-05-19T23:59:59Z",
+  "validation": "OV"
+ }
+}

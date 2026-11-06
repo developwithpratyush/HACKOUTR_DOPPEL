@@ -1,0 +1,1631 @@
+# Family auto-discovery (P11): written by `python -m doppel.certs.discover`. Don't edit by hand:
+# accepted = SAN links to a proven seed (automatic); platform_only = guard 3 (never the tenant);
+# review = for a person to check. Certificates are cached under data/certs/.
+generated: '2026-11-06'
+rule: A name on the same certificate as a name the Family Verifier already proves is controlled by the same operator (the
+  CA validated every name). Accepted automatically; guards in doppel/certs/discover.py.
+accepted:
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: ai.android
+  include_subdomains: true
+  san: ai.android
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: android.com
+  include_subdomains: true
+  san: android.com
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: appspot.com
+  include_subdomains: false
+  san: '*.appspot.com'
+  linked_to:
+  - withgoogle.com
+  - app.google
+  - thinkwithgoogle.goog
+  note: 'the platform''s own name only: its tenants stay unproven (guard 3)'
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: bdn.dev
+  include_subdomains: true
+  san: '*.bdn.dev'
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: goo.gl
+  include_subdomains: true
+  san: goo.gl
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: google-analytics.com
+  include_subdomains: true
+  san: google-analytics.com
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: google.ca
+  include_subdomains: true
+  san: '*.google.ca'
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: google.cl
+  include_subdomains: true
+  san: '*.google.cl'
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: google.co.in
+  include_subdomains: true
+  san: '*.google.co.in'
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: google.co.jp
+  include_subdomains: true
+  san: '*.google.co.jp'
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: google.co.uk
+  include_subdomains: true
+  san: '*.google.co.uk'
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: google.com.ar
+  include_subdomains: true
+  san: '*.google.com.ar'
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: google.com.au
+  include_subdomains: true
+  san: '*.google.com.au'
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: google.com.br
+  include_subdomains: true
+  san: '*.google.com.br'
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: google.com.co
+  include_subdomains: true
+  san: '*.google.com.co'
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: google.com.mx
+  include_subdomains: true
+  san: '*.google.com.mx'
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: google.com.tr
+  include_subdomains: true
+  san: '*.google.com.tr'
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: google.com.vn
+  include_subdomains: true
+  san: '*.google.com.vn'
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: google.de
+  include_subdomains: true
+  san: '*.google.de'
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: google.es
+  include_subdomains: true
+  san: '*.google.es'
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: google.fr
+  include_subdomains: true
+  san: '*.google.fr'
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: google.hu
+  include_subdomains: true
+  san: '*.google.hu'
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: google.it
+  include_subdomains: true
+  san: '*.google.it'
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: google.nl
+  include_subdomains: true
+  san: '*.google.nl'
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: google.pl
+  include_subdomains: true
+  san: '*.google.pl'
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: google.pt
+  include_subdomains: true
+  san: '*.google.pt'
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: upload.google.com
+  cert_sha256: 083ba27452d7124dbb7dd9e5fe75c22a767da6ec75ddac25927fa70f3c892bb0
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: googleapis.com
+  include_subdomains: false
+  san: '*.googleapis.com'
+  linked_to:
+  - upload.google.com
+  - bg-call-donation.goog
+  - upload.video.google.com
+  note: 'the platform''s own name only: its tenants stay unproven (guard 3)'
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: googlecommerce.com
+  include_subdomains: true
+  san: googlecommerce.com
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: gstatic.com
+  include_subdomains: true
+  san: '*.gstatic.com'
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: gvt1.com
+  include_subdomains: true
+  san: '*.gvt1.com'
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: gvt2.com
+  include_subdomains: true
+  san: '*.gvt2.com'
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: thinkwithgoogle.com
+  include_subdomains: true
+  san: thinkwithgoogle.com
+  linked_to:
+  - withgoogle.com
+  - app.google
+  - thinkwithgoogle.goog
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: urchin.com
+  include_subdomains: true
+  san: urchin.com
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: withyoutube.com
+  include_subdomains: false
+  san: withyoutube.com
+  linked_to:
+  - withgoogle.com
+  - app.google
+  - thinkwithgoogle.goog
+  note: 'the platform''s own name only: its tenants stay unproven (guard 3)'
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: youtu.be
+  include_subdomains: true
+  san: youtu.be
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: upload.google.com
+  cert_sha256: 083ba27452d7124dbb7dd9e5fe75c22a767da6ec75ddac25927fa70f3c892bb0
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: youtube-3rd-party.com
+  include_subdomains: true
+  san: '*.youtube-3rd-party.com'
+  linked_to:
+  - upload.google.com
+  - bg-call-donation.goog
+  - upload.video.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: youtube-nocookie.com
+  include_subdomains: true
+  san: '*.youtube-nocookie.com'
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: youtube.com
+  include_subdomains: true
+  san: youtube.com
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: youtubeeducation.com
+  include_subdomains: true
+  san: youtubeeducation.com
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: youtubekids.com
+  include_subdomains: true
+  san: youtubekids.com
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: yt.be
+  include_subdomains: true
+  san: yt.be
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: google
+  seed_host: google.com
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: ytimg.com
+  include_subdomains: true
+  san: '*.ytimg.com'
+  linked_to:
+  - google.com
+  - g.co
+  - android.clients.google.com
+- brand: npci
+  seed_host: npci.org.in
+  cert_sha256: a634bf3b73bba10ebfaef1c1083e6bb5bb335a9a7d547bd3a1363e77fbbc34f7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: bhimupi.org.in
+  include_subdomains: true
+  san: bhimupi.org.in
+  linked_to:
+  - npci.org.in
+  - www.npci.org.in
+  - bhimuat.npci.org.in
+- brand: npci
+  seed_host: npci.org.in
+  cert_sha256: a634bf3b73bba10ebfaef1c1083e6bb5bb335a9a7d547bd3a1363e77fbbc34f7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: netc.org.in
+  include_subdomains: true
+  san: netc.org.in
+  linked_to:
+  - npci.org.in
+  - www.npci.org.in
+  - bhimuat.npci.org.in
+- brand: npci
+  seed_host: npci.org.in
+  cert_sha256: a634bf3b73bba10ebfaef1c1083e6bb5bb335a9a7d547bd3a1363e77fbbc34f7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: rupay.co.in
+  include_subdomains: true
+  san: rupay.co.in
+  linked_to:
+  - npci.org.in
+  - www.npci.org.in
+  - bhimuat.npci.org.in
+- brand: npci
+  seed_host: npci.org.in
+  cert_sha256: a634bf3b73bba10ebfaef1c1083e6bb5bb335a9a7d547bd3a1363e77fbbc34f7
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: upichalega.com
+  include_subdomains: true
+  san: upichalega.com
+  linked_to:
+  - npci.org.in
+  - www.npci.org.in
+  - bhimuat.npci.org.in
+- brand: paytm
+  seed_host: paytm.me
+  cert_sha256: 8747e7a889f12d0fdd71a5c26d59d378f2d55d0e623162753c075e06de6d3bcf
+  source: live_tls
+  seen_on: '2026-11-06'
+  domain: p-y.tm
+  include_subdomains: true
+  san: p-y.tm
+  linked_to:
+  - paytm.me
+platform_only:
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.appspot.com'
+  platform: appspot.com
+  reason: 'appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.de.r.appspot.com'
+  platform: de.r.appspot.com
+  reason: 'de.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.df.r.appspot.com'
+  platform: df.r.appspot.com
+  reason: 'df.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.an.r.appspot.com'
+  platform: an.r.appspot.com
+  reason: 'an.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.dt.r.appspot.com'
+  platform: dt.r.appspot.com
+  reason: 'dt.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.du.r.appspot.com'
+  platform: du.r.appspot.com
+  reason: 'du.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.el.r.appspot.com'
+  platform: el.r.appspot.com
+  reason: 'el.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.as.r.appspot.com'
+  platform: as.r.appspot.com
+  reason: 'as.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.et.r.appspot.com'
+  platform: et.r.appspot.com
+  reason: 'et.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.ts.r.appspot.com'
+  platform: ts.r.appspot.com
+  reason: 'ts.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.lz.r.appspot.com'
+  platform: lz.r.appspot.com
+  reason: 'lz.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.ew.r.appspot.com'
+  platform: ew.r.appspot.com
+  reason: 'ew.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.nw.r.appspot.com'
+  platform: nw.r.appspot.com
+  reason: 'nw.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.ey.r.appspot.com'
+  platform: ey.r.appspot.com
+  reason: 'ey.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.ez.r.appspot.com'
+  platform: ez.r.appspot.com
+  reason: 'ez.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.nz.r.appspot.com'
+  platform: nz.r.appspot.com
+  reason: 'nz.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.oa.r.appspot.com'
+  platform: oa.r.appspot.com
+  reason: 'oa.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.nn.r.appspot.com'
+  platform: nn.r.appspot.com
+  reason: 'nn.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.rj.r.appspot.com'
+  platform: rj.r.appspot.com
+  reason: 'rj.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.uc.r.appspot.com'
+  platform: uc.r.appspot.com
+  reason: 'uc.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.tz.r.appspot.com'
+  platform: tz.r.appspot.com
+  reason: 'tz.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.ue.r.appspot.com'
+  platform: ue.r.appspot.com
+  reason: 'ue.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.uk.r.appspot.com'
+  platform: uk.r.appspot.com
+  reason: 'uk.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.un.r.appspot.com'
+  platform: un.r.appspot.com
+  reason: 'un.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.uw.r.appspot.com'
+  platform: uw.r.appspot.com
+  reason: 'uw.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.wl.r.appspot.com'
+  platform: wl.r.appspot.com
+  reason: 'wl.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.wm.r.appspot.com'
+  platform: wm.r.appspot.com
+  reason: 'wm.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.wn.r.appspot.com'
+  platform: wn.r.appspot.com
+  reason: 'wn.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.lm.r.appspot.com'
+  platform: lm.r.appspot.com
+  reason: 'lm.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.em.r.appspot.com'
+  platform: em.r.appspot.com
+  reason: 'em.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.km.r.appspot.com'
+  platform: km.r.appspot.com
+  reason: 'km.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.pd.r.appspot.com'
+  platform: pd.r.appspot.com
+  reason: 'pd.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.ui.r.appspot.com'
+  platform: ui.r.appspot.com
+  reason: 'ui.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.oj.r.appspot.com'
+  platform: oj.r.appspot.com
+  reason: 'oj.r.appspot.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: withgoogle.com
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.withyoutube.com'
+  platform: withyoutube.com
+  reason: 'withyoutube.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+- brand: google
+  seed_host: upload.google.com
+  cert_sha256: 083ba27452d7124dbb7dd9e5fe75c22a767da6ec75ddac25927fa70f3c892bb0
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.docs.google.com'
+  platform: docs.google.com
+  reason: 'docs.google.com is google''s user-content host: anyone publishes there (guard 3)'
+- brand: google
+  seed_host: upload.google.com
+  cert_sha256: 083ba27452d7124dbb7dd9e5fe75c22a767da6ec75ddac25927fa70f3c892bb0
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.drive.google.com'
+  platform: drive.google.com
+  reason: 'drive.google.com is google''s user-content host: anyone publishes there (guard 3)'
+- brand: google
+  seed_host: upload.google.com
+  cert_sha256: 083ba27452d7124dbb7dd9e5fe75c22a767da6ec75ddac25927fa70f3c892bb0
+  source: live_tls
+  seen_on: '2026-11-06'
+  san: '*.googleapis.com'
+  platform: googleapis.com
+  reason: 'googleapis.com is a hosting platform: a certificate here proves the platform, never a tenant (guard 3)'
+review: []
+seeds:
+- brand: sbi
+  host: sbi.bank.in
+  fetched_at: '2026-11-06T00:18:01Z'
+  cert_sha256: 21e12be5dde8151691a49b142541bd859b20551fb9c00c1fb6e9d125449c0f01
+  issuer: DigiCert Inc
+  validation: EV
+  organisation: STATE BANK OF INDIA
+  country: IN
+  sans: 2
+  legal_name_match: true
+- brand: sbi
+  host: bank.sbi
+  fetched_at: '2026-11-06T00:18:02Z'
+  cert_sha256: 3f8cf7cd74bea8273478ab3d0ea0f83d2b58c9b45c90391d3460a3b6d247b010
+  issuer: DigiCert Inc
+  validation: OV
+  organisation: STATE BANK OF INDIA
+  country: IN
+  sans: 2
+  legal_name_match: true
+- brand: sbi
+  host: onlinesbi.sbi
+  fetched_at: '2026-11-06T00:18:03Z'
+  cert_sha256: 9ea7277943e9a1189f67152df813aa6dbffe2699135f69123b862252cca0acb4
+  issuer: DigiCert Inc
+  validation: EV
+  organisation: STATE BANK OF INDIA
+  country: IN
+  sans: 2
+  legal_name_match: true
+- brand: sbi
+  host: www.onlinesbi.sbi
+  fetched_at: '2026-11-06T00:18:03Z'
+  cert_sha256: 158c9468a3d9ce9b4e5fd2ea3e787e340e630c8ad10cf443d93316834a25f7d6
+  issuer: DigiCert Inc
+  validation: EV
+  organisation: STATE BANK OF INDIA
+  country: IN
+  sans: 2
+  legal_name_match: true
+- brand: sbi
+  host: sbi.co.in
+  fetched_at: '2026-11-06T00:18:03Z'
+  cert_sha256: b3bd002fd1c92478a4c9e4149a4051957884b3160020db483bd94c4ede751853
+  issuer: Entrust Limited
+  validation: DV
+  organisation: null
+  country: null
+  sans: 2
+  legal_name_match: null
+- brand: sbi
+  host: www.sbi.co.in
+  fetched_at: '2026-11-06T00:18:03Z'
+  cert_sha256: b3bd002fd1c92478a4c9e4149a4051957884b3160020db483bd94c4ede751853
+  issuer: Entrust Limited
+  validation: DV
+  organisation: null
+  country: null
+  sans: 2
+  legal_name_match: null
+- brand: sbi
+  host: onlinesbi.sbi.bank.in
+  fetched_at: '2026-11-06T00:18:15Z'
+  cert_sha256: da5249169365815da33012d36127e9c8c5e2a101d1eb788547b4e61a5e1fbd63
+  issuer: DigiCert Inc
+  validation: EV
+  organisation: STATE BANK OF INDIA
+  country: IN
+  sans: 2
+  legal_name_match: true
+- brand: sbi
+  host: yonobusiness.sbi
+  fetched_at: '2026-11-06T00:18:16Z'
+  cert_sha256: c117e74a5423611c59b44322314583fb188d8c386993bd962c29a33ae3caff68
+  issuer: DigiCert Inc
+  validation: EV
+  organisation: STATE BANK OF INDIA
+  country: IN
+  sans: 2
+  legal_name_match: true
+- brand: sbi
+  host: retail.onlinesbi.sbi
+  fetched_at: '2026-11-06T00:18:16Z'
+  cert_sha256: 1a847a88fc2d7a8db617a41dd24f51fcbf30e756e904b8fa33d579567908dbc7
+  issuer: DigiCert Inc
+  validation: EV
+  organisation: STATE BANK OF INDIA
+  country: IN
+  sans: 2
+  legal_name_match: true
+- brand: hdfc
+  host: hdfc.bank.in
+  fetched_at: '2026-11-06T00:18:16Z'
+  cert_sha256: 26df22acf0fd768c68bc4d96ef49248002a292f0505cdfbe887221dd390fef5b
+  issuer: DigiCert Inc
+  validation: OV
+  organisation: Hdfc Bank Limited
+  country: IN
+  sans: 4
+  legal_name_match: true
+- brand: hdfc
+  host: www.hdfc.bank.in
+  fetched_at: '2026-11-06T00:18:16Z'
+  cert_sha256: 26df22acf0fd768c68bc4d96ef49248002a292f0505cdfbe887221dd390fef5b
+  issuer: DigiCert Inc
+  validation: OV
+  organisation: Hdfc Bank Limited
+  country: IN
+  sans: 4
+  legal_name_match: true
+- brand: hdfc
+  host: hdfcbank.com
+  fetched_at: '2026-11-06T00:18:16Z'
+  cert_sha256: 26df22acf0fd768c68bc4d96ef49248002a292f0505cdfbe887221dd390fef5b
+  issuer: DigiCert Inc
+  validation: OV
+  organisation: Hdfc Bank Limited
+  country: IN
+  sans: 4
+  legal_name_match: true
+- brand: hdfc
+  host: www.hdfcbank.com
+  fetched_at: '2026-11-06T00:18:17Z'
+  cert_sha256: 26df22acf0fd768c68bc4d96ef49248002a292f0505cdfbe887221dd390fef5b
+  issuer: DigiCert Inc
+  validation: OV
+  organisation: Hdfc Bank Limited
+  country: IN
+  sans: 4
+  legal_name_match: true
+- brand: hdfc
+  host: hdfc.com
+  fetched_at: '2026-11-06T00:18:17Z'
+  cert_sha256: 77d27cd17fd8a88d7b772e822bc73e27d44c004778f2b4fe0e201e59dce1d976
+  issuer: Google Trust Services
+  validation: DV
+  organisation: null
+  country: null
+  sans: 2
+  legal_name_match: null
+- brand: hdfc
+  host: www.hdfc.com
+  fetched_at: '2026-11-06T00:18:17Z'
+  cert_sha256: 45e1e12e649e30e1d3418a63cf8f639fbb3b303b077602b601026df6c7241b68
+  issuer: DigiCert Inc
+  validation: OV
+  organisation: Hdfc Bank Limited
+  country: IN
+  sans: 5
+  legal_name_match: true
+- brand: icici
+  host: icici.bank.in
+  fetched_at: '2026-11-06T00:18:17Z'
+  cert_sha256: 42b8ab6bf717a638330ac93d0c6f88560cb45ea0d1b468ba3d35656b4d875a5e
+  issuer: Sectigo Limited
+  validation: OV
+  organisation: ICICI Bank Limited
+  country: IN
+  sans: 2
+  legal_name_match: true
+- brand: icici
+  host: www.icici.bank.in
+  fetched_at: '2026-11-06T00:18:17Z'
+  cert_sha256: 658b77e9c1845214a12fdade0616100b99989978c3c2c9daaa431661d5c437b2
+  issuer: Sectigo Limited
+  validation: OV
+  organisation: ICICI Bank Limited
+  country: IN
+  sans: 1
+  legal_name_match: true
+- brand: icici
+  host: icicibank.com
+  fetched_at: '2026-11-06T00:18:17Z'
+  cert_sha256: 0d199faf375076c01fcdb2f55d5bea052229eb047ba78cc1aac8e83ae18d9a5d
+  issuer: Sectigo Limited
+  validation: OV
+  organisation: ICICI Bank Limited
+  country: IN
+  sans: 2
+  legal_name_match: true
+- brand: icici
+  host: www.icicibank.com
+  fetched_at: '2026-11-06T00:18:18Z'
+  cert_sha256: 5d1dbe351a899ebf816a38d3ae663636c2a6314ef569003f314db36a11c910cc
+  issuer: Sectigo Limited
+  validation: OV
+  organisation: ICICI Bank Limited
+  country: IN
+  sans: 2
+  legal_name_match: true
+- brand: paytm
+  host: paytm.com
+  fetched_at: '2026-11-06T00:18:18Z'
+  cert_sha256: fb021864b96c1d213e99ee829832871db89bae4e9f50fe427169ff04f023a5ae
+  issuer: DigiCert Inc
+  validation: OV
+  organisation: One 97 Communications Ltd
+  country: IN
+  sans: 2
+  legal_name_match: true
+- brand: paytm
+  host: www.paytm.com
+  fetched_at: '2026-11-06T00:18:18Z'
+  cert_sha256: fb021864b96c1d213e99ee829832871db89bae4e9f50fe427169ff04f023a5ae
+  issuer: DigiCert Inc
+  validation: OV
+  organisation: One 97 Communications Ltd
+  country: IN
+  sans: 2
+  legal_name_match: true
+- brand: paytm
+  host: paytmmoney.com
+  fetched_at: '2026-11-06T00:18:18Z'
+  cert_sha256: b7c3b4512c42a83966c84f6682e0959dd3e9e2a4e60ec0ec2555c44ea5bf460b
+  issuer: DigiCert Inc
+  validation: OV
+  organisation: PAYTM MONEY LIMITED
+  country: IN
+  sans: 2
+  legal_name_match: true
+- brand: paytm
+  host: www.paytmmoney.com
+  fetched_at: '2026-11-06T00:18:19Z'
+  cert_sha256: b7c3b4512c42a83966c84f6682e0959dd3e9e2a4e60ec0ec2555c44ea5bf460b
+  issuer: DigiCert Inc
+  validation: OV
+  organisation: PAYTM MONEY LIMITED
+  country: IN
+  sans: 2
+  legal_name_match: true
+- brand: paytm
+  host: paytm.me
+  fetched_at: '2026-11-06T00:18:19Z'
+  cert_sha256: 8747e7a889f12d0fdd71a5c26d59d378f2d55d0e623162753c075e06de6d3bcf
+  issuer: Let's Encrypt
+  validation: DV
+  organisation: null
+  country: null
+  sans: 2
+  legal_name_match: null
+- brand: paytm
+  host: paytminsurance.co.in
+  fetched_at: '2026-11-06T00:18:19Z'
+  cert_sha256: f167e7a446a0ba23078e2e02a1e0d638fd8421469de7f8ec79850e6b438e7557
+  issuer: DigiCert Inc
+  validation: OV
+  organisation: PAYTM INSURANCE BROKING PRIVATE LIMITED
+  country: IN
+  sans: 2
+  legal_name_match: true
+- brand: paytm
+  host: www.paytminsurance.co.in
+  fetched_at: '2026-11-06T00:18:20Z'
+  cert_sha256: f167e7a446a0ba23078e2e02a1e0d638fd8421469de7f8ec79850e6b438e7557
+  issuer: DigiCert Inc
+  validation: OV
+  organisation: PAYTM INSURANCE BROKING PRIVATE LIMITED
+  country: IN
+  sans: 2
+  legal_name_match: true
+- brand: paytm
+  host: paytmpayments.com
+  fetched_at: '2026-11-06T00:18:20Z'
+  cert_sha256: c7673d3da33bb090e0873a8a1aefaf3772bf5549028e8239d96d45c3b771a8bc
+  issuer: Amazon
+  validation: DV
+  organisation: null
+  country: null
+  sans: 2
+  legal_name_match: null
+- brand: paytm
+  host: www.paytmpayments.com
+  fetched_at: '2026-11-06T00:18:20Z'
+  cert_sha256: dfb57744549ab778f58ebfb35535ff5bc0dcda68879c2ca0b6d67d44160bff63
+  issuer: DigiCert, Inc.
+  validation: OV
+  organisation: Paytm Payments Services Limited
+  country: IN
+  sans: 2
+  legal_name_match: true
+- brand: india_post
+  host: indiapost.gov.in
+  fetched_at: '2026-11-06T00:18:20Z'
+  cert_sha256: d4df4453ea0ccd49f16754303bf1ffa213f1862b24f6d35defebcbe601f2b137
+  issuer: Sectigo Limited
+  validation: OV
+  organisation: DEPARTMENT OF POSTS
+  country: IN
+  sans: 2
+  legal_name_match: true
+- brand: india_post
+  host: www.indiapost.gov.in
+  fetched_at: '2026-11-06T00:18:20Z'
+  cert_sha256: d4df4453ea0ccd49f16754303bf1ffa213f1862b24f6d35defebcbe601f2b137
+  issuer: Sectigo Limited
+  validation: OV
+  organisation: DEPARTMENT OF POSTS
+  country: IN
+  sans: 2
+  legal_name_match: true
+- brand: parivahan
+  host: parivahan.gov.in
+  fetched_at: '2026-11-06T00:18:21Z'
+  cert_sha256: 89410aac282deac26aa95ed93c695d002482952e4e7c2c173c2d16a1f77fb98f
+  issuer: Let's Encrypt
+  validation: DV
+  organisation: null
+  country: null
+  sans: 2
+  legal_name_match: null
+- brand: parivahan
+  host: www.parivahan.gov.in
+  fetched_at: '2026-11-06T00:18:21Z'
+  cert_sha256: 89410aac282deac26aa95ed93c695d002482952e4e7c2c173c2d16a1f77fb98f
+  issuer: Let's Encrypt
+  validation: DV
+  organisation: null
+  country: null
+  sans: 2
+  legal_name_match: null
+- brand: parivahan
+  host: echallan.parivahan.gov.in
+  fetched_at: '2026-11-06T00:18:21Z'
+  cert_sha256: 89410aac282deac26aa95ed93c695d002482952e4e7c2c173c2d16a1f77fb98f
+  issuer: Let's Encrypt
+  validation: DV
+  organisation: null
+  country: null
+  sans: 2
+  legal_name_match: null
+- brand: income_tax
+  host: www.incometax.gov.in
+  fetched_at: '2026-11-06T00:18:21Z'
+  cert_sha256: 431ea87af9fd0668d529592e72c98ee144a12034c715449fc4d1d14f8cbc1e7c
+  issuer: DigiCert Inc
+  validation: OV
+  organisation: Income Tax Department
+  country: IN
+  sans: 2
+  legal_name_match: true
+- brand: income_tax
+  host: incometaxindia.gov.in
+  fetched_at: '2026-11-06T00:18:22Z'
+  cert_sha256: 632ce50fb23f79aefa9e6e39638ddc71a046fa577838e40f707364b63e41d83a
+  issuer: GlobalSign nv-sa
+  validation: DV
+  organisation: null
+  country: null
+  sans: 2
+  legal_name_match: null
+- brand: income_tax
+  host: www.incometaxindia.gov.in
+  fetched_at: '2026-11-06T00:18:22Z'
+  cert_sha256: 61e778f221fa93584c619f9feb5e5659163d3b07786ec4df6857c92b40d6701d
+  issuer: DigiCert Inc
+  validation: OV
+  organisation: Directorate of Income Tax
+  country: IN
+  sans: 2
+  legal_name_match: true
+- brand: income_tax
+  host: eportal.incometax.gov.in
+  fetched_at: '2026-11-06T00:18:44Z'
+  cert_sha256: 4af0d9491b924ad33d72934fdb0bac4d111500289e78cc63831a45ee79bcbf46
+  issuer: Entrust Limited
+  validation: OV
+  organisation: Directorate Of Income Tax (Systems)
+  country: IN
+  sans: 1
+  legal_name_match: true
+- brand: google
+  host: google.com
+  fetched_at: '2026-11-06T00:18:44Z'
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  issuer: Google Trust Services
+  validation: DV
+  organisation: null
+  country: null
+  sans: 65
+  legal_name_match: null
+- brand: google
+  host: www.google.com
+  fetched_at: '2026-11-06T00:18:45Z'
+  cert_sha256: 83b9c3ffb53ed1eef2849324f536430b191dd5bd5f98d3f643e397884ac9c6cb
+  issuer: Google Trust Services
+  validation: DV
+  organisation: null
+  country: null
+  sans: 1
+  legal_name_match: null
+- brand: google
+  host: blog.google
+  fetched_at: '2026-11-06T00:18:45Z'
+  cert_sha256: adee979f57514c9d6b749a6f4373e2df0d118a77fda590458d55482017ee8dad
+  issuer: Google Trust Services
+  validation: DV
+  organisation: null
+  country: null
+  sans: 1
+  legal_name_match: null
+- brand: google
+  host: www.blog.google
+  fetched_at: '2026-11-06T00:18:45Z'
+  cert_sha256: a94f4f3d4e0d9b667b923e86c53e18b850b54955bd42999badb7669e42b4007a
+  issuer: Google Trust Services
+  validation: DV
+  organisation: null
+  country: null
+  sans: 1
+  legal_name_match: null
+- brand: google
+  host: withgoogle.com
+  fetched_at: '2026-11-06T00:18:45Z'
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  issuer: Google Trust Services
+  validation: DV
+  organisation: null
+  country: null
+  sans: 46
+  legal_name_match: null
+- brand: google
+  host: www.withgoogle.com
+  fetched_at: '2026-11-06T00:18:46Z'
+  cert_sha256: 58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629
+  issuer: Google Trust Services
+  validation: DV
+  organisation: null
+  country: null
+  sans: 46
+  legal_name_match: null
+- brand: google
+  host: g.co
+  fetched_at: '2026-11-06T00:18:46Z'
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  issuer: Google Trust Services
+  validation: DV
+  organisation: null
+  country: null
+  sans: 65
+  legal_name_match: null
+- brand: google
+  host: www.g.co
+  fetched_at: '2026-11-06T00:18:46Z'
+  cert_sha256: b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7
+  issuer: Google Trust Services
+  validation: DV
+  organisation: null
+  country: null
+  sans: 65
+  legal_name_match: null
+- brand: google
+  host: goo.gle
+  fetched_at: '2026-11-06T00:18:46Z'
+  cert_sha256: cee224f53e26950907240ab99d2bfca6e94dee485a5c16f818e0218c4f9ebf7f
+  issuer: Let's Encrypt
+  validation: DV
+  organisation: null
+  country: null
+  sans: 1
+  legal_name_match: null
+- brand: google
+  host: gmail.com
+  fetched_at: '2026-11-06T00:18:47Z'
+  cert_sha256: 507d882ef893cd74d9b1327a6c907b8f6e0fa0d00d46a9b8a8577d4102d986db
+  issuer: Google Trust Services
+  validation: DV
+  organisation: null
+  country: null
+  sans: 2
+  legal_name_match: null
+- brand: google
+  host: www.gmail.com
+  fetched_at: '2026-11-06T00:18:47Z'
+  cert_sha256: a45dde1148faf93d0d8cd01d58d6125b78dbd88fe887e5ba46d0c081a3f0d072
+  issuer: Google Trust Services
+  validation: DV
+  organisation: null
+  country: null
+  sans: 1
+  legal_name_match: null
+- brand: google
+  host: upload.google.com
+  fetched_at: '2026-11-06T00:18:47Z'
+  cert_sha256: 083ba27452d7124dbb7dd9e5fe75c22a767da6ec75ddac25927fa70f3c892bb0
+  issuer: Google Trust Services
+  validation: DV
+  organisation: null
+  country: null
+  sans: 17
+  legal_name_match: null
+- brand: google
+  host: accounts.google.com
+  fetched_at: '2026-11-06T00:18:48Z'
+  cert_sha256: 1c4f7c04a5f9cb0dabe3a2f0c2c19bf6215856e540a38ff0824c34bebd391652
+  issuer: Google Trust Services
+  validation: DV
+  organisation: null
+  country: null
+  sans: 3
+  legal_name_match: null
+- brand: google
+  host: mail.google.com
+  fetched_at: '2026-11-06T00:18:48Z'
+  cert_sha256: 54302fc1606007c34de493f9f74c7a9130d93aaa46050d0290d7d4229780e79f
+  issuer: Google Trust Services
+  validation: DV
+  organisation: null
+  country: null
+  sans: 2
+  legal_name_match: null
+- brand: npci
+  host: npci.org.in
+  fetched_at: '2026-11-06T00:18:48Z'
+  cert_sha256: a634bf3b73bba10ebfaef1c1083e6bb5bb335a9a7d547bd3a1363e77fbbc34f7
+  issuer: DigiCert Inc
+  validation: OV
+  organisation: National Payments Corporation Of India
+  country: IN
+  sans: 17
+  legal_name_match: true
+- brand: npci
+  host: www.npci.org.in
+  fetched_at: '2026-11-06T00:18:48Z'
+  cert_sha256: a634bf3b73bba10ebfaef1c1083e6bb5bb335a9a7d547bd3a1363e77fbbc34f7
+  issuer: DigiCert Inc
+  validation: OV
+  organisation: National Payments Corporation Of India
+  country: IN
+  sans: 17
+  legal_name_match: true
+legal_name_proposals: []
+seed_failures:
+- brand: sbi
+  host: www.sbi.bank.in
+  error: 'ConnectionError: offline and no cached certificate for www.sbi.bank.in'
+- brand: sbi
+  host: www.bank.sbi
+  error: 'ConnectionError: offline and no cached certificate for www.bank.sbi'
+- brand: sbi
+  host: onlinesbi.com
+  error: 'ConnectionError: offline and no cached certificate for onlinesbi.com'
+- brand: sbi
+  host: www.onlinesbi.com
+  error: 'ConnectionError: offline and no cached certificate for www.onlinesbi.com'
+- brand: paytm
+  host: www.paytm.me
+  error: 'ConnectionError: offline and no cached certificate for www.paytm.me'
+- brand: income_tax
+  host: incometax.gov.in
+  error: 'ConnectionError: offline and no cached certificate for incometax.gov.in'
+- brand: income_tax
+  host: incometaxindiaefiling.gov.in
+  error: 'ConnectionError: offline and no cached certificate for incometaxindiaefiling.gov.in'
+- brand: income_tax
+  host: www.incometaxindiaefiling.gov.in
+  error: 'ConnectionError: offline and no cached certificate for www.incometaxindiaefiling.gov.in'
+- brand: google
+  host: www.goo.gle
+  error: 'ConnectionError: offline and no cached certificate for www.goo.gle'
+certificates:
+  8747e7a889f12d0fdd71a5c26d59d378f2d55d0e623162753c075e06de6d3bcf:
+    issuer: Let's Encrypt
+    organisation: null
+    validation: DV
+    not_before: '2026-09-29T04:22:32Z'
+    not_after: '2026-12-28T04:22:31Z'
+    sans:
+    - p-y.tm
+    - paytm.me
+  b0c47fc75d7757cb455d9f3fd719500d364dc6f40738baa70fadf95720b070b7:
+    issuer: Google Trust Services
+    organisation: null
+    validation: DV
+    not_before: '2026-10-07T19:07:42Z'
+    not_after: '2026-12-30T19:07:41Z'
+    sans:
+    - '*.google.com'
+    - '*.appengine.google.com'
+    - '*.bdn.dev'
+    - '*.origin-test.bdn.dev'
+    - '*.cloud.google.com'
+    - '*.crowdsource.google.com'
+    - '*.datacompute.google.com'
+    - '*.google.ca'
+    - '*.google.cl'
+    - '*.google.co.in'
+    - '*.google.co.jp'
+    - '*.google.co.uk'
+    - '*.google.com.ar'
+    - '*.google.com.au'
+    - '*.google.com.br'
+    - '*.google.com.co'
+    - '*.google.com.mx'
+    - '*.google.com.tr'
+    - '*.google.com.vn'
+    - '*.google.de'
+    - '*.google.es'
+    - '*.google.fr'
+    - '*.google.hu'
+    - '*.google.it'
+    - '*.google.nl'
+    - '*.google.pl'
+    - '*.google.pt'
+    - '*.gemini.cloud.google.com'
+    - '*.gstatic.com'
+    - '*.metric.gstatic.com'
+    - '*.gvt1.com'
+    - '*.gcpcdn.gvt1.com'
+    - '*.gvt2.com'
+    - '*.gcp.gvt2.com'
+    - '*.url.google.com'
+    - '*.youtube-nocookie.com'
+    - '*.ytimg.com'
+    - ai.android
+    - android.com
+    - '*.android.com'
+    - '*.flash.android.com'
+    - g.co
+    - '*.g.co'
+    - goo.gl
+    - www.goo.gl
+    - google-analytics.com
+    - '*.google-analytics.com'
+    - google.com
+    - googlecommerce.com
+    - '*.googlecommerce.com'
+    - urchin.com
+    - '*.urchin.com'
+    - youtu.be
+    - youtube.com
+    - '*.youtube.com'
+    - music.youtube.com
+    - '*.music.youtube.com'
+    - youtubeeducation.com
+    - '*.youtubeeducation.com'
+    - youtubekids.com
+    - '*.youtubekids.com'
+    - yt.be
+    - '*.yt.be'
+    - android.clients.google.com
+    - '*.aistudio.google.com'
+  58df2b16197e115178895c17f7ad47fcb749349d82183f3d7ccbe0b370f62629:
+    issuer: Google Trust Services
+    organisation: null
+    validation: DV
+    not_before: '2026-10-07T19:07:28Z'
+    not_after: '2026-12-30T19:07:27Z'
+    sans:
+    - '*.appspot.com'
+    - appspot.com
+    - '*.de.r.appspot.com'
+    - '*.df.r.appspot.com'
+    - '*.an.r.appspot.com'
+    - '*.dt.r.appspot.com'
+    - '*.du.r.appspot.com'
+    - '*.el.r.appspot.com'
+    - '*.as.r.appspot.com'
+    - '*.et.r.appspot.com'
+    - '*.ts.r.appspot.com'
+    - '*.lz.r.appspot.com'
+    - '*.ew.r.appspot.com'
+    - '*.nw.r.appspot.com'
+    - '*.ey.r.appspot.com'
+    - '*.ez.r.appspot.com'
+    - '*.nz.r.appspot.com'
+    - '*.oa.r.appspot.com'
+    - '*.nn.r.appspot.com'
+    - '*.rj.r.appspot.com'
+    - '*.uc.r.appspot.com'
+    - '*.tz.r.appspot.com'
+    - '*.ue.r.appspot.com'
+    - '*.uk.r.appspot.com'
+    - '*.un.r.appspot.com'
+    - '*.uw.r.appspot.com'
+    - '*.wl.r.appspot.com'
+    - '*.wm.r.appspot.com'
+    - '*.wn.r.appspot.com'
+    - '*.lm.r.appspot.com'
+    - '*.em.r.appspot.com'
+    - '*.km.r.appspot.com'
+    - '*.pd.r.appspot.com'
+    - '*.ui.r.appspot.com'
+    - '*.oj.r.appspot.com'
+    - thinkwithgoogle.com
+    - '*.thinkwithgoogle.com'
+    - thinkwithgoogle.goog
+    - '*.thinkwithgoogle.goog'
+    - withgoogle.com
+    - '*.withgoogle.com'
+    - api.projectshield.withgoogle.com
+    - withyoutube.com
+    - '*.withyoutube.com'
+    - app.google
+    - '*.app.google'
+  083ba27452d7124dbb7dd9e5fe75c22a767da6ec75ddac25927fa70f3c892bb0:
+    issuer: Google Trust Services
+    organisation: null
+    validation: DV
+    not_before: '2026-10-07T19:09:11Z'
+    not_after: '2026-12-30T19:09:10Z'
+    sans:
+    - upload.video.google.com
+    - '*.clients.google.com'
+    - '*.docs.google.com'
+    - '*.drive.google.com'
+    - '*.gdata.youtube.com'
+    - '*.googleapis.com'
+    - '*.photos.google.com'
+    - '*.youtube-3rd-party.com'
+    - upload.google.com
+    - '*.upload.google.com'
+    - upload.youtube.com
+    - '*.upload.youtube.com'
+    - uploads.stage.gdata.youtube.com
+    - bg-call-donation.goog
+    - bg-call-donation-alpha.goog
+    - bg-call-donation-canary.goog
+    - bg-call-donation-dev.goog
+  1c4f7c04a5f9cb0dabe3a2f0c2c19bf6215856e540a38ff0824c34bebd391652:
+    issuer: Google Trust Services
+    organisation: null
+    validation: DV
+    not_before: '2026-10-07T19:09:55Z'
+    not_after: '2026-12-30T19:09:54Z'
+    sans:
+    - accounts.google.com
+    - '*.partner.android.com'
+    - mtls.accounts.google.com
+  a634bf3b73bba10ebfaef1c1083e6bb5bb335a9a7d547bd3a1363e77fbbc34f7:
+    issuer: DigiCert Inc
+    organisation: National Payments Corporation Of India
+    validation: OV
+    not_before: '2026-09-10T00:00:00Z'
+    not_after: '2026-12-18T23:59:59Z'
+    sans:
+    - npci.org.in
+    - assets.bhmle.npci.org.in
+    - assets.upi.npci.org.in
+    - bhimmartech-edge.npci.org.in
+    - bhimmartech.npci.org.in
+    - bhimuat.npci.org.in
+    - bhimupi.org.in
+    - mweb.bhmle.npci.org.in
+    - netc.org.in
+    - rupay.co.in
+    - upi-edge.npci.org.in
+    - upichalega.com
+    - www.bhimupi.org.in
+    - www.netc.org.in
+    - www.npci.org.in
+    - www.rupay.co.in
+    - www.upichalega.com

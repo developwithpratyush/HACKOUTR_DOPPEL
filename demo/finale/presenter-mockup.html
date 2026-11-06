@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Doppel Presenter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+@property --p{syntax:'<number>';inherits:false;initial-value:0}
+:root{
+  --bg:#F3F4F9; --ink:#0E1424; --sub:#5B6478; --mute:#98A1B3; --line:rgba(14,20,36,.08);
+  --glass:rgba(255,255,255,.58); --glass-hi:rgba(255,255,255,.78); --edge:rgba(255,255,255,.85);
+  --acc:#6366F1; --acc2:#9B6BFF; --grad:linear-gradient(135deg,#5B5BF7 0%,#9B6BFF 100%);
+  --rose:#E5484D; --amber:#D9822B; --mint:#12A67A;
+  --rose-bg:#FDECEC; --amber-bg:#FDF1E3; --mint-bg:#E3F6EF;
+  --shadow:0 1px 0 rgba(255,255,255,.9) inset,0 18px 50px -12px rgba(40,48,90,.16),0 4px 14px -6px rgba(40,48,90,.08);
+  --r:22px;
+  --disp:"Plus Jakarta Sans",system-ui,sans-serif; --body:"Inter",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+/* ambient light */
+.bg{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.75;animation:drift 26s ease-in-out infinite alternate}
+.o1{width:620px;height:620px;background:#C9D2FF;left:-140px;top:-160px}
+.o2{width:560px;height:560px;background:#EBD9FF;right:-120px;top:8%;animation-delay:-8s}
+.o3{width:520px;height:520px;background:#CDF3E8;left:22%;bottom:-220px;animation-delay:-14s}
+.o4{width:380px;height:380px;background:#FFE2D3;right:12%;bottom:-120px;animation-delay:-4s}
+@keyframes drift{to{transform:translate(60px,40px) scale(1.08)}}
+.grain{position:absolute;inset:0;background-image:radial-gradient(rgba(14,20,36,.035) 1px,transparent 1px);background-size:3px 3px;mix-blend-mode:multiply}
+.glass{background:var(--glass);backdrop-filter:blur(26px) saturate(170%);-webkit-backdrop-filter:blur(26px) saturate(170%);border:1px solid var(--edge);box-shadow:var(--shadow);border-radius:var(--r)}
+/* top bar */
+.top{position:fixed;top:0;left:0;right:0;height:80px;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:0 28px;pointer-events:none}
+.top>*{pointer-events:auto}
+.logo{display:flex;align-items:center;gap:10px;font:800 20px var(--disp);letter-spacing:-.3px;cursor:pointer;user-select:none}
+.mark{width:30px;height:30px;border-radius:10px;background:var(--grad);display:grid;place-items:center;box-shadow:0 6px 18px -6px #6366F1}
+.mark i{width:12px;height:12px;border:2.5px solid #fff;border-radius:50%;box-shadow:5px 0 0 -1px rgba(255,255,255,.55)}
+.navr{display:flex;gap:8px;opacity:0;transform:translateY(-6px);transition:.4s}
+body.docked .navr{opacity:1;transform:none}
+.pill{font:500 13px var(--body);color:var(--sub);padding:8px 14px;border-radius:999px;text-decoration:none;display:inline-flex;gap:7px;align-items:center}
+.pill:hover{color:var(--ink)}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 4px rgba(18,166,122,.15)}
+/* landing */
+.landing{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:100px 24px 60px;text-align:center;transition:opacity .45s,transform .45s}
+body.docked .landing{opacity:0;transform:translateY(-30px) scale(.98);pointer-events:none;position:absolute;inset:0}
+.kicker{display:inline-flex;gap:9px;align-items:center;padding:7px 14px 7px 12px;border-radius:999px;font:500 13px var(--body);color:var(--sub)}
+h1{font:800 clamp(38px,5.6vw,72px)/1.04 var(--disp);letter-spacing:-2.2px;margin:22px 0 14px}
+h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{font-size:18px;color:var(--sub);max-width:560px;margin:0 auto}
+.slot{height:72px;width:min(720px,100%);margin:38px auto 18px}
+.tries{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:780px}
+.try{font:500 13px var(--mono);color:var(--ink);padding:9px 14px;border-radius:12px;cursor:pointer;border:1px solid var(--edge);background:rgba(255,255,255,.5);transition:.2s;display:flex;gap:8px;align-items:center}
+.try:hover{background:#fff;transform:translateY(-2px);box-shadow:0 10px 24px -12px rgba(40,48,90,.3)}
+.try small{font:600 10px var(--body);text-transform:uppercase;letter-spacing:.7px;color:var(--mute)}
+.stats{display:flex;gap:14px;margin-top:56px;flex-wrap:wrap;justify-content:center}
+.stat{padding:14px 20px;text-align:left;border-radius:16px;min-width:200px}
+.stat b{display:block;font:700 22px var(--disp);letter-spacing:-.5px}
+.stat span{font-size:12.5px;color:var(--sub)}
+/* the search bar (one element, moves between landing and top) */
+.search{position:fixed;z-index:30;display:flex;align-items:center;gap:12px;padding:0 10px 0 22px;border-radius:999px}
+.search.anim{transition:left .7s cubic-bezier(.6,.0,.2,1),top .7s cubic-bezier(.6,0,.2,1),width .7s cubic-bezier(.6,0,.2,1),height .7s cubic-bezier(.6,0,.2,1)}
+.search:focus-within{box-shadow:var(--shadow),0 0 0 4px rgba(99,102,241,.14)}
+.search svg{flex:none;color:var(--acc)}
+.search input{flex:1;min-width:0;border:0;background:none;outline:none;font:500 18px var(--mono);color:var(--ink);letter-spacing:-.2px}
+body.docked .search input{font-size:15px}
+.search input::placeholder{color:var(--mute);font-family:var(--body)}
+.go{flex:none;height:calc(100% - 16px);aspect-ratio:1;border-radius:50%;border:0;background:var(--grad);color:#fff;cursor:pointer;display:grid;place-items:center;box-shadow:0 8px 20px -8px #6366F1;transition:transform .2s}
+.go:hover{transform:scale(1.06)}
+/* space */
+.space{position:relative;z-index:1;max-width:1320px;margin:0 auto;padding:100px 28px 60px;display:none}
+body.docked .space{display:block}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+.tile{padding:22px;position:relative;opacity:0;transform:translateY(16px) scale(.985);animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:var(--d,0s);cursor:pointer;transition:box-shadow .25s}
+.tile:hover{box-shadow:var(--shadow),0 0 0 1px rgba(99,102,241,.25)}
+@keyframes rise{to{opacity:1;transform:none}}
+.s3{grid-column:span 3}.s4{grid-column:span 4}.s5{grid-column:span 5}.s6{grid-column:span 6}.s7{grid-column:span 7}.s8{grid-column:span 8}.s12{grid-column:span 12}
+@media (max-width:1000px){.grid>*{grid-column:span 12!important}}
+.th{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.ic{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:rgba(99,102,241,.1);color:var(--acc);font:700 11px var(--mono);flex:none}
+.tq{font:700 15px var(--disp);letter-spacing:-.2px}
+.tt{font-size:12px;color:var(--mute);margin-left:auto;font-family:var(--mono)}
+.tline{font-size:13.5px;color:var(--sub);margin:10px 0 0}
+.tile.skip{background:rgba(255,255,255,.32);box-shadow:none;border-style:dashed;border-color:rgba(14,20,36,.12);cursor:default}
+.tile.skip .ic{background:rgba(14,20,36,.05);color:var(--mute)}
+.tile.skip .tq{color:var(--mute)}
+.chip{display:inline-flex;align-items:center;gap:6px;font:600 11.5px var(--body);padding:5px 10px;border-radius:999px;letter-spacing:.2px}
+.c-bad{background:var(--rose-bg);color:var(--rose)} .c-warn{background:var(--amber-bg);color:var(--amber)} .c-good{background:var(--mint-bg);color:var(--mint)}
+.c-neu{background:rgba(14,20,36,.05);color:var(--sub)} .c-acc{background:rgba(99,102,241,.1);color:var(--acc)}
+/* hero */
+.hero{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;padding:30px 34px}
+.vrow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.vpill{font:800 14px var(--disp);letter-spacing:1.4px;padding:8px 16px;border-radius:12px;color:#fff}
+.v-phishing{background:linear-gradient(135deg,#F0565B,#D63B5E);box-shadow:0 10px 24px -10px #E5484D}
+.v-needs_review{background:linear-gradient(135deg,#F2A044,#D9822B);box-shadow:0 10px 24px -10px #D9822B}
+.v-genuine{background:linear-gradient(135deg,#1DBA8A,#0E9670);box-shadow:0 10px 24px -10px #12A67A}
+.reason{font:600 19px/1.4 var(--disp);letter-spacing:-.3px;margin:16px 0 4px;max-width:720px}
+.dom{font:600 clamp(20px,2.5vw,34px) var(--mono);letter-spacing:-.8px;margin:44px 0 46px;white-space:nowrap;overflow:visible}
+.seg{position:relative;display:inline-block;transition:opacity .4s,color .4s}
+.seg.dec{opacity:.38}
+.seg.own{color:var(--rose)}
+.seg.brand{color:var(--acc)}
+.seg.mut{color:var(--amber)}
+.seg.proved{color:var(--mint)}
+.note{position:absolute;left:0;right:0;font:600 11.5px var(--body);letter-spacing:.2px;white-space:nowrap;text-align:center;opacity:0;animation:rise .5s forwards;animation-delay:1.2s;transform:translateY(4px)}
+.note.up{bottom:calc(100% + 8px);padding-bottom:6px;border-bottom:2px solid currentColor}
+.note.dn{top:calc(100% + 8px);padding-top:6px;border-top:2px solid currentColor}
+.ring{--p:0;--c:var(--acc);width:178px;height:178px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--c) calc(var(--p)*1%),rgba(14,20,36,.06) 0);animation:fill 1.6s cubic-bezier(.3,.7,.2,1) .35s both;position:relative}
+@keyframes fill{from{--p:0}}
+.ring::before{content:"";position:absolute;inset:14px;border-radius:50%;background:rgba(255,255,255,.85);box-shadow:inset 0 2px 8px rgba(40,48,90,.08)}
+.ring div{position:relative;text-align:center}
+.ring b{display:block;font:800 40px var(--disp);letter-spacing:-1.5px}
+.ring span{font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:1px}
+/* pipeline */
+.pipe{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.stage h5{margin:0 0 10px;font:700 11px var(--body);text-transform:uppercase;letter-spacing:1.2px;color:var(--mute);display:flex;gap:8px;align-items:center}
+.stage h5::after{content:"";flex:1;height:1px;background:var(--line)}
+.nodes{display:flex;flex-wrap:wrap;gap:8px}
+.node{display:flex;align-items:center;gap:7px;padding:7px 11px;border-radius:11px;background:rgba(255,255,255,.55);border:1px solid var(--edge);font:500 12.5px var(--body);opacity:.25;transform:scale(.96);animation:lit .45s forwards;animation-delay:var(--d)}
+.node i{width:8px;height:8px;border-radius:50%;background:var(--mute)}
+.node.bad i{background:var(--rose);box-shadow:0 0 0 3px var(--rose-bg)} .node.warn i{background:var(--amber);box-shadow:0 0 0 3px var(--amber-bg)}
+.node.good i{background:var(--mint);box-shadow:0 0 0 3px var(--mint-bg)} .node.neutral i{background:var(--acc);box-shadow:0 0 0 3px rgba(99,102,241,.12)}
+.node.skip{animation:none;opacity:.35;border-style:dashed;background:none}
+@keyframes lit{to{opacity:1;transform:none}}
+/* heatmap */
+.heat{display:flex;flex-wrap:wrap;gap:3px;font:600 15px var(--mono)}
+.heat span{width:24px;height:34px;display:grid;place-items:center;border-radius:7px}
+.legend{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--mute);margin-top:12px}
+.legend i{flex:1;height:6px;border-radius:3px;background:linear-gradient(90deg,hsl(160 70% 88%),hsl(40 90% 82%),hsl(352 85% 80%))}
+/* bars */
+.bar{height:10px;border-radius:5px;background:rgba(14,20,36,.06);position:relative;margin:18px 0 8px}
+.bar b{position:absolute;inset:0 auto 0 0;border-radius:5px;background:var(--grad)}
+.bar u{position:absolute;top:-6px;bottom:-6px;width:2px;background:var(--ink);opacity:.5}
+.big{font:800 34px var(--disp);letter-spacing:-1px}
+/* sms */
+.phone{background:linear-gradient(180deg,#fff,#F6F7FB);border:1px solid var(--line);border-radius:18px;padding:14px}
+.bubble{background:#ECEEF5;border-radius:14px 14px 14px 4px;padding:10px 12px;font-size:13px}
+.bubble a{color:#2F6BFF;word-break:break-all;font-family:var(--mono);font-size:12px}
+/* cert */
+.cert{border-radius:16px;padding:14px 16px;background:linear-gradient(135deg,rgba(255,255,255,.9),rgba(240,242,255,.7));border:1px solid var(--edge);font-size:13px}
+.kv{display:grid;grid-template-columns:110px 1fr;gap:5px 10px}
+.kv dt{color:var(--mute)} .kv dd{margin:0;font-family:var(--mono);font-size:12.5px}
+.toggle{display:inline-flex;align-items:center;gap:10px;margin-top:14px;font:600 13px var(--body);cursor:pointer;user-select:none}
+.sw{width:42px;height:24px;border-radius:12px;background:rgba(14,20,36,.15);position:relative;transition:.25s}
+.sw::after{content:"";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.2);transition:.25s}
+.sw.on{background:var(--mint)} .sw.on::after{left:21px}
+/* deep */
+.deep{display:grid;grid-template-columns:1.05fr 1fr 1fr 1fr;gap:16px;align-items:stretch}
+.shot{border-radius:14px;border:1px solid var(--line);background:#fff;padding:12px;display:flex;flex-direction:column;gap:7px}
+.shot .bar2{height:8px;border-radius:4px;background:#EEF0F6}
+.shot .field{height:22px;border-radius:6px;border:1.5px solid #E2E5EE;position:relative}
+.shot .field.hot{border-color:var(--rose);background:var(--rose-bg)}
+.shot .btn{height:24px;border-radius:6px;background:var(--grad);width:50%}
+.sub{border-radius:14px;padding:14px;background:rgba(255,255,255,.5);border:1px solid var(--edge)}
+.sub h6{margin:0 0 8px;font:700 12px var(--body);color:var(--acc);text-transform:uppercase;letter-spacing:.8px}
+.sub ul{margin:0;padding-left:16px;font-size:13px;color:var(--sub)}
+.sub li{margin:3px 0}
+.flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:16px;font:500 12px var(--mono)}
+.flow span{padding:6px 10px;border-radius:9px;background:#fff;border:1px solid var(--line)}
+.flow span.hot{background:var(--rose-bg);color:var(--rose);border-color:transparent}
+.flow em{color:var(--mute);font-style:normal}
+/* table */
+.score{width:100%;border-collapse:collapse;font-size:13.5px}
+.score td{padding:8px 4px;border-bottom:1px solid var(--line)}
+.score tr:last-child td{border:0;font-weight:700}
+.score td:nth-child(2){text-align:center;width:36px}
+.score td:last-child{color:var(--sub);font-size:12px;text-align:right}
+.ok,.no,.na{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:7px;font:700 12px var(--body)}
+.ok{background:var(--mint-bg);color:var(--mint)} .no{background:var(--rose-bg);color:var(--rose)} .na{background:rgba(14,20,36,.05);color:var(--mute)}
+/* graph */
+.graph svg{width:100%;height:190px}
+/* sheet */
+.veil{position:fixed;inset:0;z-index:40;background:rgba(236,238,248,.55);backdrop-filter:blur(8px);opacity:0;pointer-events:none;transition:.3s}
+.veil.on{opacity:1;pointer-events:auto}
+.sheet{position:fixed;z-index:41;left:50%;top:50%;width:min(860px,92vw);max-height:84vh;overflow:auto;transform:translate(-50%,-46%) scale(.97);opacity:0;pointer-events:none;transition:.35s cubic-bezier(.2,.7,.2,1);padding:30px}
+.sheet.on{opacity:1;transform:translate(-50%,-50%);pointer-events:auto}
+.sheet .close{position:absolute;right:18px;top:16px;border:0;background:rgba(14,20,36,.06);width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:16px}
+.hood{margin-top:20px;padding:14px 16px;border-radius:14px;background:rgba(14,20,36,.035);font:12.5px/1.7 var(--mono);color:var(--sub)}
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,20px);opacity:0;z-index:50;padding:12px 18px;border-radius:14px;font-size:13.5px;transition:.3s}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.foot{margin-top:26px;text-align:center;font-size:12px;color:var(--mute)}
+</style>
+</head>
+<body>
+<div class="bg"><i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i><i class="orb o4"></i><div class="grain"></div></div>
+
+<header class="top">
+  <div class="logo" id="home"><div class="mark"><i></i></div>Doppel</div>
+  <nav class="navr">
+    <a class="pill glass" href="http://localhost:8000/?tab=live"><span class="dot"></span>Live Hunt</a>
+    <a class="pill glass" href="http://localhost:8000/?tab=radar">Campaign Radar</a>
+    <a class="pill glass" href="http://localhost:8000/?tab=fool">Try to fool it</a>
+  </nav>
+</header>
+
+<section class="landing" id="landing">
+  <div class="kicker glass"><span class="dot"></span>Reading the world's new certificates live</div>
+  <h1>Is this link <span>who it says it is?</span></h1>
+  <p class="lede">Paste any address from an SMS, email or ad. Doppel proves who owns it, names the trick, and shows every step.</p>
+  <div class="slot" id="slot"></div>
+  <div class="tries" id="tries"></div>
+  <div class="stats">
+    <div class="stat glass"><b>4.2M</b><span>certificates read live in 1.8 h</span></div>
+    <div class="stat glass"><b>1,583 <small style="font-size:14px;color:var(--mute)">vs 3,488</small></b><span>Doppel flags vs keyword alerts</span></div>
+    <div class="stat glass"><b>0 / 2,548</b><span>false alarms on benign names</span></div>
+  </div>
+</section>
+
+<form class="search glass" id="search" autocomplete="off">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l7 3v6c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+  <input id="q" placeholder="Paste a link… e.g. echallan.parivahan.gov.in.pay-fine.icu" spellcheck="false">
+  <button class="go" aria-label="Investigate"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+</form>
+
+<main class="space" id="space"><div class="grid" id="grid"></div>
+  <div class="foot">Mockup · verdicts, risks and findings are Doppel's real output (2026-11-06) · tile layout is the design proposal</div>
+</main>
+
+<div class="veil" id="veil"></div>
+<div class="sheet glass" id="sheet"></div>
+<div class="toast glass" id="toast"></div>
+
+<script>
+const $=s=>document.querySelector(s);
+const STAGES=[["quick","Quick",[["Q1","Who owns it"],["Q2","Family"],["Q3","Trick"],["Q4","Certificate"]]],
+              ["standard","Standard",[["S1","Human eye"],["S2","ML model"],["S3","Page probe"],["S4","CT history"],["S5","Campaign"]]],
+              ["deep","Deep",[["D1","Page copy"],["D2","Vision AI"],["D3","Credential tracker"]]]];
+const LBL={phishing:"PHISHING",needs_review:"NEEDS REVIEW",genuine:"GENUINE"};
+const TONE={phishing:"var(--rose)",needs_review:"var(--amber)",genuine:"var(--mint)"};
+
+/* Real findings from investigate() on 2026-11-06 (DOPPEL_OFFLINE=1). */
+const P={
+"echallan.parivahan.gov.in.pay-fine.icu":{tag:"the opener",label:"phishing",risk:1.0,kit:true,
+  segs:[["echallan.parivahan.gov.in.","dec","up","decoration the attacker chose"],["pay-fine.icu","own","dn","real owner"]],
+  reason:"A copy of the e-Challan payment page on a stranger's domain, sending card details away.",
+  rule:"Hard rule · credential form on a foreign owner",
+  nodes:{Q1:"bad",Q2:"bad",Q3:"bad",Q4:"neutral",S1:"warn",S2:"bad",S3:"bad",D1:"bad",D2:"bad",D3:"bad"},
+  owner:["pay-fine.icu","icu","'echallan.parivahan.gov.in' is only a sub-part the owner chose; it carries no ownership."],
+  family:[false,"Uses parivahan.gov.in as a prefix, but pay-fine.icu isn't in the Parivahan family."],
+  trick:["Level-squat","parivahan.gov.in",0.75,"The genuine address is used as a prefix of a different owner. '.icu' is 93% phishing in PhiUSIIL (a weak hint only)."],
+  cert:{state:"none",line:"No certificate of a proven Parivahan name lists this host."},
+  sms:["echallan.parivahan.gov.in.pay-fi…",0.75,"A careful reader can tell: visual closeness 0.75, SSIM 0.52."],
+  ml:[1.0,"Reads like the dataset's phishing hosts: subdomains, long host, hyphens."],
+  campaign:{mode:"related",line:"Not a member (it's our local kit). Same brand in the real world: the in-echallan.* island, 5 names, one certificate recipe."},
+  deep:{d1:["59% match to the genuine e-Challan page","form now posts to challan-pay-secure.xyz","added: card number, CVV, expiry, OTP"],
+        d2:["presents itself as Parivahan / e-Challan","owner pay-fine.icu isn't in the family","asks card number, CVV, expiry, OTP"],
+        d3:["typed card number + OTP went to challan-pay-secure.xyz"],
+        flow:["victim types card + OTP","pay-fine.icu","challan-pay-secure.xyz"],hot:[3]},
+  generic:[["Keyword filter",1,"flags 'echallan'"],["Levenshtein",0,"sub-name: distance huge"],["ML model",1,"1.00, but can't say who or why"],["Padlock = safe",2,"local kit"],["Public blocklist",2,"local kit"]],
+  whatif:{domain:"echallan.parivahan.gov.in",label:"genuine",risk:0.006,line:"Same page, real address → GENUINE. The page was never the problem; the name was."},
+  live:["Local kit, never in CT logs.","Its real cousins were caught in CT: in-echallan.* armed 26–29 Oct."]},
+
+"google.co.in":{tag:"looks fake, isn't",label:"genuine",risk:0.142,
+  segs:[["google","brand","up","brand: Google"],[".co.in","proved","dn","on Google's own certificate"]],
+  reason:"Google India. Every rule calls it a fake; Google's own certificate proves it's Google.",
+  rule:"Proof · certificate_san_link (C16)",
+  nodes:{Q1:"neutral",Q2:"warn",Q3:"warn",Q4:"good",S3:"neutral"},
+  owner:["google.co.in","co.in","Plain ASCII, one script: no hidden letters."],
+  family:[false,"Contains 'google', but no list-based proof matched: the family list doesn't name every Google country site."],
+  trick:["Ending swap","google.com",0.77,"Same name as Google, but '.co.in' isn't on the list of Google's endings."],
+  cert:{state:"proof",ca:"Google Trust Services",served:"google.com",sans:"65 names",hit:"*.google.co.in",sha:"b0c47fc7…",off:{label:"needs_review",risk:0.643}},
+  sms:null,ml:null,campaign:null,deep:null,
+  skipWhy:"Not needed: the certificate proved it at the Quick stage.",
+  generic:[["Keyword filter",0,"flags 'google'"],["Levenshtein",0,"close to google.com"],["ML model",1,"0.354, below base rate"],["Padlock = safe",1,"right, by luck"],["Public blocklist",1,"not listed"]],
+  whatif:{cert:true,line:"Without reading the certificate, Doppel would say NEEDS REVIEW 0.643 (ending swap). Flip the switch on the certificate tile."},
+  live:["Proven GENUINE live the same way:","*.vertexai.goog, *.cloud.goog · 920 genuine names in 1.8 h"]},
+
+"in-echallan.online":{tag:"a real attacker",label:"needs_review",risk:0.989,
+  segs:[["in-","mut","up","filler"],["echallan","brand","dn","brand token, exact"],[".online","mut","up","90% phishing ending"]],
+  reason:"Imitates e-Challan, already armed with certificates, and one of 5 names from the same attacker.",
+  rule:"Name only · never convicted without a page · confidence medium",
+  nodes:{Q1:"neutral",Q2:"warn",Q3:"bad",Q4:"neutral",S1:"bad",S2:"bad",S3:"neutral",S4:"bad",S5:"bad"},
+  owner:["in-echallan.online","online","Plain ASCII, one script: no hidden letters."],
+  family:[false,"Contains 'echallan', but no ownership proof matched."],
+  trick:["Combosquat","parivahan.gov.in",0.90,"Brand token 'echallan' plus other words. '.online' is 90% phishing in PhiUSIIL (weak hint)."],
+  cert:{state:"armed",ca:"Google Trust Services + Let's Encrypt",org:"none",first:"26 Oct 2026, 11:28 UTC",count:"4 certificates",recipe:"A+W / A+S3+WS3"},
+  sms:["in-echallan.online",0.90,"Reads as parivahan.gov.in in a message: visual closeness 0.90. A reader would not notice."],
+  ml:[0.91,"Reads like the dataset's phishing hosts: few labels, hyphens, '.online'."],
+  campaign:{mode:"member",line:"5 domains, one certificate recipe, one naming template. Three got certificates within 26 minutes on 28 Oct."},
+  deep:null,skipWhy:"Not opened: Doppel never visits a suspect. This verdict rests on names, certificates and the campaign.",
+  generic:[["Keyword filter",1,"flags 'echallan'"],["Levenshtein",0,"8.6% of combosquats"],["ML model",1,"0.91, no campaign"],["Padlock = safe",0,"valid padlock"],["Public blocklist",0,"not listed (6 Nov)"]],
+  whatif:{domain:"echallan.parivahan.gov.in",label:"genuine",risk:0.006,line:"The real one lives under .gov.in, a restricted registry no attacker can buy into."},
+  live:["First certificate 26 Oct, 11:28 UTC · on the sleeper watch list","Not on Phishing.Database (392k names) on 6 Nov"]},
+
+"kx72-secure.top":{tag:"no brand in the name",label:"phishing",risk:1.0,kit:true,
+  segs:[["kx72-secure.top","plain","dn","no brand anywhere in the name"]],
+  reason:"No brand in the name. The page copies SBI, sends passwords to Telegram, then bounces you to the real SBI.",
+  rule:"Hard rule · copied brand page + credential exfiltration",
+  nodes:{Q1:"neutral",Q3:"neutral",S2:"bad",S3:"bad",D1:"bad",D2:"bad",D3:"bad"},
+  owner:["kx72-secure.top","top","Nothing hidden in the address itself."],
+  family:null,
+  trick:["No trick in the name","every brand",0.16,"Far from every protected brand (best: Paytm at 0.16). Name-based tools stop here, blind."],
+  cert:{state:"none",line:"Local kit: not in CT logs."},
+  sms:null,
+  ml:[1.0,"Reads like phishing hosts (digits, '.top'), but it can't say which brand or why."],
+  campaign:null,skipWhy:"Not reached for a local kit.",
+  deep:{d1:["100% match to the genuine SBI page","form posts to kx72-secure.top"],
+        d2:["presents itself as State Bank of India","owner isn't in SBI's family","asks username + password"],
+        d3:["password → api.telegram.org (token redacted, never called)","two made-up logins both accepted","then bounces to the real sbi.bank.in"],
+        flow:["victim types password","kx72-secure.top","Telegram bot","real sbi.bank.in"],hot:[3]},
+  generic:[["Keyword filter",0,"no brand to match"],["Levenshtein",0,"far from every brand"],["ML model",1,"1.00, but who? why?"],["Padlock = safe",0,"would show a padlock"],["Public blocklist",2,"local kit"]],
+  whatif:null,
+  live:["Local kit, simulated.","Name-only monitors (dnstwist, openSquat) never see it."]}
+};
+const ALIAS={"pay-fine.icu":"echallan.parivahan.gov.in.pay-fine.icu"};
+
+/* ---------- landing ---------- */
+$("#tries").innerHTML=Object.entries(P).map(([d,p])=>`<div class="try" data-d="${d}"><small>${p.tag}</small>${d}</div>`).join("");
+document.querySelectorAll(".try").forEach(t=>t.onclick=()=>{$("#q").value=t.dataset.d;submit()});
+const sb=$("#search");
+function place(){ if(document.body.classList.contains("docked"))return; const r=$("#slot").getBoundingClientRect();
+  Object.assign(sb.style,{left:r.left+"px",top:(r.top+scrollY)+"px",width:r.width+"px",height:r.height+"px",position:"absolute"}); }
+function dockPos(){ const w=Math.min(620,innerWidth-480>320?innerWidth-480:innerWidth-180); Object.assign(sb.style,{position:"fixed",left:((innerWidth-w)/2)+"px",top:"14px",width:w+"px",height:"52px"}); }
+place(); addEventListener("resize",()=>document.body.classList.contains("docked")?dockPos():place());
+document.fonts?.ready.then(place);
+
+function norm(s){return s.trim().toLowerCase().replace(/^[a-z]+:\/\//,"").replace(/[\/?#].*$/,"").replace(/^www\./,"")}
+function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(toast.h);toast.h=setTimeout(()=>t.classList.remove("on"),3600)}
+sb.onsubmit=e=>{e.preventDefault();submit()};
+function submit(){
+  const d=ALIAS[norm($("#q").value)]||norm($("#q").value);
+  if(!d)return;
+  if(!P[d]){toast("Mockup: the four demo cases are pre-loaded. The build sends anything you type to the live engine.");return}
+  $("#q").value=d;
+  if(!document.body.classList.contains("docked")){
+    const r=sb.getBoundingClientRect(); Object.assign(sb.style,{position:"fixed",left:r.left+"px",top:r.top+"px"});
+    sb.offsetWidth; sb.classList.add("anim"); document.body.classList.add("docked"); scrollTo({top:0}); dockPos();
+    setTimeout(()=>render(d),380);
+  } else render(d);
+  $("#q").blur();
+}
+$("#home").onclick=()=>{document.body.classList.remove("docked");sb.classList.remove("anim");$("#grid").innerHTML="";$("#q").value="";place()};
+
+/* ---------- the space ---------- */
+let cur=null, certOn=true, whatOn=false;
+const heatOf=p=>p.segs.flatMap(([t,k])=>[...t].map(ch=>({ch,h:ch==="."||ch==="-"?.25:{dec:.12,own:.92,brand:.04,mut:.72,proved:.06,plain:.08}[k]})));
+const hcol=h=>`hsl(${h<.5?160-h*240:40-(h-.5)*96} ${70+h*15}% ${90-h*10}%)`;
+function T(id,cls,ic,q,body,{d=0,skip=false,tt=""}={}){
+  return `<section class="tile glass ${cls} ${skip?"skip":""}" data-id="${id}" style="--d:${d}s"><div class="th"><div class="ic">${ic}</div><div class="tq">${q}</div><div class="tt">${tt}</div></div>${body}</section>`}
+const skipBody=why=>`<p class="tline">${why}</p>`;
+const chip=(c,t)=>`<span class="chip ${c}">${t}</span>`;
+
+function heroHTML(p){
+  const show=whatOn&&p.whatif&&!p.whatif.cert?{label:p.whatif.label,risk:p.whatif.risk,segs:[[p.whatif.domain,"proved","dn","real owner · restricted registry"]],reason:p.whatif.line,rule:"What-if · same evidence, real address"}
+    :(p.cert?.state==="proof"&&!certOn)?{label:p.cert.off.label,risk:p.cert.off.risk,segs:[["google","brand","up","brand: Google"],[".co.in","mut","dn","not a Google ending?"]],reason:"Certificate check off: it looks like google.com with a different ending.",rule:"Ablation · Certificate Forensics off"}:p;
+  const kit=p.kit?chip("c-acc","simulated kit"):"";
+  return `<div><div class="vrow"><span class="vpill v-${show.label}">${LBL[show.label]}</span>${chip("c-neu",show.rule)}${kit}</div>
+    <div class="reason">${show.reason}</div>
+    <div class="dom">${show.segs.map(([t,k,pos,n])=>`<span class="seg ${k}">${t}<span class="note ${pos}" style="color:${k==="dec"||k==="plain"?"var(--mute)":`var(--${{own:"rose",brand:"acc",mut:"amber",proved:"mint"}[k]})`}">${n}</span></span>`).join("")}</div>
+    <div class="vrow">${["quick","standard","deep"].map(s=>{const on=STAGES.find(x=>x[0]===s)[2].some(([id])=>(show===p?p.nodes:p.nodes)[id]);return chip(on?"c-acc":"c-neu",(on?"● ":"○ ")+s[0].toUpperCase()+s.slice(1))}).join("")}</div></div>
+    <div class="ring" id="ring" style="--c:${TONE[show.label]};--p:${(show.risk*100).toFixed(1)}"><div><b>${show.risk.toFixed(2)}</b><span>risk score</span></div></div>`;
+}
+function render(d){
+  if(cur!==d){certOn=true;whatOn=false}
+  cur=d; const p=P[d], sk=p.skipWhy||"Not needed for this name.";
+  let i=0; const nd=()=>(.15+i++*.07).toFixed(2);
+  const pipe=`<div class="pipe">${STAGES.map(([s,name,ns])=>`<div class="stage"><h5>${name}</h5><div class="nodes">${ns.map(([id,n])=>{const st=p.nodes[id];return `<div class="node ${st||"skip"}" style="--d:${st?nd():0}s"><i></i><b style="font:600 11px var(--mono);color:var(--mute)">${id}</b>${n}</div>`}).join("")}</div></div>`).join("")}</div>`;
+  const heat=heatOf(p);
+  const g=[];
+  g.push(T("hero","s8 hero","","",heroHTML(p),{d:.05}).replace('<div class="th"><div class="ic"></div><div class="tq"></div><div class="tt"></div></div>',""));
+  // what-if
+  const w=p.whatif;
+  g.push(w?T("whatif","s4","↺","What if it were the real address?",
+    w.cert?`<p class="tline" style="margin-top:0">${w.line}</p>`:`<div style="font:600 15px var(--mono);margin:6px 0 10px;color:var(--mint)">${w.domain}</div>${chip("c-good","GENUINE · "+w.risk.toFixed(3))}<p class="tline">${w.line}</p>
+    <div class="toggle" data-act="what"><div class="sw ${whatOn?"on":""}"></div>${whatOn?"Showing the real address":"Show it in the hero"}</div>`,{d:.12})
+    :T("whatif","s4","↺","What if it were the real address?",skipBody("No what-if here: the name was never the clue. The page was."),{d:.12,skip:true}));
+  g.push(T("pipe","s12","⟶","The investigation · the brain escalates only as far as it needs",pipe,{d:.1}));
+  // quick
+  g.push(T("Q1","s4","Q1","Who really owns it?",`<div style="font:600 20px var(--mono);letter-spacing:-.4px">${p.owner[0]}</div><div style="margin-top:8px">${chip("c-neu","public suffix ."+p.owner[1])}</div><p class="tline">${p.owner[2]}</p>`,{d:.3,tt:"C1 C3"}));
+  g.push(p.family?T("Q2","s4","Q2","Is it the brand's own family?",`<div>${chip(p.family[0]?"c-good":"c-bad",p.family[0]?"in the family":"not in the family")}</div><p class="tline">${p.family[1]}</p>`,{d:.36,tt:"C2"})
+    :T("Q2","s4","Q2","Is it the brand's own family?",skipBody("No brand in the address, so there's no family to check."),{d:.36,skip:true,tt:"C2"}));
+  g.push(T("Q3","s4","Q3","Which trick is it using?",`<div class="vrow" style="margin-bottom:12px">${chip(p.trick[2]>.5?"c-warn":"c-neu",p.trick[0])}${chip("c-neu","closeness "+p.trick[2].toFixed(2)+" to "+p.trick[1])}</div>
+    <div class="heat">${heat.map(c=>`<span style="background:${hcol(c.h)}">${c.ch}</span>`).join("")}</div>
+    <div class="legend">matches the brand<i></i>foreign</div><p class="tline">${p.trick[3]}</p>`,{d:.42,tt:"C4 C5 C6"}));
+  // cert
+  const c=p.cert; let cb;
+  if(c.state==="proof") cb=`<div class="cert"><div class="vrow" style="margin-bottom:10px">${chip(certOn?"c-good":"c-neu",certOn?"proves ownership":"check off")}</div><dl class="kv"><dt>Issuer</dt><dd>${c.ca}</dd><dt>Served at</dt><dd>${c.served}</dd><dt>Names on it</dt><dd>${c.sans}</dd><dt>Lists</dt><dd style="color:var(--mint);font-weight:600">${c.hit}</dd><dt>SHA-256</dt><dd>${c.sha}</dd></dl></div>
+    <div class="toggle" data-act="cert"><div class="sw ${certOn?"on":""}"></div>Certificate check ${certOn?"on":"off"}</div>`;
+  else if(c.state==="armed") cb=`<div class="cert"><div class="vrow" style="margin-bottom:10px">${chip("c-bad","armed")}${chip("c-neu","padlock ✓ · proves nothing")}</div><dl class="kv"><dt>Issuers</dt><dd>${c.ca}</dd><dt>Organisation</dt><dd>${c.org}</dd><dt>First cert</dt><dd>${c.first}</dd><dt>In CT logs</dt><dd>${c.count}</dd><dt>Recipe</dt><dd>${c.recipe}</dd></dl></div>`;
+  g.push(c.state==="none"?T("Q4","s5","Q4","Does its certificate prove who it is?",skipBody(c.line),{d:.48,skip:true,tt:"C16 C17"}):T("Q4","s5","Q4","Does its certificate prove who it is?",cb,{d:.48,tt:"C16 C17"}));
+  // standard
+  g.push(p.sms?T("S1","s3","S1","Would a person notice?",`<div class="phone"><div class="bubble">Your e-Challan of ₹2,000 is pending. Pay today: <a>${p.sms[0]}</a></div></div><p class="tline">${p.sms[2]}</p>`,{d:.56,tt:"C7"})
+    :T("S1","s3","S1","Would a person notice?",skipBody(sk),{d:.56,skip:true,tt:"C7"}));
+  g.push(p.ml?T("S2","s4","S2","What does the ML model say?",`<div class="big">${p.ml[0].toFixed(2)}</div><div class="bar"><b style="width:${p.ml[0]*100}%"></b><u style="left:37.9%"></u></div><div class="legend" style="margin-top:0">0<span style="margin-left:31%">base rate 0.379</span><span style="margin-left:auto">1</span></div><p class="tline">${p.ml[1]} A supporting signal, never the verdict.</p>`,{d:.62,tt:"C8"})
+    :T("S2","s4","S2","What does the ML model say?",skipBody(sk),{d:.62,skip:true,tt:"C8"}));
+  // campaign
+  const cm=p.campaign;
+  const isl=cm?`<div class="graph"><svg viewBox="0 0 520 190">
+      <g stroke="#6366F1" stroke-opacity=".35" stroke-width="2">${[[260,95,150,45],[260,95,370,45],[260,95,130,140],[260,95,390,140],[150,45,370,45],[130,140,390,140],[150,45,130,140],[370,45,390,140]].map(a=>`<line x1="${a[0]}" y1="${a[1]}" x2="${a[2]}" y2="${a[3]}"/>`).join("")}</g>
+      ${[[260,95,"in-echallan.online"],[150,45,"in-echallan.date"],[370,45,"in-echallan.party"],[130,140,"in-echallan.trade"],[390,140,"ln-echallan.bid"]].map(([x,y,n],k)=>{const me=cm.mode==="member"&&k===0;return `<circle cx="${x}" cy="${y}" r="${me?13:9}" fill="${me?"#E5484D":"#fff"}" stroke="${me?"#fff":"#6366F1"}" stroke-width="3"/><text x="${x}" y="${y+(y<95?-16:26)}" text-anchor="middle" font-family="JetBrains Mono" font-size="11" fill="#5B6478">${n}</text>`}).join("")}
+      ${[[40,30],[480,170],[60,175],[470,25],[30,100]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="5" fill="#C9CEDD"/>`).join("")}
+    </svg></div>`:"";
+  g.push(cm?T("S5","s7","S5","Is it part of a campaign?",`${cm.mode==="related"?chip("c-neu","related island · same brand"):chip("c-bad","member · strong (same certificate recipe)")}${isl}<p class="tline" style="margin-top:0">${cm.line}</p>`,{d:.7,tt:"C18"})
+    :T("S5","s7","S5","Is it part of a campaign?",skipBody(sk),{d:.7,skip:true,tt:"C18"}));
+  // generic vs doppel
+  const mk=v=>v===1?`<span class="ok">✓</span>`:v===0?`<span class="no">✕</span>`:`<span class="na">–</span>`;
+  g.push(T("gen","s5","vs","Generic tools vs Doppel",`<table class="score">${p.generic.map(([n,v,why])=>`<tr><td>${n}</td><td>${mk(v)}</td><td>${why}</td></tr>`).join("")}<tr><td>Doppel</td><td>${mk(1)}</td><td>${LBL[p.label]}, with proof</td></tr></table><p class="tline" style="font-size:11.5px">✓ right answer · ✕ wrong · – not applicable</p>`,{d:.76}));
+  // deep
+  const dp=p.deep;
+  g.push(dp?T("deep","s12","D","Deep stage · the page, opened safely in a sandbox",`<div class="vrow" style="margin:-4px 0 14px">${chip("c-acc","simulated kit · localhost fixture")}</div>
+    <div class="deep"><div class="shot"><div class="bar2" style="width:60%"></div><div class="bar2" style="width:85%"></div><div class="field"></div><div class="field hot"></div><div class="field hot"></div><div class="btn"></div><div style="font-size:11px;color:var(--mute)">sandboxed render</div></div>
+    <div class="sub"><h6>D1 · Does it copy the real page?</h6><ul>${dp.d1.map(x=>`<li>${x}</li>`).join("")}</ul></div>
+    <div class="sub"><h6>D2 · Who does it claim to be?</h6><ul>${dp.d2.map(x=>`<li>${x}</li>`).join("")}</ul></div>
+    <div class="sub"><h6>D3 · Where does the password go?</h6><ul>${dp.d3.map(x=>`<li>${x}</li>`).join("")}</ul></div></div>
+    <div class="flow">${dp.flow.map((x,k)=>`<span class="${k===dp.flow.length-1||k===2?"hot":""}">${x}</span>`).join("<em>→</em>")}</div>`,{d:.84,tt:"C10–C15"})
+    :T("deep","s12","D","Deep stage · the page, opened safely in a sandbox",skipBody(sk),{d:.84,skip:true,tt:"C10–C15"}));
+  // live + case file
+  g.push(T("live","s6","◉","Live Hunt",`<div style="font:600 15px var(--disp)">${p.live[0]}</div><p class="tline">${p.live[1]}</p><div class="vrow" style="margin-top:12px">${chip("c-neu","4.2M certificates read")}${chip("c-neu","1,583 flags vs 3,488 keyword alerts")}</div>`,{d:.9}));
+  g.push(T("case","s6","¶","Case file",`<p class="tline" style="margin-top:0">A one-page report a bank or CERT-In can act on. Every sentence cites a piece of evidence; nothing is invented.</p><div class="vrow" style="margin-top:12px"><span class="pill glass" style="color:var(--ink)">English</span><span class="pill glass" style="color:var(--ink)">हिंदी</span></div>`,{d:.96}));
+  $("#grid").innerHTML=g.join("");
+}
+
+/* clicks: toggles re-render in place; tiles open the focus sheet */
+$("#grid").addEventListener("click",e=>{
+  const act=e.target.closest("[data-act]");
+  if(act){ e.stopPropagation(); if(act.dataset.act==="cert")certOn=!certOn; else whatOn=!whatOn; rerender(); return }
+  const t=e.target.closest(".tile"); if(!t||t.classList.contains("skip")||t.dataset.id==="hero")return;
+  openSheet(t);
+});
+function rerender(){ // keep the entrance animation off on a toggle
+  render(cur); document.querySelectorAll(".tile,.node,.note").forEach(x=>{x.style.animation="none";x.style.opacity=1;x.style.transform="none"});
+}
+const HOOD={Q1:"Address Reader · Public Suffix List (incl. private section) → registrable owner · checks C1, C3",Q2:"Family Verifier · proofs: restricted registry, brand-owned TLD, official list, certificate SANs · C2",
+  Q3:"Trick Detector · 16 tricks, glyph-cost edit distance, combo words, TLD priors · C4, C5, C6",Q4:"Certificate Forensics · CT cache: SAN links, validated organisation, first certificate (armed) · C16, C17",
+  S1:"Human-Eye Renderer · renders the name as an SMS shows it, compares with SSIM · C7",S2:"Risk Model · PhiUSIIL-trained, calibrated; a weak, supporting signal only · C8",
+  S5:"Campaign Radar · naming template + certificate recipe + timing → islands (NetworkX) · C18",deep:"Page Inspector · Vision AI (Gemini) · Credential Tracker in a sandboxed browser; never a real suspect · C10–C15",
+  gen:"Computed per case by script in the build (never typed by hand).",whatif:"Counterfactual: the same evidence re-scored with the genuine address.",live:"P12 collector: public CT stream → the brain → catch store.",case:"Grounded narration: every sentence must cite an evidence id or it's dropped.",pipe:"The brain is a deterministic policy, not an LLM: it escalates Quick → Standard → Deep only when evidence is unresolved."};
+function openSheet(t){
+  const s=$("#sheet"); s.innerHTML=`<button class="close" onclick="closeSheet()">✕</button>`+t.innerHTML+`<div class="hood">Under the hood · ${HOOD[t.dataset.id]||""}</div>`;
+  s.classList.add("on");$("#veil").classList.add("on");
+}
+function closeSheet(){$("#sheet").classList.remove("on");$("#veil").classList.remove("on")}
+if(location.hash.length>1){$("#q").value=decodeURIComponent(location.hash.slice(1));setTimeout(submit,300)}
+$("#veil").onclick=closeSheet; addEventListener("keydown",e=>{if(e.key==="Escape")closeSheet()});
+</script>
+</body>
+</html>

@@ -1,0 +1,562 @@
+{
+  "schema_version": "1.0.0",
+  "domain": "paytrn.com",
+  "input": {
+    "raw": "paytrn.com",
+    "display": "paytrn.com",
+    "source": "gallery"
+  },
+  "owner": "paytrn.com",
+  "target_brand": {
+    "id": "paytm",
+    "name": "Paytm"
+  },
+  "closeness": 0.96,
+  "risk_score": 0.55,
+  "confidence": "low",
+  "label": "needs_review",
+  "reason": "Reads as paytm.com to the eye (rn -> m), but today the page copies nothing and asks for nothing. An analyst should decide.",
+  "hard_rule": null,
+  "counterfactual": {
+    "change": "rn -> m look-alike undone (treat 'paytrn' as an ordinary word)",
+    "undone_evidence_ids": [
+      "E4",
+      "E5",
+      "E6"
+    ],
+    "label": "benign",
+    "risk_score": 0.18,
+    "summary": "Would be BENIGN without the rn -> m look-alike: everything else about it is unremarkable."
+  },
+  "timings_ms": {
+    "quick": 14,
+    "standard": 700,
+    "deep": 2600,
+    "total": 3318
+  },
+  "stages": [
+    {
+      "stage": "quick",
+      "status": "completed",
+      "tools": [
+        "address_reader",
+        "family_verifier",
+        "trick_detector"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "provisional": {
+        "label": "suspicious",
+        "risk_score": 0.7,
+        "reason": "Suspicious: reads as 'paytm' to the eye."
+      }
+    },
+    {
+      "stage": "standard",
+      "status": "completed",
+      "tools": [
+        "human_eye_renderer",
+        "risk_model",
+        "page_probe"
+      ],
+      "evidence_ids": [
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "provisional": {
+        "label": "suspicious",
+        "risk_score": 0.62,
+        "reason": "Suspicious name, but the page asks for nothing."
+      }
+    },
+    {
+      "stage": "deep",
+      "status": "completed",
+      "tools": [
+        "page_inspector",
+        "vision_ai",
+        "credential_tracker"
+      ],
+      "evidence_ids": [
+        "E9",
+        "E10",
+        "E11",
+        "E12"
+      ],
+      "provisional": {
+        "label": "needs_review",
+        "risk_score": 0.55,
+        "reason": "Reads as paytm.com to the eye (rn -> m), but today the page copies nothing and asks for nothing. An analyst should decide."
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "tool": "address_reader",
+      "stage": "quick",
+      "criterion": "C1",
+      "finding": "owner_resolved",
+      "points_to": "neutral",
+      "strength": "strong",
+      "score": 0,
+      "target_brand": null,
+      "summary": "Real owner is paytrn.com (public suffix 'com').",
+      "details": {
+        "owner": "paytrn.com",
+        "public_suffix": "com",
+        "private_suffix": false
+      },
+      "duration_ms": 2
+    },
+    {
+      "evidence_id": "E2",
+      "tool": "address_reader",
+      "stage": "quick",
+      "criterion": "C3",
+      "finding": "single_script",
+      "points_to": "neutral",
+      "strength": "strong",
+      "score": 0,
+      "target_brand": null,
+      "summary": "Plain ASCII, one script: no hidden letters.",
+      "details": {
+        "scripts": [
+          "Latin"
+        ]
+      },
+      "duration_ms": 2
+    },
+    {
+      "evidence_id": "E3",
+      "tool": "family_verifier",
+      "stage": "quick",
+      "criterion": "C2",
+      "finding": "not_in_family",
+      "points_to": "phishing",
+      "strength": "medium",
+      "score": 0.5,
+      "target_brand": {
+        "id": "paytm",
+        "name": "Paytm"
+      },
+      "summary": "Not Paytm's: no ownership proof matched.",
+      "details": {
+        "proofs_checked": [
+          "brand_tld",
+          "restricted_registry",
+          "official_list"
+        ],
+        "proofs_matched": []
+      },
+      "duration_ms": 1
+    },
+    {
+      "evidence_id": "E4",
+      "tool": "trick_detector",
+      "stage": "quick",
+      "criterion": "C5",
+      "finding": "twin_letters",
+      "points_to": "phishing",
+      "strength": "medium",
+      "score": 0.9,
+      "target_brand": {
+        "id": "paytm",
+        "name": "Paytm"
+      },
+      "summary": "'rn' stands in for 'm': paytrn reads as paytm.",
+      "details": {
+        "edits": [
+          {
+            "op": "substitute",
+            "candidate": "rn",
+            "genuine": "m",
+            "candidate_span": [
+              4,
+              6
+            ],
+            "genuine_span": [
+              4,
+              5
+            ],
+            "cost": 0.05,
+            "kind": "twin_letters"
+          }
+        ],
+        "levenshtein": 2
+      },
+      "duration_ms": 11
+    },
+    {
+      "evidence_id": "E5",
+      "tool": "trick_detector",
+      "stage": "quick",
+      "criterion": "C4",
+      "finding": "brand_closeness",
+      "points_to": "phishing",
+      "strength": "medium",
+      "score": 0.96,
+      "target_brand": {
+        "id": "paytm",
+        "name": "Paytm"
+      },
+      "summary": "Closeness to paytm.com is 0.96 by visual edit distance (plain letter counting says only 0.67).",
+      "details": {
+        "closeness": 0.96,
+        "levenshtein_similarity": 0.67,
+        "genuine": "paytm.com"
+      },
+      "duration_ms": 11
+    },
+    {
+      "evidence_id": "E6",
+      "tool": "human_eye_renderer",
+      "stage": "standard",
+      "criterion": "C7",
+      "finding": "sms_view_near_identical",
+      "points_to": "phishing",
+      "strength": "medium",
+      "score": 0.93,
+      "target_brand": {
+        "id": "paytm",
+        "name": "Paytm"
+      },
+      "summary": "In the SMS view, SSIM 0.97 against paytm.com: a reader would not notice.",
+      "details": {
+        "ssim": 0.97,
+        "visual_edit_distance": 0.05,
+        "artifacts": [
+          {
+            "kind": "render",
+            "path": "renders/paytrn.com_sms.png",
+            "caption": "SMS view, candidate vs genuine"
+          }
+        ]
+      },
+      "duration_ms": 290
+    },
+    {
+      "evidence_id": "E7",
+      "tool": "risk_model",
+      "stage": "standard",
+      "criterion": "C8",
+      "finding": "ml_risk",
+      "points_to": "genuine",
+      "strength": "weak",
+      "score": 0.59,
+      "target_brand": null,
+      "summary": "ML risk 0.41 (supporting signal only).",
+      "details": {
+        "probability": 0.41
+      },
+      "duration_ms": 35
+    },
+    {
+      "evidence_id": "E8",
+      "tool": "page_probe",
+      "stage": "standard",
+      "criterion": "C9",
+      "finding": "live_no_credentials",
+      "points_to": "genuine",
+      "strength": "medium",
+      "score": 0.4,
+      "target_brand": null,
+      "summary": "A live page with ordinary content and no login or payment form.",
+      "details": {
+        "status": "live",
+        "http_status": 200,
+        "has_login_form": false
+      },
+      "duration_ms": 700
+    },
+    {
+      "evidence_id": "E9",
+      "tool": "page_inspector",
+      "stage": "deep",
+      "criterion": "C10",
+      "finding": "visual_mismatch",
+      "points_to": "genuine",
+      "strength": "medium",
+      "score": 0.6,
+      "target_brand": {
+        "id": "paytm",
+        "name": "Paytm"
+      },
+      "summary": "Screenshot matches Paytm's saved page at only 18%.",
+      "details": {
+        "ssim": 0.18,
+        "phash_distance": 31
+      },
+      "duration_ms": 1900
+    },
+    {
+      "evidence_id": "E10",
+      "tool": "vision_ai",
+      "stage": "deep",
+      "criterion": "C12",
+      "finding": "no_brand_claim",
+      "points_to": "genuine",
+      "strength": "strong",
+      "score": 0.5,
+      "target_brand": null,
+      "summary": "The page doesn't claim to be any protected brand.",
+      "details": {
+        "claimed_brand": null,
+        "model": "gemini-flash",
+        "temperature": 0
+      },
+      "duration_ms": 2600
+    },
+    {
+      "evidence_id": "E11",
+      "tool": "vision_ai",
+      "stage": "deep",
+      "criterion": "C13",
+      "finding": "asks_nothing_sensitive",
+      "points_to": "genuine",
+      "strength": "medium",
+      "score": 0.6,
+      "target_brand": null,
+      "summary": "Asks for nothing sensitive.",
+      "details": {
+        "asks_for": []
+      },
+      "duration_ms": 2600
+    },
+    {
+      "evidence_id": "E12",
+      "tool": "credential_tracker",
+      "stage": "deep",
+      "criterion": "C14",
+      "finding": "no_credential_form",
+      "points_to": "neutral",
+      "strength": "strong",
+      "score": 0,
+      "target_brand": null,
+      "summary": "No form to submit, so there is no credential destination to report.",
+      "details": {
+        "forms_found": 0
+      },
+      "duration_ms": 900
+    }
+  ],
+  "trace": [
+    {
+      "step": 1,
+      "t_ms": 0,
+      "kind": "case_opened",
+      "message": "New case: paytrn.com. Single investigation, so every stage runs and the verdict updates after each one."
+    },
+    {
+      "step": 2,
+      "t_ms": 1,
+      "kind": "tool",
+      "stage": "quick",
+      "tool": "address_reader",
+      "args": {
+        "domain": "paytrn.com"
+      },
+      "duration_ms": 2,
+      "evidence_ids": [
+        "E1",
+        "E2"
+      ],
+      "risk_before": 0.0,
+      "risk_after": 0.1,
+      "message": "Address Reader: ordinary ASCII name."
+    },
+    {
+      "step": 3,
+      "t_ms": 3,
+      "kind": "tool",
+      "stage": "quick",
+      "tool": "family_verifier",
+      "args": {
+        "owner": "paytrn.com"
+      },
+      "duration_ms": 1,
+      "evidence_ids": [
+        "E3"
+      ],
+      "risk_before": 0.1,
+      "risk_after": 0.2,
+      "message": "Family Verifier: not in any brand's family."
+    },
+    {
+      "step": 4,
+      "t_ms": 4,
+      "kind": "tool",
+      "stage": "quick",
+      "tool": "trick_detector",
+      "args": {
+        "domain": "paytrn.com",
+        "owner": "paytrn.com"
+      },
+      "duration_ms": 11,
+      "evidence_ids": [
+        "E4",
+        "E5"
+      ],
+      "risk_before": 0.2,
+      "risk_after": 0.7,
+      "message": "Trick Detector: rn -> m twin letters, imitating Paytm."
+    },
+    {
+      "step": 5,
+      "t_ms": 15,
+      "kind": "provisional_verdict",
+      "stage": "quick",
+      "label": "suspicious",
+      "risk_after": 0.7,
+      "message": "Suspicious: reads as 'paytm' to the eye."
+    },
+    {
+      "step": 6,
+      "t_ms": 15,
+      "kind": "policy",
+      "message": "Brand signal found, so go to Stage 2 (Standard)."
+    },
+    {
+      "step": 7,
+      "t_ms": 16,
+      "kind": "tool",
+      "stage": "standard",
+      "tool": "human_eye_renderer",
+      "args": {
+        "candidate": "paytrn.com",
+        "genuine": "paytm.com",
+        "view": "sms"
+      },
+      "duration_ms": 290,
+      "evidence_ids": [
+        "E6"
+      ],
+      "risk_before": 0.7,
+      "risk_after": 0.74,
+      "message": "Human-Eye Renderer: near-identical to the eye."
+    },
+    {
+      "step": 8,
+      "t_ms": 16,
+      "kind": "tool",
+      "stage": "standard",
+      "tool": "risk_model",
+      "args": {
+        "domain": "paytrn.com"
+      },
+      "duration_ms": 35,
+      "evidence_ids": [
+        "E7"
+      ],
+      "risk_before": 0.74,
+      "risk_after": 0.72,
+      "message": "Risk Model: middling ML risk."
+    },
+    {
+      "step": 9,
+      "t_ms": 16,
+      "kind": "tool",
+      "stage": "standard",
+      "tool": "page_probe",
+      "args": {
+        "domain": "paytrn.com"
+      },
+      "duration_ms": 700,
+      "evidence_ids": [
+        "E8"
+      ],
+      "risk_before": 0.72,
+      "risk_after": 0.62,
+      "message": "Page Probe: live page, but it asks for nothing."
+    },
+    {
+      "step": 10,
+      "t_ms": 716,
+      "kind": "provisional_verdict",
+      "stage": "standard",
+      "label": "suspicious",
+      "risk_after": 0.62,
+      "message": "Suspicious name, but the page asks for nothing."
+    },
+    {
+      "step": 11,
+      "t_ms": 716,
+      "kind": "policy",
+      "message": "Live page, so go to Stage 3 (Deep) to check whether it copies Paytm."
+    },
+    {
+      "step": 12,
+      "t_ms": 717,
+      "kind": "tool",
+      "stage": "deep",
+      "tool": "page_inspector",
+      "args": {
+        "url": "https://paytrn.com/",
+        "genuine_snapshot": "paytm_home"
+      },
+      "duration_ms": 1900,
+      "evidence_ids": [
+        "E9"
+      ],
+      "risk_before": 0.62,
+      "risk_after": 0.58,
+      "message": "Page Inspector: doesn't look like Paytm."
+    },
+    {
+      "step": 13,
+      "t_ms": 717,
+      "kind": "tool",
+      "stage": "deep",
+      "tool": "vision_ai",
+      "args": {
+        "screenshot": "deep/paytrn.com.png"
+      },
+      "duration_ms": 2600,
+      "evidence_ids": [
+        "E10",
+        "E11"
+      ],
+      "risk_before": 0.58,
+      "risk_after": 0.55,
+      "message": "Vision AI: no brand claimed, nothing requested."
+    },
+    {
+      "step": 14,
+      "t_ms": 717,
+      "kind": "tool",
+      "stage": "deep",
+      "tool": "credential_tracker",
+      "args": {
+        "url": "https://paytrn.com/"
+      },
+      "duration_ms": 900,
+      "evidence_ids": [
+        "E12"
+      ],
+      "risk_before": 0.55,
+      "risk_after": 0.55,
+      "message": "Credential Tracker: nothing to submit."
+    },
+    {
+      "step": 15,
+      "t_ms": 3318,
+      "kind": "final_verdict",
+      "label": "needs_review",
+      "risk_before": 0.55,
+      "risk_after": 0.55,
+      "message": "NEEDS REVIEW: Reads as paytm.com to the eye (rn -> m), but today the page copies nothing and asks for nothing. An analyst should decide."
+    }
+  ],
+  "meta": {
+    "generated_at": "2026-11-05T10:00:00+05:30",
+    "engine_version": "0.0.1-mock",
+    "mock": true,
+    "notes": "Risk 0.55 falls inside the NEEDS REVIEW band (mock band 0.40-0.70; P11 sets it by split-conformal)."
+  }
+}

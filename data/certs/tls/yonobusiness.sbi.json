@@ -1,0 +1,25 @@
+{
+ "host": "yonobusiness.sbi",
+ "brand": "sbi",
+ "fetched_at": "2026-11-06T00:18:16Z",
+ "source": "live_tls",
+ "cert": {
+  "sha256": "c117e74a5423611c59b44322314583fb188d8c386993bd962c29a33ae3caff68",
+  "subject": {
+   "cn": "yonobusiness.sbi",
+   "o": "STATE BANK OF INDIA",
+   "c": "IN"
+  },
+  "issuer": {
+   "cn": "DigiCert EV RSA CA G2",
+   "o": "DigiCert Inc"
+  },
+  "sans": [
+   "yonobusiness.sbi",
+   "www.yonobusiness.sbi"
+  ],
+  "not_before": "2026-06-12T00:00:00Z",
+  "not_after": "2026-12-27T23:59:59Z",
+  "validation": "EV"
+ }
+}

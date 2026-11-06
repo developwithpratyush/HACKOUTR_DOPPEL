@@ -1,0 +1,26 @@
+# Free-hosting / site-builder platforms that the Public Suffix List does NOT list as
+# private suffixes. Users get <name>.<platform> without registering a domain, so the
+# real owner is "a user of <platform>", exactly like web.app or workers.dev.
+#
+# Derived in P2 from PhiUSIIL (data/raw/phiusiil): registrable domains with >= 50
+# distinct phishing subdomains and 0 legitimate rows, kept only when the name is a
+# known hosting or site-builder service. Re-derive with the query in the P2 handoff.
+weeblysite.com
+weebly.com
+godaddysites.com
+webwave.dev
+glitch.me
+myportfolio.com
+start.page
+usrfiles.com
+boxmode.io
+jimdosite.com
+webcindario.com
+000webhostapp.com
+hyperphp.com
+mystrikingly.com
+temp-site.link
+backblazeb2.com
+myqcloud.com
+myhuaweicloud.com
+infura-ipfs.io

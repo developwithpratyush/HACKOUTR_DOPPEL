@@ -1,0 +1,25 @@
+{
+ "host": "www.sbi.co.in",
+ "brand": "sbi",
+ "fetched_at": "2026-11-06T00:18:03Z",
+ "source": "live_tls",
+ "cert": {
+  "sha256": "b3bd002fd1c92478a4c9e4149a4051957884b3160020db483bd94c4ede751853",
+  "subject": {
+   "cn": "*.sbi.co.in",
+   "o": null,
+   "c": null
+  },
+  "issuer": {
+   "cn": "Entrust DV TLS Issuing RSA CA 2",
+   "o": "Entrust Limited"
+  },
+  "sans": [
+   "*.sbi.co.in",
+   "sbi.co.in"
+  ],
+  "not_before": "2026-06-16T00:00:00Z",
+  "not_after": "2026-12-31T23:59:59Z",
+  "validation": "DV"
+ }
+}

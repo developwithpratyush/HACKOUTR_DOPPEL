@@ -1,0 +1,632 @@
+{
+  "schema_version": "1.0.0",
+  "domain": "xn--pytm-53d.com",
+  "input": {
+    "raw": "https://pаytm.com/login",
+    "display": "pаytm.com",
+    "source": "gallery"
+  },
+  "owner": "xn--pytm-53d.com",
+  "target_brand": {
+    "id": "paytm",
+    "name": "Paytm"
+  },
+  "closeness": 0.99,
+  "risk_score": 0.97,
+  "confidence": "high",
+  "label": "phishing",
+  "reason": "Looks exactly like paytm.com because of one hidden Cyrillic letter, copies Paytm's login page, and sends the password to itself.",
+  "hard_rule": {
+    "id": "H2_brand_claim_foreign_credentials",
+    "forces": "phishing",
+    "description": "The page claims a brand, the owner isn't in that brand's family, and the credentials leave to a domain outside it.",
+    "evidence_ids": [
+      "E11",
+      "E13"
+    ]
+  },
+  "counterfactual": {
+    "change": "Cyrillic 'а' (U+0430) -> Latin 'a'",
+    "undone_evidence_ids": [
+      "E2",
+      "E4"
+    ],
+    "label": "genuine",
+    "risk_score": 0.02,
+    "summary": "Would be GENUINE only if the 'а' were a Latin 'a': one hidden letter is all that separates it from paytm.com.",
+    "counterfactual_domain": "paytm.com"
+  },
+  "timings_ms": {
+    "quick": 18,
+    "standard": 790,
+    "deep": 4800,
+    "total": 5612
+  },
+  "stages": [
+    {
+      "stage": "quick",
+      "status": "completed",
+      "tools": [
+        "address_reader",
+        "family_verifier",
+        "trick_detector"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "provisional": {
+        "label": "suspicious",
+        "risk_score": 0.78,
+        "reason": "Suspicious: one hidden Cyrillic letter, imitating Paytm."
+      }
+    },
+    {
+      "stage": "standard",
+      "status": "completed",
+      "tools": [
+        "human_eye_renderer",
+        "risk_model",
+        "page_probe"
+      ],
+      "evidence_ids": [
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "provisional": {
+        "label": "suspicious",
+        "risk_score": 0.86,
+        "reason": "Suspicious: invisible to a reader, and a live login page exists."
+      }
+    },
+    {
+      "stage": "deep",
+      "status": "completed",
+      "tools": [
+        "page_inspector",
+        "vision_ai",
+        "credential_tracker"
+      ],
+      "evidence_ids": [
+        "E9",
+        "E10",
+        "E11",
+        "E12",
+        "E13"
+      ],
+      "provisional": {
+        "label": "phishing",
+        "risk_score": 0.97,
+        "reason": "Looks exactly like paytm.com because of one hidden Cyrillic letter, copies Paytm's login page, and sends the password to itself."
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "tool": "address_reader",
+      "stage": "quick",
+      "criterion": "C1",
+      "finding": "owner_resolved",
+      "points_to": "neutral",
+      "strength": "strong",
+      "score": 0,
+      "target_brand": null,
+      "summary": "Real owner is xn--pytm-53d.com (public suffix 'com').",
+      "details": {
+        "owner": "xn--pytm-53d.com",
+        "public_suffix": "com",
+        "private_suffix": false
+      },
+      "duration_ms": 3
+    },
+    {
+      "evidence_id": "E2",
+      "tool": "address_reader",
+      "stage": "quick",
+      "criterion": "C3",
+      "finding": "mixed_script",
+      "points_to": "phishing",
+      "strength": "strong",
+      "score": 0.95,
+      "target_brand": null,
+      "summary": "Mixes Latin and Cyrillic: the second letter is Cyrillic 'а' (U+0430), not Latin 'a'.",
+      "details": {
+        "scripts": [
+          "Latin",
+          "Cyrillic"
+        ],
+        "unicode": "pаytm.com",
+        "edits": [
+          {
+            "op": "substitute",
+            "candidate": "а",
+            "genuine": "a",
+            "candidate_span": [
+              1,
+              2
+            ],
+            "genuine_span": [
+              1,
+              2
+            ],
+            "cost": 0.0,
+            "kind": "homoglyph",
+            "codepoints": [
+              "U+0430"
+            ]
+          }
+        ]
+      },
+      "duration_ms": 3
+    },
+    {
+      "evidence_id": "E3",
+      "tool": "family_verifier",
+      "stage": "quick",
+      "criterion": "C2",
+      "finding": "not_in_family",
+      "points_to": "phishing",
+      "strength": "medium",
+      "score": 0.5,
+      "target_brand": {
+        "id": "paytm",
+        "name": "Paytm"
+      },
+      "summary": "Not Paytm's: no brand-owned ending, no restricted registry, not on Paytm's official list.",
+      "details": {
+        "proofs_checked": [
+          "brand_tld",
+          "restricted_registry",
+          "official_list"
+        ],
+        "proofs_matched": []
+      },
+      "duration_ms": 1
+    },
+    {
+      "evidence_id": "E4",
+      "tool": "trick_detector",
+      "stage": "quick",
+      "criterion": "C5",
+      "finding": "homoglyph",
+      "points_to": "phishing",
+      "strength": "medium",
+      "score": 0.95,
+      "target_brand": {
+        "id": "paytm",
+        "name": "Paytm"
+      },
+      "summary": "UTS-39 skeleton is 'paytm.com', identical to the genuine paytm.com.",
+      "details": {
+        "skeleton": "paytm.com",
+        "genuine": "paytm.com"
+      },
+      "duration_ms": 14
+    },
+    {
+      "evidence_id": "E5",
+      "tool": "trick_detector",
+      "stage": "quick",
+      "criterion": "C4",
+      "finding": "brand_closeness",
+      "points_to": "phishing",
+      "strength": "medium",
+      "score": 0.99,
+      "target_brand": {
+        "id": "paytm",
+        "name": "Paytm"
+      },
+      "summary": "Closeness to paytm.com is 0.99 (one zero-cost homoglyph swap).",
+      "details": {
+        "closeness": 0.99,
+        "genuine": "paytm.com",
+        "per_brand": {
+          "paytm": 0.99,
+          "sbi": 0.04
+        }
+      },
+      "duration_ms": 14
+    },
+    {
+      "evidence_id": "E6",
+      "tool": "human_eye_renderer",
+      "stage": "standard",
+      "criterion": "C7",
+      "finding": "sms_view_identical",
+      "points_to": "phishing",
+      "strength": "medium",
+      "score": 0.98,
+      "target_brand": {
+        "id": "paytm",
+        "name": "Paytm"
+      },
+      "summary": "Rendered in the SMS view, it is pixel-identical to paytm.com (SSIM 1.00).",
+      "details": {
+        "ssim": 1.0,
+        "visual_edit_distance": 0.0,
+        "artifacts": [
+          {
+            "kind": "render",
+            "path": "renders/xn--pytm-53d.com_sms.png",
+            "caption": "SMS view, candidate vs genuine"
+          }
+        ]
+      },
+      "duration_ms": 310
+    },
+    {
+      "evidence_id": "E7",
+      "tool": "risk_model",
+      "stage": "standard",
+      "criterion": "C8",
+      "finding": "ml_risk",
+      "points_to": "genuine",
+      "strength": "weak",
+      "score": 0.78,
+      "target_brand": null,
+      "summary": "ML risk 0.22: the dataset model sees an ordinary short .com (supporting signal only).",
+      "details": {
+        "probability": 0.22
+      },
+      "duration_ms": 40
+    },
+    {
+      "evidence_id": "E8",
+      "tool": "page_probe",
+      "stage": "standard",
+      "criterion": "C9",
+      "finding": "live_login_form",
+      "points_to": "phishing",
+      "strength": "medium",
+      "score": 0.7,
+      "target_brand": null,
+      "summary": "A live page with a login form (mobile number + password).",
+      "details": {
+        "status": "live",
+        "http_status": 200,
+        "has_login_form": true
+      },
+      "duration_ms": 790
+    },
+    {
+      "evidence_id": "E9",
+      "tool": "page_inspector",
+      "stage": "deep",
+      "criterion": "C10",
+      "finding": "visual_match",
+      "points_to": "phishing",
+      "strength": "medium",
+      "score": 0.94,
+      "target_brand": {
+        "id": "paytm",
+        "name": "Paytm"
+      },
+      "summary": "Screenshot matches the saved Paytm login page at 94%.",
+      "details": {
+        "phash_distance": 4,
+        "ssim": 0.94,
+        "artifacts": [
+          {
+            "kind": "heatmap",
+            "path": "deep/xn--pytm-53d.com_heatmap.png",
+            "caption": "Differences vs genuine Paytm login"
+          }
+        ]
+      },
+      "duration_ms": 2100
+    },
+    {
+      "evidence_id": "E10",
+      "tool": "page_inspector",
+      "stage": "deep",
+      "criterion": "C11",
+      "finding": "form_target_changed",
+      "points_to": "phishing",
+      "strength": "medium",
+      "score": 0.8,
+      "target_brand": {
+        "id": "paytm",
+        "name": "Paytm"
+      },
+      "summary": "Same layout as the genuine page, but the form now posts to /collect.php on the suspect domain.",
+      "details": {
+        "genuine_action": "https://paytm.com/api/login",
+        "suspect_action": "https://xn--pytm-53d.com/collect.php"
+      },
+      "duration_ms": 2100
+    },
+    {
+      "evidence_id": "E11",
+      "tool": "vision_ai",
+      "stage": "deep",
+      "criterion": "C12",
+      "finding": "claimed_brand_mismatch",
+      "points_to": "phishing",
+      "strength": "strong",
+      "score": 0.95,
+      "target_brand": {
+        "id": "paytm",
+        "name": "Paytm"
+      },
+      "summary": "The page claims to be Paytm, but its owner isn't in Paytm's family.",
+      "details": {
+        "claimed_brand": "Paytm",
+        "model": "gemini-flash",
+        "temperature": 0
+      },
+      "duration_ms": 2900
+    },
+    {
+      "evidence_id": "E12",
+      "tool": "vision_ai",
+      "stage": "deep",
+      "criterion": "C13",
+      "finding": "asks_sensitive",
+      "points_to": "phishing",
+      "strength": "medium",
+      "score": 0.85,
+      "target_brand": {
+        "id": "paytm",
+        "name": "Paytm"
+      },
+      "summary": "Asks for mobile number, password and OTP.",
+      "details": {
+        "asks_for": [
+          "mobile_number",
+          "password",
+          "otp"
+        ]
+      },
+      "duration_ms": 2900
+    },
+    {
+      "evidence_id": "E13",
+      "tool": "credential_tracker",
+      "stage": "deep",
+      "criterion": "C14",
+      "finding": "credentials_to_foreign_domain",
+      "points_to": "phishing",
+      "strength": "strong",
+      "score": 0.9,
+      "target_brand": {
+        "id": "paytm",
+        "name": "Paytm"
+      },
+      "summary": "Dummy credentials were POSTed to xn--pytm-53d.com/collect.php, outside Paytm's family.",
+      "details": {
+        "first_hop": "https://xn--pytm-53d.com/collect.php",
+        "dummy_credentials": true,
+        "requests_captured": 7
+      },
+      "duration_ms": 4800
+    }
+  ],
+  "trace": [
+    {
+      "step": 1,
+      "t_ms": 0,
+      "kind": "case_opened",
+      "message": "New case: xn--pytm-53d.com (shown as pаytm.com in the SMS). Single investigation, so every stage runs and the verdict updates after each one."
+    },
+    {
+      "step": 2,
+      "t_ms": 1,
+      "kind": "tool",
+      "stage": "quick",
+      "tool": "address_reader",
+      "args": {
+        "domain": "xn--pytm-53d.com"
+      },
+      "duration_ms": 3,
+      "evidence_ids": [
+        "E1",
+        "E2"
+      ],
+      "risk_before": 0.0,
+      "risk_after": 0.55,
+      "message": "Address Reader: decoded the punycode and found a hidden Cyrillic letter."
+    },
+    {
+      "step": 3,
+      "t_ms": 4,
+      "kind": "tool",
+      "stage": "quick",
+      "tool": "family_verifier",
+      "args": {
+        "owner": "xn--pytm-53d.com"
+      },
+      "duration_ms": 1,
+      "evidence_ids": [
+        "E3"
+      ],
+      "risk_before": 0.55,
+      "risk_after": 0.62,
+      "message": "Family Verifier: no ownership proof for any protected brand."
+    },
+    {
+      "step": 4,
+      "t_ms": 5,
+      "kind": "tool",
+      "stage": "quick",
+      "tool": "trick_detector",
+      "args": {
+        "domain": "xn--pytm-53d.com",
+        "owner": "xn--pytm-53d.com"
+      },
+      "duration_ms": 14,
+      "evidence_ids": [
+        "E4",
+        "E5"
+      ],
+      "risk_before": 0.62,
+      "risk_after": 0.78,
+      "message": "Trick Detector: homoglyph of paytm.com."
+    },
+    {
+      "step": 5,
+      "t_ms": 19,
+      "kind": "provisional_verdict",
+      "stage": "quick",
+      "label": "suspicious",
+      "risk_after": 0.78,
+      "message": "Suspicious: one hidden Cyrillic letter, imitating Paytm."
+    },
+    {
+      "step": 6,
+      "t_ms": 19,
+      "kind": "policy",
+      "message": "Brand signal found, so go to Stage 2 (Standard)."
+    },
+    {
+      "step": 7,
+      "t_ms": 20,
+      "kind": "tool",
+      "stage": "standard",
+      "tool": "human_eye_renderer",
+      "args": {
+        "candidate": "pаytm.com",
+        "genuine": "paytm.com",
+        "view": "sms"
+      },
+      "duration_ms": 310,
+      "evidence_ids": [
+        "E6"
+      ],
+      "risk_before": 0.78,
+      "risk_after": 0.82,
+      "message": "Human-Eye Renderer: a reader can't see any difference."
+    },
+    {
+      "step": 8,
+      "t_ms": 20,
+      "kind": "tool",
+      "stage": "standard",
+      "tool": "risk_model",
+      "args": {
+        "domain": "xn--pytm-53d.com"
+      },
+      "duration_ms": 40,
+      "evidence_ids": [
+        "E7"
+      ],
+      "risk_before": 0.82,
+      "risk_after": 0.81,
+      "message": "Risk Model: low ML risk. The name-only model is fooled, as expected."
+    },
+    {
+      "step": 9,
+      "t_ms": 20,
+      "kind": "tool",
+      "stage": "standard",
+      "tool": "page_probe",
+      "args": {
+        "domain": "xn--pytm-53d.com"
+      },
+      "duration_ms": 790,
+      "evidence_ids": [
+        "E8"
+      ],
+      "risk_before": 0.81,
+      "risk_after": 0.86,
+      "message": "Page Probe: live page with a login form."
+    },
+    {
+      "step": 10,
+      "t_ms": 810,
+      "kind": "provisional_verdict",
+      "stage": "standard",
+      "label": "suspicious",
+      "risk_after": 0.86,
+      "message": "Suspicious: invisible to a reader, and a live login page exists."
+    },
+    {
+      "step": 11,
+      "t_ms": 810,
+      "kind": "policy",
+      "message": "Live page, so go to Stage 3 (Deep)."
+    },
+    {
+      "step": 12,
+      "t_ms": 811,
+      "kind": "tool",
+      "stage": "deep",
+      "tool": "page_inspector",
+      "args": {
+        "url": "https://xn--pytm-53d.com/login",
+        "genuine_snapshot": "paytm_login"
+      },
+      "duration_ms": 2100,
+      "evidence_ids": [
+        "E9",
+        "E10"
+      ],
+      "risk_before": 0.86,
+      "risk_after": 0.9,
+      "message": "Page Inspector: a near-exact copy with a changed form target."
+    },
+    {
+      "step": 13,
+      "t_ms": 811,
+      "kind": "tool",
+      "stage": "deep",
+      "tool": "vision_ai",
+      "args": {
+        "screenshot": "deep/xn--pytm-53d.com.png"
+      },
+      "duration_ms": 2900,
+      "evidence_ids": [
+        "E11",
+        "E12"
+      ],
+      "risk_before": 0.9,
+      "risk_after": 0.94,
+      "message": "Vision AI: claims Paytm, asks for password and OTP."
+    },
+    {
+      "step": 14,
+      "t_ms": 811,
+      "kind": "tool",
+      "stage": "deep",
+      "tool": "credential_tracker",
+      "args": {
+        "url": "https://xn--pytm-53d.com/login"
+      },
+      "duration_ms": 4800,
+      "evidence_ids": [
+        "E13"
+      ],
+      "risk_before": 0.94,
+      "risk_after": 0.97,
+      "message": "Credential Tracker: the password leaves Paytm's family."
+    },
+    {
+      "step": 15,
+      "t_ms": 5611,
+      "kind": "hard_rule",
+      "evidence_ids": [
+        "E11",
+        "E13"
+      ],
+      "message": "Hard rule fired: H2_brand_claim_foreign_credentials. The page claims a brand, the owner isn't in that brand's family, and the credentials leave to a domain outside it."
+    },
+    {
+      "step": 16,
+      "t_ms": 5612,
+      "kind": "final_verdict",
+      "label": "phishing",
+      "risk_before": 0.97,
+      "risk_after": 0.97,
+      "message": "PHISHING: Looks exactly like paytm.com because of one hidden Cyrillic letter, copies Paytm's login page, and sends the password to itself."
+    }
+  ],
+  "meta": {
+    "generated_at": "2026-11-05T10:00:00+05:30",
+    "engine_version": "0.0.1-mock",
+    "mock": true
+  }
+}

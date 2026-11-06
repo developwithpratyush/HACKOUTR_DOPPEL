@@ -1,0 +1,417 @@
+{
+  "schema_version": "1.0.0",
+  "domain": "sbi-kyc-update.in",
+  "input": {
+    "raw": "sbi-kyc-update.in",
+    "display": "sbi-kyc-update.in",
+    "source": "nrd_snapshot"
+  },
+  "owner": "sbi-kyc-update.in",
+  "target_brand": {
+    "id": "sbi",
+    "name": "State Bank of India"
+  },
+  "closeness": 0.62,
+  "risk_score": 0.79,
+  "confidence": "medium",
+  "label": "sleeper",
+  "reason": "SBI's name plus 'kyc' and 'update', registered but parked: not live yet, re-check daily.",
+  "hard_rule": null,
+  "counterfactual": {
+    "change": "brand token 'sbi' removed",
+    "undone_evidence_ids": [
+      "E4",
+      "E5",
+      "E6"
+    ],
+    "label": "benign",
+    "risk_score": 0.21,
+    "summary": "Would be BENIGN without the 'sbi' token: the lure words alone aren't enough.",
+    "counterfactual_domain": "kyc-update.in"
+  },
+  "timings_ms": {
+    "quick": 12,
+    "standard": 650,
+    "deep": null,
+    "total": 665
+  },
+  "stages": [
+    {
+      "stage": "quick",
+      "status": "completed",
+      "tools": [
+        "address_reader",
+        "family_verifier",
+        "trick_detector"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "provisional": {
+        "label": "suspicious",
+        "risk_score": 0.72,
+        "reason": "Suspicious: SBI's name plus KYC and update lures."
+      }
+    },
+    {
+      "stage": "standard",
+      "status": "completed",
+      "tools": [
+        "human_eye_renderer",
+        "risk_model",
+        "page_probe"
+      ],
+      "evidence_ids": [
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "provisional": {
+        "label": "sleeper",
+        "risk_score": 0.79,
+        "reason": "Sleeper: a high-risk SBI look-alike with no live page yet."
+      }
+    },
+    {
+      "stage": "deep",
+      "status": "skipped",
+      "tools": [],
+      "evidence_ids": [],
+      "provisional": null,
+      "skip_reason": "No live page (parked): nothing to open. Re-check in 24 h."
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "tool": "address_reader",
+      "stage": "quick",
+      "criterion": "C1",
+      "finding": "owner_resolved",
+      "points_to": "neutral",
+      "strength": "strong",
+      "score": 0,
+      "target_brand": null,
+      "summary": "Real owner is sbi-kyc-update.in (public suffix 'in').",
+      "details": {
+        "owner": "sbi-kyc-update.in",
+        "public_suffix": "in",
+        "private_suffix": false
+      },
+      "duration_ms": 2
+    },
+    {
+      "evidence_id": "E2",
+      "tool": "address_reader",
+      "stage": "quick",
+      "criterion": "C3",
+      "finding": "single_script",
+      "points_to": "neutral",
+      "strength": "strong",
+      "score": 0,
+      "target_brand": null,
+      "summary": "Plain ASCII: no hidden letters.",
+      "details": {
+        "scripts": [
+          "Latin"
+        ]
+      },
+      "duration_ms": 2
+    },
+    {
+      "evidence_id": "E3",
+      "tool": "family_verifier",
+      "stage": "quick",
+      "criterion": "C2",
+      "finding": "not_in_family",
+      "points_to": "phishing",
+      "strength": "medium",
+      "score": 0.5,
+      "target_brand": {
+        "id": "sbi",
+        "name": "State Bank of India"
+      },
+      "summary": "Not SBI's: not under .sbi or .bank.in, and not on SBI's official list.",
+      "details": {
+        "proofs_checked": [
+          "brand_tld",
+          "restricted_registry",
+          "official_list"
+        ],
+        "proofs_matched": []
+      },
+      "duration_ms": 1
+    },
+    {
+      "evidence_id": "E4",
+      "tool": "trick_detector",
+      "stage": "quick",
+      "criterion": "C5",
+      "finding": "combosquat",
+      "points_to": "phishing",
+      "strength": "medium",
+      "score": 0.85,
+      "target_brand": {
+        "id": "sbi",
+        "name": "State Bank of India"
+      },
+      "summary": "Brand token 'sbi' plus lure words 'kyc' and 'update'.",
+      "details": {
+        "tokens": [
+          "sbi",
+          "kyc",
+          "update"
+        ],
+        "brand_alias": "sbi",
+        "lure_words": [
+          {
+            "word": "kyc",
+            "category": "account"
+          },
+          {
+            "word": "update",
+            "category": "account"
+          }
+        ]
+      },
+      "duration_ms": 9
+    },
+    {
+      "evidence_id": "E5",
+      "tool": "trick_detector",
+      "stage": "quick",
+      "criterion": "C4",
+      "finding": "brand_closeness",
+      "points_to": "phishing",
+      "strength": "medium",
+      "score": 0.62,
+      "target_brand": {
+        "id": "sbi",
+        "name": "State Bank of India"
+      },
+      "summary": "Closeness to SBI is 0.62: the brand token is exact, the rest is added words (letter counting calls it 'far').",
+      "details": {
+        "closeness": 0.62,
+        "genuine": "sbi.bank.in",
+        "levenshtein_similarity": 0.29
+      },
+      "duration_ms": 9
+    },
+    {
+      "evidence_id": "E6",
+      "tool": "human_eye_renderer",
+      "stage": "standard",
+      "criterion": "C7",
+      "finding": "sms_view_brand_prominent",
+      "points_to": "phishing",
+      "strength": "medium",
+      "score": 0.5,
+      "target_brand": {
+        "id": "sbi",
+        "name": "State Bank of India"
+      },
+      "summary": "In the SMS view, 'sbi' leads the link and reads as an official SBI KYC address.",
+      "details": {
+        "visual_edit_distance": 0.48
+      },
+      "duration_ms": 280
+    },
+    {
+      "evidence_id": "E7",
+      "tool": "risk_model",
+      "stage": "standard",
+      "criterion": "C8",
+      "finding": "ml_risk",
+      "points_to": "phishing",
+      "strength": "weak",
+      "score": 0.81,
+      "target_brand": null,
+      "summary": "ML risk 0.81 (supporting signal only).",
+      "details": {
+        "probability": 0.81
+      },
+      "duration_ms": 38
+    },
+    {
+      "evidence_id": "E8",
+      "tool": "page_probe",
+      "stage": "standard",
+      "criterion": "C9",
+      "finding": "parked",
+      "points_to": "phishing",
+      "strength": "medium",
+      "score": 0.6,
+      "target_brand": null,
+      "summary": "Registrar parking page: no content, no form. Registered, not weaponised yet.",
+      "details": {
+        "status": "parked",
+        "http_status": 200,
+        "has_login_form": false
+      },
+      "duration_ms": 650
+    }
+  ],
+  "trace": [
+    {
+      "step": 1,
+      "t_ms": 0,
+      "kind": "case_opened",
+      "message": "New case: sbi-kyc-update.in from the newly-registered-domains snapshot. Batch input, so the brain escalates only on evidence."
+    },
+    {
+      "step": 2,
+      "t_ms": 1,
+      "kind": "tool",
+      "stage": "quick",
+      "tool": "address_reader",
+      "args": {
+        "domain": "sbi-kyc-update.in"
+      },
+      "duration_ms": 2,
+      "evidence_ids": [
+        "E1",
+        "E2"
+      ],
+      "risk_before": 0.0,
+      "risk_after": 0.1,
+      "message": "Address Reader: ordinary ASCII name."
+    },
+    {
+      "step": 3,
+      "t_ms": 3,
+      "kind": "tool",
+      "stage": "quick",
+      "tool": "family_verifier",
+      "args": {
+        "owner": "sbi-kyc-update.in"
+      },
+      "duration_ms": 1,
+      "evidence_ids": [
+        "E3"
+      ],
+      "risk_before": 0.1,
+      "risk_after": 0.25,
+      "message": "Family Verifier: not SBI's."
+    },
+    {
+      "step": 4,
+      "t_ms": 4,
+      "kind": "tool",
+      "stage": "quick",
+      "tool": "trick_detector",
+      "args": {
+        "domain": "sbi-kyc-update.in",
+        "owner": "sbi-kyc-update.in"
+      },
+      "duration_ms": 9,
+      "evidence_ids": [
+        "E4",
+        "E5"
+      ],
+      "risk_before": 0.25,
+      "risk_after": 0.72,
+      "message": "Trick Detector: brand + lure words, imitating SBI."
+    },
+    {
+      "step": 5,
+      "t_ms": 13,
+      "kind": "provisional_verdict",
+      "stage": "quick",
+      "label": "suspicious",
+      "risk_after": 0.72,
+      "message": "Suspicious: SBI's name plus KYC and update lures."
+    },
+    {
+      "step": 6,
+      "t_ms": 13,
+      "kind": "policy",
+      "message": "Brand signal found, so go to Stage 2 (Standard)."
+    },
+    {
+      "step": 7,
+      "t_ms": 14,
+      "kind": "tool",
+      "stage": "standard",
+      "tool": "human_eye_renderer",
+      "args": {
+        "candidate": "sbi-kyc-update.in",
+        "genuine": "sbi.bank.in",
+        "view": "sms"
+      },
+      "duration_ms": 280,
+      "evidence_ids": [
+        "E6"
+      ],
+      "risk_before": 0.72,
+      "risk_after": 0.74,
+      "message": "Human-Eye Renderer: the brand leads the link."
+    },
+    {
+      "step": 8,
+      "t_ms": 14,
+      "kind": "tool",
+      "stage": "standard",
+      "tool": "risk_model",
+      "args": {
+        "domain": "sbi-kyc-update.in"
+      },
+      "duration_ms": 38,
+      "evidence_ids": [
+        "E7"
+      ],
+      "risk_before": 0.74,
+      "risk_after": 0.77,
+      "message": "Risk Model: high ML risk."
+    },
+    {
+      "step": 9,
+      "t_ms": 14,
+      "kind": "tool",
+      "stage": "standard",
+      "tool": "page_probe",
+      "args": {
+        "domain": "sbi-kyc-update.in"
+      },
+      "duration_ms": 650,
+      "evidence_ids": [
+        "E8"
+      ],
+      "risk_before": 0.77,
+      "risk_after": 0.79,
+      "message": "Page Probe: parked."
+    },
+    {
+      "step": 10,
+      "t_ms": 664,
+      "kind": "provisional_verdict",
+      "stage": "standard",
+      "label": "sleeper",
+      "risk_after": 0.79,
+      "message": "Sleeper: a high-risk SBI look-alike with no live page yet."
+    },
+    {
+      "step": 11,
+      "t_ms": 664,
+      "kind": "policy",
+      "message": "No live page, so skip Stage 3 (Deep) and watch it."
+    },
+    {
+      "step": 12,
+      "t_ms": 665,
+      "kind": "final_verdict",
+      "label": "sleeper",
+      "risk_before": 0.79,
+      "risk_after": 0.79,
+      "message": "SLEEPER: SBI's name plus 'kyc' and 'update', registered but parked: not live yet, re-check daily."
+    }
+  ],
+  "meta": {
+    "generated_at": "2026-11-05T10:00:00+05:30",
+    "engine_version": "0.0.1-mock",
+    "mock": true
+  }
+}
