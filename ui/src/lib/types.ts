@@ -113,7 +113,8 @@ export interface BrandInfo { id: string; name: string; aliases: string[]; brand_
 
 export interface Health { ok: boolean; engine: string; version: string; contract: string;
                           built: Record<string, boolean>; warm_ms: number | null; max_batch: number;
-                          fixtures: string; brands: string[]; cert_family_links?: number }
+                          fixtures: string; brands: string[]; cert_family_links?: number;
+                          offline?: boolean; stale_fixtures?: string[] }
 
 // ---- Live Hunt (P12): the collector's state file + catch store, via /api/live/* ----
 export interface LiveTick { name: string; t: number; label: Label; brand: string | null; naive: string | null; risk: number }

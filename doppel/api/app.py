@@ -7,6 +7,8 @@
     POST /api/scan/upload  file (.txt/.csv)  the same, from an uploaded file
     GET  /api/scan/{id}/export/{fmt}         json | csv | blocklist | html, as a download
     POST /api/report       {verdict, lang}   the case file (P10): printable HTML, narration grounded in evidence IDs
+    POST /api/baselines    {verdict}         what generic methods say on the same name (P14): keyword, Levenshtein,
+                                             dnstwist, phishing_catcher, ML alone, padlock, public blocklist
 
 Static, for the UI: ``/runs/renders/*`` (Human-Eye Renderer PNGs), ``/runs/deep/*`` (Deep-stage screenshots and
 heatmaps, P8), ``/fixtures/*`` (our local mock pages,
@@ -76,6 +78,8 @@ class Engine:
             sb = sandbox()
             sb._ex.submit(sb._ensure).result(60)
         self.warm_ms = round((time.perf_counter() - t) * 1000, 1)
+        from doppel.baselines import generic                 # dnstwist's index (~3 s) off the request path
+        threading.Thread(target=generic, args=(self.brain.reg,), daemon=True).start()
 
     def investigate(self, raw: str, source: str, certs: bool | None = None) -> dict:
         with self.lock:
@@ -147,7 +151,20 @@ def health() -> dict:
             "warm_ms": e.warm_ms, "max_batch": MAX_BATCH,
             "fixtures": ("Pages are local fixtures only (demo/fixtures; clones generated from saved genuine pages), "
                          "rendered in a sandbox with no DNS; Doppel never visits a domain it judges."),
-            "brands": [b.id for b in e.brain.reg.brands]}
+            "brands": [b.id for b in e.brain.reg.brands],
+            "offline": _offline(), "stale_fixtures": _stale()}
+
+
+def _offline() -> bool:
+    from doppel.certs.store import offline
+
+    return offline()
+
+
+def _stale() -> list[str]:
+    from doppel.deep.pages import stale_clones
+
+    return stale_clones()
 
 
 @app.get("/api/brands")
@@ -169,6 +186,25 @@ def investigate(body: InvestigateIn) -> dict:
         return engine().investigate(raw, body.source, certs=body.certs)
     except NOT_DOMAIN as exc:
         raise HTTPException(422, detail=f"Not a domain Doppel can read: {exc}") from exc
+
+
+class BaselinesIn(BaseModel):
+    verdict: dict
+
+
+@app.post("/api/baselines")
+def baselines(body: BaselinesIn) -> dict:
+    """The generic methods on the verdict's name (the ML row reads the verdict's own C8). Never looks anything up."""
+    from doppel.baselines import generic
+
+    d = body.verdict.get("domain")
+    if not isinstance(d, str) or not d:
+        raise HTTPException(422, detail="verdict.domain missing")
+    try:
+        rows = generic(engine().brain.reg).compare(d, body.verdict)
+    except NOT_DOMAIN as exc:
+        raise HTTPException(422, detail=f"{type(exc).__name__}: {exc}") from exc
+    return {"domain": d, "rows": rows}
 
 
 class ReportIn(BaseModel):
@@ -330,8 +366,10 @@ def live_catch(name: str, mode: LiveMode = "live") -> dict:
 def live_recordings() -> dict:
     from doppel.live import LIVE_DIR
 
-    files = sorted((LIVE_DIR / "recordings").glob("stream-*.jsonl.gz"))
-    return {"recordings": [{"name": f.name, "bytes": f.stat().st_size, "modified": f.stat().st_mtime} for f in files]}
+    rec = LIVE_DIR / "recordings"
+    files = sorted((rec / "keep").glob("stream-*.jsonl.gz")) + sorted(rec.glob("stream-*.jsonl.gz"))
+    return {"recordings": [{"name": f.relative_to(rec).as_posix(), "bytes": f.stat().st_size, "modified": f.stat().st_mtime,
+                            "kept": f.parent.name == "keep"} for f in files]}
 
 
 class ReplayIn(BaseModel):
@@ -355,7 +393,7 @@ def live_replay(body: ReplayIn) -> dict:
     paths = []
     for name in body.files:
         p = (rec / name).resolve()
-        if p.parent != rec.resolve() or not p.is_file() or not p.name.startswith("stream-"):
+        if p.parent not in (rec.resolve(), (rec / "keep").resolve()) or not p.is_file() or not p.name.startswith("stream-"):
             raise HTTPException(422, detail=f"Unknown recording {name!r}.")
         paths.append(str(p))
     cmd = [sys.executable, "-m", "doppel.cli", "live", "replay", *paths, "--hours", str(body.hours),

@@ -1,5 +1,6 @@
 // The one place the UI talks to the API. If the API is down, the gallery falls back to the contract's
 // mock verdicts (contracts/examples, imported at build time), and the UI says so in the header.
+import type { BaselineRow } from "./pack";
 import type { BrandInfo, Health, LiveCatch, LiveResponse, RadarResponse, ScanResponse, Source, Verdict } from "./types";
 
 const mockFiles = import.meta.glob("../../../contracts/examples/*.json", { eager: true, import: "default" }) as
@@ -58,6 +59,8 @@ export const api = {
     }
     return r.text();
   },
+  /** What generic methods say on the verdict's name (P14): keyword, Levenshtein, dnstwist, phishing_catcher, ML, padlock, blocklist. */
+  baselines: (verdict: Verdict) => call<{ domain: string; rows: BaselineRow[] }>("/api/baselines", json({ verdict })),
   /** Campaign Radar (P13): campaign cards + the island graph from the latest `doppel campaigns` run. */
   campaigns: () => call<RadarResponse>("/api/campaigns"),
   /** Live Hunt (P12): the collector's state, all-time numbers and latest catches. Polled once a second. */

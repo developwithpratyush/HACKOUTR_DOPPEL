@@ -1,0 +1,207 @@
+{
+ "generated_at": "2026-11-06T07:40:06+00:00",
+ "engine": "0.0.1+p13",
+ "cases": {
+  "echallan.parivahan.gov.in.pay-fine.icu": {
+   "file": "echallan.parivahan.gov.in.pay-fine.icu.json",
+   "label": "phishing",
+   "risk": 1.0,
+   "source": "gallery"
+  },
+  "echallan.parivahan.gov.in": {
+   "file": "echallan.parivahan.gov.in.json",
+   "label": "genuine",
+   "risk": 0.006,
+   "source": "paste"
+  },
+  "google.co.in": {
+   "file": "google.co.in.json",
+   "label": "genuine",
+   "risk": 0.142,
+   "source": "paste"
+  },
+  "googleapis.com": {
+   "file": "googleapis.com.json",
+   "label": "genuine",
+   "risk": 0.159,
+   "source": "paste"
+  },
+  "upichalega.com": {
+   "file": "upichalega.com.json",
+   "label": "genuine",
+   "risk": 0.003,
+   "source": "paste"
+  },
+  "hdfc-pan-up-date2.web.app": {
+   "file": "hdfc-pan-up-date2.web.app.json",
+   "label": "needs_review",
+   "risk": 0.927,
+   "source": "paste"
+  },
+  "sbicard.com": {
+   "file": "sbicard.com.json",
+   "label": "needs_review",
+   "risk": 0.84,
+   "source": "paste"
+  },
+  "in-echallan.online": {
+   "file": "in-echallan.online.json",
+   "label": "needs_review",
+   "risk": 0.989,
+   "source": "paste"
+  },
+  "kx72-secure.top": {
+   "file": "kx72-secure.top.json",
+   "label": "phishing",
+   "risk": 1.0,
+   "source": "gallery"
+  },
+  "xn--pytm-53d.com": {
+   "file": "xn--pytm-53d.com.json",
+   "label": "phishing",
+   "risk": 1.0,
+   "source": "gallery"
+  },
+  "sbi-secure-login.com": {
+   "file": "sbi-secure-login.com.json",
+   "label": "needs_review",
+   "risk": 0.903,
+   "source": "paste"
+  },
+  "paytm.com.verify-kyc.in": {
+   "file": "paytm.com.verify-kyc.in.json",
+   "label": "needs_review",
+   "risk": 0.999,
+   "source": "paste"
+  },
+  "onlinesbi.co": {
+   "file": "onlinesbi.co.json",
+   "label": "needs_review",
+   "risk": 0.967,
+   "source": "paste"
+  },
+  "goog1e.com": {
+   "file": "goog1e.com.json",
+   "label": "needs_review",
+   "risk": 0.707,
+   "source": "paste"
+  },
+  "icicibank.com.in": {
+   "file": "icicibank.com.in.json",
+   "label": "needs_review",
+   "risk": 0.917,
+   "source": "paste"
+  },
+  "hdfcbank-rewards.in": {
+   "file": "hdfcbank-rewards.in.json",
+   "label": "needs_review",
+   "risk": 0.906,
+   "source": "paste"
+  },
+  "google.one": {
+   "file": "google.one.json",
+   "label": "needs_review",
+   "risk": 0.709,
+   "source": "paste"
+  },
+  "one.google": {
+   "file": "one.google.json",
+   "label": "genuine",
+   "risk": 0.006,
+   "source": "paste"
+  },
+  "sbi.bank.in": {
+   "file": "sbi.bank.in.json",
+   "label": "genuine",
+   "risk": 0.006,
+   "source": "paste"
+  },
+  "yonobusiness.sbi": {
+   "file": "yonobusiness.sbi.json",
+   "label": "genuine",
+   "risk": 0.006,
+   "source": "paste"
+  },
+  "paytrn.com": {
+   "file": "paytrn.com.json",
+   "label": "needs_review",
+   "risk": 0.775,
+   "source": "gallery"
+  },
+  "sbi-kyc-update.in": {
+   "file": "sbi-kyc-update.in.json",
+   "label": "sleeper",
+   "risk": 0.961,
+   "source": "nrd_snapshot"
+  },
+  "onlinesbi.sbi.bank.in": {
+   "file": "onlinesbi.sbi.bank.in.json",
+   "label": "genuine",
+   "risk": 0.0,
+   "source": "gallery"
+  },
+  "thanksbitcoin.com": {
+   "file": "thanksbitcoin.com.json",
+   "label": "benign",
+   "risk": 0.021,
+   "source": "nrd_snapshot"
+  },
+  "sbi.bank-in.com": {
+   "file": "sbi.bank-in.com.json",
+   "label": "sleeper",
+   "risk": 0.994,
+   "source": "gallery"
+  },
+  "sbi.co.in": {
+   "file": "sbi.co.in.json",
+   "label": "genuine",
+   "risk": 0.006,
+   "source": "gallery"
+  },
+  "google-analytics.com": {
+   "file": "google-analytics.com.json",
+   "label": "genuine",
+   "risk": 0.139,
+   "source": "paste"
+  },
+  "mspeedpost.com": {
+   "file": "mspeedpost.com.json",
+   "label": "needs_review",
+   "risk": 0.929,
+   "source": "paste"
+  }
+ },
+ "aliases": {
+  "echallan.parivahan.gov.in.pay-fine.icu": "echallan.parivahan.gov.in.pay-fine.icu",
+  "echallan.parivahan.gov.in": "echallan.parivahan.gov.in",
+  "google.co.in": "google.co.in",
+  "googleapis.com": "googleapis.com",
+  "upichalega.com": "upichalega.com",
+  "hdfc-pan-up-date2.web.app": "hdfc-pan-up-date2.web.app",
+  "sbicard.com": "sbicard.com",
+  "in-echallan.online": "in-echallan.online",
+  "kx72-secure.top": "kx72-secure.top",
+  "xn--pytm-53d.com": "xn--pytm-53d.com",
+  "sbi-secure-login.com": "sbi-secure-login.com",
+  "paytm.com.verify-kyc.in": "paytm.com.verify-kyc.in",
+  "onlinesbi.co": "onlinesbi.co",
+  "goog1e.com": "goog1e.com",
+  "icicibank.com.in": "icicibank.com.in",
+  "hdfcbank-rewards.in": "hdfcbank-rewards.in",
+  "google.one": "google.one",
+  "one.google": "one.google",
+  "sbi.bank.in": "sbi.bank.in",
+  "yonobusiness.sbi": "yonobusiness.sbi",
+  "https://pаytm.com/login": "xn--pytm-53d.com",
+  "paytrn.com": "paytrn.com",
+  "sbi-kyc-update.in": "sbi-kyc-update.in",
+  "https://echallan.parivahan.gov.in.pay-fine.icu/challan": "echallan.parivahan.gov.in.pay-fine.icu",
+  "https://kx72-secure.top/": "kx72-secure.top",
+  "https://onlinesbi.sbi.bank.in/": "onlinesbi.sbi.bank.in",
+  "thanksbitcoin.com": "thanksbitcoin.com",
+  "sbi.bank-in.com": "sbi.bank-in.com",
+  "sbi.co.in": "sbi.co.in",
+  "google-analytics.com": "google-analytics.com",
+  "mspeedpost.com": "mspeedpost.com"
+ }
+}

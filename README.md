@@ -139,6 +139,21 @@ pytest -q                                                     # Python tests
 cd ui && npm test                                             # UI tests
 ```
 
+### Demo safety: no internet, no problem
+
+```bash
+python -m doppel.cli serve --offline          # every check answers from its cache; nothing touches the network
+python demo/finale/smoke.py --no-network      # the whole stage flow with every non-local socket and DNS blocked
+python demo/finale/build_pack.py              # re-record the offline pack (real verdicts) + the computed scoreboard
+python -m doppel.cli live keep                # pin a recorded hour of the CT stream for the Live Hunt REPLAY
+```
+
+- `serve` **refuses to start** if the Deep-stage fixture kits are older than their config or snapshot (`--allow-stale` overrides).
+- If the API process itself dies, the UI falls back to the **recorded real verdicts** in `demo/finale/pack/` and labels every such screen **REPLAY** (force it with `?mock=1`).
+- All fonts are bundled; the UI makes no external requests.
+
+**Generic tools, computed:** `POST /api/baselines` runs a keyword alert, Levenshtein, dnstwist, phishing_catcher, the ML model alone, the padlock and a public blocklist on the same name, using the same code as the P4 arena. On the brands' own genuine addresses, Levenshtein flags **15 of 19**; Doppel flags **0**.
+
 UI deep links: `/` Presenter view · `/?d=<domain>` open one result · `/?tab=explore` Analyst console · `/?tab=live` Live Hunt · `/?tab=radar` Campaign Radar · `/?tab=fool` Try to fool it.
 
 ---

@@ -4,6 +4,7 @@ import { useCallback, useContext, useEffect, useLayoutEffect, useRef, useState, 
 import "../presenter.css";
 import { api, ApiError } from "../lib/api";
 import { BrandsCtx } from "../lib/context";
+import { packCase, packContext, packIndex, type ArenaCell, type BaselineRow } from "../lib/pack";
 import {
   ev, ev1, exfilFlow, generic, heat, heatColour, isBad, isKit, islandLayout, LABEL_TEXT, nodeTone, NODES, pickCampaign,
   segments, trickName, type Seg,
@@ -45,7 +46,8 @@ const domSize = (n: number) => `${Math.max(17, Math.min(34, 34 - (n - 20) * 0.5)
 
 interface Shown { label: string; risk: number; segs: Seg[]; reason: string; rule: string }
 
-export default function Presenter({ live, onNav }: { live: boolean; onNav: (t: NavTarget) => void }) {
+export default function Presenter({ live, ready = true, offline = false, onNav }:
+  { live: boolean; ready?: boolean; offline?: boolean; onNav: (t: NavTarget) => void }) {
   const brands = useContext(BrandsCtx);
   const [q, setQ] = useState("");
   const [docked, setDocked] = useState(false);
@@ -59,6 +61,9 @@ export default function Presenter({ live, onNav }: { live: boolean; onNav: (t: N
   const [toast, setToast] = useState<string | null>(null);
   const [radar, setRadar] = useState<Campaign[]>([]);
   const [sum, setSum] = useState<LiveSummary | null>(null);
+  const [base, setBase] = useState<BaselineRow[] | null>(null);
+  const [replayAt, setReplayAt] = useState<string | null>(null);
+  const [arena, setArena] = useState<Record<string, ArenaCell> | null>(null);
   const slot = useRef<HTMLDivElement>(null);
   const bar = useRef<HTMLFormElement>(null);
   const [anim, setAnim] = useState(false);
@@ -79,6 +84,13 @@ export default function Presenter({ live, onNav }: { live: boolean; onNav: (t: N
   useEffect(() => { document.fonts?.ready.then(place); }, [place]);
 
   useEffect(() => {
+    packContext().then((c) => {
+      if (c) setArena(c.arena);
+      if (c && !live) {                                  // the API is down: the recorded radar and live summary
+        setRadar(c.campaigns.campaigns);
+        setSum(c.live && "totals" in c.live.summary ? c.live.summary as LiveSummary : null);
+      }
+    });
     if (!live) return;
     api.campaigns().then((r) => setRadar(r.campaigns)).catch(() => undefined);
     api.live("live").then((r) => setSum("totals" in r.summary ? r.summary as LiveSummary : null)).catch(() => undefined);
@@ -90,7 +102,8 @@ export default function Presenter({ live, onNav }: { live: boolean; onNav: (t: N
     const d = norm(raw);
     if (!d) return;
     setQ(d);
-    if (!live) { say("The Doppel API isn't running: start it with `python -m doppel.cli serve`."); return; }
+    const rec = live ? null : await packCase(raw);
+    if (!live && !rec) { say("The engine isn't running: only the recorded stage cases can be shown (start: python -m doppel.cli serve)."); return; }
     if (!docked) {
       const b = bar.current!, r = b.getBoundingClientRect();
       Object.assign(b.style, { position: "fixed", left: `${r.left}px`, top: `${r.top}px` });
@@ -98,10 +111,17 @@ export default function Presenter({ live, onNav }: { live: boolean; onNav: (t: N
       setAnim(true); setDocked(true); scrollTo({ top: 0 });
     }
     const source = CASES.find((c) => c.d === d)?.source ?? (KITS.has(d) ? "gallery" : "paste");
+    const reset = () => { setCertOn(true); setWhatOn(false); setStill(false); setSheet(null); };
+    if (rec) {                                           // REPLAY: the verdict recorded by build_pack.py
+      reset(); setVOff(rec.verdict_certs_off ?? null); setBase(rec.baselines); setV(rec.verdict);
+      packIndex().then((i) => setReplayAt(i?.generated_at ?? "recorded"));
+      return;
+    }
     setBusy(true);
     try {
       const verdict = await api.investigate(d, source, true);
-      setVOff(null); setCertOn(true); setWhatOn(false); setStill(false); setSheet(null); setV(verdict);
+      reset(); setReplayAt(null); setVOff(null); setBase(null); setV(verdict);
+      api.baselines(verdict).then((r) => setBase(r.rows)).catch(() => setBase(null));
       if (verdict.evidence.some((e) => e.criterion === "C16" && e.points_to === "genuine")) {
         api.investigate(d, source, false).then(setVOff).catch(() => undefined);
       }
@@ -112,7 +132,7 @@ export default function Presenter({ live, onNav }: { live: boolean; onNav: (t: N
 
   // ?d=<domain> opens straight into the space (deep link for the backup video and screenshots)
   const deep = useRef(new URLSearchParams(location.search).get("d"));
-  useEffect(() => { if (live && deep.current) { const d = deep.current; deep.current = null; run(d); } });
+  useEffect(() => { if ((live || ready) && deep.current) { const d = deep.current; deep.current = null; run(d); } });
 
   const home = () => { setDocked(false); setAnim(false); setV(null); setQ(""); };
   const flip = (f: () => void) => { setStill(true); f(); };
@@ -132,7 +152,7 @@ export default function Presenter({ live, onNav }: { live: boolean; onNav: (t: N
 
       {!docked && (
         <section className="landing">
-          <div className="kicker glass"><span className={`pdot ${live ? "" : "off"}`} />{live ? "Reading the world's new certificates" : "Engine offline · start doppel serve"}</div>
+          <div className="kicker glass"><span className={`pdot ${live ? "" : "off"}`} />{!live ? "Engine not running · recorded stage cases (REPLAY)" : offline ? "Offline mode · every check answers from its cache" : "Reading the world's new certificates"}</div>
           <h1>Is this link <span>who it says it is?</span></h1>
           <p className="lede">Paste any address from an SMS, email or ad. Doppel proves who owns it, names the trick, and shows every step.</p>
           <div className="slot" ref={slot} />
@@ -155,7 +175,7 @@ export default function Presenter({ live, onNav }: { live: boolean; onNav: (t: N
       </form>
 
       {docked && v && <Space key={v.domain + v.meta.generated_at} v={v} vOff={vOff} certOn={certOn} whatOn={whatOn} still={still} radar={radar}
-        sum={sum} brands={brands} onCert={() => flip(() => setCertOn((x) => !x))} onWhat={() => flip(() => setWhatOn((x) => !x))}
+        sum={sum} brands={brands} base={base} arena={arena} replayAt={replayAt} onCert={() => flip(() => setCertOn((x) => !x))} onWhat={() => flip(() => setWhatOn((x) => !x))}
         onOpen={setSheet} onNav={onNav} sheet={sheet} />}
       {docked && !v && busy && <div className="space"><p className="foot" style={{ marginTop: 120 }}>Investigating…</p></div>}
 
@@ -168,11 +188,12 @@ const fmtBig = (n: number) => (n >= 1e6 ? `${(n / 1e6).toFixed(1)}M` : n >= 1e3 
 
 interface SpaceProps {
   v: Verdict; vOff: Verdict | null; certOn: boolean; whatOn: boolean; still: boolean; radar: Campaign[]; sum: LiveSummary | null;
-  brands: Record<string, import("../lib/types").BrandInfo>; onCert: () => void; onWhat: () => void; onOpen: (id: string | null) => void;
+  brands: Record<string, import("../lib/types").BrandInfo>; base: BaselineRow[] | null; arena: Record<string, ArenaCell> | null;
+  replayAt: string | null; onCert: () => void; onWhat: () => void; onOpen: (id: string | null) => void;
   onNav: (t: NavTarget) => void; sheet: string | null;
 }
 
-function Space({ v, vOff, certOn, whatOn, still, radar, sum, brands, onCert, onWhat, onOpen, onNav, sheet }: SpaceProps) {
+function Space({ v, vOff, certOn, whatOn, still, radar, sum, brands, base, arena, replayAt, onCert, onWhat, onOpen, onNav, sheet }: SpaceProps) {
   const cf = v.counterfactual;
   const proof = v.evidence.find((e) => e.criterion === "C16" && e.points_to === "genuine");
   const view = !certOn && vOff ? vOff : v;
@@ -209,7 +230,8 @@ function Space({ v, vOff, certOn, whatOn, still, radar, sum, brands, onCert, onW
     ? { id: "Q2", cls: "s4", ic: "Q2", q: "Is it the brand's own family?", tt: "C2", skip: c2?.summary ?? "No brand to check." }
     : { id: "Q2", cls: "s4", ic: "Q2", q: "Is it the brand's own family?", tt: "C2", body: <>
         {chip(proof ? "c-good" : c2.points_to === "genuine" ? "c-good" : "c-bad", proof ? "in the family (certificate)" : c2.points_to === "genuine" ? "in the family" : "not in the family")}
-        <p className="tline">{c2.summary}</p></> });
+        <p className="tline">{proof ? proof.summary : c2.summary}</p>
+        {proof && <p className="tline" style={{ fontSize: 12 }}>The list alone said: {c2.summary}</p>}</> });
 
   tiles.push({ id: "Q3", cls: "s4", ic: "Q3", q: "Which trick is it using?", tt: "C4 C5 C6", body: <>
     <div className="pvrow" style={{ marginBottom: 12 }}>{chip(c5 ? "c-warn" : "c-neu", trickName(v))}
@@ -242,7 +264,8 @@ function Space({ v, vOff, certOn, whatOn, still, radar, sum, brands, onCert, onW
     <p className="tline">{c8.summary.split(". Sup")[0]}. A supporting signal, never the verdict.</p></> }
     : { id: "S2", cls: "s4", ic: "S2", q: "What does the ML model say?", tt: "C8", skip: skipWhy("standard") });
 
-  const pc = pickCampaign(v, radar);
+  const pc0 = pickCampaign(v, radar);
+  const pc = pc0 && (pc0.member || isBad(v.label)) ? pc0 : null;      // no "related" attacker island on a genuine name
   tiles.push(pc ? { id: "S5", cls: "s7", ic: "S5", q: "Is it part of a campaign?", tt: "C18", body: <>
     {pc.member ? chip("c-bad", `member · ${pc.c.strength}`) : chip("c-neu", "related island · same brand, not a member")}
     <Island c={pc.c} focus={pc.member ? (pc.c.members_ids.includes(v.domain) ? v.domain : v.owner) : null} />
@@ -250,12 +273,15 @@ function Space({ v, vOff, certOn, whatOn, still, radar, sum, brands, onCert, onW
     <button className="toggle" onClick={(e) => { e.stopPropagation(); onNav("radar"); }}>Open Campaign Radar →</button></> }
     : { id: "S5", cls: "s7", ic: "S5", q: "Is it part of a campaign?", tt: "C18", skip: radar.length ? "No campaign links this name or its brand." : "Campaign Radar data not loaded (run `doppel campaigns`)." });
 
-  const gen = generic(v, brands);
+  const gen = base ? base.map((r) => ({ name: r.name, says: r.detail, agrees: r.flagged == null ? null : r.flagged === isBad(v.label) }))
+    : generic(v, brands);
+  const lev = arena?.levenshtein;
   const mk = (a: boolean | null) => a === true ? <span className="pok">✓</span> : a === false ? <span className="no">✕</span> : <span className="na">–</span>;
   tiles.push({ id: "gen", cls: "s5", ic: "vs", q: "Generic tools on this name", body: <>
     <table className="score"><tbody>{gen.map((r) => <tr key={r.name}><td>{r.name}</td><td>{mk(r.agrees)}</td><td>{r.says}</td></tr>)}
       <tr><td>Doppel</td><td>{mk(true)}</td><td>{LABEL_TEXT[v.label]}, with the evidence above</td></tr></tbody></table>
-    <p className="tline" style={{ fontSize: 11.5 }}>✓ same call as Doppel · ✕ the opposite call</p></> });
+    <p className="tline" style={{ fontSize: 11.5 }}>✓ same call as Doppel · ✕ the opposite call · – can't say{base ? "" : " · engine rows unavailable, derived from the verdict"}</p>
+    {lev && <p className="tline"><b>In our arena</b>, Levenshtein flags <b>{lev.flagged} of {lev.of}</b> of the brands' own genuine addresses; Doppel flags <b>{arena?.doppel?.flagged ?? 0}</b>. It proves the family first.</p>}</> });
 
   const flow = exfilFlow(v);
   const dl = (crits: string[]) => v.evidence.filter((e) => crits.includes(e.criterion)).map((e) => <li key={e.evidence_id}>{e.summary}</li>);
@@ -290,7 +316,7 @@ function Space({ v, vOff, certOn, whatOn, still, radar, sum, brands, onCert, onW
       <div className="grid">
         <section className="ptile glass s8 hero" style={order(0)}>
           <div style={{ minWidth: 0 }}>
-            <div className="pvrow"><span className={`vpill v-${shown.label}`}>{LABEL_TEXT[shown.label] ?? shown.label}</span>{chip("c-neu", shown.rule)}{isKit(v) && chip("c-acc", "simulated kit")}</div>
+            <div className="pvrow"><span className={`vpill v-${shown.label}`}>{LABEL_TEXT[shown.label] ?? shown.label}</span>{chip("c-neu", shown.rule)}{isKit(v) && chip("c-acc", "simulated kit")}{replayAt && chip("c-warn", `REPLAY · recorded ${fmtTime(replayAt)}`)}</div>
             <div className="reason">{shown.reason}</div>
             <div className="pdom" style={{ fontSize: domSize(shown.segs.reduce((n, s) => n + s.text.length, 0)) }}>
               {shown.segs.map((s, i) => <span key={i} className={`seg ${s.kind}`}>{s.text}<span className={`note ${s.up ? "up" : "dn"}`} style={{ color: NOTE_COL[s.kind] }}>{s.note}</span></span>)}

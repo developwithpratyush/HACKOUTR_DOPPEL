@@ -6,6 +6,7 @@ import Campaigns from "./components/Campaigns";
 import LiveHunt from "./components/LiveHunt";
 import Presenter from "./components/Presenter";
 import { api, ApiError, MOCKS } from "./lib/api";
+import { packCase } from "./lib/pack";
 import { BrandsCtx } from "./lib/context";
 import { GALLERY, type Case } from "./lib/gallery";
 import type { BrandInfo, Health, ScanResponse, Source, Verdict } from "./lib/types";
@@ -54,10 +55,12 @@ export default function App() {
 
   const run = useCallback(async (raw: string, source: Source, c?: Case, startAt?: number) => {
     setError(null);
-    if (!live) {
+    if (!live) {                                       // P14: a real recorded verdict first, the P0 mock last
+      const rec = await packCase(raw);
       const mock = c?.mock ? MOCKS[c.mock] : undefined;
-      if (mock) setLoaded({ verdict: mock, caseId: c?.id, story: c?.input, startAt });
-      else setError("The API is offline: only gallery cases with a mock verdict can be shown.");
+      if (rec) setLoaded({ verdict: rec.verdict, caseId: c?.id, story: c?.input, startAt });
+      else if (mock) setLoaded({ verdict: mock, caseId: c?.id, story: c?.input, startAt });
+      else setError("The API is offline: only the recorded stage cases can be shown.");
       return;
     }
     setBusy(true);
@@ -85,7 +88,7 @@ export default function App() {
   return (
     <BrandsCtx.Provider value={brands}>
       <div hidden={tab !== "presenter"}>
-        <Presenter live={live} onNav={(t) => { setTab(t); window.scrollTo({ top: 0 }); }} />
+        <Presenter live={live} ready={checked} offline={!!health?.offline} onNav={(t) => { setTab(t); window.scrollTo({ top: 0 }); }} />
       </div>
       <div className="wrap" hidden={tab === "presenter"}>
         <header className="pt-6 pb-2 flex flex-wrap items-end justify-between gap-3">

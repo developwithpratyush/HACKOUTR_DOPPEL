@@ -191,8 +191,9 @@ def live_replay(
         typer.echo(f"A replay is already running (pid {st.get('pid')}). Stop it: doppel live stop --mode replay", err=True)
         raise typer.Exit(1)
     if not files:
+        kept = sorted((LIVE_DIR / "recordings" / "keep").glob("stream-*.jsonl.gz"))
         rec = sorted((LIVE_DIR / "recordings").glob("stream-*.jsonl.gz"))
-        files = rec[-hours - 1:-1] if len(rec) > hours else rec[-hours:]   # skip the hour still being written
+        files = kept[-hours:] if kept else (rec[-hours - 1:-1] if len(rec) > hours else rec[-hours:])  # pinned first
     if not files:
         typer.echo("No recordings yet: run the live collector first (doppel live run).", err=True)
         raise typer.Exit(1)
@@ -204,6 +205,30 @@ def live_replay(
     setup_logging(d)
     typer.echo(f"Replaying {', '.join(f.name for f in files)} at {speed}x", err=True)
     Collector("replay", recording=list(files), speed=speed, ct_daily_cap=0).run()
+
+
+@live_app.command("keep")
+def live_keep(
+    files: List[Path] = typer.Argument(None, help="Recordings to pin. Default: the biggest complete hour."),
+) -> None:
+    """Pin recorded stream hours for the stage REPLAY: copied to runs/live/recordings/keep/, which retention never
+    prunes and replay plays first."""
+    import shutil
+
+    from doppel.live import LIVE_DIR
+
+    rec = sorted((LIVE_DIR / "recordings").glob("stream-*.jsonl.gz"))
+    if not files:
+        done = rec[:-1] if len(rec) > 1 else rec            # the newest hour may still be being written
+        files = [max(done, key=lambda p: p.stat().st_size)] if done else []
+    if not files:
+        typer.echo("No recordings to keep.", err=True)
+        raise typer.Exit(1)
+    keep = LIVE_DIR / "recordings" / "keep"
+    keep.mkdir(parents=True, exist_ok=True)
+    for f in files:
+        shutil.copy2(f, keep / f.name)
+        typer.echo(f"kept {f.name} ({f.stat().st_size / 1e6:.1f} MB) -> {keep}")
 
 
 @live_app.command("stop")
@@ -321,10 +346,25 @@ def campaigns(
 def serve(
     host: str = typer.Option("127.0.0.1", help="Bind address. Keep it local for the demo."),
     port: int = typer.Option(8000, help="Port."),
+    offline: bool = typer.Option(False, "--offline", help="Never touch the network: CT, vision and narration "
+                                 "answer from their caches only (the venue-has-no-internet switch)."),
+    allow_stale: bool = typer.Option(False, "--allow-stale", help="Start even if the fixture kits are stale."),
 ) -> None:
-    """Run the API and (once `npm run build` has made ui/dist) the analyst UI at http://HOST:PORT."""
+    """Run the API and (once `npm run build` has made ui/dist) the UI at http://HOST:PORT."""
+    import os
+
+    if offline:
+        os.environ["DOPPEL_OFFLINE"] = "1"
+    from doppel.deep.pages import stale_clones
+
+    if (stale := stale_clones()) and not allow_stale:
+        lines = "\n  ".join(stale)
+        typer.echo(f"Refusing to start: the Deep-stage fixture kits are stale, so the demo would show old pages:\n  {lines}\n"
+                   "Rebuild: python -m doppel.deep.pages   (or pass --allow-stale)", err=True)
+        raise typer.Exit(2)
     from doppel.api.app import UI_DIST, run
 
+    typer.echo("Offline mode: no network calls (caches only)." if offline else "Online mode.", err=True)
     if not UI_DIST.is_dir():
         typer.echo("ui/dist not found: API only. Build the UI with `npm run build` in ui/, "
                    "or run `npm run dev` there (http://localhost:5173).", err=True)

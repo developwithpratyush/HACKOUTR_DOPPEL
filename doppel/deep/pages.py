@@ -261,6 +261,28 @@ def build_all() -> list[dict]:
     return [r for host, spec in sites().items() if (r := build_site(host, spec))]
 
 
+def stale_clones() -> list[str]:
+    """Fixture kits whose generated clone is missing, or older than ``sites.yaml`` or than the genuine snapshot it
+    copies. The demo must not run on those (P14): rebuild with ``python -m doppel.deep.pages``."""
+    if not SITES.exists():
+        return []
+    yaml_m, refs, out = SITES.stat().st_mtime, references(), []
+    for host, spec in sites().items():
+        brand = spec.get("clone_of")
+        if not brand or spec.get("status") == "none":
+            continue
+        ref, gen = refs.get(brand), generated_path(host)
+        if ref is None:
+            out.append(f"{host}: no saved snapshot of {brand} (run scripts/data/snapshot_genuine.py)")
+        elif not gen.exists():
+            out.append(f"{host}: clone not generated")
+        elif gen.stat().st_mtime < yaml_m:
+            out.append(f"{host}: clone older than demo/fixtures/sites.yaml")
+        elif ref.dom.exists() and gen.stat().st_mtime < ref.dom.stat().st_mtime:
+            out.append(f"{host}: clone older than the {brand} snapshot")
+    return out
+
+
 def page_html(host: str) -> tuple[str | None, dict]:
     """The page a fixture host serves: the generated clone if built, else its committed hand-made page.
 
