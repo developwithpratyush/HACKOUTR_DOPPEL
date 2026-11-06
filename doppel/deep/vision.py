@@ -104,7 +104,9 @@ def _env() -> dict:
 
 
 def offline() -> bool:
-    return _env().get("DOPPEL_OFFLINE", "0") == "1"
+    from doppel import net
+
+    return _env().get("DOPPEL_OFFLINE", "0") == "1" or net.down()
 
 
 def _keys() -> list[str]:
@@ -154,6 +156,11 @@ def _ask_gemini(png: bytes, text: str) -> tuple[dict, str, list[str]]:
             except Exception as exc:                  # noqa: BLE001 - try the next key / model, report all
                 msg = f"{type(exc).__name__}: {str(exc)[:160]}"
                 errors.append(f"{model} key{i}: {msg}")
+                from doppel import net
+
+                if net.is_network_error(exc):         # no internet: stop now, use the recorded / offline answer
+                    net.mark_down(f"vision: {type(exc).__name__}")
+                    raise RuntimeError("; ".join(errors)) from exc
                 if not any(k in msg for k in KEY_ERRORS):
                     break                             # the model is down (503, 404, timeout): next model, not next key
     raise RuntimeError("; ".join(errors) or "no Gemini key configured")

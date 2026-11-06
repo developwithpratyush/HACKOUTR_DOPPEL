@@ -152,7 +152,13 @@ def health() -> dict:
             "fixtures": ("Pages are local fixtures only (demo/fixtures; clones generated from saved genuine pages), "
                          "rendered in a sandbox with no DNS; Doppel never visits a domain it judges."),
             "brands": [b.id for b in e.brain.reg.brands],
-            "offline": _offline(), "stale_fixtures": _stale()}
+            "offline": _offline(), "network": _net(), "stale_fixtures": _stale()}
+
+
+def _net() -> dict:
+    from doppel import net
+
+    return net.state()
 
 
 def _offline() -> bool:

@@ -16,6 +16,7 @@ Trick Detector, so evidence here has no target brand.
 
 from __future__ import annotations
 
+import re
 import time
 from dataclasses import dataclass, field
 from functools import lru_cache
@@ -172,15 +173,77 @@ def _embedded_domain(subdomain: str) -> dict | None:
     return None
 
 
+# Special-use names that can never be a public website (IANA special-use registry; RFC 2606, 6761, 6762, 7686, 9476).
+RESERVED_TLDS = {
+    "invalid": "reserved so that it can never exist (RFC 2606)",
+    "test": "reserved for testing, never on the public internet (RFC 2606)",
+    "example": "reserved for documentation (RFC 2606)",
+    "localhost": "this computer only (RFC 6761)",
+    "local": "the local network only (multicast DNS, RFC 6762)",
+    "onion": "Tor only, not the web (RFC 7686)",
+    "alt": "reserved for non-DNS names (RFC 9476)",
+    "internal": "reserved for private networks (ICANN, 2024)",
+}
+_LABEL = re.compile(r"^[a-z0-9_](?:[a-z0-9_-]{0,61}[a-z0-9_])?$")
+
+
+def _check_name(raw: str, host: str) -> None:
+    """Refuse what can't be a website address: Doppel judges real domains, it never invents a verdict for the rest."""
+    if len(host) > 253:
+        raise AddressError(f"{raw!r} is longer than a domain name can be (253 characters)")
+    labels = host.split(".")
+    for lab in labels:
+        if not lab:
+            raise AddressError(f"{raw!r} has an empty part between dots")
+        if not _LABEL.match(lab):
+            why = ("longer than 63 characters" if len(lab) > 63 else "starts or ends with a hyphen"
+                   if lab[0] == "-" or lab[-1] == "-" else "has characters a domain can't contain")
+            raise AddressError(f"{raw!r} isn't a domain: the part {lab[:40]!r} {why}")
+    tld = labels[-1]
+    if tld in RESERVED_TLDS:
+        raise AddressError(f"'.{tld}' is {RESERVED_TLDS[tld]}: no real website can use {raw!r}")
+    if not _psl_known().publicsuffix(host):          # the whole name: '.za' itself isn't listed, 'co.za' is
+        raise AddressError(f"'.{tld}' isn't a real top-level domain, so {raw!r} can't exist on the internet")
+
+
+def _userinfo_domain(raw: str) -> dict | None:
+    """``https://sbi.co.in@evil.top/``: everything before '@' is a login name the browser ignores, but the victim
+    reads 'sbi.co.in' first. When that part is a real domain, it's carried as the embedded (borrowed) address."""
+    text = raw.strip().strip("<>\"'()[]")
+    text = text.split("://", 1)[1] if "://" in text else text[2:] if text.startswith("//") else text
+    for sep in "/?#\\":
+        text = text.split(sep, 1)[0]
+    if "@" not in text:
+        return None
+    info = text.rsplit("@", 1)[0].split(":", 1)[0].strip(".")
+    if "." not in info:
+        return None
+    try:
+        info, _ = to_ascii_and_unicode(info)
+    except AddressError:
+        return None
+    psl = _psl_known()
+    suffix = psl.publicsuffix(info)
+    if not suffix or not psl.privatesuffix(info):
+        return None
+    return {"domain": info, "suffix": suffix, "via": "userinfo"}
+
+
 def read_address(raw: str) -> AddressReading:
     host_text = extract_host(raw)
-    if all(part.isdigit() for part in host_text.split(".")) and host_text.count(".") == 3:
+    parts = host_text.split(".")
+    if all(p.isdigit() for p in parts) and len(parts) == 4:
+        if any(int(p) > 255 or (len(p) > 1 and p[0] == "0") for p in parts):
+            raise AddressError(f"{raw!r} isn't a valid IP address")
         return AddressReading(raw=raw, host=host_text, display=host_text, public_suffix="", icann_suffix="",
                               owner=host_text, subdomain="", hosting_platform=None, is_ip=True)
     host, display = to_ascii_and_unicode(host_text)
     if "." not in host:
         raise AddressError(f"{raw!r} has no domain suffix")
+    _check_name(raw, host)
     public_suffix, icann_suffix, owner, platform = _owner(host)
+    if "_" in owner and platform is None:    # registries never allow '_' in a name you buy (platform tenants may)
+        raise AddressError(f"{raw!r} can't be registered: '{owner}' contains an underscore")
     subdomain = host[: -len(owner)].rstrip(".") if host != owner else ""
     return AddressReading(
         raw=raw,
@@ -192,7 +255,7 @@ def read_address(raw: str) -> AddressReading:
         subdomain=subdomain,
         hosting_platform=platform,
         labels=[_label_scripts(l) for l in display.split(".")],
-        embedded=_embedded_domain(subdomain),
+        embedded=_embedded_domain(subdomain) or _userinfo_domain(raw),
     )
 
 
@@ -220,7 +283,10 @@ def address_reader(raw: str, ids: Ids | None = None) -> tuple[AddressReading, li
         items.append(evidence(
             ids, **common, criterion="C1", finding="owner_differs", points_to="phishing", strength="strong",
             score=0.85 if multi else 0.75,
-            summary=(f"Real owner is {r.owner}. '{r.subdomain}' is only a sub-part the owner chose; "
+            summary=(f"Real owner is {r.owner}. Everything before '@' ('{r.embedded['domain']}') is a fake login name "
+                     "the browser ignores: it's there so the link reads like a different site."
+                     if r.embedded.get("via") == "userinfo" else
+                     f"Real owner is {r.owner}. '{r.subdomain}' is only a sub-part the owner chose; "
                      f"it carries the address '{r.embedded['domain']}' to look like a different site."),
             embedded_domain=r.embedded["domain"], embedded_suffix=r.embedded["suffix"], **owner_details))
     elif r.hosting_platform:

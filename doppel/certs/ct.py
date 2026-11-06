@@ -27,7 +27,7 @@ from doppel.contract import REPO_ROOT
 SSLMATE = "https://api.certspotter.com/v1/issuances"
 CRTSH = "https://crt.sh/"
 USER_AGENT = "doppel-ct/0.1 (certificate transparency research)"
-TIMEOUT = 25
+TIMEOUT = 10          # seconds; a dead network trips doppel.net after the first failure
 MAX_PAGES = 2
 
 
@@ -138,6 +138,11 @@ def search(domain: str, include_subdomains: bool = True, network: bool = True, r
             break
         except Exception as exc:                   # noqa: BLE001 - try the next source
             errors.append(f"{fn.__name__.strip('_')}: {type(exc).__name__}: {str(exc)[:100]}")
+            from doppel import net
+
+            if net.is_network_error(exc):          # no internet: the other source won't answer either
+                net.mark_down(f"CT {fn.__name__.strip('_')}: {type(exc).__name__}")
+                raise ConnectionError("; ".join(errors)) from exc
     else:
         raise ConnectionError("; ".join(errors))
     record = {"domain": domain, "include_subdomains": include_subdomains, "fetched_at": store.now_iso(), **res}

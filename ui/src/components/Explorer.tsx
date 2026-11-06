@@ -263,6 +263,10 @@ function EvidenceRows({ items }: { items: Evidence[] }) {
           <span key={e.evidence_id + "i"} className={"ic " + tn}>{ICON[tn]}</span>,
           <span key={e.evidence_id + "s"}>
             <span className="text-[var(--muted)] text-[12.5px]">{CHECKS[e.criterion] ?? e.criterion}:</span> {e.summary}
+            {e.finding === "no_certificate_link" && <div className="meta" style={{ fontStyle: "italic" }}>
+              This only means no genuine brand certificate lists this name. That's expected for a look-alike, and our local
+              test kits have no real certificate at all. To see certificate evidence, try google.co.in (proof),
+              in-echallan.online (armed), hdfc-pan-up-date2.web.app (platform padlock) or sbicard.com (another company).</div>}
             <div className="meta">{e.evidence_id} · {e.finding} · points to {e.points_to} · {e.strength} · score {e.score.toFixed(2)}
               {p !== 0 && <> · <span className={p > 0 ? "delta-up" : "delta-down"}>{p > 0 ? "+" : ""}{p.toFixed(2)} log-odds</span></>}</div>
           </span>,

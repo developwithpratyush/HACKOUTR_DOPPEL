@@ -22,7 +22,10 @@ _SAFE = re.compile(r"[^a-z0-9.\-_]")
 
 
 def offline() -> bool:
-    return os.environ.get("DOPPEL_OFFLINE", "0") not in ("", "0", "false", "False")
+    """Cache only: ``DOPPEL_OFFLINE=1``, or the network failed in the last minute or two (``doppel.net``)."""
+    from doppel import net
+
+    return net.offline()
 
 
 def now_iso() -> str:

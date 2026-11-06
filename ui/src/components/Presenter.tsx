@@ -64,6 +64,7 @@ export default function Presenter({ live, ready = true, offline = false, onNav }
   const [base, setBase] = useState<BaselineRow[] | null>(null);
   const [replayAt, setReplayAt] = useState<string | null>(null);
   const [arena, setArena] = useState<Record<string, ArenaCell> | null>(null);
+  const [invalid, setInvalid] = useState<{ input: string; why: string } | null>(null);
   const slot = useRef<HTMLDivElement>(null);
   const bar = useRef<HTMLFormElement>(null);
   const [anim, setAnim] = useState(false);
@@ -101,7 +102,7 @@ export default function Presenter({ live, ready = true, offline = false, onNav }
   const run = async (raw: string) => {
     const d = norm(raw);
     if (!d) return;
-    setQ(d);
+    setQ(d); setInvalid(null);
     const rec = live ? null : await packCase(raw);
     if (!live && !rec) { say("The engine isn't running: only the recorded stage cases can be shown (start: python -m doppel.cli serve)."); return; }
     if (!docked) {
@@ -126,7 +127,9 @@ export default function Presenter({ live, ready = true, offline = false, onNav }
         api.investigate(d, source, false).then(setVOff).catch(() => undefined);
       }
     } catch (e) {
-      say(e instanceof ApiError ? e.message : String(e));
+      if (e instanceof ApiError && e.status === 422) {   // not a real domain: say why, never invent a verdict
+        setV(null); setInvalid({ input: d, why: e.message.replace(/^Not a domain Doppel can read:\s*/, "") });
+      } else say(e instanceof ApiError ? e.message : String(e));
     } finally { setBusy(false); }
   };
 
@@ -134,7 +137,7 @@ export default function Presenter({ live, ready = true, offline = false, onNav }
   const deep = useRef(new URLSearchParams(location.search).get("d"));
   useEffect(() => { if ((live || ready) && deep.current) { const d = deep.current; deep.current = null; run(d); } });
 
-  const home = () => { setDocked(false); setAnim(false); setV(null); setQ(""); };
+  const home = () => { setDocked(false); setAnim(false); setV(null); setInvalid(null); setQ(""); };
   const flip = (f: () => void) => { setStill(true); f(); };
 
   return (
@@ -178,6 +181,18 @@ export default function Presenter({ live, ready = true, offline = false, onNav }
         sum={sum} brands={brands} base={base} arena={arena} replayAt={replayAt} onCert={() => flip(() => setCertOn((x) => !x))} onWhat={() => flip(() => setWhatOn((x) => !x))}
         onOpen={setSheet} onNav={onNav} sheet={sheet} />}
       {docked && !v && busy && <div className="space"><p className="foot" style={{ marginTop: 120 }}>Investigating…</p></div>}
+      {docked && !v && !busy && invalid && (
+        <main className="space"><div className="grid">
+          <section className="ptile glass s12 hero" style={{ ["--d" as string]: "0.05s" }}>
+            <div style={{ minWidth: 0 }}>
+              <div className="pvrow"><span className="vpill" style={{ background: "linear-gradient(135deg,#8A93A6,#5B6478)" }}>NOT A REAL DOMAIN</span>
+                {chip("c-neu", "no verdict: nothing to judge")}</div>
+              <div className="reason">{invalid.why}</div>
+              <div className="pdom" style={{ fontSize: domSize(invalid.input.length), textDecoration: "line-through", textDecorationColor: "var(--mute)", color: "var(--mute)" }}>{invalid.input}</div>
+              <p className="tline">Doppel judges addresses that can exist on the internet. For anything else it says so, instead of inventing a verdict.</p>
+            </div>
+          </section>
+        </div></main>)}
 
       <div className="toast glass" style={{ opacity: toast ? 1 : 0 }}>{toast}</div>
     </div>
@@ -250,7 +265,16 @@ function Space({ v, vOff, certOn, whatOn, still, radar, sum, brands, base, arena
         <dt>In CT logs</dt><dd>{c17.details.count} certificates</dd><dt>Validation</dt><dd>{Object.keys(c17.details.validation ?? {}).join(", ") || "—"}</dd></dl>
       <p className="tline">{c17.summary}</p></div> : null;
   const otherCert = ev(v, "C16").find((e) => e.finding !== "no_certificate_link" && e !== proof);
-  tiles.push(certBody ? { id: "Q4", cls: "s5", ic: "Q4", q: "Does its certificate prove who it is?", tt: "C16 C17", body: <>{certBody}{otherCert && <p className="tline">{otherCert.summary}</p>}</> }
+  const TRAP: Record<string, string> = { certificate_platform_only: "padlock from the hosting platform · proves nothing about the owner",
+    certificate_organisation_other: "a real company, but not the brand" };
+  const trapBody = otherCert && TRAP[otherCert.finding] ? <div className="cert">
+    <div className="pvrow" style={{ marginBottom: 10 }}>{chip("c-warn", TRAP[otherCert.finding])}</div>
+    <p className="tline" style={{ marginTop: 0 }}>{otherCert.summary}</p>
+    {Object.entries(otherCert.details ?? {}).filter(([k, x]) => ["platform", "platform_brand", "guard", "organisation", "country", "validation", "issuer"].includes(k) && typeof x === "string")
+      .slice(0, 4).map(([k, x]) => <dl key={k} className="pkv" style={{ marginTop: 4 }}><dt>{k.replace(/_/g, " ")}</dt><dd>{String(x)}</dd></dl>)}
+  </div> : null;
+  tiles.push(certBody || trapBody ? { id: "Q4", cls: "s5", ic: "Q4", q: "Does its certificate prove who it is?", tt: "C16 C17",
+      body: <>{trapBody}{certBody}{otherCert && !trapBody && <p className="tline">{otherCert.summary}</p>}</> }
     : { id: "Q4", cls: "s5", ic: "Q4", q: "Does its certificate prove who it is?", tt: "C16 C17", skip: otherCert?.summary ?? ev1(v, "C16")?.summary ?? "No certificate evidence for this name." });
 
   tiles.push(c7 ? { id: "S1", cls: "s3", ic: "S1", q: "Would a person notice?", tt: "C7", body: <>

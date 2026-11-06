@@ -1,0 +1,77 @@
+# Doppel batch-scan sample: upload this in "Batch scan" (or: python -m doppel.cli scan demo/finale/batch-sample.txt -f html -o runs/batch.html)
+# One address per line; lines starting with # are comments. Mixed on purpose: genuine, look-alikes, real phishing, junk.
+
+# --- Genuine: the brands' own addresses (should come out GENUINE) ---
+onlinesbi.sbi
+sbi.bank.in
+yonobusiness.sbi
+hdfcbank.com
+icicibank.com
+paytm.com
+indiapost.gov.in
+incometax.gov.in
+echallan.parivahan.gov.in
+www.google.com
+google.co.in
+googleapis.com
+one.google
+upichalega.com
+
+# --- Look-alikes: one per trick ---
+paytrn.com
+goog1e.com
+onlinesbi.co
+icicibank.com.in
+sbi-secure-login.com
+hdfcbank-rewards.in
+incometax-refund.in
+indiapost-tracking.in
+paytm.com.verify-kyc.in
+sbi.bank-in.com
+google.one
+gooogle.co
+xn--pytm-53d.com
+https://pаytm.com/login
+mspeedpost.com
+
+# --- Real phishing from the public Phishing.Database list (names only, never visited) ---
+hdfc-pan-up-date2.web.app
+hdfc-32-pan-update.web.app
+indiapost.gov.atxxycp.top
+indiapost.gov.bdzhpc.top
+indiapost.govin.life
+
+# --- One attacker's campaign (Campaign Radar): five e-Challan look-alikes, same certificate recipe ---
+in-echallan.online
+in-echallan.date
+in-echallan.party
+in-echallan.trade
+ln-echallan.bid
+
+# --- How addresses really arrive: URLs, paths, ports, capitals, tricks in the URL ---
+https://echallan.parivahan.gov.in.pay-fine.icu/challan?id=8842
+HTTP://WWW.SBI-KYC-UPDATE.IN/verify
+https://sbi.co.in@secure-verify-login.top/account
+http://paytm-cashback-offer.shop:8080/claim
+icici-card-block-alert.top/
+
+# --- Ordinary sites that contain a brand-like word (should NOT be flagged) ---
+thanksbitcoin.com
+lesbiancinema.org
+billsplitter.app
+my-portfolio.github.io
+wikipedia.org
+
+# --- Duplicates and case (each line is judged; the same name always gets the same verdict) ---
+paytrn.com
+PAYTRN.COM
+
+# --- Not real domains (should be listed as skipped, never judged) ---
+xyz.invalid
+sbi.test
+abc.notatld
+hello world.com
+a..com
+999.1.1.1
+google.onion
+Your SBI account is blocked, update KYC at sbi-kyc.in now

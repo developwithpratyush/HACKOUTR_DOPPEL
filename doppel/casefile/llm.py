@@ -58,7 +58,9 @@ def _env() -> dict:
 
 
 def offline() -> bool:
-    return _env().get("DOPPEL_OFFLINE", "") not in ("", "0", "false")
+    from doppel import net
+
+    return _env().get("DOPPEL_OFFLINE", "") not in ("", "0", "false") or net.down()
 
 
 def models() -> list[str]:
@@ -121,6 +123,11 @@ def _call_keys(clients, m, kw, errors):
             hint = re.search(r"try again in (?:(\d+)m)?([\d.]+)s", str(exc))
             wait = f" (retry in {int(hint.group(1) or 0) * 60 + float(hint.group(2)):.1f}s)" if hint else ""
             errors.append(f"{m} key{n}: {type(exc).__name__}: {str(exc)[:120]}{wait}")
+            from doppel import net
+
+            if net.is_network_error(exc):                  # no internet: no other key or model will answer
+                net.mark_down(f"narration: {type(exc).__name__}")
+                raise LLMUnavailable("; ".join(errors)) from exc
             if not any(k in str(exc) or k in type(exc).__name__ for k in KEY_ERRORS):
                 return None                                # a model problem: another key won't help
     return None
