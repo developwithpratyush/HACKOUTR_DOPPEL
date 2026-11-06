@@ -4,6 +4,8 @@
 
 Built for the HackOUTR hackathon, problem statement **PS-08: Phishing Domain Detection**.
 
+<p align="center"><img src="assets/landing.png" alt="Doppel landing: one question, one search bar" width="88%"></p>
+
 ---
 
 ## Why Doppel
@@ -55,6 +57,14 @@ A deterministic **central brain** (a policy, not an LLM) sends each name through
 
 Risk is a ranking score, not a calibrated probability.
 
+## What you see
+
+Type a name and press Enter. The search bar glides up and "the space" assembles: the verdict with the domain annotated, the pipeline lighting up stage by stage, then one card per check that ran. Checks the brain didn't need are shown faded, with its reason.
+
+| A fake with no brand in its name → **PHISHING** | Google's own site → **GENUINE**, by certificate |
+|---|---|
+| <img src="assets/result-kit.png" alt="kx72-secure.top result: Deep stage traces the password to a Telegram bot"> | <img src="assets/result-google.png" alt="google.co.in result: proven by Google's own certificate"> |
+
 ---
 
 ## Repository layout
@@ -87,14 +97,19 @@ tests/           Python test suite
 
 ## Run it
 
-**Requirements:** Python 3.11, Node 18+.
+**Requirements:** Python 3.11 (3.12 works; 3.14 has no scikit-image wheel yet), Node 20.19+.
 
 ```bash
 # 1. engine
 python -m venv .venv
 .venv/Scripts/activate          # Windows  (source .venv/bin/activate on macOS/Linux)
-pip install -e ".[all]"         # see pyproject.toml for per-feature extras
-playwright install chromium     # Deep stage sandbox
+pip install -e ".[api,tricks,risk,deep,certs,llm,live,campaign,dev]"
+python -m playwright install chromium    # the Deep stage sandbox browser
+
+# 1b. data (pinned, SHA-256 checked) + the local fixture pages for the Deep stage
+python scripts/data/fetch.py
+python scripts/data/snapshot_genuine.py  # saves the genuine brand pages the kits are cloned from
+python -m doppel.deep.pages              # generates the fixture kits (gitignored)
 
 # 2. optional keys: copy the template and fill in your own
 cp .env.example .env            # Gemini (vision), Groq (case files), SSLMate (CT lookups)
@@ -105,6 +120,8 @@ cd ui && npm install && npm run build && cd ..
 # 4. serve the API + UI
 python -m doppel.cli serve      # open http://127.0.0.1:8000/
 ```
+
+The Quick and Standard stages need no data download and no keys: `pip install -e ".[api,tricks,certs]"` and `python -m doppel.cli scan <name>` is enough to try it.
 
 Doppel runs without any keys: vision and narration fall back to cached results and templates, and certificate checks use the bundled CT cache. Set `DOPPEL_OFFLINE=1` to never touch the network.
 
@@ -132,6 +149,10 @@ UI deep links: `/` Presenter view · `/?d=<domain>` open one result · `/?tab=ex
 - Fixture phishing pages are made by us, served only inside the sandbox, and labelled **simulated kit** in the UI. No real credentials are ever used.
 - Live catches are called "imitates *brand*", never "phishing", unless a public list or page evidence says so.
 - Third-party data and code are credited in [CREDITS.md](CREDITS.md).
+
+## Tech stack
+
+Python 3.11 · FastAPI · Playwright (sandboxed Chromium) · scikit-learn (logistic regression, calibrated) · scikit-image (SSIM) · NetworkX · websockets (CT stream) · Gemini (page vision) · Groq (case-file narration) · React 18 + Vite + Tailwind 4 · Vitest · pytest.
 
 ## License
 

@@ -134,6 +134,7 @@ export function islandLayout(c: Campaign, focus: string | null, w = 520, h = 200
   });
   const edges: [string, string][] = [];
   ring.forEach((d, i) => { if (centre) edges.push([centre, d]); if (ring.length > 2) edges.push([d, ring[(i + 1) % ring.length]]); });
+  if (!centre && ring.length === 2) edges.push([ring[0], ring[1]]);
   return { pos, edges, centre };
 }
 
