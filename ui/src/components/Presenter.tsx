@@ -152,7 +152,7 @@ export default function Presenter({ live, ready = true, offline = false, onNav }
 
       {!docked && (
         <section className="landing">
-          <div className="kicker glass"><span className={`pdot ${live ? "" : "off"}`} />{!live ? "Engine not running · recorded stage cases (REPLAY)" : offline ? "Offline mode · every check answers from its cache" : "Reading the world's new certificates"}</div>
+          <div className="kicker glass" title={offline ? "Presenter note: started with --offline (caches only, no network)" : undefined}><span className={`pdot ${live ? "" : "off"}`} />{live ? "Reading the world's new certificates" : "Engine not running · recorded stage cases (REPLAY)"}</div>
           <h1>Is this link <span>who it says it is?</span></h1>
           <p className="lede">Paste any address from an SMS, email or ad. Doppel proves who owns it, names the trick, and shows every step.</p>
           <div className="slot" ref={slot} />
